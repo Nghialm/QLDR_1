@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<CultureInfo>
+		<Name>KTY Format</Name>
+		<Code>vi-VN</Code>
+		<DateFormat>dd/MM/yyyy</DateFormat>
+		<DateSeparator>/</DateSeparator>
+		<TimeFormat>HH:mm:ss</TimeFormat>
+		<TimeSeparator>:</TimeSeparator>
+		<DecimalSeparator>,</DecimalSeparator>
+		<GroupSeparator>.</GroupSeparator>
+		<CalendarLanguage>vi-VN</CalendarLanguage>
+		<Extend1></Extend1>
+		<Extend2></Extend2>
+		<Extend3></Extend3>
+		<Extend4></Extend4>
+		<Extend5></Extend5>
+		<Extend6></Extend6>
+		<Extend7></Extend7>
+		<Extend8></Extend8>
+		<Extend9></Extend9>
+		<Extend10></Extend10>
+	</CultureInfo>
+</root>

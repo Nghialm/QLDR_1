@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Vns.QuanLyDoanRa.Domain.VnsLichCongTac,Vns.QuanLyDoanRa" table="VnsLichCongTac" lazy="false">
+
+		<id name="Id" column="LichCongTacId" type="Guid">
+			<generator class="assigned"/>
+		</id>
+		<property column="CongTacId" type="Guid" name="CongTacId" not-null="true" />
+		<property column="NuocId" type="Guid" name="NuocId" length="10" />
+		<property column="DiaDiem" type="String" name="DiaDiem" length="128" />
+		<property column="NgayDi" type="DateTime" name="NgayDi" />
+		<property column="NgayVe" type="DateTime" name="NgayVe" />
+    <property column="NgayCongTac" type="Decimal" name="NgayCongTac" precision="5" scale="0" />    
+    <property column="TrangThai" type="Int32" name="TrangThai" />
+		<property column="MoTa" type="String" name="MoTa" length="512" />
+    <property column="LoaiQuocGia" type="Int32" name="LoaiQuocGia" />
+    <many-to-one name="objNuocDen" column="NuocId" class="Vns.QuanLyDoanRa.Domain.VnsDmQuocGia" insert="false" update="false" lazy="false" not-found="ignore" />
+		<!--<many-to-one name="TenTrangThai" column="TrangThai" class="Vns.QuanLyDoanRa.Domain.VnsDmHeThong" insert="false" update="false" lazy="false" not-found="ignore" />-->
+	</class>
+</hibernate-mapping>

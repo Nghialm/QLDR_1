@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:wcf="http://www.springframework.net/wcf">
+
+
+  <!-- Property placeholder configurer for database settings 
+  <wcf:channelFactory id="DonViService" channelType="Vns.KeyManagement.Service.Interface.IInterface.IDmDonViService, Vns.KeyManagement">
+  </wcf:channelFactory>
+  <wcf:channelFactory id="TinhThanhService" channelType="Vns.KeyManagement.Service.Interface.IInterface.ITinhThanhService, Vns.KeyManagement">
+  </wcf:channelFactory>
+  <wcf:channelFactory id="QuanHuyenService" channelType="Vns.KeyManagement.Service.Interface.IInterface.IQuanHuyenService, Vns.KeyManagement">
+  </wcf:channelFactory>
+  <wcf:channelFactory id="PhuongXaService" channelType="Vns.KeyManagement.Service.Interface.IInterface.IPhuongXaService, Vns.KeyManagement">
+  </wcf:channelFactory>
+
+  <wcf:channelFactory id="HinhThucCapService" channelType="Vns.KeyManagement.Service.Interface.IInterface.IHinhThucCapService, Vns.KeyManagement">
+  </wcf:channelFactory>
+
+  <wcf:channelFactory id="DanhMucNganhService" channelType="Vns.KeyManagement.Service.Interface.IInterface.IDanhMucNganhService, Vns.KeyManagement">
+  </wcf:channelFactory>
+
+  <wcf:channelFactory id="DanhMucDaiLyService" channelType="Vns.KeyManagement.Service.Interface.IInterface.IDanhMucDaiLyService, Vns.KeyManagement">
+  </wcf:channelFactory>
+  <wcf:channelFactory id="DanhMucPhanMemService" channelType="Vns.KeyManagement.Service.Interface.IInterface.IDanhMucPhanMemService, Vns.KeyManagement">
+  </wcf:channelFactory>
+
+  <wcf:channelFactory id="DanhMucVersionService" channelType="Vns.KeyManagement.Service.Interface.IInterface.IDanhMucVersionService, Vns.KeyManagement">
+  </wcf:channelFactory>
+
+  <wcf:channelFactory id="GiaoDichService" channelType="Vns.KeyManagement.Service.Interface.IInterface.IGiaoDichService, Vns.KeyManagement">
+  </wcf:channelFactory>
+
+  <wcf:channelFactory id="GiaoDichDonViService" channelType="Vns.KeyManagement.Service.Interface.IInterface.IGiaoDichDonViService, Vns.KeyManagement">
+  </wcf:channelFactory>
+  <wcf:channelFactory id="TrangThaiService" channelType="Vns.KeyManagement.Service.Interface.IInterface.ITrangThaiService, Vns.KeyManagement">
+  </wcf:channelFactory>
+  <wcf:channelFactory id="KeyService" channelType="Vns.KeyManagement.KeyService, Vns.KeyManagement">
+  </wcf:channelFactory>
+  -->
+
+  <wcf:channelFactory id="AppGroupsService" channelType="Vns.Erp.Core.Admin.Service.Interface.IAppGroupsService, Vns.Core.Admin.Service" endpointConfigurationName="WcfAppGroupsService"/>
+  
+  <wcf:channelFactory id="AppUsersService" channelType="Vns.Erp.Core.Admin.Service.Interface.IAppUsersService, Vns.Core.Admin.Service" endpointConfigurationName="WcfAppUsersService"/>
+  
+  <wcf:channelFactory id="DmDonviService" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmDonviService, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmDonviService"/>
+  
+  <wcf:channelFactory id="AppDvGroupUserService" channelType="Vns.Erp.Core.Admin.Service.Interface.IAppDvGroupUserService, Vns.Core.Admin.Service" endpointConfigurationName="WcfAppDvGroupUserService"/>
+  
+  <wcf:channelFactory id="HtThamsoService" channelType="Vns.Erp.Core.Admin.Service.Interface.IHtThamsoService, Vns.Core.Admin.Service" endpointConfigurationName="WcfHtThamsoService"/>
+  
+  <wcf:channelFactory id="AppFormsService" channelType="Vns.Erp.Core.Admin.Service.Interface.IAppFormsService, Vns.Core.Admin.Service" endpointConfigurationName="WcfAppFormsService"/>
+  
+  <wcf:channelFactory id="AppUsergroupService" channelType="Vns.Erp.Core.Admin.Service.Interface.IAppUsergroupService, Vns.Core.Admin.Service" endpointConfigurationName="WcfAppUsergroupService"/>
+  
+  <wcf:channelFactory id="AppDvFormService" channelType="Vns.Erp.Core.Admin.Service.Interface.IAppDvFormService, Vns.Core.Admin.Service" endpointConfigurationName="WcfAppDvFormService"/>
+  
+  <wcf:channelFactory id="AppHGroupFormService" channelType="Vns.Erp.Core.Admin.Service.Interface.IAppHGroupFormService, Vns.Core.Admin.Service" endpointConfigurationName="WcfAppHGroupFormService"/>
+  
+  <wcf:channelFactory id="AppUgFormService" channelType="Vns.Erp.Core.Admin.Service.Interface.IAppUgFormService, Vns.Core.Admin.Service" endpointConfigurationName="WcfAppUgFormService"/>
+  
+  <wcf:channelFactory id="AppHGroupFunctService" channelType="Vns.Erp.Core.Admin.Service.Interface.IAppHGroupFunctService, Vns.Core.Admin.Service" endpointConfigurationName="WcfAppHGroupFunctService"/>
+  
+  <wcf:channelFactory id="AppGroupFormsService" channelType="Vns.Erp.Core.Admin.Service.Interface.IAppGroupFormsService, Vns.Core.Admin.Service" endpointConfigurationName="WcfAppGroupFormsService"/>
+  
+  <wcf:channelFactory id="AppGroupFunctionService" channelType="Vns.Erp.Core.Admin.Service.Interface.IAppGroupFunctionService, Vns.Core.Admin.Service" endpointConfigurationName="WcfAppGroupFunctionService"/>
+  
+  <wcf:channelFactory id="AppDvBcService" channelType="Vns.Erp.Core.Admin.Service.Interface.IAppDvBcService, Vns.Core.Admin.Service" endpointConfigurationName="WcfAppDvBcService"/>
+  
+  <wcf:channelFactory id="AppDvGroupBcService" channelType="Vns.Erp.Core.Admin.Service.Interface.IAppDvGroupBcService, Vns.Core.Admin.Service" endpointConfigurationName="WcfAppDvGroupBcService"/>
+  
+  <wcf:channelFactory id="HtBaocaoService" channelType="Vns.Erp.Core.Admin.Service.Interface.IHtBaocaoService, Vns.Core.Admin.Service" endpointConfigurationName="WcfHtBaocaoService"/>
+  
+  <wcf:channelFactory id="AppCtStatusService" channelType="Vns.Erp.Core.Admin.Service.Interface.IAppCtStatusService, Vns.Core.Admin.Service" endpointConfigurationName="WcfAppCtStatusService"/>
+  
+  <wcf:channelFactory id="HtLoaichungtuService" channelType="Vns.Erp.Core.Admin.Service.Interface.IHtLoaichungtuService, Vns.Core.Admin.Service" endpointConfigurationName="WcfHtLoaichungtuService"/>
+  
+  <wcf:channelFactory id="AppDvGroupFormService" channelType="Vns.Erp.Core.Admin.Service.Interface.IAppDvGroupFormService, Vns.Core.Admin.Service" endpointConfigurationName="WcfAppDvGroupFormService"/>
+  
+  <wcf:channelFactory id="AppDvGroupService" channelType="Vns.Erp.Core.Admin.Service.Interface.IAppDvGroupService, Vns.Core.Admin.Service" endpointConfigurationName="WcfAppDvGroupService"/>
+  
+  <wcf:channelFactory id="DmTaikhoanService" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmTaikhoanService, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmTaikhoanService"/>
+  
+  <wcf:channelFactory id="HtFileBaocaoService" channelType="Vns.Erp.Core.Admin.Service.Interface.IHtFileBaocaoService, Vns.Core.Admin.Service" endpointConfigurationName="WcfHtFileBaocaoService"/>
+  
+  <wcf:channelFactory id="HtBienBaocaoService" channelType="Vns.Erp.Core.Admin.Service.Interface.IHtBienBaocaoService, Vns.Core.Admin.Service" endpointConfigurationName="WcfHtBienBaocaoService"/>
+  
+
+  <wcf:channelFactory id="DmTkChitietService" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmTkChitietService, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmTkChitietService"/>
+  
+  <wcf:channelFactory id="DmPhongbanService" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmPhongbanService, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmPhongbanService"/>
+  
+
+  <wcf:channelFactory id="DmKhangService" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmKhangService, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmKhangService"/>
+  
+  <wcf:channelFactory id="HtDanhmucService" channelType="Vns.Erp.Core.Admin.Service.Interface.IHtDanhmucService, Vns.Core.Admin.Service" endpointConfigurationName="WcfHtDanhmucService"/>
+  
+  <wcf:channelFactory id="DmNhomKhangService" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmNhomKhangService, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmNhomKhangService"/>
+  
+  <wcf:channelFactory id="DmNhomvattu1Service" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmNhomvattu1Service, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmNhomvattu1Service"/>
+  
+  <wcf:channelFactory id="DmDvtService" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmDvtService, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmDvtService"/>
+  
+  <wcf:channelFactory id="DmHanghoaService" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmHanghoaService, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmHanghoaService"/>
+  
+  <wcf:channelFactory id="DmTudo1Service" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmTudo1Service, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmTudo1Service"/>
+  
+  <wcf:channelFactory id="DmTudo2Service" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmTudo2Service, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmTudo2Service"/>
+  
+  <wcf:channelFactory id="DmTudo3Service" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmTudo3Service, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmTudo3Service"/>
+  
+  <wcf:channelFactory id="DmTudo4Service" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmTudo4Service, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmTudo4Service"/>
+  
+  <wcf:channelFactory id="DmTudo5Service" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmTudo5Service, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmTudo5Service"/>
+  <!---->
+  <wcf:channelFactory id="DmKhoService" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmKhoService, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmKhoService"/>
+  
+
+  <wcf:channelFactory id="DmLydoTgTscdService" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmLydoTgTscdService, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmLydoTgTscdService"/>
+  
+  <wcf:channelFactory id="DmNhomTscdService" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmNhomTscdService, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmNhomTscdService"/>
+  
+  <wcf:channelFactory id="DmLoaiTaisanService" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmLoaiTaisanService, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmLoaiTaisanService"/>
+  
+  <wcf:channelFactory id="DmNguonTscdService" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmNguonTscdService, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmNguonTscdService"/>
+  
+  <wcf:channelFactory id="DmBtKetchuyenService" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmBtKetchuyenService, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmBtKetchuyenService"/>
+  
+  <wcf:channelFactory id="DmKhoanphiService" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmKhoanphiService, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmKhoanphiService"/>
+  
+  <wcf:channelFactory id="DmVuviecService" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmVuviecService, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmVuviecService"/>
+  
+  <wcf:channelFactory id="DmHopdongService" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmHopdongService, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmHopdongService"/>
+  
+
+  <wcf:channelFactory id="LsTygiaService" channelType="Vns.Erp.Core.Admin.Service.Interface.ILsTygiaService, Vns.Core.Admin.Service" endpointConfigurationName="WcfLsTygiaService"/>
+  
+  <wcf:channelFactory id="DmNgoaiteService" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmNgoaiteService, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmNgoaiteService"/>
+  
+  <wcf:channelFactory id="DmThueService" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmThueService, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmThueService"/>
+  
+  <wcf:channelFactory id="DmPtqtService" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmPtqtService, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmPtqtService"/>
+  
+  <wcf:channelFactory id="KtKhoasoThangService" channelType="Vns.Erp.Core.Admin.Service.Interface.IKtKhoasoThangService, Vns.Core.Admin.Service" endpointConfigurationName="WcfKtKhoasoThangService"/>
+  
+  <wcf:channelFactory id="KtStatusCtService" channelType="Vns.Erp.Core.Admin.Service.Interface.IKtStatusCtService, Vns.Core.Admin.Service" endpointConfigurationName="WcfKtStatusCtService"/>
+  
+  <wcf:channelFactory id="HtSoChungtuMaxService" channelType="Vns.Erp.Core.Admin.Service.Interface.IHtSoChungtuMaxService, Vns.Core.Admin.Service" endpointConfigurationName="WcfHtSoChungtuMaxService"/>
+    
+  
+
+  <!--Ke Toan-->
+  <wcf:channelFactory id="BcKetoanService" channelType="Vns.Erp.Core.Accounting.Service.Interface.IBcKetoanService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfBcKetoanService"/>
+  
+  <wcf:channelFactory id="CtDService" channelType="Vns.Erp.Core.Accounting.Service.Interface.ICtDService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfCtDService"/>
+  
+  <wcf:channelFactory id="CtHService" channelType="Vns.Erp.Core.Accounting.Service.Interface.ICtHService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfCtHService"/>
+  
+  <wcf:channelFactory id="CtHoadonService" channelType="Vns.Erp.Core.Accounting.Service.Interface.ICtHoadonService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfCtHoadonService"/>
+  
+  <wcf:channelFactory id="CtThueService" channelType="Vns.Erp.Core.Accounting.Service.Interface.ICtThueService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfCtThueService"/>
+  
+  <wcf:channelFactory id="CtHNxService" channelType="Vns.Erp.Core.Accounting.Service.Interface.ICtHNxService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfCtHNxService"/>
+  
+  <wcf:channelFactory id="CtDNxService" channelType="Vns.Erp.Core.Accounting.Service.Interface.ICtDNxService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfCtDNxService"/>
+  
+  <wcf:channelFactory id="BcKetoanKhoService" channelType="Vns.Erp.Core.Accounting.Service.Interface.IBcKetoanKhoService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfBcKetoanKhoService"/>
+  <wcf:channelFactory id="KtDmBtPhanboService" channelType="Vns.Erp.Core.Accounting.Service.Interface.IKtDmBtPhanboService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfKtDmBtPhanboService"/>
+  
+  <wcf:channelFactory id="KtThBtPhanboService" channelType="Vns.Erp.Core.Accounting.Service.Interface.IKtThBtPhanboService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfKtThBtPhanboService"/>
+  
+  
+
+  <!--Tai san co dinh-->
+  <wcf:channelFactory id="DmLoaitaisanService" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmLoaitaisanService, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmLoaitaisanService"/>
+  
+  <wcf:channelFactory id="DmTscdService" channelType="Vns.Erp.Core.Admin.Service.Interface.IDmTscdService, Vns.Core.Admin.Service" endpointConfigurationName="WcfDmTscdService"/>
+  
+  <wcf:channelFactory id="TsCtTscdNvonService" channelType="Vns.Erp.Core.Admin.Service.Interface.ITsCtTscdNvonService, Vns.Core.Admin.Service" endpointConfigurationName="WcfTsCtTscdNvonService"/>
+  
+  <wcf:channelFactory id="TsTscdPtungService" channelType="Vns.Erp.Core.Admin.Service.Interface.ITsTscdPtungService, Vns.Core.Admin.Service" endpointConfigurationName="WcfTsTscdPtungService"/>
+  
+  <wcf:channelFactory id="CtTscdService" channelType="Vns.Erp.Core.Admin.Service.Interface.ICtTscdService, Vns.Core.Admin.Service" endpointConfigurationName="WcfCtTscdService"/>
+  
+  <wcf:channelFactory id="TsDieuchuyenService" channelType="Vns.Erp.Core.Admin.Service.Interface.ITsDieuchuyenService, Vns.Core.Admin.Service" endpointConfigurationName="WcfTsDieuchuyenService"/>
+  
+  <!--Thiet lap bao cao-->
+  <wcf:channelFactory id="KtDieukienBcService" channelType="Vns.Erp.Core.Admin.Service.Interface.IKtDieukienBcService, Vns.Core.Admin.Service" endpointConfigurationName="WcfKtDieukienBcService"/>
+  
+  <wcf:channelFactory id="KtHBaocaoService" channelType="Vns.Erp.Core.Admin.Service.Interface.IKtHBaocaoService, Vns.Core.Admin.Service" endpointConfigurationName="WcfKtHBaocaoService"/>
+  
+  <wcf:channelFactory id="KtHCotService" channelType="Vns.Erp.Core.Admin.Service.Interface.IKtHCotService, Vns.Core.Admin.Service" endpointConfigurationName="WcfKtHCotService"/>
+  
+  <wcf:channelFactory id="KtHDongService" channelType="Vns.Erp.Core.Admin.Service.Interface.IKtHDongService, Vns.Core.Admin.Service" endpointConfigurationName="WcfKtHDongService"/>
+  
+  
+  <!--Report-->
+  <wcf:channelFactory id="RpLedgerS38DNService" channelType="Vns.Erp.Core.Accounting.Report.Service.Interface.IRpLedgerS38DNService, Vns.Erp.Core.Accounting.Report.Service" endpointConfigurationName="WcfRpLedgerS38DNService"/>
+  
+  <wcf:channelFactory id="RpLedgerS07DnService" channelType="Vns.Erp.Core.Accounting.Report.Service.Interface.IRpLedgerS07DnService, Vns.Erp.Core.Accounting.Report.Service" endpointConfigurationName="WcfRpLedgerS07DnService"/>
+  
+  <wcf:channelFactory id="RpLedgerS06DnService" channelType="Vns.Erp.Core.Accounting.Report.Service.Interface.IRpLedgerS06DnService, Vns.Erp.Core.Accounting.Report.Service" endpointConfigurationName="WcfRpLedgerS06DnService"/>
+  
+  <wcf:channelFactory id="RpLedgerS06DnDetailService" channelType="Vns.Erp.Core.Accounting.Report.Service.Interface.IRpLedgerS06DnDetailService, Vns.Erp.Core.Accounting.Report.Service" endpointConfigurationName="WcfRpLedgerS06DnDetailService"/>
+  
+  <wcf:channelFactory id="RpLedgerS10DnService" channelType="Vns.Erp.Core.Accounting.Report.Service.Interface.IRpLedgerS10DnService, Vns.Erp.Core.Accounting.Report.Service" endpointConfigurationName="WcfRpLedgerS10DnService"/>
+  
+  <wcf:channelFactory id="RpLedgerS11DnAllService" channelType="Vns.Erp.Core.Accounting.Report.Service.Interface.IRpLedgerS11DnAllService, Vns.Erp.Core.Accounting.Report.Service" endpointConfigurationName="WcfRpLedgerS11DnAllService"/>
+  
+  <wcf:channelFactory id="RpLedgerS11DnService" channelType="Vns.Erp.Core.Accounting.Report.Service.Interface.IRpLedgerS11DnService, Vns.Erp.Core.Accounting.Report.Service" endpointConfigurationName="WcfRpLedgerS11DnService"/>
+  
+  <wcf:channelFactory id="RpLedgerS12DnService" channelType="Vns.Erp.Core.Accounting.Report.Service.Interface.IRpLedgerS12DnService, Vns.Erp.Core.Accounting.Report.Service" endpointConfigurationName="WcfRpLedgerS12DnService"/>
+  
+  <wcf:channelFactory id="RpReportB01DnService" channelType="Vns.Erp.Core.Accounting.Report.Service.Interface.IRpReportB01DnService, Vns.Erp.Core.Accounting.Report.Service" endpointConfigurationName="WcfRpReportB01DnService"/>
+  
+  <wcf:channelFactory id="RpBangTinhKhauHaoService" channelType="Vns.Erp.Core.Accounting.Report.Service.Interface.IRpBangTinhKhauHao, Vns.Erp.Core.Accounting.Report.Service" endpointConfigurationName="WcfRpBangTinhKhauHaoService"/>
+  
+  <wcf:channelFactory id="RpTheTscdS23DnService" channelType="Vns.Erp.Core.Accounting.Report.Service.Interface.IRpTheTscdS23DnService, Vns.Erp.Core.Accounting.Report.Service" endpointConfigurationName="WcfRpTheTscdS23DnService"/>
+  
+  <wcf:channelFactory id="RpSoTscdS21DnService" channelType="Vns.Erp.Core.Accounting.Report.Service.Interface.IRpSoTscdS21DnService, Vns.Erp.Core.Accounting.Report.Service" endpointConfigurationName="WcfRpSoTscdS21DnService"/>
+
+  
+  <!--Tinh gia xuat kho  -->
+  <wcf:channelFactory id="KtGiaxuatDaukyService" channelType="Vns.Erp.Core.Accounting.Service.Interface.IKtGiaxuatDaukyService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfKtGiaxuatDaukyService"/>
+  
+  <wcf:channelFactory id="KtDuluongDaukyService" channelType="Vns.Erp.Core.Accounting.Service.Interface.IKtDuluongDaukyService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfKtDuluongDaukyService"/>
+  
+  <wcf:channelFactory id="TsLsKhauhaoService" channelType="Vns.Erp.Core.Admin.Service.Interface.ITsLsKhauhaoService, Vns.Core.Admin.Service" endpointConfigurationName="WcfTsLsKhauhaoService"/>
+  
+
+
+  <!--Hoa don dich vu ke toan-->
+<wcf:channelFactory id="KtCtHHddvService" channelType="Vns.Erp.Core.Accounting.Service.Interface.IKtCtHHddvService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfKtCtHHddvService"/>
+
+<wcf:channelFactory id="KtCtDHddvService" channelType="Vns.Erp.Core.Accounting.Service.Interface.IKtCtDHddvService, Vns.Erp.Core.Accounting.Service" endpointConfigurationName="WcfKtCtDHddvService"/>
+
+</objects>
+
+  

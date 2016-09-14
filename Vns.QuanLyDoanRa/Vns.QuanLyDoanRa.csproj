@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{905C5649-9DA2-4881-A37F-C5F350079F44}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vns.QuanLyDoanRa</RootNamespace>
+    <AssemblyName>Vns.QuanLyDoanRa</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging">
+      <HintPath>..\References\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net">
+      <HintPath>..\References\Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>..\References\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.BonusSkins.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.Data.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.OfficeSkins.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.OfficeSkins.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.Utils.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.Xpo.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraBars.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraBars.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraEditors.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraGrid.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraGrid.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraLayout.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraLayout.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraNavBar.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraNavBar.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraPrinting.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraPrinting.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraReports.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraRichEdit.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraRichEdit.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v10.2.Extensions, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraRichEdit.v10.2.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraScheduler.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v10.2.Core, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraScheduler.v10.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraScheduler.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraTreeList.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraTreeList.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraVerticalGrid.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v10.2.Design, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\DevExpress.XtraVerticalGrid.v10.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\References\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zlib">
+      <HintPath>..\References\Ionic.Zlib.dll</HintPath>
+    </Reference>
+    <Reference Include="LoadingCircle">
+      <HintPath>..\References\LoadingCircle.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\References\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\References\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Nullables">
+      <HintPath>..\References\Nullables.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Aop">
+      <HintPath>..\References\Spring.Aop.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core">
+      <HintPath>..\References\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data">
+      <HintPath>..\References\Spring.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Data.NHibernate32">
+      <HintPath>..\References\Spring.Data.NHibernate32.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Services">
+      <HintPath>..\References\Spring.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web">
+      <HintPath>..\References\Spring.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Vns.Core.Admin.Dao">
+      <HintPath>..\References\Vns.Core.Admin.Dao.dll</HintPath>
+    </Reference>
+    <Reference Include="Vns.Erp.Core">
+      <HintPath>..\References\Vns.Erp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Vns.Erp.Core.Accounting.Domain">
+      <HintPath>..\References\Vns.Erp.Core.Accounting.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="Vns.Erp.Core.Admin.Domain">
+      <HintPath>..\References\Vns.Erp.Core.Admin.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="Vns.Erp.Core.Dao">
+      <HintPath>..\References\Vns.Erp.Core.Dao.dll</HintPath>
+    </Reference>
+    <Reference Include="Vns.Erp.Core.Dao.NHibernate">
+      <HintPath>..\References\Vns.Erp.Core.Dao.NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Vns.Erp.Core.Domain">
+      <HintPath>..\References\Vns.Erp.Core.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="Vns.Erp.Core.Service">
+      <HintPath>..\References\Vns.Erp.Core.Service.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dao\Interface\IVnsNgoaiTeDao.cs" />
+    <Compile Include="Dao\VnsNgoaiTeDao.cs" />
+    <Compile Include="Dao\VnsSoDuCuoiKyDao.cs" />
+    <Compile Include="Dao\Interface\IVnsSoDuCuoiKyDao.cs" />
+    <Compile Include="Dao\Interface\IVnsDmKhachHangDao.cs" />
+    <Compile Include="Dao\Interface\IVnsDuLuongDauKyDao.cs" />
+    <Compile Include="Dao\Interface\Report\IReportDao.cs" />
+    <Compile Include="Dao\Report\ReportDao.cs" />
+    <Compile Include="Dao\VnsDmKhachHangDao.cs" />
+    <Compile Include="Dao\InfoDao.cs" />
+    <Compile Include="Dao\Interface\IInfoDao.cs" />
+    <Compile Include="Dao\Interface\Report\IRP_BC04DDao.cs" />
+    <Compile Include="Dao\Interface\IVnsHtSoCtMaxDao.cs" />
+    <Compile Include="Dao\Interface\Report\IRP_SoDuDao.cs" />
+    <Compile Include="Dao\Interface\Report\IRP_SoDuTaiKhoanDao.cs" />
+    <Compile Include="Dao\Report\RP_SoDuDao.cs" />
+    <Compile Include="Dao\Report\RP_SoDuTaiKhoanDao.cs" />
+    <Compile Include="Dao\VnsDuLuongDauKyDao.cs" />
+    <Compile Include="Dao\VnsHtSoCtMaxDao.cs" />
+    <Compile Include="Dao\Interface\IVnsChungTuDao.cs" />
+    <Compile Include="Dao\Interface\IVnsDanhMucChucVuDao.cs" />
+    <Compile Include="Dao\Interface\IVnsDinhMucDao.cs" />
+    <Compile Include="Dao\Interface\IVnsDmHeThongDao.cs" />
+    <Compile Include="Dao\Interface\IVnsDmMucTieuMucDao.cs" />
+    <Compile Include="Dao\Interface\IVnsDmQuocGiaDao.cs" />
+    <Compile Include="Dao\Interface\IVnsDoanCongTacDao.cs" />
+    <Compile Include="Dao\Interface\IVnsDonViDao.cs" />
+    <Compile Include="Dao\Interface\IVnsDuToanDoanDao.cs" />
+    <Compile Include="Dao\Interface\IVnsGiaoDichDao.cs" />
+    <Compile Include="Dao\Interface\IVnsLichCongTacDao.cs" />
+    <Compile Include="Dao\Interface\IVnsLoaiChungTuDao.cs" />
+    <Compile Include="Dao\Interface\IVnsLoaiDoanRaDao.cs" />
+    <Compile Include="Dao\Interface\IVnsNghiepVuDao.cs" />
+    <Compile Include="Dao\Interface\IVnsQuyetToanDoanDao.cs" />
+    <Compile Include="Dao\Interface\IVnsThanhVienDao.cs" />
+    <Compile Include="Dao\VnsChungTuDao.cs" />
+    <Compile Include="Dao\VnsDanhMucChucVuDao.cs" />
+    <Compile Include="Dao\VnsDinhMucDao.cs" />
+    <Compile Include="Dao\VnsDmHeThongDao.cs" />
+    <Compile Include="Dao\VnsDmMucTieuMucDao.cs" />
+    <Compile Include="Dao\VnsDmQuocGiaDao.cs" />
+    <Compile Include="Dao\VnsDoanCongTacDao.cs" />
+    <Compile Include="Dao\VnsDonViDao.cs" />
+    <Compile Include="Dao\VnsDuToanDoanDao.cs" />
+    <Compile Include="Dao\VnsGiaoDichDao.cs" />
+    <Compile Include="Dao\VnsLichCongTacDao.cs" />
+    <Compile Include="Dao\VnsLoaiChungTuDao.cs" />
+    <Compile Include="Dao\VnsLoaiDoanRaDao.cs" />
+    <Compile Include="Dao\VnsNghiepVuDao.cs" />
+    <Compile Include="Dao\VnsQuyetToanDoanDao.cs" />
+    <Compile Include="Dao\VnsThanhVienDao.cs" />
+    <Compile Include="Domain\Report\PhuLucTongHopQuyetToanDr.cs" />
+    <Compile Include="Domain\Report\PhuBieuChiQT.cs" />
+    <Compile Include="Domain\Report\RP_ChungTuGhiSo.cs" />
+    <Compile Include="Domain\Report\VnsReportTongHop.cs" />
+    <Compile Include="Domain\Report\VnsReportChuaQt.cs" />
+    <Compile Include="Domain\Report\RP_BangKeCtGhiSo.cs" />
+    <Compile Include="Domain\Report\RP_Doan_CongNo.cs" />
+    <Compile Include="Domain\Report\VnsReport.cs" />
+    <Compile Include="Domain\VnsNgoaiTe.cs" />
+    <Compile Include="Domain\VnsNgoaiTe.generated.cs" />
+    <Compile Include="Domain\VnsSoDuCuoiKy.cs" />
+    <Compile Include="Domain\VnsSoDuCuoiKy.generated.cs" />
+    <Compile Include="Domain\VnsDmKhachhang.cs" />
+    <Compile Include="Domain\VnsDmKhachhang.generated.cs" />
+    <Compile Include="Domain\Info.cs" />
+    <Compile Include="Domain\Info.generated.cs" />
+    <Compile Include="Domain\Report\BC03DR.cs" />
+    <Compile Include="Domain\Report\RP_BangKeQT.cs" />
+    <Compile Include="Domain\Report\RP_BC04DR.cs" />
+    <Compile Include="Domain\Report\RP_BC05DR.cs" />
+    <Compile Include="Domain\Report\RP_BC06DR.cs" />
+    <Compile Include="Domain\Report\RP_SoDuInfo.cs" />
+    <Compile Include="Domain\Report\RP_SoDuTaiKhoan.cs" />
+    <Compile Include="Domain\Report\ViewQuyetToan.cs" />
+    <Compile Include="Domain\Report\ViewTamUngDoanRa.cs" />
+    <Compile Include="Domain\Report\VnsInQtTu.cs" />
+    <Compile Include="Domain\VnsDuLuongDauKy.cs" />
+    <Compile Include="Domain\VnsDuLuongDauKy.generated.cs" />
+    <Compile Include="Domain\VnsHtSoCtMax.cs" />
+    <Compile Include="Domain\VnsHtSoCtMax.generated.cs" />
+    <Compile Include="Domain\VnsChungTu.cs" />
+    <Compile Include="Domain\VnsChungTu.generated.cs" />
+    <Compile Include="Domain\VnsDanhMucChucVu.cs" />
+    <Compile Include="Domain\VnsDanhMucChucVu.generated.cs" />
+    <Compile Include="Domain\VnsDinhMuc.cs" />
+    <Compile Include="Domain\VnsDinhMuc.generated.cs" />
+    <Compile Include="Domain\VnsDmHeThong.cs" />
+    <Compile Include="Domain\VnsDmHeThong.generated.cs" />
+    <Compile Include="Domain\VnsDmMucTieuMuc.cs" />
+    <Compile Include="Domain\VnsDmMucTieuMuc.generated.cs" />
+    <Compile Include="Domain\VnsDmQuocGia.cs" />
+    <Compile Include="Domain\VnsDmQuocGia.generated.cs" />
+    <Compile Include="Domain\VnsDoanCongTac.cs" />
+    <Compile Include="Domain\VnsDoanCongTac.generated.cs" />
+    <Compile Include="Domain\VnsDonVi.cs" />
+    <Compile Include="Domain\VnsDonVi.generated.cs" />
+    <Compile Include="Domain\VnsDuToanDoan.cs" />
+    <Compile Include="Domain\VnsDuToanDoan.generated.cs" />
+    <Compile Include="Domain\VnsGiaoDich.cs" />
+    <Compile Include="Domain\VnsGiaoDich.generated.cs" />
+    <Compile Include="Domain\VnsLichCongTac.cs" />
+    <Compile Include="Domain\VnsLichCongTac.generated.cs" />
+    <Compile Include="Domain\VnsLoaiChungTu.cs" />
+    <Compile Include="Domain\VnsLoaiChungTu.generated.cs" />
+    <Compile Include="Domain\VnsLoaiDoanRa.cs" />
+    <Compile Include="Domain\VnsLoaiDoanRa.generated.cs" />
+    <Compile Include="Domain\VnsNghiepVu.cs" />
+    <Compile Include="Domain\VnsNghiepVu.generated.cs" />
+    <Compile Include="Domain\VnsQuyetToanDoan.cs" />
+    <Compile Include="Domain\VnsQuyetToanDoan.generated.cs" />
+    <Compile Include="Domain\VnsThanhVien.cs" />
+    <Compile Include="Domain\VnsThanhVien.generated.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\Interface\IVnsNgoaiTeService.cs" />
+    <Compile Include="Service\Interface\Report\IReportService.cs" />
+    <Compile Include="Service\Report\ReportService.cs" />
+    <Compile Include="Service\Report\ReportService.Dung.cs" />
+    <Compile Include="Service\VnsNgoaiTeService.cs" />
+    <Compile Include="Service\VnsSoDuCuoiKyService.cs" />
+    <Compile Include="Service\Interface\IVnsSoDuCuoiKyService.cs" />
+    <Compile Include="Service\Interface\IVnsDmKhachHangService.cs" />
+    <Compile Include="Service\Interface\IVnsDuLuongDauKyService.cs" />
+    <Compile Include="Service\VnsDmKhachHangService.cs" />
+    <Compile Include="Service\InfoService.cs" />
+    <Compile Include="Service\Interface\IInfoService.cs" />
+    <Compile Include="Service\Interface\IVnsHtSoCtMaxService.cs" />
+    <Compile Include="Service\Interface\Report\IRP_BC05DRService.cs" />
+    <Compile Include="Service\Interface\Report\IRP_BangKeQTService.cs" />
+    <Compile Include="Service\Interface\Report\IRP_BC03DRService.cs" />
+    <Compile Include="Service\Interface\Report\IRP_BC04DRService.cs" />
+    <Compile Include="Service\Interface\Report\IRP_SoDuService.cs" />
+    <Compile Include="Service\Interface\Report\IRP_BC06DRService.cs" />
+    <Compile Include="Service\Interface\Report\IRP_SoDuTaiKhoanService.cs" />
+    <Compile Include="Service\Report\RP_BC05DRService.cs" />
+    <Compile Include="Service\Report\RP_BangKeQTService.cs" />
+    <Compile Include="Service\Report\RP_BC03DRService.cs" />
+    <Compile Include="Service\Report\RP_BC04DRService.cs" />
+    <Compile Include="Service\Report\RP_BC06DRService.cs" />
+    <Compile Include="Service\Report\RP_SoDuService.cs" />
+    <Compile Include="Service\Report\RP_SoDuTaiKhoanService.cs" />
+    <Compile Include="Service\VnsDuLuongDauKyService.cs" />
+    <Compile Include="Service\VnsHtSoCtMaxService.cs" />
+    <Compile Include="Service\Interface\IVnsChungTuService.cs" />
+    <Compile Include="Service\Interface\IVnsDanhMucChucVuService.cs" />
+    <Compile Include="Service\Interface\IVnsDinhMucService.cs" />
+    <Compile Include="Service\Interface\IVnsDmHeThongService.cs" />
+    <Compile Include="Service\Interface\IVnsDmMucTieuMucService.cs" />
+    <Compile Include="Service\Interface\IVnsDmQuocGiaService.cs" />
+    <Compile Include="Service\Interface\IVnsDoanCongTacService.cs" />
+    <Compile Include="Service\Interface\IVnsDonViService.cs" />
+    <Compile Include="Service\Interface\IVnsDuToanDoanService.cs" />
+    <Compile Include="Service\Interface\IVnsGiaoDichService.cs" />
+    <Compile Include="Service\Interface\IVnsLichCongTacService.cs" />
+    <Compile Include="Service\Interface\IVnsLoaiChungTuService.cs" />
+    <Compile Include="Service\Interface\IVnsLoaiDoanRaService.cs" />
+    <Compile Include="Service\Interface\IVnsNghiepVuService.cs" />
+    <Compile Include="Service\Interface\IVnsQuyetToanDoanService.cs" />
+    <Compile Include="Service\Interface\IVnsThanhVienService.cs" />
+    <Compile Include="Service\VnsChungTuService.cs" />
+    <Compile Include="Service\VnsDanhMucChucVuService.cs" />
+    <Compile Include="Service\VnsDinhMucService.cs" />
+    <Compile Include="Service\VnsDmHeThongService.cs" />
+    <Compile Include="Service\VnsDmMucTieuMucService.cs" />
+    <Compile Include="Service\VnsDmQuocGiaService.cs" />
+    <Compile Include="Service\VnsDoanCongTacService.cs" />
+    <Compile Include="Service\VnsDonViService.cs" />
+    <Compile Include="Service\VnsDuToanDoanService.cs" />
+    <Compile Include="Service\VnsGiaoDichService.cs" />
+    <Compile Include="Service\VnsLichCongTacService.cs" />
+    <Compile Include="Service\VnsLoaiChungTuService.cs" />
+    <Compile Include="Service\VnsLoaiDoanRaService.cs" />
+    <Compile Include="Service\VnsNghiepVuService.cs" />
+    <Compile Include="Service\VnsQuyetToanDoanService.cs" />
+    <Compile Include="Service\VnsThanhVienService.cs" />
+    <Compile Include="VnsConvert.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\VnsChungTu.hbm.xml" />
+    <EmbeddedResource Include="Resource\VnsDinhMuc.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\VnsDmMucTieuMuc.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\VnsDmQuocGia.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\VnsDoanCongTac.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\VnsDuToanDoan.hbm.xml" />
+    <EmbeddedResource Include="Resource\VnsGiaoDich.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\VnsLichCongTac.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\VnsLoaiDoanRa.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\VnsQuyetToanDoan.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\VnsThanhVien.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\VnsDmHeThong.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\VnsLoaiChungTu.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\VnsNghiepVu.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\VnsDanhMucChucVu.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\VnsDonVi.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\VnsHtSoCtMax.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\Info.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\VnsDmKhachHang.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\VnsDuLuongDauKy.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\VnsSoDuCuoiKy.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\VnsNgoaiTe.hbm.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

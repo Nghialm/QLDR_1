@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Vns.QuanLyDoanRa.Domain.VnsHtSoCtMax,Vns.QuanLyDoanRa" table="VnsHtSoCtMax" lazy="false">
+
+		<id name="Id" column="Id" type="Guid">
+			<generator class="guid"/>
+		</id>
+		<property column="LoaichungtuId" type="Guid" name="LoaichungtuId" />
+		<property column="SoChungtuMax" type="Int32" name="SoChungtuMax" />
+		<property column="Thang" type="Int32" name="Thang" />
+		<property column="Nam" type="Int32" name="Nam" />
+		
+	</class>
+</hibernate-mapping>

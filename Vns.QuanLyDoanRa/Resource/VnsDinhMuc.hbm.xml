@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Vns.QuanLyDoanRa.Domain.VnsDinhMuc,Vns.QuanLyDoanRa" table="VnsDinhMuc" lazy="false">
+
+		<id name="Id" column="DinhMucId" type="Guid">
+			<generator class="guid"/>
+		</id>
+		<property column="NgayApDung" type="DateTime" name="NgayApDung" not-null="true" />
+		<property column="NhomNuoc" type="Int32" name="NhomNuoc" not-null="true" />
+		<property column="LoaiCapVu" type="Int32" name="LoaiCapVu" not-null="true" />
+		<property column="MucId" type="Guid" name="MucId" not-null="true" />
+		<property column="DinhMuc" type="Decimal" name="DinhMuc" not-null="true" />
+		<property column="NuocId" type="String" name="NuocId" length="32" />
+    <property column="CachTinh" type="Int32" name="CachTinh" />
+    <property column="DienGiai" type="String" name="DienGiai" length="256" />
+    <property column="ThuTu" type="Int32" name="ThuTu" not-null="true" />
+    <many-to-one column="MucId" name="Muc" class="Vns.QuanLyDoanRa.Domain.VnsDmMucTieuMuc"  not-found="ignore" insert="false" update="false" lazy="false"/>
+    
+    <!--
+    <many-to-one column="NuocId" name="Nuoc" class="Vns.QuanLyDoanRa.Domain.VnsDmQuocGia"  not-found="ignore" insert="false" update="false" lazy="false"/>
+    -->
+	</class>
+</hibernate-mapping>

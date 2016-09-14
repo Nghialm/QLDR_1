@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Vns.QuanLyDoanRa.Domain.VnsLoaiDoanRa,Vns.QuanLyDoanRa" table="VnsLoaiDoanRa" lazy="false">
+
+		<id name="Id" column="LoaiDoanRaId" type="Guid">
+			<generator class="guid"/>
+		</id>
+		<property column="MaLoaiDoanRa" type="String" name="MaLoaiDoanRa" not-null="true" length="32" />
+		<property column="TenLoaiDoanRa" type="String" name="TenLoaiDoanRa" length="128" />
+		
+	</class>
+</hibernate-mapping>

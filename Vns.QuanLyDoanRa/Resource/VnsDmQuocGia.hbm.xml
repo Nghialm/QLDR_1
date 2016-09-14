@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Vns.QuanLyDoanRa.Domain.VnsDmQuocGia,Vns.QuanLyDoanRa" table="VnsDmQuocGia" lazy="false">
+
+		<id name="Id" column="NuocId" type="Guid">
+			<generator class="guid"/>
+		</id>
+		<property column="MaNuoc" type="String" name="MaNuoc" not-null="true" length="32" />
+		<property column="TenNuoc" type="String" name="TenNuoc" not-null="true" length="128" />
+		<property column="PhanLoai" type="Int32" name="PhanLoai" not-null="true" />
+   <!-- 
+   <bag name="DinhMuc" table="VnsDinhMuc" inverse="false" cascade="all-delete-orphan" lazy="true">
+      <key column="NuocId"/>
+      <one-to-many class="SpringSample.Core.Domain.VnsDinhMuc" not-found="ignore"/>
+    </bag>
+    -->
+	</class>
+</hibernate-mapping>

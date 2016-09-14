@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:tx="http://www.springframework.net/tx">
+
+  <!-- Referenced by main application context configuration file -->
+
+  <description>
+    The Northwind service layer definitions
+  </description>
+
+  <!-- Property placeholder configurer for database settings -->
+  <object id="VnsChungTuService" type="Vns.QuanLyDoanRa.Service.VnsChungTuService, Vns.QuanLyDoanRa">
+    <property name="VnsChungTuDao" ref="VnsChungTuDao"/>
+    <property name="VnsGiaoDichDao" ref="VnsGiaoDichDao"/>
+  </object>
+  <object id="VnsDanhMucChucVuService" type="Vns.QuanLyDoanRa.Service.VnsDanhMucChucVuService, Vns.QuanLyDoanRa">
+    <property name="VnsDanhMucChucVuDao" ref="VnsDanhMucChucVuDao"/>
+  </object>
+  <object id="VnsDonViService" type="Vns.QuanLyDoanRa.Service.VnsDonViService, Vns.QuanLyDoanRa">
+    <property name="VnsDonViDao" ref="VnsDonViDao"/>
+  </object>
+  <object id="VnsDinhMucService" type="Vns.QuanLyDoanRa.Service.VnsDinhMucService, Vns.QuanLyDoanRa">
+    <property name="VnsDinhMucDao" ref="VnsDinhMucDao"/>
+  </object>
+  <object id="VnsDmMucTieuMucService" type="Vns.QuanLyDoanRa.Service.VnsDmMucTieuMucService, Vns.QuanLyDoanRa">
+    <property name="VnsDmMucTieuMucDao" ref="VnsDmMucTieuMucDao"/>
+  </object>
+  <object id="VnsDmQuocGiaService" type="Vns.QuanLyDoanRa.Service.VnsDmQuocGiaService, Vns.QuanLyDoanRa">
+    <property name="VnsDmQuocGiaDao" ref="VnsDmQuocGiaDao"/>
+  </object>
+  <object id="VnsDoanCongTacService" type="Vns.QuanLyDoanRa.Service.VnsDoanCongTacService, Vns.QuanLyDoanRa">
+    <property name="VnsDoanCongTacDao" ref="VnsDoanCongTacDao"/>
+    <property name="VnsGiaoDichDao" ref="VnsGiaoDichDao"/>
+    <property name="VnsChungTuDao" ref="VnsChungTuDao"/>
+    <property name="VnsDuToanDoanDao" ref="VnsDuToanDoanDao"/>
+    <property name="VnsQuyetToanDoanDao" ref="VnsQuyetToanDoanDao"/>
+    <property name="VnsLichCongTacDao" ref="VnsLichCongTacDao"/>
+    <property name="VnsThanhVienDao" ref="VnsThanhVienDao"/>
+  </object>
+  <object id="VnsDuToanDoanService" type="Vns.QuanLyDoanRa.Service.VnsDuToanDoanService, Vns.QuanLyDoanRa">
+    <property name="VnsDuToanDoanDao" ref="VnsDuToanDoanDao"/>
+    <property name="VnsThanhVienDao" ref="VnsThanhVienDao"/>
+    <property name="VnsLichCongTacDao" ref="VnsLichCongTacDao"/>
+    <property name="VnsDinhMucDao" ref="VnsDinhMucDao"/>
+    <property name="VnsDanhMucChucVuDao" ref="VnsDanhMucChucVuDao"/>
+  </object>
+  <object id="VnsGiaoDichService" type="Vns.QuanLyDoanRa.Service.VnsGiaoDichService, Vns.QuanLyDoanRa">
+    <property name="VnsGiaoDichDao" ref="VnsGiaoDichDao"/>
+    <property name="VnsChungTuDao" ref="VnsChungTuDao"/>
+    <property name="VnsDoanCongTacDao" ref="VnsDoanCongTacDao"/>
+    <property name="VnsDmQuocGiaDao" ref="VnsDmQuocGiaDao"/>
+    <property name="VnsLoaiDoanRaDao" ref="VnsLoaiDoanRaDao"/>
+    <property name="VnsDmMucTieuMucDao" ref="VnsDmMucTieuMucDao"/>
+    <!--<property name="RP_BC04DRDao" ref="RP_BC04DRDao"/>-->
+    <property name="VnsDanhMucChucVuDao" ref="VnsDanhMucChucVuDao"/>
+    <property name="ReportDao" ref="ReportDao"/>
+    <property name="VnsDuToanDoanDao" ref="VnsDuToanDoanDao"/>
+
+  </object>
+  <object id="VnsLichCongTacService" type="Vns.QuanLyDoanRa.Service.VnsLichCongTacService, Vns.QuanLyDoanRa">
+    <property name="VnsLichCongTacDao" ref="VnsLichCongTacDao"/>
+  </object>
+  <object id="VnsLoaiDoanRaService" type="Vns.QuanLyDoanRa.Service.VnsLoaiDoanRaService, Vns.QuanLyDoanRa">
+    <property name="VnsLoaiDoanRaDao" ref="VnsLoaiDoanRaDao"/>
+  </object>
+  <object id="VnsQuyetToanDoanService" type="Vns.QuanLyDoanRa.Service.VnsQuyetToanDoanService, Vns.QuanLyDoanRa">
+    <property name="VnsQuyetToanDoanDao" ref="VnsQuyetToanDoanDao"/>
+    <property name="VnsDoanCongTacDao" ref="VnsDoanCongTacDao"/>
+    <property name="VnsChungTuDao" ref="VnsChungTuDao"/>
+    <property name="VnsGiaoDichDao" ref="VnsGiaoDichDao"/>
+    <property name="VnsNghiepVuDao" ref="VnsNghiepVuDao"/>
+  </object>
+
+  <object id="VnsDmKhachHangService" type="Vns.QuanLyDoanRa.Service.VnsDmKhachHangService, Vns.QuanLyDoanRa">
+    <property name="VnsDmKhachHangDao" ref="VnsDmKhachHangDao"/>
+  </object>
+
+  <object id="VnsThanhVienService" type="Vns.QuanLyDoanRa.Service.VnsThanhVienService, Vns.QuanLyDoanRa">
+    <property name="VnsThanhVienDao" ref="VnsThanhVienDao"/>
+  </object>
+  <object id="VnsDmHeThongService" type="Vns.QuanLyDoanRa.Service.VnsDmHeThongService, Vns.QuanLyDoanRa">
+    <property name="VnsDmHeThongDao" ref="VnsDmHeThongDao"/>
+  </object>
+  <object id="VnsNghiepVuService" type="Vns.QuanLyDoanRa.Service.VnsNghiepVuService, Vns.QuanLyDoanRa">
+    <property name="VnsNghiepVuDao" ref="VnsNghiepVuDao"/>
+  </object>
+  <object id="VnsLoaiChungTuService" type="Vns.QuanLyDoanRa.Service.VnsLoaiChungTuService, Vns.QuanLyDoanRa">
+    <property name="VnsLoaiChungTuDao" ref="VnsLoaiChungTuDao"/>
+    <property name="VnsHtSoCtMaxDao" ref="VnsHtSoCtMaxDao"/>
+  </object>
+
+  <object id="VnsDuLuongDauKyService" type="Vns.QuanLyDoanRa.Service.VnsDuLuongDauKyService, Vns.QuanLyDoanRa">
+    <property name="VnsDuLuongDauKyDao" ref="VnsDuLuongDauKyDao"/>
+    <property name="VnsGiaoDichDao" ref="VnsGiaoDichDao"/>
+    <property name="VnsSoDuCuoiKyDao" ref="VnsSoDuCuoiKyDao"/>
+    <property name="ReportDao" ref="ReportDao"/>
+  </object>
+
+  <object id="InfoService" type="Vns.QuanLyDoanRa.Service.InfoService, Vns.QuanLyDoanRa">
+    <property name="InfoDao" ref="InfoDao"/>
+  </object>
+
+  <object id="VnsNgoaiTeService" type="Vns.QuanLyDoanRa.Service.VnsNgoaiTeService, Vns.QuanLyDoanRa">
+    <property name="VnsNgoaiTeDao" ref="VnsNgoaiTeDao"/>
+  </object>
+  <!--<object id="VnsLoaiChungTuService" type="Vns.QuanLyDoanRa.Service.VnsLoaiChungTuService, Vns.QuanLyDoanRa">
+    <property name="VnsHtSoCtMaxDao" ref="VnsHtSoCtMaxDao"/>
+  </object>-->
+
+  <!--report-->
+  <object id="RP_BC03DRService" type="Vns.QuanLyDoanRa.Service.Report.RP_BC03DRService, Vns.QuanLyDoanRa">
+    <property name="VnsDuToanDoanDao" ref="VnsDuToanDoanDao"/>
+    <property name="VnsGiaoDichDao" ref="VnsGiaoDichDao"/>
+    <property name="VnsDoanCongTacDao" ref="VnsDoanCongTacDao"/>
+    <property name="VnsChungTuDao" ref="VnsChungTuDao"/>
+    <property name="VnsLichCongTacDao" ref="VnsLichCongTacDao"/>
+  </object>
+
+  <object id="RP_BC04DRService" type="Vns.QuanLyDoanRa.Service.Report.RP_BC04DRService, Vns.QuanLyDoanRa">
+    <!--<property name="RP_BC04DRDao" ref="RP_BC04DRDao"/>-->
+    <property name="VnsDoanCongTacDao" ref="VnsDoanCongTacDao"/>
+    <property name="ReportDao" ref="ReportDao"/>
+    <!--<property name="VnsGiaoDichDao" ref="VnsGiaoDichDao"/>
+    <property name="VnsDoanCongTacDao" ref="VnsDoanCongTacDao"/>-->
+  </object>
+
+  <object id="RP_BC05DRService" type="Vns.QuanLyDoanRa.Service.Report.RP_BC05DRService, Vns.QuanLyDoanRa">
+    <property name="ReportDao" ref="ReportDao"/>
+    <property name="RP_SoDuDao" ref="RP_SoDuDao"/>
+    <property name="VnsLoaiDoanRaDao" ref="VnsLoaiDoanRaDao"/>
+  </object>
+
+  <object id="RP_BC06DRService" type="Vns.QuanLyDoanRa.Service.Report.RP_BC06DRService, Vns.QuanLyDoanRa">
+    <property name="RP_SoDuDao" ref="RP_SoDuDao"/>
+    <property name="VnsDoanCongTacDao" ref="VnsDoanCongTacDao"/>
+    <property name="VnsLichCongTacDao" ref="VnsLichCongTacDao"/>
+  </object>
+
+  <object id="RP_BangKeQTService" type="Vns.QuanLyDoanRa.Service.Report.RP_BangKeQTService, Vns.QuanLyDoanRa">
+    <!--<property name="RP_BC04DRDao" ref="RP_BC04DRDao"/>-->
+    <property name="VnsLoaiDoanRaDao" ref="VnsLoaiDoanRaDao"/>
+    <property name="ReportDao" ref="ReportDao"/>
+    <!--<property name="VnsDoanCongTacDao" ref="VnsDoanCongTacDao"/>-->
+  </object>
+
+  <object id="RP_SoDuTaiKhoanService" type="Vns.QuanLyDoanRa.Service.Report.RP_SoDuTaiKhoanService, Vns.QuanLyDoanRa">
+
+    <property name="RP_SoDuTaiKhoanDao" ref="RP_SoDuTaiKhoanDao"/>
+    <property name="VnsLoaiDoanRaDao" ref="VnsLoaiDoanRaDao"/>
+  </object>
+
+  <object id="VnsSoDuCuoiKyService" type="Vns.QuanLyDoanRa.Service.VnsSoDuCuoiKyService, Vns.QuanLyDoanRa">
+    <property name="VnsSoDuCuoiKyDao" ref="VnsSoDuCuoiKyDao"/>
+  </object>
+
+  <object id="ReportService" type="Vns.QuanLyDoanRa.Service.Report.ReportService, Vns.QuanLyDoanRa">
+    <property name="VnsDoanCongTacDao" ref="VnsDoanCongTacDao"/>
+    <property name="VnsLichCongTacDao" ref="VnsLichCongTacDao"/>
+    <property name="VnsGiaoDichDao" ref="VnsGiaoDichDao"/>
+    <property name="ReportDao" ref="ReportDao"/>
+    <property name="VnsLoaiDoanRaDao" ref="VnsLoaiDoanRaDao"/>
+    <property name ="RP_SoDuTaiKhoanDao" ref ="RP_SoDuTaiKhoanDao"/>
+  </object>
+</objects>

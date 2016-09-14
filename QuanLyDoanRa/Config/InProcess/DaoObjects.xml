@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:db="http://www.springframework.net/database">
+
+  <object id="HibernateTemplate" type="Spring.Data.NHibernate.Generic.HibernateTemplate">
+    <property name="SessionFactory" ref="NHibernateSessionFactory" />
+    <property name="TemplateFlushMode" value="Auto" />
+    <property name="CacheQueries" value="true" />
+  </object>
+  <!--Copy Here-->
+  <!-- Data Access Objects -->
+  <object id="VnsChungTuDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.VnsChungTuDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="VnsDinhMucDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.VnsDinhMucDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="VnsDanhMucChucVuDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.VnsDanhMucChucVuDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="VnsDonViDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.VnsDonViDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="VnsDmMucTieuMucDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.VnsDmMucTieuMucDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="VnsDmQuocGiaDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.VnsDmQuocGiaDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="VnsDoanCongTacDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.VnsDoanCongTacDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="VnsDuToanDoanDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.VnsDuToanDoanDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="VnsGiaoDichDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.VnsGiaoDichDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+
+  <object id="VnsDmKhachHangDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.VnsDmKhachHangDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  
+  <object id="VnsLichCongTacDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.VnsLichCongTacDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="VnsLoaiDoanRaDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.VnsLoaiDoanRaDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="VnsQuyetToanDoanDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.VnsQuyetToanDoanDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="VnsThanhVienDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.VnsThanhVienDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="VnsDmHeThongDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.VnsDmHeThongDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="VnsNghiepVuDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.VnsNghiepVuDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="VnsLoaiChungTuDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.VnsLoaiChungTuDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+
+  <object id="InfoDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.InfoDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+
+  <object id="VnsHtSoCtMaxDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.VnsHtSoCtMaxDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+
+  <object id="VnsDuLuongDauKyDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.VnsDuLuongDauKyDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+
+  <object id="VnsNgoaiTeDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.VnsNgoaiTeDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+
+  <object id="VnsSoDuCuoiKyDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.VnsSoDuCuoiKyDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+
+  <!--<object id="RP_BC04DRDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.RP_BC04DRDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>-->
+
+  <object id="ReportDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.ReportDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  
+  <object id="RP_SoDuDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.RP_SoDuDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+
+  <object id="RP_SoDuTaiKhoanDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.RP_SoDuTaiKhoanDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>  
+  
+  <!-- ASP Membership-->
+  <object id="MembershipUserDao" type="Vns.Erp.Security.Dao.NHibernate.MembershipUserDao, Vns.Erp.Security">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="UsersDao" type="Vns.Erp.Security.Dao.NHibernate.UsersDao, Vns.Erp.Security">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="MembersDao" type="Vns.Erp.Security.Dao.NHibernate.MembersDao, Vns.Erp.Security">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="RolesDao" type="Vns.Erp.Security.Dao.NHibernate.RolesDao, Vns.Erp.Security">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <object id="UsersInRolesDao" type="Vns.Erp.Security.Dao.NHibernate.UsersInRolesDao, Vns.Erp.Security">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+  <!--End ASP Membership-->
+  
+</objects>

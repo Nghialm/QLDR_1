@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Vns.QuanLyDoanRa.Domain.VnsQuyetToanDoan,Vns.QuanLyDoanRa" table="VnsQuyetToanDoan" lazy="false">
+
+		<id name="Id" column="QuyetToanId" type="Guid">
+			<generator class="guid"/>
+		</id>
+		<property column="LichCongTacId" type="Guid" name="LichCongTacId" not-null="true" />
+		<property column="CongTacId" type="Guid" name="CongTacId" not-null="true" />
+		<property column="MucId" type="Guid" name="MucId" not-null="true" />
+		<property column="TenKhoanChi" type="String" name="TenKhoanChi" length="256" />
+		<property column="SoTien" type="Decimal" name="SoTien" />
+		<property column="DienGiai" type="String" name="DienGiai" length="512" />
+		<property column="NgayCt" type="DateTime" name="NgayCt" />
+		<property column="NgayHt" type="DateTime" name="NgayHt" />
+		<property column="TkId" type="Guid" name="TkId"/>
+		<property column="ChungTuId" type="Guid" name="ChungTuId"/>
+		<property column="MaTk" type="String" name="MaTk" length="32" />
+		<property column="TenTk" type="String" name="TenTk" length="128" />
+		<property column="TyGia" type="Decimal" name="TyGia" />
+		<property column="SoTienVND" type="Decimal" name="SoTienVND" />
+		<property column="LanQuyetToan" type="Decimal" name="LanQuyetToan" />
+    <property column="NgoaiTeId" type="Guid" name="NgoaiTeId" />
+		<many-to-one name="objMucTieuMuc" column="MucId" class="Vns.QuanLyDoanRa.Domain.VnsDmMucTieuMuc" insert="false" update="false" not-found="ignore" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Vns.QuanLyDoanRa.Domain.VnsChungTu,Vns.QuanLyDoanRa" table="VnsChungTu" lazy="false">
+
+		<id name="Id" column="ChungTuId" type="Guid">
+			<generator class="guid"/>
+		</id>
+		<property column="NgayCt" type="DateTime" name="NgayCt" />
+		<property column="NgayHt" type="DateTime" name="NgayHt" />
+		<property column="SoCt" type="String" name="SoCt" length="32" />
+		<property column="LoaiChungTutId" type="Guid" name="LoaiChungTutId" />
+		<property column="MaLoaiChungTu" type="String" name="MaLoaiChungTu" length="32" />
+		<property column="NoiDung" type="String" name="NoiDung" length="512" />
+    <property column="NguoiLapPhieu" type="String" name="NguoiLapPhieu" length="128" />
+    <property column="NguoiGiaoDich" type="String" name="NguoiGiaoDich" length="128" />
+    <property column="DiaChi" type="String" name="DiaChi" length="512" />
+    <property column="TrangThai" type="Int32" name="TrangThai"/>
+    <property column="NhomCt" type="String" name="NhomCt" length="32" />
+    <property column="NguoiGiaoDichVietTat" type="String" name="NguoiGiaoDichVietTat" length="255" />
+    
+    <bag name="LstGiaoDich" cascade="delete-orphan" table="VnsGiaoDich" inverse="false" lazy="false">
+      <key column="ChungTuId"></key>
+      <one-to-many class="Vns.QuanLyDoanRa.Domain.VnsGiaoDich" not-found="ignore"/>
+    </bag>
+    
+	</class>
+</hibernate-mapping>

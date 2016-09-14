@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Vns.QuanLyDoanRa.Domain.VnsDmKhachHang,Vns.QuanLyDoanRa" table="VnsDmKhachHang" lazy="false">
+
+		<id name="Id" column="KhachhangId" type="Guid">
+			<generator class="guid"/>
+		</id>
+		<property column="TenKhachHang" type="String" name="TenKhachHang"/>
+		<property column="MaDvqhns" type="String" name="MaDvqhns"/>
+		<property column="DiaChi" type="String" name="DiaChi"/>
+    <property column="SoTaiKhoan" type="String" name="SoTaiKhoan"/>
+    <property column="MaCTMT" type="String" name="MaCTMT"/>
+    <property column="GhiChu1" type="String" name="GhiChu1"/>
+    <property column="GhiChu2" type="String" name="GhiChu2"/>
+    <property column="MaKhachHang" type="String" name="MaKhachHang"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Vns.QuanLyDoanRa.Domain.VnsDoanCongTac,Vns.QuanLyDoanRa" table="VnsDoanCongTac" lazy="false">
+
+		<id name="Id" column="CongTacId" type="Guid">
+			<generator class="assigned"/>
+		</id>
+    <property column="IdBanDau" type="Guid" name="IdBanDau" />
+    <property column="LanQuyetToan" type="Int32" name="LanQuyetToan" />
+		<property column="TruongDoan" type="String" name="TruongDoan" length="128" />
+		<property column="Ten" type="String" name="Ten" length="128" />
+		<property column="MoTa" type="String" name="MoTa" length="512" />
+		<property column="NgayDi" type="DateTime" name="NgayDi" />
+		<property column="NgayVe" type="DateTime" name="NgayVe" />
+		<property column="TrangThai" type="Int32" name="TrangThai" not-null="true" />
+		<property column="ChucVuTruongDoanId" type="Guid" name="ChucVuTruongDoanId" />
+		<property column="DonViId" type="Guid" name="DonViId" />
+		<property column="LoaiDoanRaId" type="Guid" name="LoaiDoanRaId" not-null="true" />
+		<property column="ChungTuId" type="Guid" name="ChungTuId" />
+		<property column="NgayQuyetToan" type="DateTime" name="NgayQuyetToan" />
+		<property column="SoTbDuToan" type="String" name="SoTbDuToan" length="128" />
+		<property column="NgayIn" type="DateTime" name="NgayIn" />
+		<property column="NgayCanCu" type="DateTime" name="NgayCanCu" />
+		<property column="CanCuCongVan" type="String" name="CanCuCongVan" length="512" />
+		<property column="SoCanCuHoSo" type="String" name="SoCanCuHoSo" length="512" />
+		<property column="TenTruongDoan" type="String" name="TenTruongDoan" length="255" />
+		<property column="SoThongBaoDuToan" type="String" name="SoThongBaoDuToan" length="255" />
+		<property column="SoThongBaoQuyetToan" type="String" name="SoThongBaoQuyetToan" length="255" />
+		<property column="TenVietTat" type="String" name="TenVietTat" length="255" />
+		<property column="NguoiGiaoDich" type="String" name="NguoiGiaoDich" length="255" />
+		<property column="NguoiGiaoDichVietTat" type="String" name="NguoiGiaoDichVietTat" length="255" />
+		<property column="NgayDuyetDuToan" type="DateTime" name="NgayDuyetDuToan"/>
+
+
+		<many-to-one name="LoaiDoanRa" column="LoaiDoanRaId" class="Vns.QuanLyDoanRa.Domain.VnsLoaiDoanRa" insert="false" update="false" lazy="false" not-found="ignore" />
+		<bag name="DanhSachLichCongTac" cascade="all-delete-orphan" table="VnsLichCongTac" inverse="false" lazy="false">
+			<key column="CongTacId"></key>
+			<one-to-many class="Vns.QuanLyDoanRa.Domain.VnsLichCongTac" not-found="ignore"/>
+		</bag>
+		<bag name="DanhSachThanhVien" cascade="all-delete-orphan" table="VnsLichCongTac" inverse="false" lazy="false">
+			<key column="CongTacId"></key>
+			<one-to-many class="Vns.QuanLyDoanRa.Domain.VnsThanhVien" not-found="ignore"/>
+		</bag>
+		<bag name="DanhSachDuToanDoan" cascade="none" table="VnsDuToanDoan" lazy="false">
+			<key column="CongTacId"></key>
+			<one-to-many class="Vns.QuanLyDoanRa.Domain.VnsDuToanDoan" not-found="ignore"/>
+		</bag>
+		<bag name="DanhSachQuyetToanDoan" cascade="all-delete-orphan" table="VnsQuyetToanDoan" inverse="false" lazy="false">
+			<key column="CongTacId"></key>
+			<one-to-many class="Vns.QuanLyDoanRa.Domain.VnsQuyetToanDoan" not-found="ignore"/>
+		</bag>
+	</class>
+</hibernate-mapping>

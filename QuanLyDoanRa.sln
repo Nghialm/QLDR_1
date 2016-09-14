@@ -1,0 +1,107 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyDoanRa", "QuanLyDoanRa\QuanLyDoanRa.csproj", "{E155553D-5720-497B-B5E3-0635FA3B3FD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vns.QuanLyDoanRa", "Vns.QuanLyDoanRa\Vns.QuanLyDoanRa.csproj", "{905C5649-9DA2-4881-A37F-C5F350079F44}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{ABD8F532-5447-4C4C-A5BE-CDA406DAA113}"
+	ProjectSection(SolutionItems) = preProject
+		References\Common.Logging.dll = References\Common.Logging.dll
+		References\Common.Logging.Log4Net.dll = References\Common.Logging.Log4Net.dll
+		References\DevComponents.DotNetBar2.dll = References\DevComponents.DotNetBar2.dll
+		References\DevExpress.BonusSkins.v10.2.dll = References\DevExpress.BonusSkins.v10.2.dll
+		References\DevExpress.Data.v10.2.dll = References\DevExpress.Data.v10.2.dll
+		References\DevExpress.OfficeSkins.v10.2.dll = References\DevExpress.OfficeSkins.v10.2.dll
+		References\DevExpress.Utils.v10.2.dll = References\DevExpress.Utils.v10.2.dll
+		References\DevExpress.Xpo.v10.2.Design.dll = References\DevExpress.Xpo.v10.2.Design.dll
+		References\DevExpress.XtraBars.v10.2.Design.dll = References\DevExpress.XtraBars.v10.2.Design.dll
+		References\DevExpress.XtraBars.v10.2.dll = References\DevExpress.XtraBars.v10.2.dll
+		References\DevExpress.XtraEditors.v10.2.dll = References\DevExpress.XtraEditors.v10.2.dll
+		References\DevExpress.XtraGrid.v10.2.Design.dll = References\DevExpress.XtraGrid.v10.2.Design.dll
+		References\DevExpress.XtraGrid.v10.2.dll = References\DevExpress.XtraGrid.v10.2.dll
+		References\DevExpress.XtraLayout.v10.2.Design.dll = References\DevExpress.XtraLayout.v10.2.Design.dll
+		References\DevExpress.XtraLayout.v10.2.dll = References\DevExpress.XtraLayout.v10.2.dll
+		References\DevExpress.XtraNavBar.v10.2.Design.dll = References\DevExpress.XtraNavBar.v10.2.Design.dll
+		References\DevExpress.XtraNavBar.v10.2.dll = References\DevExpress.XtraNavBar.v10.2.dll
+		References\DevExpress.XtraPrinting.v10.2.Design.dll = References\DevExpress.XtraPrinting.v10.2.Design.dll
+		References\DevExpress.XtraPrinting.v10.2.dll = References\DevExpress.XtraPrinting.v10.2.dll
+		References\DevExpress.XtraReports.v10.2.dll = References\DevExpress.XtraReports.v10.2.dll
+		References\DevExpress.XtraRichEdit.v10.2.Design.dll = References\DevExpress.XtraRichEdit.v10.2.Design.dll
+		References\DevExpress.XtraRichEdit.v10.2.dll = References\DevExpress.XtraRichEdit.v10.2.dll
+		References\DevExpress.XtraRichEdit.v10.2.Extensions.dll = References\DevExpress.XtraRichEdit.v10.2.Extensions.dll
+		References\DevExpress.XtraScheduler.v10.2.Core.dll = References\DevExpress.XtraScheduler.v10.2.Core.dll
+		References\DevExpress.XtraScheduler.v10.2.Design.dll = References\DevExpress.XtraScheduler.v10.2.Design.dll
+		References\DevExpress.XtraScheduler.v10.2.dll = References\DevExpress.XtraScheduler.v10.2.dll
+		References\DevExpress.XtraTreeList.v10.2.Design.dll = References\DevExpress.XtraTreeList.v10.2.Design.dll
+		References\DevExpress.XtraTreeList.v10.2.dll = References\DevExpress.XtraTreeList.v10.2.dll
+		References\DevExpress.XtraVerticalGrid.v10.2.Design.dll = References\DevExpress.XtraVerticalGrid.v10.2.Design.dll
+		References\DevExpress.XtraVerticalGrid.v10.2.dll = References\DevExpress.XtraVerticalGrid.v10.2.dll
+		References\Iesi.Collections.dll = References\Iesi.Collections.dll
+		References\Ionic.Zlib.dll = References\Ionic.Zlib.dll
+		References\LoadingCircle.dll = References\LoadingCircle.dll
+		References\log4net.dll = References\log4net.dll
+		References\Microsoft.Office.Interop.Word.dll = References\Microsoft.Office.Interop.Word.dll
+		C:\Program Files (x86)\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.ConnectionInfo.dll = C:\Program Files (x86)\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.ConnectionInfo.dll
+		C:\Program Files (x86)\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.Smo.dll = C:\Program Files (x86)\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.Smo.dll
+		References\NHibernate.dll = References\NHibernate.dll
+		References\Nullables.dll = References\Nullables.dll
+		References\Office.dll = References\Office.dll
+		References\Spring.Aop.dll = References\Spring.Aop.dll
+		References\Spring.Core.dll = References\Spring.Core.dll
+		References\Spring.Data.dll = References\Spring.Data.dll
+		References\Spring.Data.NHibernate32.dll = References\Spring.Data.NHibernate32.dll
+		References\Spring.Services.dll = References\Spring.Services.dll
+		References\Spring.Web.dll = References\Spring.Web.dll
+		..\..\..\..\VKetoan\System.Data.SQLite.dll = ..\..\..\..\VKetoan\System.Data.SQLite.dll
+		References\System.Data.SQLite.dll = References\System.Data.SQLite.dll
+		References\Vns.Core.Admin.Dao.dll = References\Vns.Core.Admin.Dao.dll
+		References\Vns.Erp.Core.Accounting.Domain.dll = References\Vns.Erp.Core.Accounting.Domain.dll
+		References\Vns.Erp.Core.Admin.Domain.dll = References\Vns.Erp.Core.Admin.Domain.dll
+		References\Vns.Erp.Core.Dao.dll = References\Vns.Erp.Core.Dao.dll
+		References\Vns.Erp.Core.Dao.NHibernate.dll = References\Vns.Erp.Core.Dao.NHibernate.dll
+		References\Vns.Erp.Core.dll = References\Vns.Erp.Core.dll
+		References\Vns.Erp.Core.Domain.dll = References\Vns.Erp.Core.Domain.dll
+		References\Vns.Erp.Core.Service.dll = References\Vns.Erp.Core.Service.dll
+		References\Vns.Erp.Security.dll = References\Vns.Erp.Security.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E155553D-5720-497B-B5E3-0635FA3B3FD9}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{E155553D-5720-497B-B5E3-0635FA3B3FD9}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{E155553D-5720-497B-B5E3-0635FA3B3FD9}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{E155553D-5720-497B-B5E3-0635FA3B3FD9}.Debug|x86.ActiveCfg = Debug|x86
+		{E155553D-5720-497B-B5E3-0635FA3B3FD9}.Debug|x86.Build.0 = Debug|x86
+		{E155553D-5720-497B-B5E3-0635FA3B3FD9}.Release|Any CPU.ActiveCfg = Release|x86
+		{E155553D-5720-497B-B5E3-0635FA3B3FD9}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{E155553D-5720-497B-B5E3-0635FA3B3FD9}.Release|Mixed Platforms.Build.0 = Release|x86
+		{E155553D-5720-497B-B5E3-0635FA3B3FD9}.Release|x86.ActiveCfg = Release|x86
+		{E155553D-5720-497B-B5E3-0635FA3B3FD9}.Release|x86.Build.0 = Release|x86
+		{905C5649-9DA2-4881-A37F-C5F350079F44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{905C5649-9DA2-4881-A37F-C5F350079F44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{905C5649-9DA2-4881-A37F-C5F350079F44}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{905C5649-9DA2-4881-A37F-C5F350079F44}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{905C5649-9DA2-4881-A37F-C5F350079F44}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{905C5649-9DA2-4881-A37F-C5F350079F44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{905C5649-9DA2-4881-A37F-C5F350079F44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{905C5649-9DA2-4881-A37F-C5F350079F44}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{905C5649-9DA2-4881-A37F-C5F350079F44}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{905C5649-9DA2-4881-A37F-C5F350079F44}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

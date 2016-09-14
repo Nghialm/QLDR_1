@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <nam_ke_toan_info>
+    <nam_kt>2011</nam_kt>
+  </nam_ke_toan_info>
+	<server_info>
+		<server_name>VUQUANGDUNG-PC\SQLEXPRESS</server_name>
+		<server_database>QuanLyDoanRa</server_database>
+		<data_user>sa</data_user>
+		<server_pass>dungvq89</server_pass>
+	</server_info>
+	
+</config>

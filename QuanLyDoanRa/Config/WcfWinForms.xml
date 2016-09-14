@@ -1,0 +1,1237 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+
+  <description>
+    The Northwind web layer definitions
+  </description>
+  
+  <object id="frmThemSuaXoa" type="Vns.Erp.Core.Admin.VbAdminGUI.frmThemSuaXoa, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="HtFileBaocaoService" ref="HtFileBaocaoService" />
+    <property name="HtBienBaocaoService" ref="HtBienBaocaoService" />
+    <property name="HtBaocaoService" ref="HtBaocaoService" />
+  </object>
+  <object id="frmUserRightList" type="Vns.Erp.Core.Admin.VbAdminGUI.frmUserRightList, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="AppUsersService" ref="AppUsersService" />
+    <property name="AppGroupsService" ref="AppGroupsService" />
+    <property name="AppDvGroupService" ref="AppDvGroupService" />    
+    <property name="DmDonviService" ref="DmDonviService" />
+    <property name="AppDvGroupFormService" ref="AppDvGroupFormService"/>
+    <property name="AppDvGroupUserService" ref="AppDvGroupUserService"/>    
+    <property name="frmUserEdit" ref="frmUserEdit" />    
+    
+  </object>
+  <object id="frmChangePassword" type="Vns.Erp.Core.Admin.VbAdminGUI.frmChangePassword, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="AppUsersService" ref="AppUsersService" />
+  </object>
+  <object id="frmUserEdit" type="Vns.Erp.Core.Admin.VbAdminGUI.frmUserEdit, Vns.Erp.Core.Admin.VbAdminGUI">
+    <property name="AppUserService" ref="AppUsersService" />
+    <property name="AppGroupsService" ref="AppGroupsService" />
+    <property name="DmDonviService" ref="DmDonviService" />
+    <property name="AppDvGroupUserService" ref="AppDvGroupUserService" />
+  </object>
+  <object id="frmGroupEdit" type="Vns.Erp.Core.Admin.VbAdminGUI.frmGroupEdit, Vns.Erp.Core.Admin.VbAdminGUI">
+    <property name="AppGroupsService" ref="AppGroupsService" />
+    <property name="DmDonviService" ref="DmDonviService" />
+    <property name="AppDvGroupService" ref="AppDvGroupService" />
+  </object>
+  <object id="frmLogin" type="Vns.Erp.Core.Admin.VbAdminGUI.frmLogin, Vns.Erp.Core.Admin.VbAdminGUI">
+    <property name="AppUsersService" ref="AppUsersService" />
+    <property name="DmDonviService" ref="DmDonviService" />
+    <property name="AppDvGroupUserService" ref="AppDvGroupUserService" />    
+  </object>
+  
+  <object id="frmDonviBaocao" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDonviBaocao, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="DmDonviService" ref="DmDonviService" />
+    <property name="AppDvBcService" ref="AppDvBcService" />
+    <property name="HtBaocaoService" ref="HtBaocaoService" />
+    <property name="AppDvGroupBcService" ref="AppDvGroupBcService" />
+  </object>
+
+  <object id="frmPermission" type="Vns.Erp.Core.Admin.VbAdminGUI.frmPermission, Vns.Erp.Core.Admin.VbAdminGUI">
+    <property name="AppFormsService" ref="AppFormsService" />
+    <property name="AppGroupFunctionService" ref="AppGroupFunctionService" />
+    <property name="AppGroupFormsService" ref="AppGroupFormsService" />
+    <property name="AppUsersService" ref="AppUsersService" />
+    <property name="AppGroupsService" ref="AppGroupsService" />
+    <property name="AppUgFormService" ref="AppUgFormService" />
+  </object>
+  
+  <object id="frmPopupOfPermission" type="Vns.Erp.Core.Admin.VbAdminGUI.frmPopupOfPermission, Vns.Erp.Core.Admin.VbAdminGUI">
+    <property name="AppGroupsService" ref="AppGroupsService" />
+  </object>
+  
+  <object id="frmPopupOfSetup" type="Vns.Erp.Core.Admin.VbAdminGUI.frmPopupOfSetup, Vns.Erp.Core.Admin.VbAdminGUI">
+    <property name="AppFormsService" ref="AppFormsService" />
+    <property name="AppGroupFormsService" ref="AppGroupFormsService" />
+    <property name="AppGroupFunctionService" ref="AppGroupFunctionService" />
+  </object>
+
+  <object id="frmSetupMenu" type="Vns.Erp.Core.Admin.VbAdminGUI.frmSetupMenu, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="AppFormsService" ref="AppFormsService" />
+    <property name="AppDvFormService" ref="AppDvFormService" />
+    <property name="AppUgFormService" ref="AppUgFormService" />
+    <property name="AppGroupFormsService" ref="AppGroupFormsService" />
+    <property name="AppDvGroupFormService" ref="AppDvGroupFormService" />
+    <property name="AppGroupFunctionService" ref="AppGroupFunctionService" />
+  </object>
+  
+  <object id="frmSetupHMenu" type="Vns.Erp.Core.Admin.VbAdminGUI.frmSetupHMenu, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="AppHGroupFormService" ref="AppHGroupFormService" />
+    <property name="AppHGroupFunctService" ref="AppHGroupFunctService" />
+    <property name="AppGroupFormsService" ref="AppGroupFormsService" />
+    <property name="AppGroupFunctionService" ref="AppGroupFunctionService" />
+    <property name="AppFormsService" ref="AppFormsService" />
+  </object>  
+  <object id="frmDonviGroup" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDonviGroup, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">    
+    <property name="DmDonviService" ref="DmDonviService" />
+    <property name="AppFormsService" ref="AppFormsService" />
+    <property name="AppDvFormService" ref="AppDvFormService" />
+    <property name="AppGroupFormsService" ref="AppGroupFormsService" />
+    <property name="AppDvGroupUserService" ref="AppDvGroupUserService" />
+    <property name="AppDvGroupFormService" ref="AppDvGroupFormService" />
+    <property name="AppGroupFunctionService" ref="AppGroupFunctionService" />
+  </object>
+
+  <object id="frmDonviGroupBaocao" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDonviGroupBaocao, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="AppGroupsService" ref="AppGroupsService" />
+    <property name="DmDonviService" ref="DmDonviService" />
+    <property name="AppDvBcService" ref="AppDvBcService" />
+    <property name="HtBaocaoService" ref="HtBaocaoService" />
+    <property name="AppDvGroupService" ref="AppDvGroupService" />
+    <property name="AppDvGroupBcService" ref="AppDvGroupBcService" />
+    <property name="AppDvGroupUserService" ref="AppDvGroupUserService" />    
+  </object>
+  <object id="frmGrantStatusGroup" type="Vns.Erp.Core.Admin.VbAdminGUI.frmGrantStatusGroup, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="DmDonviService" ref="DmDonviService" />
+    <property name="AppGroupsService" ref="AppGroupsService" />
+    <property name="AppCtStatusService" ref="AppCtStatusService" />
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />      
+  </object>
+  <object id="frmDonviGroupForm" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDonviGroupForm, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">    
+    <property name="DmDonviService" ref="DmDonviService" />
+    <property name="AppGroupsService" ref="AppGroupsService" />
+    <property name="AppFormsService" ref="AppFormsService" />
+    <property name="AppDvFormService" ref="AppDvFormService" />
+    <property name="AppDvGroupService" ref="AppDvGroupService" />
+    <property name="AppGroupFormsService" ref="AppGroupFormsService" />
+    <property name="AppDvGroupFormService" ref="AppDvGroupFormService" />
+    <property name="AppDvGroupUserService" ref="AppDvGroupUserService" />
+    <property name="AppGroupFunctionService" ref="AppGroupFunctionService" />   
+  </object>
+  <object id="frmDanhMucDonVi_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucDonVi_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="DmDonviService" ref="DmDonviService" />
+  </object>
+
+  <object id="frmDanhMucDonVi_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucDonVi_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="DmDonviService" ref="DmDonviService" />
+    <property name="FormChiTiet" ref="frmDanhMucDonVi_ChiTiet" />    
+  </object>
+  
+  <!--Danh muc don vi tinh-->
+  <object id="frmDanhMucDonViTinh_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucDonViTinh_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="DmDvtService" ref="DmDvtService" />
+  </object>
+
+  <object id="frmDanhMucDonViTinh_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucDonViTinh_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="DmDvtService" ref="DmDvtService" />
+    <property name="FormChiTiet" ref="frmDanhMucDonViTinh_ChiTiet" />
+  </object>
+  <!---->
+
+  <object id="frmDanhMucLoaiChungTu_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucLoaiChungTu_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <!--
+    <property name="ErpService" ref="HtLoaichungtuService" />
+    -->
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    
+  </object>
+  <object id="frmDanhMucLoaiChungTu_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucLoaiChungTu_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <!--
+    <property name="ErpService" ref="HtLoaichungtuService" />
+    -->
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    
+    <property name="FormChiTiet" ref="frmDanhMucLoaiChungTu_ChiTiet" />    
+  </object>
+  <object id="frmDanhMucTaiKhoan_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucTaiKhoan_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <!--
+    <property name="ErpService" ref="DmTaikhoanService" />
+    -->
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="DmTkChitietService" ref="DmTkChitietService" />
+
+  </object>
+  <object id="frmDanhMucTaiKhoan_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucTaiKhoan_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <!--
+    <property name="ErpService" ref="DmTaikhoanService" />
+    -->
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="FormChiTiet" ref="frmDanhMucTaiKhoan_ChiTiet" />        
+  </object>
+  <object id="frmDanhMucPhongBan_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucPhongBan_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <!--
+    <property name="ErpService" ref="DmPhongbanService" />
+    -->
+    <property name="DmPhongbanService" ref="DmPhongbanService" />
+
+  </object>
+  <object id="frmDanhMucPhongBan_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucPhongBan_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <!--
+    <property name="ErpService" ref="DmPhongbanService" />
+    -->
+    <property name="DmPhongbanService" ref="DmPhongbanService" />
+    <property name="FormChiTiet" ref="frmDanhMucPhongBan_ChiTiet" />
+  </object>
+
+  <object id="frmDanhMucKhachHang_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucKhachHang_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <!--
+    <property name="ErpService" ref="DmKhangService" />
+    -->
+    <property name="DmKhangService" ref="DmKhangService" />
+    <property name="HtDanhmucService" ref="HtDanhmucService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="DmNhomKhangService" ref="DmNhomKhangService" />
+    
+  </object>
+  <object id="frmDanhMucKhachHang_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucKhachHang_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <!--
+    <property name="ErpService" ref="DmKhangService" />
+    -->
+    <property name="DmKhangService" ref="DmKhangService" />
+    <property name="FormChiTiet" ref="frmDanhMucKhachHang_ChiTiet" />
+  </object>
+
+  <object id="frmDanhMucNhomKhachHang_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucNhomKhachHang_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">    
+    <property name="DmNhomKhangService" ref="DmNhomKhangService" />
+  </object>
+  <object id="frmDanhMucNhomKhachHang_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucNhomKhachHang_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">    
+    <property name="DmNhomKhangService" ref="DmNhomKhangService" />
+    <property name="FormChiTiet" ref="frmDanhMucNhomKhachHang_ChiTiet" />
+  </object>
+  <object id="frmDanhMucNhomVatTu1_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucNhomVatTu1_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="DmNhomvattu1Service" ref="DmNhomvattu1Service" />
+  </object>
+  <object id="frmDanhMucNhomVatTu1_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucNhomVatTu1_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="DmNhomvattu1Service" ref="DmNhomvattu1Service" />
+    <property name="FormChiTiet" ref="frmDanhMucNhomVatTu1_ChiTiet" />
+  </object>
+  <object id="frmDanhMucHangHoa_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucHangHoa_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="DmNhomvattu1Service" ref="DmNhomvattu1Service" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="DmDvtService" ref="DmDvtService" />
+    <property name="HtDanhmucService" ref="HtDanhmucService" />
+    <property name="DmHanghoaService" ref="DmHanghoaService" />
+  </object>
+  <object id="frmDanhMucHangHoa_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucHangHoa_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">    
+    <property name="DmDvtService" ref="DmDvtService" />
+    <property name="DmHanghoaService" ref="DmHanghoaService" />    
+    <property name="FormChiTiet" ref="frmDanhMucHangHoa_ChiTiet" />
+  </object>
+  <object id="frmDanhMucTuDo1_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucTuDo1_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="DmTudo1Service" ref="DmTudo1Service" />
+    <!--
+    <property name="ErpService" ref="DmTudo1Service" />
+    -->
+    <property name="FormChiTiet" ref="frmDanhMucTuDo1_ChiTiet" />
+  </object>
+  <object id="frmDanhMucTuDo1_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucTuDo1_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="DmTudo1Service" ref="DmTudo1Service" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <!--
+    <property name="ErpService" ref="DmTudo1Service" />
+    -->
+  </object>
+
+  <object id="frmDanhMucKho_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucKho_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <!--
+    <property name="ErpService" ref="DmKhoService" />
+    -->
+    <property name="DmKhoService" ref="DmKhoService" />
+    <property name="HtDanhmucService" ref="HtDanhmucService" />    
+  </object>
+  <object id="frmDanhMucKho_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucKho_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <!--
+    <property name="ErpService" ref="DmKhoService" />
+    -->
+    <property name="DmKhoService" ref="DmKhoService" />    
+    <property name="FormChiTiet" ref="frmDanhMucKho_ChiTiet" />
+  </object>    
+  <object id="frmDanhMucLyDoTGTSCD_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucLyDoTGTSCD_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <!-- 
+    <property name="ErpService" ref="DmLydoTgTscdService" />
+    -->
+    <property name="DmLydoTgTscdService" ref="DmLydoTgTscdService" />    
+    <property name="HtDanhmucService" ref="HtDanhmucService" />
+  </object>
+  <object id="frmDanhMucLyDoTGTSCD_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucLyDoTGTSCD_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <!--
+    <property name="ErpService" ref="DmLydoTgTscdService" />
+    -->
+    <property name="DmLydoTgTscdService" ref="DmLydoTgTscdService" />
+    <property name="FormChiTiet" ref="frmDanhMucLyDoTGTSCD_ChiTiet" />
+  </object>
+
+  <object id="frmDanhMucNhomTSCD_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucNhomTSCD_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">    
+    <property name="DmNhomTscdService" ref="DmNhomTscdService" />
+  </object>
+  
+  <object id="frmDanhMucNhomTSCD_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucNhomTSCD_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">    
+    <property name="DmNhomTscdService" ref="DmNhomTscdService" />
+    <property name="FormChiTiet" ref="frmDanhMucNhomTSCD_ChiTiet" />
+  </object>
+
+  <object id="frmDanhMucLoaiTaiSan1_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucLoaiTaiSan1_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="DmLoaiTaisanService" ref="DmLoaiTaisanService" />
+  </object>
+
+  <object id="frmDanhMucLoaiTaiSan1_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucLoaiTaiSan1_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="DmLoaiTaisanService" ref="DmLoaiTaisanService" />
+    <property name="FormChiTiet" ref="frmDanhMucLoaiTaiSan1_ChiTiet" />
+  </object>
+
+  <object id="frmDanhMucNguonVon_tscd_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucNguonVon_tscd_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="DmBtKetchuyenService" ref="DmBtKetchuyenService" />
+    <property name="DmNguonTscdService" ref="DmNguonTscdService" />
+    
+  </object>
+
+  <object id="frmDanhMucNguonVon_tscd_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucNguonVon_tscd_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="DmNguonTscdService" ref="DmNguonTscdService" />
+    <property name="FormChiTiet" ref="frmDanhMucNguonVon_tscd_ChiTiet" />
+  </object>
+
+  <object id="frmDanhMucKhoanPhi_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucKhoanPhi_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <!--
+    <property name="ErpService" ref="DmKhoanphiService" />
+    -->
+    <property name="DmKhoanphiService" ref="DmKhoanphiService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+  </object>
+
+  <object id="frmDanhMucKhoanPhi_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucKhoanPhi_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <!--
+    <property name="ErpService" ref="DmKhoanphiService" />
+    -->
+    <property name="DmKhoanphiService" ref="DmKhoanphiService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="FormChiTiet" ref="frmDanhMucKhoanPhi_ChiTiet" />
+  </object>
+
+  <object id="frmDanhMucTuDo2_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucTuDo2_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="DmTudo2Service" ref="DmTudo2Service" />
+    <!--
+    <property name="ErpService" ref="DmTudo2Service" />
+    -->
+    <property name="FormChiTiet" ref="frmDanhMucTuDo2_ChiTiet" />
+  </object>
+  <object id="frmDanhMucTuDo2_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucTuDo2_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="DmTudo2Service" ref="DmTudo2Service" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <!--
+    <property name="ErpService" ref="DmTudo2Service" />
+    -->
+  </object>
+  
+  <object id="frmDanhMucVuViec_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucVuViec_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <!--
+    <property name="ErpService" ref="DmVuviecService" />
+    -->
+    <property name="DmVuviecService" ref="DmVuviecService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+
+  </object>
+
+  <object id="frmDanhMucVuViec_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucVuViec_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <!--
+    <property name="ErpService" ref="DmVuviecService" />
+    -->
+    <property name="DmVuviecService" ref="DmVuviecService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="FormChiTiet" ref="frmDanhMucVuViec_ChiTiet" />
+  </object>
+  
+  <object id="frmDanhMucHopDong_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucHopDong_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <!--
+    <property name="ErpService" ref="DmHopdongService" />
+    -->
+    <property name="DmHopdongService" ref="DmHopdongService" />
+    <property name="HtDanhmucService" ref="HtDanhmucService" />
+  </object>
+
+  <object id="frmDanhMucHopDong_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucHopDong_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <!--
+    <property name="ErpService" ref="DmHopdongService" />
+    -->
+    <property name="DmHopdongService" ref="DmHopdongService" />
+    <property name="FormChiTiet" ref="frmDanhMucHopDong_ChiTiet" />
+  </object>
+  <object id="frmDanhMucTuDo3_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucTuDo3_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="DmTudo3Service" ref="DmTudo3Service" />
+    <!--
+    <property name="ErpService" ref="DmTudo3Service" />
+    -->
+    <property name="FormChiTiet" ref="frmDanhMucTuDo3_ChiTiet" />
+  </object>
+  <object id="frmDanhMucTuDo3_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucTuDo3_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="DmTudo3Service" ref="DmTudo3Service" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <!--
+    <property name="ErpService" ref="DmTudo3Service" />
+    -->
+  </object>
+
+  <object id="frmDanhMucTuDo4_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucTuDo4_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+      <property name="DmTudo4Service" ref="DmTudo4Service" />
+    <!--
+      <property name="ErpService" ref="DmTudo4Service" />
+    -->      
+      <property name="FormChiTiet" ref="frmDanhMucTuDo4_ChiTiet" />
+    </object>
+    <object id="frmDanhMucTuDo4_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucTuDo4_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+      <property name="DmTudo4Service" ref="DmTudo4Service" />
+      <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+      <!--
+      <property name="ErpService" ref="DmTudo4Service" />
+      -->
+    </object>
+  
+  <object id="frmLS_TyGiaNgoaiTe_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmLS_TyGiaNgoaiTe_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="LsTygiaService" ref="LsTygiaService" />
+  </object>
+  <object id="frmLS_TyGiaNgoaiTe_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmLS_TyGiaNgoaiTe_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="LsTygiaService" ref="LsTygiaService" />
+    <property name="DmNgoaiteService" ref="DmNgoaiteService" />    
+  </object>
+
+  <object id="frmDanhMucNgoaiTe_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucNgoaiTe_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <!--
+    <property name="ErpService" ref="DmNgoaiteService" />
+    -->
+    <property name="DmNgoaiteService" ref="DmNgoaiteService" />
+  </object>
+  
+  <object id="frmDanhMucNgoaiTe_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucNgoaiTe_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <!--
+    <property name="ErpService" ref="DmNgoaiteService" />
+    -->
+    <property name="DmNgoaiteService" ref="DmNgoaiteService" />
+    <property name="FormChiTiet" ref="frmDanhMucNgoaiTe_ChiTiet" />    
+  </object>
+
+  <object id="frmDanhMucThue_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucThue_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <!--
+    <property name="ErpService" ref="DmThueService" />
+    -->
+    <property name="DmThueService" ref="DmThueService" />
+  </object>
+
+  <object id="frmDanhMucThue_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucThue_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <!--
+    <property name="ErpService" ref="DmThueService" />
+    -->
+    <property name="DmThueService" ref="DmThueService" />
+    <property name="FormChiTiet" ref="frmDanhMucThue_ChiTiet" />
+  </object>
+
+
+  <object id="frmDanhMucPhuongThucQuanTri_ChiTiet" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucPhuongThucQuanTri_ChiTiet, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <!--
+    <property name="ErpService" ref="DmPtqtService" />
+    -->
+    <property name="DmPtqtService" ref="DmPtqtService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />    
+  </object>
+
+  <object id="frmDanhMucPhuongThucQuanTri_DanhSach" type="Vns.Erp.Core.Admin.VbAdminGUI.frmDanhMucPhuongThucQuanTri_DanhSach, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <!--
+    <property name="ErpService" ref="DmPtqtService" />
+    -->
+    <property name="DmPtqtService" ref="DmPtqtService" />
+    <property name="FormChiTiet" ref="frmDanhMucPhuongThucQuanTri_ChiTiet" />
+  </object>  
+  <object id="frmThamSoHeThong" type="Vns.Erp.Core.Admin.VbAdminGUI.frmThamSoHeThong, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+    <property name="HtThamsoService" ref="HtThamsoService" />
+  </object>
+  <!--Phieu ke toan-->
+  <object id="frmCT_H_DanhSach" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmCT_H_DanhSach, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="CtHService" ref="CtHService" />
+    <property name="CtDService" ref="CtDService" />
+    <property name="DmPtqtService" ref="DmPtqtService" />
+    <property name="DmVuviecService" ref="DmVuviecService" />
+  </object>
+  <object id="frmCT_H_ChiTiet" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmCT_H_ChiTiet, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="CtThueService" ref="CtThueService" />
+    <property name="CtHoadonService" ref="CtHoadonService" />
+    <property name="CtHService" ref="CtHService" />
+    <property name="CtDService" ref="CtDService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="DmNgoaiteService" ref="DmNgoaiteService" />
+    <property name="DmHopdongService" ref="DmHopdongService" />
+    <property name="DmVuviecService" ref="DmVuviecService" />
+    <property name="DmPhongbanService" ref="DmPhongbanService" />
+    <property name="DmKhoanphiService" ref="DmKhoanphiService" />
+    <property name="DmTudo1Service" ref="DmTudo1Service" />
+    <property name="DmTudo2Service" ref="DmTudo2Service" />
+    <property name="DmTudo3Service" ref="DmTudo3Service" />
+    <property name="DmTudo4Service" ref="DmTudo4Service" />
+    <property name="DmTudo5Service" ref="DmTudo5Service" />
+    <property name="DmPtqtService" ref="DmPtqtService" />
+    <property name="DmKhangService" ref="DmKhangService" />
+    <property name="KtKhoasoThangService" ref="KtKhoasoThangService" />
+    <property name="LsTygiaService" ref="LsTygiaService" />
+  </object>
+  <object id="frmChungTuThue" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmChungTuThue, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="DmThueService" ref="DmThueService" />
+    <property name="CtHoadonService" ref="CtHoadonService" />
+    <property name="CtThueService" ref="CtThueService" />
+  </object>
+  <!--Phieu nhap xuat kho-->
+  <object id="frmPhieuNhapKho_DanhSach" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmPhieuNhapKho_DanhSach, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="CtHNxService" ref="CtHNxService" />
+    <property name="CtDNxService" ref="CtDNxService" />
+    <property name="DmKhoService" ref="DmKhoService" />
+  </object>
+  <object id="frmPhieuNhapKho_ChiTiet" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmPhieuNhapKho_ChiTiet, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="DmKhoService" ref="DmKhoService" />
+    <property name="DmVuviecService" ref="DmVuviecService" />
+    <property name="DmPtqtService" ref="DmPtqtService" />
+    <property name="DmTudo1Service" ref="DmTudo1Service" />
+    <property name="DmTudo2Service" ref="DmTudo2Service" />
+    <property name="DmTudo3Service" ref="DmTudo3Service" />
+    <property name="DmTudo4Service" ref="DmTudo4Service" />
+    <property name="DmTudo5Service" ref="DmTudo5Service" />
+    <property name="DmPhongbanService" ref="DmPhongbanService" />
+    <property name="DmKhoanphiService" ref="DmKhoanphiService" />
+    <property name="DmHopdongService" ref="DmHopdongService" />
+    <property name="CtHNxService" ref="CtHNxService" />
+    <property name="CtDNxService" ref="CtDNxService" />
+    <property name="HtSoChungtuMaxService" ref="HtSoChungtuMaxService" />
+    <property name="KtKhoasoThangService" ref="KtKhoasoThangService" />
+    <property name="DmHanghoaService" ref="DmHanghoaService" />
+    <property name="DmKhangService" ref="DmKhangService" />
+    <property name="DmNgoaiteService" ref="DmNgoaiteService" />
+    <property name="LsTygiaService" ref="LsTygiaService" />
+  </object>
+  <!--Phieu mua hang nhap khau-->
+  <object id="frmPhieuNhapKhau_Danhsach" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmPhieuNhapKhau_Danhsach, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="CtHNxService" ref="CtHNxService" />
+    <property name="CtDNxService" ref="CtDNxService" />
+    <property name="DmKhoService" ref="DmKhoService" />
+  </object>
+  <object id="frmPhieuNhapKhau_ChiTiet" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmPhieuNhapKhau_ChiTiet, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="DmKhoService" ref="DmKhoService" />
+    <property name="DmVuviecService" ref="DmVuviecService" />
+    <property name="DmPtqtService" ref="DmPtqtService" />
+    <property name="DmTudo1Service" ref="DmTudo1Service" />
+    <property name="DmTudo2Service" ref="DmTudo2Service" />
+    <property name="DmTudo3Service" ref="DmTudo3Service" />
+    <property name="DmTudo4Service" ref="DmTudo4Service" />
+    <property name="DmTudo5Service" ref="DmTudo5Service" />
+    <property name="DmPhongbanService" ref="DmPhongbanService" />
+    <property name="DmKhoanphiService" ref="DmKhoanphiService" />
+    <property name="DmHopdongService" ref="DmHopdongService" />
+    <property name="CtHNxService" ref="CtHNxService" />
+    <property name="CtDNxService" ref="CtDNxService" />
+    <property name="HtSoChungtuMaxService" ref="HtSoChungtuMaxService" />
+    <property name="KtKhoasoThangService" ref="KtKhoasoThangService" />
+    <property name="DmHanghoaService" ref="DmHanghoaService" />
+    <property name="DmKhangService" ref="DmKhangService" />
+    <property name="DmNgoaiteService" ref="DmNgoaiteService" />
+    <property name="CtHoadonService" ref="CtHoadonService" />
+    <property name="CtThueService" ref="CtThueService" />
+    <property name="LsTygiaService" ref="LsTygiaService" />
+  </object>
+  <!--Phieu ban hang kiem xuat kho-->
+  <object id="frmHoaDonBanHangKiemPhieuXuatKho_DanhSach" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmHoaDonBanHangKiemPhieuXuatKho_DanhSach, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="CtHNxService" ref="CtHNxService" />
+    <property name="CtDNxService" ref="CtDNxService" />
+    <property name="DmKhoService" ref="DmKhoService" />
+  </object>
+  <object id="frmHoaDonBanHangKiemPhieuXuatKho_ChiTiet" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmHoaDonBanHangKiemPhieuXuatKho_ChiTiet, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="DmKhoService" ref="DmKhoService" />
+    <property name="DmVuviecService" ref="DmVuviecService" />
+    <property name="DmPtqtService" ref="DmPtqtService" />
+    <property name="DmTudo1Service" ref="DmTudo1Service" />
+    <property name="DmTudo2Service" ref="DmTudo2Service" />
+    <property name="DmTudo3Service" ref="DmTudo3Service" />
+    <property name="DmTudo4Service" ref="DmTudo4Service" />
+    <property name="DmTudo5Service" ref="DmTudo5Service" />
+    <property name="DmPhongbanService" ref="DmPhongbanService" />
+    <property name="DmKhoanphiService" ref="DmKhoanphiService" />
+    <property name="DmHopdongService" ref="DmHopdongService" />
+    <property name="CtHNxService" ref="CtHNxService" />
+    <property name="CtDNxService" ref="CtDNxService" />
+    <property name="HtSoChungtuMaxService" ref="HtSoChungtuMaxService" />
+    <property name="KtKhoasoThangService" ref="KtKhoasoThangService" />
+    <property name="DmHanghoaService" ref="DmHanghoaService" />
+    <property name="DmKhangService" ref="DmKhangService" />
+    <property name="DmNgoaiteService" ref="DmNgoaiteService" />
+    <property name="CtHoadonService" ref="CtHoadonService" />
+    <property name="CtThueService" ref="CtThueService" />
+    <property name="LsTygiaService" ref="LsTygiaService" />
+  </object>
+  <!--Tai san co dinh-->
+  <object id="frmThongTinTaiSan_DanhSach" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmThongTinTaiSan_DanhSach, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="DmLoaitaisanService" ref="DmLoaitaisanService" />
+    <property name="DmTscdService" ref="DmTscdService" />
+  </object>
+  <object id="frmThongTinTSCD_ChiTiet" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmThongTinTSCD_ChiTiet, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="CtTscdService" ref="CtTscdService" />
+    <property name="DmTscdService" ref="DmTscdService" />
+    <property name="DmNguonTscdService" ref="DmNguonTscdService" />
+    <property name="TsCtTscdNvonService" ref="TsCtTscdNvonService" />
+    <property name="TsTscdPtungService" ref="TsTscdPtungService" />
+    <property name="DmLoaitaisanService" ref="DmLoaitaisanService" />
+    <property name="DmDvtService" ref="DmDvtService" />
+    <property name="DmPhongbanService" ref="DmPhongbanService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="HtDanhmucService" ref="HtDanhmucService" />
+    <property name="DmLydoTgTscdService" ref="DmLydoTgTscdService" />
+    <property name="DmNhomTscdService" ref="DmNhomTscdService" />
+  </object>
+  <!--Dieu chuyen tai san-->
+  <object id="frmDieuChuyenTaiSan_DanhSach" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmDieuChuyenTaiSan_DanhSach, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="DmTscdService" ref="DmTscdService" />
+    <property name="TsDieuchuyenService" ref="TsDieuchuyenService" />
+    <property name="DmPhongbanService" ref="DmPhongbanService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+  </object>
+  <object id="frmDieuChuyenTaiSan_ChiTiet" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmDieuChuyenTaiSan_ChiTiet, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="DmTscdService" ref="DmTscdService" />
+    <property name="TsDieuchuyenService" ref="TsDieuchuyenService" />
+    <property name="DmPhongbanService" ref="DmPhongbanService" />
+    <!--<property name="DmTaikhoanService" ref="DmTaikhoanService" />-->
+  </object>
+  <!--Khai bao giam TSCD-->
+  <object id="frmKhaiBaoGiamTaiSan_DanhSach" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmKhaiBaoGiamTaiSan_DanhSach, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="DmTscdService" ref="DmTscdService" />
+    <property name="CtTscdService" ref="CtTscdService" />
+    <property name="CtHService" ref="CtHService" />
+  </object>
+  <object id="frmKhaiBaoGiamTaiSan_ChiTiet" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmKhaiBaoGiamTaiSan_ChiTiet, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="CtTscdService" ref="CtTscdService" />
+    <property name="DmTscdService" ref="DmTscdService" />
+    <property name="CtHService" ref="CtHService" />
+    <property name="CtDService" ref="CtDService" />
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="DmLydoTgTscdService" ref="DmLydoTgTscdService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="DmNgoaiteService" ref="DmNgoaiteService" />
+  </object>
+  <!--Dieu chinh gia tri tai san-->
+  <object id="frmDieuChinhGiaTriTaiSan_DanhSach" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmDieuChinhGiaTriTaiSan_DanhSach, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="DmTscdService" ref="DmTscdService" />
+    <property name="CtTscdService" ref="CtTscdService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+  </object>
+  <object id="frmDieuChinhGiaTriTaiSan_ChiTiet" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmDieuChinhGiaTriTaiSan_ChiTiet, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="DmTscdService" ref="DmTscdService" />
+    <property name="TsCtTscdNvonService" ref="TsCtTscdNvonService" />
+    <property name="HtDanhmucService" ref="HtDanhmucService" />
+    <property name="DmNguonTscdService" ref="DmNguonTscdService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="CtTscdService" ref="CtTscdService" />
+    <property name="DmLydoTgTscdService" ref="DmLydoTgTscdService" />
+  </object>
+  <!--So du tai khoan-->
+  <object id="frmSoDuTaiKhoan2_DanhSach" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmSoDuTaiKhoan2_DanhSach, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="CtHService" ref="CtHService" />
+  </object>
+  <object id="frmSoDuTaiKhoan2_ChiTiet" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmSoDuTaiKhoan2_ChiTiet, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="CtHService" ref="CtHService" />
+    <property name="CtDService" ref="CtDService" />
+    <property name="DmNgoaiteService" ref="DmNgoaiteService" />
+    <property name="DmHopdongService" ref="DmHopdongService" />
+    <property name="DmPtqtService" ref="DmPtqtService" />
+    <property name="DmPhongbanService" ref="DmPhongbanService" />
+    <property name="DmVuviecService" ref="DmVuviecService" />
+    <property name="DmTudo1Service" ref="DmTudo1Service" />
+    <property name="DmTudo2Service" ref="DmTudo2Service" />
+    <property name="DmTudo3Service" ref="DmTudo3Service" />
+    <property name="DmTudo4Service" ref="DmTudo4Service" />
+    <property name="DmTudo5Service" ref="DmTudo5Service" />
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="DmKhangService" ref="DmKhangService" />
+  </object>
+  <!--so du kho-->
+  <object id="frmSoDuTaiKhoan_Kho2_DanhSach" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmSoDuTaiKhoan_Kho2_DanhSach, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="CtHNxService" ref="CtHNxService" />
+    <property name="DmKhoService" ref="DmKhoService" />
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+  </object>
+  <object id="frmSoDuTaiKhoan_Kho2_ChiTiet" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmSoDuTaiKhoan_Kho2_ChiTiet, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="CtHNxService" ref="CtHNxService" />
+    <property name="CtDNxService" ref="CtDNxService" />
+    <property name="DmNgoaiteService" ref="DmNgoaiteService" />
+    <property name="DmHopdongService" ref="DmHopdongService" />
+    <property name="DmPtqtService" ref="DmPtqtService" />
+    <property name="DmPhongbanService" ref="DmPhongbanService" />
+    <property name="DmVuviecService" ref="DmVuviecService" />
+    <property name="DmTudo1Service" ref="DmTudo1Service" />
+    <property name="DmTudo2Service" ref="DmTudo2Service" />
+    <property name="DmTudo3Service" ref="DmTudo3Service" />
+    <property name="DmTudo4Service" ref="DmTudo4Service" />
+    <property name="DmTudo5Service" ref="DmTudo5Service" />
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="DmKhangService" ref="DmKhangService" />
+    <property name="DmDvtService" ref="DmDvtService" />
+    <property name="DmHanghoaService" ref="DmHanghoaService" />
+    <property name="DmKhoService" ref="DmKhoService" />
+  </object>
+  <!--Danh sach phieu dieu chuyen kho-->
+  <object id="frmPhieuDieuXuatDieuChuyen_DanhSach" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmPhieuDieuXuatDieuChuyen_DanhSach, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="CtHNxService" ref="CtHNxService" />
+    <property name="CtDNxService" ref="CtDNxService" />
+    <property name="DmKhoService" ref="DmKhoService" />
+  </object>
+  <object id="PhieuDieuXuatDieuChuyen" type="Vns.Erp.Core.Accounting.VbAccountingGUI.PhieuDieuXuatDieuChuyen, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="CtHNxService" ref="CtHNxService" />
+    <property name="CtDNxService" ref="CtDNxService" />
+    <property name="DmKhoService" ref="DmKhoService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="DmVuviecService" ref="DmVuviecService" />
+    <property name="DmNgoaiteService" ref="DmNgoaiteService" />
+    <property name="LsTygiaService" ref="LsTygiaService" />
+    <property name="DmHanghoaService" ref="DmHanghoaService" />
+    <property name="KtKhoasoThangService" ref="KtKhoasoThangService" />
+  </object>
+  <!--Phieu xuat tra hang cho nha cung cap-->
+  <object id="frmPhieuXuatTraLaiHangChoNhaSX_DanhSach" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmPhieuXuatTraLaiHangChoNhaSX_DanhSach, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="CtHNxService" ref="CtHNxService" />
+    <property name="CtDNxService" ref="CtDNxService" />
+    <property name="DmKhoService" ref="DmKhoService" />
+  </object>
+  <object id="frmPhieuXuatTraLaiHangChoNhaSX_ChiTiet" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmPhieuXuatTraLaiHangChoNhaSX_ChiTiet, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="DmKhoService" ref="DmKhoService" />
+    <property name="DmVuviecService" ref="DmVuviecService" />
+    <property name="DmPtqtService" ref="DmPtqtService" />
+    <property name="DmTudo1Service" ref="DmTudo1Service" />
+    <property name="DmTudo2Service" ref="DmTudo2Service" />
+    <property name="DmTudo3Service" ref="DmTudo3Service" />
+    <property name="DmTudo4Service" ref="DmTudo4Service" />
+    <property name="DmTudo5Service" ref="DmTudo5Service" />
+    <property name="DmPhongbanService" ref="DmPhongbanService" />
+    <property name="DmKhoanphiService" ref="DmKhoanphiService" />
+    <property name="DmHopdongService" ref="DmHopdongService" />
+    <property name="CtHNxService" ref="CtHNxService" />
+    <property name="CtDNxService" ref="CtDNxService" />
+    <property name="HtSoChungtuMaxService" ref="HtSoChungtuMaxService" />
+    <property name="KtKhoasoThangService" ref="KtKhoasoThangService" />
+    <property name="DmHanghoaService" ref="DmHanghoaService" />
+    <property name="DmKhangService" ref="DmKhangService" />
+    <property name="DmNgoaiteService" ref="DmNgoaiteService" />
+    <!--<property name="CtHoadonService" ref="CtHoadonService" />-->
+    <!--<property name="CtThueService" ref="CtThueService" />-->
+    <property name="LsTygiaService" ref="LsTygiaService" />
+  </object>
+    <!--Phieu hang ban bi tra lai-->
+    <object id="frmPhieuNhapHangBanBiTraLai_DanhSach" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmPhieuNhapHangBanBiTraLai_DanhSach, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+      <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+      <property name="CtHNxService" ref="CtHNxService" />
+      <property name="CtDNxService" ref="CtDNxService" />
+      <property name="DmKhoService" ref="DmKhoService" />
+    </object>
+    <object id="frmPhieuNhapHangBanBiTraLai_ChiTiet" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmPhieuNhapHangBanBiTraLai_ChiTiet, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+      <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+      <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+      <property name="DmKhoService" ref="DmKhoService" />
+      <property name="DmVuviecService" ref="DmVuviecService" />
+      <property name="DmPtqtService" ref="DmPtqtService" />
+      <property name="DmTudo1Service" ref="DmTudo1Service" />
+      <property name="DmTudo2Service" ref="DmTudo2Service" />
+      <property name="DmTudo3Service" ref="DmTudo3Service" />
+      <property name="DmTudo4Service" ref="DmTudo4Service" />
+      <property name="DmTudo5Service" ref="DmTudo5Service" />
+      <property name="DmPhongbanService" ref="DmPhongbanService" />
+      <property name="DmKhoanphiService" ref="DmKhoanphiService" />
+      <property name="DmHopdongService" ref="DmHopdongService" />
+      <property name="CtHNxService" ref="CtHNxService" />
+      <property name="CtDNxService" ref="CtDNxService" />
+      <property name="HtSoChungtuMaxService" ref="HtSoChungtuMaxService" />
+      <property name="KtKhoasoThangService" ref="KtKhoasoThangService" />
+      <property name="DmHanghoaService" ref="DmHanghoaService" />
+      <property name="DmKhangService" ref="DmKhangService" />
+      <property name="DmNgoaiteService" ref="DmNgoaiteService" />
+      <!--<property name="CtHoadonService" ref="CtHoadonService" />-->
+      <!--<property name="CtThueService" ref="CtThueService" />-->
+      <property name="LsTygiaService" ref="LsTygiaService" />
+  </object>
+  <!--Phieu ke toan khac-->
+  <object id="frmPhieuKeToanKhac2_DanhSach" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmPhieuKeToanKhac2_DanhSach, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="CtHService" ref="CtHService" />
+    <property name="CtDService" ref="CtDService" />
+    <property name="DmPtqtService" ref="DmPtqtService" />
+    <property name="DmVuviecService" ref="DmVuviecService" />
+  </object>
+  <object id="frmPhieuKeToanKhac2_ChiTiet" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmPhieuKeToanKhac2_ChiTiet, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="CtThueService" ref="CtThueService" />
+    <property name="CtHService" ref="CtHService" />
+    <property name="CtDService" ref="CtDService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="DmNgoaiteService" ref="DmNgoaiteService" />
+    <property name="DmHopdongService" ref="DmHopdongService" />
+    <property name="DmVuviecService" ref="DmVuviecService" />
+    <property name="DmPhongbanService" ref="DmPhongbanService" />
+    <property name="DmKhoanphiService" ref="DmKhoanphiService" />
+    <property name="DmVuviecService" ref="DmVuviecService" />
+    <property name="DmTudo1Service" ref="DmTudo1Service" />
+    <property name="DmTudo2Service" ref="DmTudo2Service" />
+    <property name="DmTudo3Service" ref="DmTudo3Service" />
+    <property name="DmTudo4Service" ref="DmTudo4Service" />
+    <property name="DmTudo5Service" ref="DmTudo5Service" />
+    <property name="DmPtqtService" ref="DmPtqtService" />
+    <property name="DmKhangService" ref="DmKhangService" />
+    <property name="KtKhoasoThangService" ref="KtKhoasoThangService" />
+    <property name="LsTygiaService" ref="LsTygiaService" />
+  </object>
+  <object id="frmChungTuThue2" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmChungTuThue2, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="DmThueService" ref="DmThueService" />
+    <!--<property name="CtHoadonService" ref="CtHoadonService" />
+    <property name="CtThueService" ref="CtThueService" />-->
+  </object>
+  
+  
+  <!--Thiet lap chi tieu bao cao-->
+  <object id="frmKT_H_BAOCAO_DanhSach" type="Vns.Erp.Core.Accounting.Report.frmKT_H_BAOCAO_DanhSach, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="KtHBaocaoService" ref="KtHBaocaoService" />
+  </object>
+  <object id="frmKT_H_BAOCAO_ChiTiet" type="Vns.Erp.Core.Accounting.Report.frmKT_H_BAOCAO_ChiTiet, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="KtHBaocaoService" ref="KtHBaocaoService" />
+  </object>
+  <object id="frmKhaiBaoChiTieu_DanhSach" type="Vns.Erp.Core.Accounting.Report.frmKhaiBaoChiTieu_DanhSach, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="KtHDongService" ref="KtHDongService" />
+  </object>
+  <object id="frmKhaiBaoChiTieu_ChiTiet" type="Vns.Erp.Core.Accounting.Report.frmKhaiBaoChiTieu_ChiTiet, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="KtHCotService" ref="KtHCotService" />
+    <property name="KtDieukienBcService" ref="KtDieukienBcService" />
+    <property name="KtHDongService" ref="KtHDongService" />
+  </object>
+  <!--Thiet lap form bao cao-->
+  <object id="frmBaoCaoTongHop" type="Vns.Erp.Core.Accounting.Report.frmBaoCaoTongHop, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="HtFileBaocaoService" ref="HtFileBaocaoService" />
+    <property name="HtBienBaocaoService" ref="HtBienBaocaoService" />
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="AppDvBcService" ref="AppDvBcService" />
+    <property name="HtBaocaoService" ref="HtBaocaoService" />
+    <property name="AppDvGroupBcService" ref="AppDvGroupBcService" />
+  </object>
+  <object id="frmBaoCaoView" type="Vns.Erp.Core.Accounting.Report.frmBaoCaoView, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+  </object>
+  <!--Thiet lap form main-->
+  <object id="frmMain" type="Vns.Main.frmMain, VKetoan" singleton="false">
+    <property name="AppUsersService" ref="AppUsersService" />
+    <property name="DmDonviService" ref="DmDonviService" />
+    <property name="HtThamsoService" ref="HtThamsoService" />
+    <property name="AppFormsService" ref="AppFormsService" />
+    <property name="AppUsergroupService" ref="AppUsergroupService" />
+    <property name="AppDvFormService" ref="AppDvFormService" />
+    <property name="AppHGroupFormService" ref="AppHGroupFormService" />
+    <property name="AppUgFormService" ref="AppUgFormService" />
+    <property name="AppHGroupFunctService" ref="AppHGroupFunctService" />
+    <property name="AppGroupFormsService" ref="AppGroupFormsService" />
+    <property name="AppDvGroupUserService" ref="AppDvGroupUserService" />
+    <property name="AppDvGroupFormService" ref="AppDvGroupFormService" />
+    <property name="AppGroupFunctionService" ref="AppGroupFunctionService" />
+    <property name="AppLogbookService" ref="AppLogbookService" />
+  </object>
+  <!--Thiet lap form tim kiem-->
+  <object id="frmSearchKTHDONG" type="Vns.Erp.Core.Accounting.Report.frmSearchKTHDONG, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="BcKetoanService" ref="BcKetoanService" />
+    <property name="DmKhangService" ref="DmKhangService" />
+    <property name="DmHanghoaService" ref="DmHanghoaService" />
+    <property name="KtHDongService" ref="KtHDongService" />
+  </object>
+  <!--Tim kiem chung tu kho-->
+  <object id="frmTimKiemChungTuKho" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmTimKiemChungTuKho, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="DmKhoService" ref="DmKhoService" />
+    <property name="DmNhomvattu1Service" ref="DmNhomvattu1Service" />
+    <property name="CtHNxService" ref="CtHNxService" />
+    <property name="CtDNxService" ref="CtDNxService" />
+  </object>
+  <!--Tim kiem chung tu binh thuong-->
+  <object id="frmTimKiemChungTuKeToan" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmTimKiemChungTuKeToan, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="CtHService" ref="CtHService" />
+    <property name="CtDService" ref="CtDService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="DmVuviecService" ref="DmVuviecService" />
+    <property name="DmPtqtService" ref="DmPtqtService" />
+    <property name="DmKhoanphiService" ref="DmKhoanphiService" />
+    <property name="DmHopdongService" ref="DmHopdongService" />
+    <property name="DmPhongbanService" ref="DmPhongbanService" />
+    <property name="DmTudo1Service" ref="DmTudo1Service" />
+    <property name="DmTudo2Service" ref="DmTudo2Service" />
+    <property name="DmTudo3Service" ref="DmTudo3Service" />
+    <property name="DmTudo4Service" ref="DmTudo4Service" />
+    <property name="DmTudo5Service" ref="DmTudo5Service" />
+  </object>
+  <!--Thiet lap Uc for Report-->
+  <object id="UC_LookUp_Nhom_Vat_Tu_1" type="Vns.Erp.Core.Accounting.Report.LookUp_Nhom_Vat_Tu_1, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="DmNhomvattu1Service" ref="DmNhomvattu1Service" />
+  </object>
+  <object id="UC_Lookup_DM_Nhom_KH" type="Vns.Erp.Core.Accounting.Report.Lookup_DM_Nhom_KH, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="DmNhomKhangService" ref="DmNhomKhangService" />
+  </object>
+  <object id="UC_KT_H_Baocao" type="Vns.Erp.Core.Accounting.Report.KT_H_Baocao, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="KtHBaocaoService" ref="KtHBaocaoService" />
+  </object>
+  <object id="UC_LookupKH" type="Vns.Erp.Core.Accounting.Report.LookupKH, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="DmKhangService" ref="DmKhangService" />
+  </object>
+  <object id="UC_Lookup_Tai_Khoan" type="Vns.Erp.Core.Accounting.Report.Lookup_Tai_Khoan, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+  </object>
+  <object id="UC_Lookup_Don_Vi" type="Vns.Erp.Core.Accounting.Report.Lookup_Don_Vi, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="DmDonviService" ref="DmDonviService" />
+  </object>
+  <object id="UC_LookUp_Ma_Loai_Tai_San" type="Vns.Erp.Core.Accounting.Report.LookUp_Ma_Loai_Tai_San, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="DmLoaitaisanService" ref="DmLoaitaisanService" />
+  </object>
+  <object id="UC_LookUp_Phong_Ban" type="Vns.Erp.Core.Accounting.Report.LookUp_Phong_Ban, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="DmPhongbanService" ref="DmPhongbanService" />
+  </object>
+  <object id="UC_LookUp_LoaiKHang" type="Vns.Erp.Core.Accounting.Report.LookUp_LoaiKHang, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="HtDanhmucService" ref="HtDanhmucService" />
+  </object>
+  <object id="UC_Lookup_Hang_Hoa" type="Vns.Erp.Core.Accounting.Report.Lookup_Hang_Hoa, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="DmHanghoaService" ref="DmHanghoaService" />
+  </object>
+  <object id="UC_LookUp_Hop_Dong" type="Vns.Erp.Core.Accounting.Report.LookUp_Hop_Dong, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="DmHopdongService" ref="DmHopdongService" />
+  </object>
+  <object id="UC_Lookup_DM_Kho" type="Vns.Erp.Core.Accounting.Report.Lookup_DM_Kho, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="DmKhoService" ref="DmKhoService" />
+  </object>
+  <object id="UC_LookUp_Ma_NTE" type="Vns.Erp.Core.Accounting.Report.LookUp_Ma_NTE, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="DmNgoaiteService" ref="DmNgoaiteService" />
+  </object>
+  <object id="UC_Lookup_HTLoaiChungTu" type="Vns.Erp.Core.Accounting.Report.Lookup_HTLoaiChungTu, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+  </object>
+  <object id="UC_Lookup_VuViec" type="Vns.Erp.Core.Accounting.Report.Lookup_VuViec, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="DmVuviecService" ref="DmVuviecService" />
+  </object>
+  <object id="UC_LookUp_NhomTS" type="Vns.Erp.Core.Accounting.Report.LookUp_NhomTS, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="DmNhomTscdService" ref="DmNhomTscdService" />
+  </object>
+  <object id="UC_Lookup_MulTai_Khoan" type="Vns.Erp.Core.Accounting.Report.Lookup_MulTai_Khoan, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+  </object>
+  <object id="UC_urc_TrangThai" type="Vns.Erp.Core.Accounting.Report.urc_TrangThai, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="KtStatusCtService" ref="KtStatusCtService" />
+  </object>
+  <object id="UC_Lookup_PTQT" type="Vns.Erp.Core.Accounting.Report.Lookup_PTQT, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="DmPtqtService" ref="DmPtqtService" />
+  </object>
+  <object id="UC_LookUp_KhoanPhi" type="Vns.Erp.Core.Accounting.Report.LookUp_KhoanPhi, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="DmKhoanphiService" ref="DmKhoanphiService" />
+  </object>
+  <object id="UC_LookUp_DM_TUDO1" type="Vns.Erp.Core.Accounting.Report.LookUp_DM_TUDO1, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="DmTudo1Service" ref="DmTudo1Service" />
+  </object>
+  <object id="UC_LookUp_DM_TUDO2" type="Vns.Erp.Core.Accounting.Report.LookUp_DM_TUDO2, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="DmTudo2Service" ref="DmTudo2Service" />
+  </object>
+  <object id="UC_LookUp_DM_TUDO3" type="Vns.Erp.Core.Accounting.Report.LookUp_DM_TUDO3, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="DmTudo3Service" ref="DmTudo3Service" />
+  </object>
+  <object id="UC_LookUp_DM_TUDO4" type="Vns.Erp.Core.Accounting.Report.LookUp_DM_TUDO4, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="DmTudo4Service" ref="DmTudo4Service" />
+  </object>
+  <object id="UC_LookUp_DM_TUDO5" type="Vns.Erp.Core.Accounting.Report.LookUp_DM_TUDO5, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="DmTudo5Service" ref="DmTudo5Service" />
+  </object>
+  <!--But toan ket chuyen-->
+  <object id="frmButToanKetChuyen_DanhSach" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmButToanKetChuyen_DanhSach, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="DmBtKetchuyenService" ref="DmBtKetchuyenService" />
+  </object>
+  <object id="frmButToanKetChuyen_ChiTiet" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmButToanKetChuyen_ChiTiet, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="DmBtKetchuyenService" ref="DmBtKetchuyenService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="HtDanhmucService" ref="HtDanhmucService" />
+  </object>
+  <!--Thuc hien but toan ket chuyen-->
+  <object id="frmDieuChuyenSoDu" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmDieuChuyenSoDu, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="HtSoChungtuMaxService" ref="HtSoChungtuMaxService" />
+    <property name="DmNgoaiteService" ref="DmNgoaiteService" />
+    <property name="KtKhoasoThangService" ref="KtKhoasoThangService" />
+    <property name="CtHService" ref="CtHService" />
+    <property name="DmBtKetchuyenService" ref="DmBtKetchuyenService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+  </object>
+  <!--But toan phan bo-->
+  <object id="frmKhaiBaoCacButToanPBTD_DanhSach" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmKhaiBaoCacButToanPBTD_DanhSach, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="KtDmBtPhanboService" ref="KtDmBtPhanboService" />
+    <property name="DmKhangService" ref="DmKhangService" />
+    <property name="DmVuviecService" ref="DmVuviecService" />
+    <property name="DmKhoanphiService" ref="DmKhoanphiService" />
+    <property name="DmTudo1Service" ref="DmTudo1Service" />
+    <property name="DmHopdongService" ref="DmHopdongService" />
+  </object>
+  <object id="frmKhaiBaoCacButToanPBTD_ChiTiet" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmKhaiBaoCacButToanPBTD_ChiTiet, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="KtDmBtPhanboService" ref="KtDmBtPhanboService" />
+    <property name="DmKhangService" ref="DmKhangService" />
+    <property name="DmVuviecService" ref="DmVuviecService" />
+    <property name="DmKhoanphiService" ref="DmKhoanphiService" />
+    <property name="DmTudo1Service" ref="DmTudo1Service" />
+    <property name="DmHopdongService" ref="DmHopdongService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="HtDanhmucService" ref="HtDanhmucService" />
+  </object>
+
+  <!--Thuc hien phan bo-->
+  <object id="frmButToanPhanBoTuDong" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmButToanPhanBoTuDong, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="KtThBtPhanboService" ref="KtThBtPhanboService" />
+    <property name="KtDmBtPhanboService" ref="KtDmBtPhanboService" />
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="DmKhangService" ref="DmKhangService" />
+    <property name="DmVuviecService" ref="DmVuviecService" />
+    <property name="DmKhoanphiService" ref="DmKhoanphiService" />
+    <property name="DmTudo1Service" ref="DmTudo1Service" />
+    <property name="DmHopdongService" ref="DmHopdongService" />
+    <property name="HtDanhmucService" ref="HtDanhmucService" />
+    <property name="CtHService" ref="CtHService" />
+    <property name="KtKhoasoThangService" ref="KtKhoasoThangService" />
+  </object>
+
+  <object id="frmNamKeToan" type="Vns.Erp.Core.Admin.VbAdminGUI.frmNamKeToan, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+
+  </object>
+  <object id="frmCultureSetting2" type="Vns.Erp.Core.Admin.VbAdminGUI.frmCultureSetting2, Vns.Erp.Core.Admin.VbAdminGUI" singleton="false">
+
+  </object>  
+  
+  <!--tinh gia xuat kho-->
+  <object id="frmTinhGiaTrungBinh" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmTinhGiaTrungBinh, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="HtDanhmucService" ref="HtDanhmucService" />
+    <property name="DmNhomvattu1Service" ref="DmNhomvattu1Service" />
+    <property name="DmKhoService" ref="DmKhoService" />
+    <property name="KtKhoasoThangService" ref="KtKhoasoThangService" />
+    <property name="DmHanghoaService" ref="DmHanghoaService" />
+    <property name="BcKetoanKhoService" ref="BcKetoanKhoService" />
+
+  </object>
+
+  <object id="frmLichSuHaoMon_ThangNguonVon" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmLichSuHaoMon_ThangNguonVon, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="TsLsKhauhaoService" ref="TsLsKhauhaoService" />
+    <property name="TsCtTscdNvonService" ref="TsCtTscdNvonService" />
+    <property name="DmTscdService" ref="DmTscdService" />
+    <property name="CtHService" ref="CtHService" />
+    <property name="CtDService" ref="CtDService" />
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="DmNgoaiteService" ref="DmNgoaiteService" />
+    <property name="CtTscdService" ref="CtTscdService" />
+    <property name="KtKhoasoThangService" ref="KtKhoasoThangService" />
+  </object>
+  <!--In the TSCD-->
+  <object id="In_The_TSCD" type="Vns.Erp.Core.Accounting.VbAccountingGUI.In_The_TSCD, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="DmTscdService" ref="DmTscdService" />
+    <property name="DmLoaitaisanService" ref="DmLoaitaisanService" />
+  </object>
+  <object id="The_TSCD" type="Vns.Erp.Core.Accounting.VbAccountingGUI.The_TSCD, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="DmTscdService" ref="DmTscdService" />
+    <property name="RpTheTscdS23DnService" ref="RpTheTscdS23DnService" />
+    <property name="TsTscdPtungService" ref="TsTscdPtungService" />
+  </object>
+  <object id="frmKhoaSoThang" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmKhoaSoThang, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="KtKhoasoThangService" ref="KtKhoasoThangService" />
+  </object>
+  <object id="frmKhoaSoNgay" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmKhoaSoNgay, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="KtKhoaSoNgayService" ref="KtKhoaSoNgayService" />
+  </object>
+  <!--In phieu ke toan-->
+  <object id="frmPhieu_Input" type="Vns.Erp.Core.Accounting.Report.frmPhieu_Input, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="CtHService" ref="CtHService" />
+    <property name="CtDService" ref="CtDService" />
+    <property name="HtThamsoService" ref="HtThamsoService" />
+  </object>
+  <!--In phieu ke toan kho-->
+  <object id="frmKho_Input" type="Vns.Erp.Core.Accounting.Report.frmKho_Input, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="CtHNxService" ref="CtHNxService" />
+    <property name="CtDNxService" ref="CtDNxService" />
+    <property name="HtThamsoService" ref="HtThamsoService" />
+  </object>
+  <!--in phieu hoa don dich vu-->
+  <object id="frmHDDV_input" type="Vns.Erp.Core.Accounting.Report.frmHDDV_input, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="KtCtHHddvService" ref="KtCtHHddvService" />
+    <property name="KtCtDHddvService" ref="KtCtDHddvService" />
+    <property name="HtThamsoService" ref="HtThamsoService" />
+  </object>
+  
+  <!--Form in report-->
+  <object id="ReportPreview" type="Vns.Erp.Core.Accounting.Report.ReportPreview, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="HtThamsoService" ref="HtThamsoService" />
+  </object>
+  <!--Form in report-->
+  <object id="frmTimKiemHoaDon" type="Vns.Erp.Core.Accounting.Report.frmTimKiemHoaDon, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="CtHoadonService" ref="CtHoadonService" />
+    <property name="CtThueService" ref="CtThueService" />
+  </object>
+  <!--Form chi tiet thue GTGT-->
+  <object id="frmHoaDonThueGTGT" type="Vns.Erp.Core.Accounting.Report.frmHoaDonThueGTGT, Vns.Erp.Core.Accounting.Report" singleton="false">
+    <property name="CtHoadonService" ref="CtHoadonService" />
+    <property name="CtThueService" ref="CtThueService" />
+    <property name="DmThueService" ref="DmThueService" />
+  </object>
+  <!--Dich vu spa-->
+  <object id="frmDanhMucThe_DanhSach" type="Vns.Erp.Core.Spa.VbSpaGUI.frmDanhMucThe_DanhSach, Vns.Erp.Core.Spa.VbSpaGUI" singleton="false">
+    <property name="SpaDmTheService" ref="SpaDmTheService" />
+    <property name="FormChiTiet" ref="frmDanhMucThe_ChiTiet" />
+  </object>
+
+  <object id="frmDanhMucThe_ChiTiet" type="Vns.Erp.Core.Spa.VbSpaGUI.frmDanhMucThe_ChiTiet, Vns.Erp.Core.Spa.VbSpaGUI" singleton="false">
+    <property name="SpaDmTheService" ref="SpaDmTheService" />
+    <property name="DmKhangService" ref="DmKhangService" />
+  </object>
+
+  <object id="frmDanhMucGiuongDV_DanhSach" type="Vns.Erp.Core.Spa.VbSpaGUI.frmDanhMucGiuongDV_DanhSach, Vns.Erp.Core.Spa.VbSpaGUI" singleton="false">
+    <property name="SpaDmGuongdvService" ref="SpaDmGuongdvService" />
+    <property name="FormChiTiet" ref="frmDanhMucGiuongDV_ChiTiet" />
+  </object>
+
+  <object id="frmDanhMucGiuongDV_ChiTiet" type="Vns.Erp.Core.Spa.VbSpaGUI.frmDanhMucGiuongDV_ChiTiet, Vns.Erp.Core.Spa.VbSpaGUI" singleton="false">
+    <!--<property name="ErpService" ref="SpaDmTheService" />-->
+    <property name="SpaDmGuongdvService" ref="SpaDmGuongdvService" />
+  </object>
+
+  <object id="frmHDDV_DanhSach" type="Vns.Erp.Core.Spa.VbSpaGUI.frmHDDV_DanhSach, Vns.Erp.Core.Spa.VbSpaGUI" singleton="false">
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="CtHHddvService" ref="CtHHddvService" />
+    <property name="CtDHddvService" ref="CtDHddvService" />
+  </object>
+
+  <object id="frmChonDichVu" type="Vns.Erp.Core.Spa.VbSpaGUI.frmChonDichVu, Vns.Erp.Core.Spa.VbSpaGUI" singleton="false">
+    <property name="SpaDmDichVuService" ref="SpaDmDichVuService" />
+  </object>
+
+  <object id="frmHDDV_ChiTiet" type="Vns.Erp.Core.Spa.VbSpaGUI.frmHDDV_ChiTiet, Vns.Erp.Core.Spa.VbSpaGUI" singleton="false">
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="CtHHddvService" ref="CtHHddvService" />
+    <property name="CtDHddvService" ref="CtDHddvService" />
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="DmKhangService" ref="DmKhangService" />
+    <property name="SpaDmTheService" ref="SpaDmTheService" />
+    <property name="SpaDmGuongdvService" ref="SpaDmGuongdvService" />
+    <property name="DmHanghoaService" ref="DmHanghoaService" />
+    <property name="SpaDmNhanvienService" ref="SpaDmNhanvienService" />
+    <property name="SpaDmDichVuService" ref="SpaDmDichVuService" />
+    <property name="SpaLsTheService" ref="SpaLsTheService" />
+  </object>
+
+  <object id="frmDanhMucDichVu_DanhSach" type="Vns.Erp.Core.Spa.VbSpaGUI.frmDanhMucDichVu_DanhSach, Vns.Erp.Core.Spa.VbSpaGUI" singleton="false">
+    <property name="SpaDmDichVuService" ref="SpaDmDichVuService" />
+    <property name="FormChiTiet" ref="frmDanhMucDichVu_ChiTiet" />
+  </object>
+
+  <object id="frmDanhMucDichVu_ChiTiet" type="Vns.Erp.Core.Spa.VbSpaGUI.frmDanhMucDichVu_ChiTiet, Vns.Erp.Core.Spa.VbSpaGUI" singleton="false">
+    <property name="SpaDmDichVuService" ref="SpaDmDichVuService" />
+  </object>
+
+  <object id="frmDanhMucCBNV_DanhSach" type="Vns.Erp.Core.Spa.VbSpaGUI.frmDanhMucCBNV_DanhSach, Vns.Erp.Core.Spa.VbSpaGUI" singleton="false">
+    <property name="SpaDmNhanvienService" ref="SpaDmNhanvienService" />
+    <property name="FormChiTiet" ref="frmDanhMucCBNV_ChiTiet" />
+  </object>
+
+  <object id="frmDanhMucCBNV_ChiTiet" type="Vns.Erp.Core.Spa.VbSpaGUI.frmDanhMucCBNV_ChiTiet, Vns.Erp.Core.Spa.VbSpaGUI" singleton="false">
+    <property name="SpaDmNhanvienService" ref="SpaDmNhanvienService" />
+  </object>
+
+  <object id="frmBangLuong" type="Vns.Erp.Core.Spa.VbSpaGUI.frmBangLuong, Vns.Erp.Core.Spa.VbSpaGUI" singleton="false">
+    <property name="CtHHddvService" ref="CtHHddvService" />
+    <property name="SpaDmNhanvienService" ref="SpaDmNhanvienService" />
+    <property name="SpaReportsService" ref="SpaReportsService" />
+    <property name="SpaBangLuongService" ref="SpaBangLuongService" />
+  </object>
+
+  <object id="SpaApplicationInit" type="Vns.Erp.Core.Spa.VbSpaGUI.SpaApplicationInit, Vns.Erp.Core.Spa.VbSpaGUI" singleton="false">
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="DmNgoaiteService" ref="DmNgoaiteService" />
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="DmKhoService" ref="DmKhoService" />
+  </object>
+
+  <object id="frmLSThe" type="Vns.Erp.Core.Spa.VbSpaGUI.frmLSThe, Vns.Erp.Core.Spa.VbSpaGUI" singleton="false">
+    <property name="SpaLsTheService" ref="SpaLsTheService" />
+  </object>
+
+  <object id="frmDoanhThuBanThe" type="Vns.Erp.Core.Spa.VbSpaGUI.frmDoanhThuBanThe, Vns.Erp.Core.Spa.VbSpaGUI" singleton="false">
+    <property name="SpaReportsService" ref="SpaReportsService" />
+    <property name="DmNhomKhangService" ref="DmNhomKhangService" />
+  </object>
+
+  <object id="frmDoanhThuNhomKH" type="Vns.Erp.Core.Spa.VbSpaGUI.frmDoanhThuNhomKH, Vns.Erp.Core.Spa.VbSpaGUI" singleton="false">
+    <property name="SpaReportsService" ref="SpaReportsService" />
+    <property name="DmNhomKhangService" ref="DmNhomKhangService" />
+  </object>
+
+  <object id="frmDoanhThuTongHop" type="Vns.Erp.Core.Spa.VbSpaGUI.frmDoanhThuTongHop, Vns.Erp.Core.Spa.VbSpaGUI" singleton="false">
+    <property name="SpaReportsService" ref="SpaReportsService" />
+    <property name="DmNhomKhangService" ref="DmNhomKhangService" />
+  </object>
+
+  <object id="frmCongViecNhanVien" type="Vns.Erp.Core.Spa.VbSpaGUI.frmCongViecNhanVien, Vns.Erp.Core.Spa.VbSpaGUI" singleton="false">
+    <property name="SpaReportsService" ref="SpaReportsService" />
+    <property name="SpaDmNhanvienService" ref="SpaDmNhanvienService" />
+  </object>
+  <!--Dich vu spa-->
+
+  <!--Ke toan hoa don dich vu-->
+  <object id="Ketoan.frmHoaDonDichVu_DanhSach" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmHoaDonDichVu_DanhSach, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="KtCtHHddvService" ref="KtCtHHddvService" />
+    <property name="KtCtDHddvService" ref="KtCtDHddvService" />
+    <property name="DmPtqtService" ref="DmPtqtService" />
+    <property name="DmVuviecService" ref="DmVuviecService" />
+  </object>
+  
+  <object id="Ketoan.frmHoaDonDichVu_ChiTiet" type="Vns.Erp.Core.Accounting.VbAccountingGUI.frmHoaDonDichVu_ChiTiet, Vns.Erp.Core.Accounting.VbAccountingGUI" singleton="false">
+    <property name="HtLoaichungtuService" ref="HtLoaichungtuService" />
+    <property name="KtCtHHddvService" ref="KtCtHHddvService" />
+    <property name="KtCtDHddvService" ref="KtCtDHddvService" />
+    <property name="DmNgoaiteService" ref="DmNgoaiteService" />
+    <property name="LsTygiaService" ref="LsTygiaService" />
+    <property name="CtHoadonService" ref="CtHoadonService" />
+    <property name="DmHopdongService" ref="DmHopdongService" />
+    <property name="DmVuviecService" ref="DmVuviecService" />
+    <property name="DmPhongbanService" ref="DmPhongbanService" />
+    <property name="DmKhoanphiService" ref="DmKhoanphiService" />
+    <property name="DmTudo1Service" ref="DmTudo1Service" />
+    <property name="DmTudo2Service" ref="DmTudo2Service" />
+    <property name="DmTudo3Service" ref="DmTudo3Service" />
+    <property name="DmTudo4Service" ref="DmTudo4Service" />
+    <property name="DmTudo5Service" ref="DmTudo5Service" />
+    <property name="DmPtqtService" ref="DmPtqtService" />
+    <property name="DmTaikhoanService" ref="DmTaikhoanService" />
+    <property name="KtKhoasoThangService" ref="KtKhoasoThangService" />
+    <property name="DmKhangService" ref="DmKhangService" />
+  </object>
+  <!--Ke toan hoa don dich vu-->
+</objects>

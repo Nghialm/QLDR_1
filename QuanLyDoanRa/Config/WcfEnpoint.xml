@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<client>
+
+
+  <!-- Local-->
+
+  <endpoint address="http://localhost:17022/AuthenticationService.svc"
+    binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService"
+    contract="AuthService.AuthenticationService" name="BasicHttpBinding_AuthenticationService" />
+  
+  <endpoint address="http://localhost:17022/AppCtStatusService.svc"
+        behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IAppCtStatusService"
+        name="WcfAppCtStatusService" />
+  <!--
+  <endpoint address="http://localhost:17022/AppCtStatusService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IAppCtStatusService" name="WcfAppCtStatusService"/>
+  <endpoint address="http://localhost:17022/AppCtStatusService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IAppCtStatusService" name="WcfAppCtStatusService"/>
+  -->
+  <endpoint address="http://localhost:17022/AppGroupsService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IAppGroupsService" name="WcfAppGroupsService"/>
+
+  <endpoint address="http://localhost:17022/AppUsersService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IAppUsersService" name="WcfAppUsersService"/>
+
+  <endpoint address="http://localhost:17022/DmDonviService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmDonviService" name="WcfDmDonviService"/>
+
+  <endpoint address="http://localhost:17022/AppDvGroupUserService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IAppDvGroupUserService" name="WcfAppDvGroupUserService"/>
+
+  <endpoint address="http://localhost:17022/HtThamsoService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IHtThamsoService" name="WcfHtThamsoService"/>
+
+  <endpoint address="http://localhost:17022/AppFormsService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IAppFormsService" name="WcfAppFormsService"/>
+
+  <endpoint address="http://localhost:17022/AppUsergroupService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IAppUsergroupService" name="WcfAppUsergroupService"/>
+
+  <endpoint address="http://localhost:17022/AppDvFormService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IAppDvFormService" name="WcfAppDvFormService"/>
+
+  <endpoint address="http://localhost:17022/AppHGroupFormService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IAppHGroupFormService" name="WcfAppHGroupFormService"/>
+
+  <endpoint address="http://localhost:17022/AppUgFormService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IAppUgFormService" name="WcfAppUgFormService"/>
+
+  <endpoint address="http://localhost:17022/AppHGroupFunctService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IAppHGroupFunctService" name="WcfAppHGroupFunctService"/>
+
+  <endpoint address="http://localhost:17022/AppGroupFormsService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IAppGroupFormsService" name="WcfAppGroupFormsService"/>
+
+  <endpoint address="http://localhost:17022/AppGroupFunctionService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IAppGroupFunctionService" name="WcfAppGroupFunctionService"/>
+
+  <endpoint address="http://localhost:17022/AppDvBcService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IAppDvBcService" name="WcfAppDvBcService"/>
+
+  <endpoint address="http://localhost:17022/AppDvGroupBcService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IAppDvGroupBcService" name="WcfAppDvGroupBcService"/>
+
+  <endpoint address="http://localhost:17022/HtBaocaoService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IHtBaocaoService" name="WcfHtBaocaoService"/>
+ 
+
+  <endpoint address="http://localhost:17022/HtLoaichungtuService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IHtLoaichungtuService" name="WcfHtLoaichungtuService"/>
+
+  <endpoint address="http://localhost:17022/AppDvGroupFormService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IAppDvGroupFormService" name="WcfAppDvGroupFormService"/>
+
+  <endpoint address="http://localhost:17022/AppDvGroupService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IAppDvGroupService" name="WcfAppDvGroupService"/>
+
+  <endpoint address="http://localhost:17022/DmTaikhoanService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmTaikhoanService" name="WcfDmTaikhoanService"/>
+
+  <endpoint address="http://localhost:17022/HtFileBaocaoService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IHtFileBaocaoService" name="WcfHtFileBaocaoService"/>
+
+  <endpoint address="http://localhost:17022/HtBienBaocaoService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IHtBienBaocaoService" name="WcfHtBienBaocaoService"/>
+
+
+  <endpoint address="http://localhost:17022/DmTkChitietService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmTkChitietService" name="WcfDmTkChitietService"/>
+
+  <endpoint address="http://localhost:17022/DmPhongbanService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmPhongbanService" name="WcfDmPhongbanService"/>
+
+
+  <endpoint address="http://localhost:17022/DmKhangService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmKhangService" name="WcfDmKhangService"/>
+
+  <endpoint address="http://localhost:17022/HtDanhmucService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IHtDanhmucService" name="WcfHtDanhmucService"/>
+
+  <endpoint address="http://localhost:17022/DmNhomKhangService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmNhomKhangService" name="WcfDmNhomKhangService"/>
+
+  <endpoint address="http://localhost:17022/DmNhomvattu1Service.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmNhomvattu1Service" name="WcfDmNhomvattu1Service"/>
+
+  <endpoint address="http://localhost:17022/DmDvtService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmDvtService" name="WcfDmDvtService"/>
+
+  <endpoint address="http://localhost:17022/DmHanghoaService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmHanghoaService" name="WcfDmHanghoaService"/>
+
+  <endpoint address="http://localhost:17022/DmTudo1Service.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmTudo1Service" name="WcfDmTudo1Service"/>
+<!---->
+  <endpoint address="http://localhost:17022/DmTudo2Service.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmTudo2Service" name="WcfDmTudo2Service"/>
+
+  <endpoint address="http://localhost:17022/DmTudo3Service.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmTudo3Service" name="WcfDmTudo3Service"/>
+
+  <endpoint address="http://localhost:17022/DmTudo4Service.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmTudo4Service" name="WcfDmTudo4Service"/>
+
+  <endpoint address="http://localhost:17022/DmTudo5Service.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmTudo5Service" name="WcfDmTudo5Service"/>
+
+  <endpoint address="http://localhost:17022/DmKhoService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmKhoService" name="WcfDmKhoService"/>
+
+
+  <endpoint address="http://localhost:17022/DmLydoTgTscdService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmLydoTgTscdService" name="WcfDmLydoTgTscdService"/>
+
+  <endpoint address="http://localhost:17022/DmNhomTscdService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmNhomTscdService" name="WcfDmNhomTscdService"/>
+
+  <endpoint address="http://localhost:17022/DmLoaiTaisanService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmLoaitaisanService" name="WcfDmLoaiTaisanService"/>
+
+  <endpoint address="http://localhost:17022/DmNguonTscdService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmNguonTscdService" name="WcfDmNguonTscdService"/>
+
+  <endpoint address="http://localhost:17022/DmBtKetchuyenService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmBtKetchuyenService" name="WcfDmBtKetchuyenService"/>
+
+  <endpoint address="http://localhost:17022/DmKhoanphiService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmKhoanphiService" name="WcfDmKhoanphiService"/>
+
+  <endpoint address="http://localhost:17022/DmVuviecService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmVuviecService" name="WcfDmVuviecService"/>
+
+  <endpoint address="http://localhost:17022/DmHopdongService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmHopdongService" name="WcfDmHopdongService"/>
+
+
+  <endpoint address="http://localhost:17022/LsTygiaService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.ILsTygiaService" name="WcfLsTygiaService"/>
+
+  <endpoint address="http://localhost:17022/DmNgoaiteService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmNgoaiteService" name="WcfDmNgoaiteService"/>
+
+  <endpoint address="http://localhost:17022/DmThueService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmThueService" name="WcfDmThueService"/>
+
+  <endpoint address="http://localhost:17022/DmPtqtService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmPtqtService" name="WcfDmPtqtService"/>
+
+  <endpoint address="http://localhost:17022/KtKhoasoThangService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IKtKhoasoThangService" name="WcfKtKhoasoThangService"/>
+
+  <endpoint address="http://localhost:17022/KtStatusCtService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IKtStatusCtService" name="WcfKtStatusCtService"/>
+
+  <endpoint address="http://localhost:17022/HtSoChungtuMaxService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IHtSoChungtuMaxService" name="WcfHtSoChungtuMaxService"/>
+
+
+
+  <!--Ke Toan-->
+  <endpoint address="http://localhost:17022/BcKetoanService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.IBcKetoanService" name="WcfBcKetoanService"/>
+
+  <endpoint address="http://localhost:17022/CtDService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.ICtDService" name="WcfCtDService"/>
+
+  <endpoint address="http://localhost:17022/CtHService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.ICtHService" name="WcfCtHService"/>
+
+  <endpoint address="http://localhost:17022/CtHoadonService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.ICtHoadonService" name="WcfCtHoadonService"/>
+
+  <endpoint address="http://localhost:17022/CtThueService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.ICtThueService" name="WcfCtThueService"/>
+
+  <endpoint address="http://localhost:17022/CtHNxService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.ICtHNxService" name="WcfCtHNxService"/>
+
+  <endpoint address="http://localhost:17022/CtDNxService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.ICtDNxService" name="WcfCtDNxService"/>
+
+  <endpoint address="http://localhost:17022/BcKetoanKhoService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.IBcKetoanKhoService" name="WcfBcKetoanKhoService"/>
+
+
+  <!--Tai san co dinh-->
+  <endpoint address="http://localhost:17022/DmLoaitaisanService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmLoaitaisanService" name="WcfDmLoaitaisanService"/>
+
+  <endpoint address="http://localhost:17022/DmTscdService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IDmTscdService" name="WcfDmTscdService"/>
+
+  <endpoint address="http://localhost:17022/TsCtTscdNvonService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.ITsCtTscdNvonService" name="WcfTsCtTscdNvonService"/>
+
+  <endpoint address="http://localhost:17022/TsTscdPtungService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.ITsTscdPtungService" name="WcfTsTscdPtungService"/>
+
+  <endpoint address="http://localhost:17022/CtTscdService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.ICtTscdService" name="WcfCtTscdService"/>
+
+  <endpoint address="http://localhost:17022/TsDieuchuyenService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.ITsDieuchuyenService" name="WcfTsDieuchuyenService"/>
+
+  <!--Thiet lap bao cao-->
+  <endpoint address="http://localhost:17022/KtDieukienBcService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IKtDieukienBcService" name="WcfKtDieukienBcService"/>
+
+  <endpoint address="http://localhost:17022/KtHBaocaoService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IKtHBaocaoService" name="WcfKtHBaocaoService"/>
+
+  <endpoint address="http://localhost:17022/KtHCotService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IKtHCotService" name="WcfKtHCotService"/>
+
+  <endpoint address="http://localhost:17022/KtHDongService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.IKtHDongService" name="WcfKtHDongService"/>
+
+  <endpoint address="http://localhost:17022/KtDmBtPhanboService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.IKtDmBtPhanboService" name="WcfKtDmBtPhanboService"/>
+
+  <endpoint address="http://localhost:17022/KtThBtPhanboService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.IKtThBtPhanboService" name="WcfKtThBtPhanboService"/>
+
+  <!--Report-->
+  <endpoint address="http://localhost:17022/RpLedgerS38DNService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Report.Service.Interface.IRpLedgerS38DNService" name="WcfRpLedgerS38DNService"/>
+
+  <endpoint address="http://localhost:17022/RpLedgerS07DnService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Report.Service.Interface.IRpLedgerS07DnService" name="WcfRpLedgerS07DnService"/>
+
+  <endpoint address="http://localhost:17022/RpLedgerS06DnService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Report.Service.Interface.IRpLedgerS06DnService" name="WcfRpLedgerS06DnService"/>
+
+  <endpoint address="http://localhost:17022/RpLedgerS06DnDetailService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Report.Service.Interface.IRpLedgerS06DnDetailService" name="WcfRpLedgerS06DnDetailService"/>
+
+  <endpoint address="http://localhost:17022/RpLedgerS10DnService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Report.Service.Interface.IRpLedgerS10DnService" name="WcfRpLedgerS10DnService"/>
+
+  <endpoint address="http://localhost:17022/RpLedgerS11DnAllService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Report.Service.Interface.IRpLedgerS11DnAllService" name="WcfRpLedgerS11DnAllService"/>
+
+  <endpoint address="http://localhost:17022/RpLedgerS11DnService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Report.Service.Interface.IRpLedgerS11DnService" name="WcfRpLedgerS11DnService"/>
+
+  <endpoint address="http://localhost:17022/RpLedgerS12DnService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Report.Service.Interface.IRpLedgerS12DnService" name="WcfRpLedgerS12DnService"/>
+
+  <endpoint address="http://localhost:17022/RpReportB01DnService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Report.Service.Interface.IRpReportB01DnService" name="WcfRpReportB01DnService"/>
+
+  <endpoint address="http://localhost:17022/RpBangTinhKhauHaoService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Report.Service.Interface.IRpBangTinhKhauHao" name="WcfRpBangTinhKhauHaoService"/>
+
+  <endpoint address="http://localhost:17022/RpTheTscdS23DnService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Report.Service.Interface.IRpTheTscdS23DnService" name="WcfRpTheTscdS23DnService"/>
+
+  <endpoint address="http://localhost:17022/RpSoTscdS21DnService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Report.Service.Interface.IRpSoTscdS21DnService" name="WcfRpSoTscdS21DnService"/>
+
+
+  <!--Tinh gia xuat kho-->
+  <endpoint address="http://localhost:17022/KtGiaxuatDaukyService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.IKtGiaxuatDaukyService" name="WcfKtGiaxuatDaukyService"/>
+
+  <endpoint address="http://localhost:17022/KtDuluongDaukyService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.IKtDuluongDaukyService" name="WcfKtDuluongDaukyService"/>
+
+
+  <endpoint address="http://localhost:17022/TsLsKhauhaoService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Admin.Service.Interface.ITsLsKhauhaoService" name="WcfTsLsKhauhaoService"/>
+
+
+
+  <!--Hoa don dich vu ke toan-->
+  <endpoint address="http://localhost:17022/KtCtHHddvService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.IKtCtHHddvService" name="WcfKtCtHHddvService"/>
+
+  <endpoint address="http://localhost:17022/KtCtDHddvService.svc" behaviorConfiguration="InterceptorBehavior" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AuthenticationService" contract="Vns.Erp.Core.Accounting.Service.Interface.IKtCtDHddvService" name="WcfKtCtDHddvService"/>
+</client>

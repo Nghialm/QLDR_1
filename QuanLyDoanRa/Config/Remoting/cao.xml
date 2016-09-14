@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net"
+         xmlns:r="http://www.springframework.net/remoting">
+	
+	<description>cao</description>
+
+  <r:caoFactory id="AppDvBcService" remoteTargetName="AppDvBcService" 
+                serviceUrl="tcp://localhost:8005" />
+  <r:caoFactory id="AppGroupsService" remoteTargetName="AppGroupsService"
+                 serviceUrl="tcp://localhost:8005" />
+  <r:caoFactory id="AppUsersService" remoteTargetName="AppUsersService"
+                 serviceUrl="tcp://localhost:8005" />
+  <r:caoFactory id="DmDonviService" remoteTargetName="DmDonviService"
+                 serviceUrl="tcp://localhost:8005" />
+  <r:caoFactory id="AppDvGroupUserService" remoteTargetName="AppDvGroupUserService"
+                 serviceUrl="tcp://localhost:8005" />
+  <r:caoFactory id="HtThamsoService" remoteTargetName="HtThamsoService"
+                 serviceUrl="tcp://localhost:8005" />
+  <r:caoFactory id="AppFormsService" remoteTargetName="AppFormsService"
+                 serviceUrl="tcp://localhost:8005" />
+  <r:caoFactory id="AppUsergroupService" remoteTargetName="AppUsergroupService"
+                 serviceUrl="tcp://localhost:8005" />
+  <r:caoFactory id="AppGroupFunctionService" remoteTargetName="AppGroupFunctionService"
+                 serviceUrl="tcp://localhost:8005" />
+  <r:caoFactory id="AppDvGroupBcService" remoteTargetName="AppDvGroupBcService"
+               serviceUrl="tcp://localhost:8005" />
+  <r:caoFactory id="AppGroupFormsService" remoteTargetName="AppGroupFormsService"
+               serviceUrl="tcp://localhost:8005" />
+  <r:caoFactory id="AppUgFormService" remoteTargetName="AppUgFormService"
+             serviceUrl="tcp://localhost:8005" />
+  <r:caoFactory id="AppHGroupFunctService" remoteTargetName="AppHGroupFunctService"
+             serviceUrl="tcp://localhost:8005" />
+  
+  <r:caoFactory id="AppCtStatusService" remoteTargetName="AppCtStatusService"
+             serviceUrl="tcp://localhost:8005" />
+  <r:caoFactory id="AppDvFormService" remoteTargetName="AppDvFormService"
+             serviceUrl="tcp://localhost:8005" />
+  <r:caoFactory id="AppHGroupFormService" remoteTargetName="AppHGroupFormService"
+             serviceUrl="tcp://localhost:8005" />
+  <r:caoFactory id="AppDvGroupFormService" remoteTargetName="AppDvGroupFormService"
+             serviceUrl="tcp://localhost:8005" />
+  <r:caoFactory id="HtBaocaoService" remoteTargetName="HtBaocaoService"
+             serviceUrl="tcp://localhost:8005" />
+  <r:caoFactory id="HtLoaichungtuService" remoteTargetName="HtLoaichungtuService"
+             serviceUrl="tcp://localhost:8005" />
+  <r:caoFactory id="AppDvGroupService" remoteTargetName="AppDvGroupService"
+             serviceUrl="tcp://localhost:8005" />
+  
+  <!--
+		Old fashion way without remoting config parser...
+	<object id="calculatorService" type="Spring.Remoting.CaoFactoryObject, Spring.Services">
+		<property name="RemoteTargetName" value="prototypeCalculator" />
+		<property name="ServiceUrl" value="tcp://localhost:8005" />
+	</object>
+  -->
+	
+</objects>

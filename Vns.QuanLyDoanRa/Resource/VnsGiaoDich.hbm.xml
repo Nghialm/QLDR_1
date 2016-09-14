@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Vns.QuanLyDoanRa.Domain.VnsGiaoDich,Vns.QuanLyDoanRa" table="VnsGiaoDich" lazy="false">
+
+		<id name="GiaoDichId" column="GiaoDichId" type="Guid">
+			<generator class="guid"/>
+		</id>
+		<property column="ChungTuId" type="Guid" name="ChungTuId" not-null="true" />
+		<property column="TkNoId" type="Guid" name="TkNoId" />
+		<property column="MaTkNo" type="String" name="MaTkNo" length="32" />
+		<property column="TenTkNo" type="String" name="TenTkNo" length="128" />
+    <property column="TkCoId" type="Guid" name="TkCoId" />
+    <property column="MaTkCo" type="String" name="MaTkCo" length="32" />
+    <property column="TenTkCo" type="String" name="TenTkCo" length="128" />
+		<property column="SoTien" type="Decimal" name="SoTien" />
+		<property column="TyGia" type="Decimal" name="TyGia" />
+		<property column="SoTienNt" type="Decimal" name="SoTienNt" />
+		<property column="KhachHangNoId" type="Guid" name="KhachHangNoId" />
+    <property column="KhachHangCoId" type="Guid" name="KhachHangCoId" />
+		<property column="DoanRaNoId" type="Guid" name="DoanRaNoId" />
+    <property column="DoanRaCoId" type="Guid" name="DoanRaCoId" />
+		<property column="LoaiDoanRaNoId" type="Guid" name="LoaiDoanRaNoId" />
+    <property column="LoaiDoanRaCoId" type="Guid" name="LoaiDoanRaCoId" />
+    <property column="MucTieuMucNoId" type="Guid" name="MucTieuMucNoId" />
+    <property column="MucTieuMucCoId" type="Guid" name="MucTieuMucCoId" />
+    <property column="NoiDung" type="String" name="NoiDung" />
+    <property column="TyGiaTuDong" type="Decimal" name="TyGiaTuDong" />
+    <property column="DuLuong" type="Decimal" name="DuLuong" />
+    <property column="DienGiai" type="String" name="DienGiai" />
+    <property column="MoTa" type="String" name="MoTa" />
+    <property column="NgoaiTeId" type="Guid" name="NgoaiTeId" />
+    <many-to-one name="objChungTu" column="ChungTuId" class="Vns.QuanLyDoanRa.Domain.VnsChungTu" insert="false" update="false" not-found="ignore" />
+    <many-to-one name="objDoanRa" column="DoanRaCoId" class="Vns.QuanLyDoanRa.Domain.VnsDoanCongTac" insert="false" update="false" not-found="ignore" />
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Vns.QuanLyDoanRa.Domain.VnsDuLuongDauKy,Vns.QuanLyDoanRa" table="VnsDuLuongDauKy" lazy="true">
+		<id name="Id" column="Id">
+			<generator class="guid" />
+		</id>
+		<property name="NgayTinh" column="NgayTinh" />
+		<property name="NguonId" column="NguonId" />
+		<property name="GiaoDichId" column="GiaoDichId" />
+    <property name="NghiepVu" column="NghiepVu" />
+		<property name="DuLuong" column="DuLuong" />
+		<property name="TyGia" column="TyGia" />
+		<property name="SoTienTon" column="SoTienTon" />
+		<property name="PhuongPhapId" column="PhuongPhapId" />
+    <property name="NgayCt" column="NgayCt" />
+	</class>
+</hibernate-mapping>

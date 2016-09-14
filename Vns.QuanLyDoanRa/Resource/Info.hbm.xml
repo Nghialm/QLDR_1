@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="Vns.QuanLyDoanRa.Domain.Info,Vns.QuanLyDoanRa" table="Info" lazy="false">
+
+		<id name="Id" column="Id" type="Guid">
+			<generator class="guid"/>
+		</id>
+		<property column="Ma" type="String" name="Ma" length="250" />
+		<property column="GiaTri" type="String" name="GiaTri" length="250" />
+    <property column="MoTa" type="String" name="MoTa" length="250" />
+		<property column="TrangThai" type="Int32" name="TrangThai" />
+		
+	</class>
+</hibernate-mapping>

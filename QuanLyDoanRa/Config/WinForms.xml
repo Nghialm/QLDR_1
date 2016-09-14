@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+
+	<description>
+		The Northwind web layer definitions
+	</description>
+
+	<!--Thiet lap form main-->
+	<object id="frmLogin" type="QuanLyDoanRa.FrmLogin, QuanLyDoanRa" singleton="false">
+	</object>
+	<object id="frmMain" type="QuanLyDoanRa.FrmMain, QuanLyDoanRa" singleton="false">
+		<property name="InfoService" ref="InfoService"/>
+	</object>
+	<object id="frmMain1" type="QuanLyDoanRa.frmMain1, QuanLyDoanRa" singleton="false">
+		<property name="InfoService" ref="InfoService"/>
+	</object>
+	
+	<object id="FrmQuanTriNguoiDung" type="QuanLyDoanRa.FrmQuanTriNguoiDung, QuanLyDoanRa" singleton="false">
+	</object>
+	<object id="frmTamUng" type="QuanLyDoanRa.FrmTamUng, QuanLyDoanRa" singleton="false">
+		<property name="VnsLoaiChungTuService" ref="VnsLoaiChungTuService"/>
+		<property name="VnsGiaoDichService" ref="VnsGiaoDichService"/>
+		<property name="VnsChungTuService" ref="VnsChungTuService"/>
+		<property name="VnsNghiepVuService" ref="VnsNghiepVuService"/>
+		<property name="VnsLoaiDoanRaService" ref="VnsLoaiDoanRaService"/>
+		<property name="VnsDoanCongTacService" ref="VnsDoanCongTacService"/>
+
+	</object>
+
+	<object id="frmUyNhiemChi" type="QuanLyDoanRa.FrmUyNhiemChi, QuanLyDoanRa" singleton="false">
+		<property name="VnsLoaiChungTuService" ref="VnsLoaiChungTuService"/>
+		<property name="VnsGiaoDichService" ref="VnsGiaoDichService"/>
+		<property name="VnsChungTuService" ref="VnsChungTuService"/>
+		<property name="VnsNghiepVuService" ref="VnsNghiepVuService"/>
+		<property name="VnsLoaiDoanRaService" ref="VnsLoaiDoanRaService"/>
+		<property name="VnsDoanCongTacService" ref="VnsDoanCongTacService"/>
+		<property name="VnsDmKhachHangService" ref="VnsDmKhachHangService"/>
+	</object>
+
+	<object id="frmUyNhiemChiEdit" type="QuanLyDoanRa.frmUyNhiemChiEdit, QuanLyDoanRa" singleton="false">
+		<property name="VnsChungTuService" ref="VnsChungTuService"/>
+		<property name="VnsGiaoDichService" ref="VnsGiaoDichService"/>
+		<property name="VnsNghiepVuService" ref="VnsNghiepVuService"/>
+		<property name="VnsLoaiChungTuService" ref="VnsLoaiChungTuService"/>
+		<property name="VnsLoaiDoanRaService" ref="VnsLoaiDoanRaService"/>
+		<property name="VnsDoanCongTacService" ref="VnsDoanCongTacService"/>
+		<property name="VnsDmMucTieuMucService" ref="VnsDmMucTieuMucService"/>
+		<property name="VnsDmKhachHangService" ref="VnsDmKhachHangService"/>
+		<property name="VnsDmHeThongService" ref="VnsDmHeThongService"/>
+	</object>
+
+	<object id="frmMucTieuMuc" type="QuanLyDoanRa.FrmMucTieuMuc, QuanLyDoanRa" singleton="false">
+		<property name="VnsDmMucTieuMucService" ref="VnsDmMucTieuMucService"/>
+	</object>
+	<!--<object id="frmDanhMucChucVu" type="QuanLyDoanRa.FrmDanhMucChucVu, QuanLyDoanRa" singleton="false">
+    <property name="VnsDanhMucChucVuService" ref="VnsDanhMucChucVuService"/>
+  </object>-->
+	<object id="frmChucVu" type="QuanLyDoanRa.FrmDMChucVu, QuanLyDoanRa" singleton="false">
+		<property name="VnsDanhMucChucVuService" ref="VnsDanhMucChucVuService"/>
+	</object>
+	<object id="frmDonVi" type="QuanLyDoanRa.FrmDonVi, QuanLyDoanRa" singleton="false">
+		<property name="VnsDonViService" ref="VnsDonViService"/>
+		<property name="VnsDmHeThongService" ref="VnsDmHeThongService"/>
+	</object>
+	<object id="frmDMQuocGia" type="QuanLyDoanRa.FrmDMQuocGia, QuanLyDoanRa" singleton="false">
+		<property name="VnsDmQuocGiaService" ref="VnsDmQuocGiaService"/>
+		<property name="VnsDmHeThongService" ref="VnsDmHeThongService"/>
+	</object>
+	<object id="frmDSDoanCongTac" type="QuanLyDoanRa.FrmDSDoanCongTac, QuanLyDoanRa" singleton="false">
+		<property name="VnsDoanCongTacService" ref="VnsDoanCongTacService"/>
+		<property name="VnsLoaiDoanRaService" ref="VnsLoaiDoanRaService"/>
+		<property name="VnsThanhVienService" ref="VnsThanhVienService"/>
+		<property name="VnsLichCongTacService" ref="VnsLichCongTacService"/>
+		<property name="VnsGiaoDichService" ref="VnsGiaoDichService"/>
+		<property name="VnsChungTuService" ref="VnsChungTuService"/>
+	</object>
+	<object id="frmDMHeThong" type="QuanLyDoanRa.FrmDMHeThong, QuanLyDoanRa" singleton="false">
+		<property name="VnsDmHeThongService" ref="VnsDmHeThongService"/>
+	</object>
+	<object id="frmChungTu" type="QuanLyDoanRa.FrmChungTu, QuanLyDoanRa" singleton="false">
+		<property name="VnsChungTuService" ref="VnsChungTuService"/>
+	</object>
+	<object id="frmDinhMuc" type="QuanLyDoanRa.FrmDinhMuc, QuanLyDoanRa" singleton="false">
+		<property name="VnsDinhMucService" ref="VnsDinhMucService"/>
+		<property name="VnsDmQuocGiaService" ref="VnsDmQuocGiaService"/>
+		<property name="VnsDmMucTieuMucService" ref="VnsDmMucTieuMucService"/>
+		<property name="VnsDmHeThongService" ref="VnsDmHeThongService"/>
+	</object>
+	<object id="frmQuyetToanDoan" type="QuanLyDoanRa.FrmQuyetToanDoan, QuanLyDoanRa" singleton="false">
+		<property name="VnsQuyetToanDoanService" ref="VnsQuyetToanDoanService"/>
+		<property name="VnsDmQuocGiaService" ref="VnsDmQuocGiaService"/>
+		<property name="VnsDmMucTieuMucService" ref="VnsDmMucTieuMucService"/>
+		<property name="VnsDoanCongTacService" ref="VnsDoanCongTacService"/>
+		<property name="VnsDmHeThongService" ref="VnsDmHeThongService"/>
+		<property name="VnsDuToanDoanService" ref="VnsDuToanDoanService"/>
+		<property name="VnsLoaiChungTuService" ref="VnsLoaiChungTuService"/>
+		<property name="VnsNghiepVuService" ref="VnsNghiepVuService"/>
+		<property name="VnsChungTuService" ref="VnsChungTuService"/>
+	</object>
+
+	<object id="FrmQuyetToanDoanEdit" type="QuanLyDoanRa.FrmQuyetToanDoanEdit, QuanLyDoanRa" singleton="false">
+		<property name="VnsDmMucTieuMucService" ref="VnsDmMucTieuMucService"/>
+		<property name="VnsDoanCongTacService" ref="VnsDoanCongTacService"/>
+		<property name="VnsDuToanDoanService" ref="VnsDuToanDoanService"/>
+		<property name="VnsLoaiChungTuService" ref="VnsLoaiChungTuService"/>
+		<property name="VnsNghiepVuService" ref="VnsNghiepVuService"/>
+		<property name="VnsQuyetToanDoanService" ref="VnsQuyetToanDoanService"/>
+	</object>
+
+	<object id="frmEditDoanCT" type="QuanLyDoanRa.FrmEditDoanCT, QuanLyDoanRa" singleton="false">
+		<property name="VnsDoanCongTacService" ref="VnsDoanCongTacService"/>
+		<property name="VnsLoaiDoanRaService" ref="VnsLoaiDoanRaService"/>
+		<property name="VnsDmQuocGiaService" ref="VnsDmQuocGiaService"/>
+		<property name="VnsDmHeThongService" ref="VnsDmHeThongService"/>
+		<property name="VnsThanhVienService" ref="VnsThanhVienService"/>
+		<property name="VnsLichCongTacService" ref="VnsLichCongTacService"/>
+		<property name="VnsDonViService" ref="VnsDonViService"/>
+		<property name="VnsDanhMucChucVuService" ref="VnsDanhMucChucVuService"/>
+
+	</object>
+	<object id="frmEditTamUng" type="QuanLyDoanRa.FrmEditTamUng, QuanLyDoanRa" singleton="false">
+		<property name="VnsChungTuService" ref="VnsChungTuService"/>
+		<property name="VnsGiaoDichService" ref="VnsGiaoDichService"/>
+		<property name="VnsNghiepVuService" ref="VnsNghiepVuService"/>
+		<property name="VnsLoaiChungTuService" ref="VnsLoaiChungTuService"/>
+		<property name="VnsLoaiDoanRaService" ref="VnsLoaiDoanRaService"/>
+		<property name="VnsDoanCongTacService" ref="VnsDoanCongTacService"/>
+		<property name="VnsDmMucTieuMucService" ref="VnsDmMucTieuMucService"/>
+	</object>
+	<object id="frmDuToanDoanRa" type="QuanLyDoanRa.FrmDuToanDoanRa, QuanLyDoanRa" singleton="false">
+		<property name="VnsDuToanDoanService" ref="VnsDuToanDoanService"/>
+		<property name="VnsDmQuocGiaService" ref="VnsDmQuocGiaService"/>
+		<property name="VnsDmMucTieuMucService" ref="VnsDmMucTieuMucService"/>
+	</object>
+	<object id="frmThanhToan" type="QuanLyDoanRa.FrmThanhToan, QuanLyDoanRa" singleton="false">
+		<property name="VnsDuToanDoanService" ref="VnsDuToanDoanService"/>
+	</object>
+	<object id="frmLoaiDoanRa" type="QuanLyDoanRa.FrmLoaiDoanRa, QuanLyDoanRa" singleton="false">
+		<property name="VnsLoaiDoanRaService" ref="VnsLoaiDoanRaService"/>
+	</object>
+
+	<object id="FrmThamSoBaoCao" type="QuanLyDoanRa.Reports.FrmThamSoBaoCao, QuanLyDoanRa" singleton="false">
+		<property name="VnsDoanCongTacService" ref="VnsDoanCongTacService"/>
+	</object>
+
+	<object id="frmNamKeToan" type="QuanLyDoanRa.FrmNamKeToan, QuanLyDoanRa" singleton="false">
+		<!--<property name="ReportService" ref="ReportService"/>-->
+	</object>
+
+	<object id="GetSoDu4Input" type="QuanLyDoanRa.Controls.GetSoDu4Input, QuanLyDoanRa" singleton="false">
+		<property name="ReportService" ref="ReportService"/>
+		<property name="VnsLoaiDoanRaService" ref="VnsLoaiDoanRaService"/>
+
+	</object>
+
+	<object id="InBiaQuyetToan" type="QuanLyDoanRa.Reports.InBiaQuyetToan, QuanLyDoanRa" singleton="false">
+		<property name="VnsLichCongTacService" ref="VnsLichCongTacService"/>
+		<property name="VnsThanhVienService" ref="VnsThanhVienService"/>
+		<property name="VnsDanhMucChucVuService" ref="VnsDanhMucChucVuService"/>
+		<property name="VnsDmQuocGiaService" ref="VnsDmQuocGiaService"/>
+
+	</object>
+	<object id="frmDuToan" type="QuanLyDoanRa.FrmDuToan, QuanLyDoanRa" singleton="false">
+		<property name="VnsDuToanDoanService" ref="VnsDuToanDoanService"/>
+		<property name="VnsDmQuocGiaService" ref="VnsDmQuocGiaService"/>
+		<property name="VnsDmMucTieuMucService" ref="VnsDmMucTieuMucService"/>
+		<property name="VnsDoanCongTacService" ref="VnsDoanCongTacService"/>
+		<property name="VnsDmHeThongService" ref="VnsDmHeThongService"/>
+	</object>
+	<object id="FrmEditDuToan" type="QuanLyDoanRa.FrmEditDuToan, QuanLyDoanRa" singleton="false">
+		<property name="VnsDuToanDoanService" ref="VnsDuToanDoanService"/>
+		<property name="VnsDmQuocGiaService" ref="VnsDmQuocGiaService"/>
+		<property name="VnsDmMucTieuMucService" ref="VnsDmMucTieuMucService"/>
+		<property name="VnsDoanCongTacService" ref="VnsDoanCongTacService"/>
+		<property name="VnsDmHeThongService" ref="VnsDmHeThongService"/>
+	</object>
+	<object id="frmThamSoHeThong" type="QuanLyDoanRa.frmThamSoHeThong, QuanLyDoanRa" singleton="false">
+		<property name="InfoService" ref="InfoService"/>
+	</object>
+
+	<object id="frmDanhMucKhachHang" type="QuanLyDoanRa.frmDanhMucKhachHang, QuanLyDoanRa" singleton="false">
+		<property name="VnsDmKhachHangService" ref="VnsDmKhachHangService"/>
+	</object>
+
+	<!--Report-->
+	<object id="frmReportByLoaiDR" type="QuanLyDoanRa.Reports.frmReportByLoaiDR, QuanLyDoanRa" singleton="false">
+		<property name="VnsLoaiDoanRaService" ref="VnsLoaiDoanRaService"/>
+		<property name="VnsGiaoDichService" ref="VnsGiaoDichService"/>
+	</object>
+
+	<object id="frmReportByThangNam" type="QuanLyDoanRa.Reports.frmReportByThangNam, QuanLyDoanRa" singleton="false">
+	</object>
+
+	<object id="frmPhuBieuTongHopKp" type="QuanLyDoanRa.Reports.frmPhuBieuTongHopKp, QuanLyDoanRa" singleton="false">
+	</object>
+
+	<object id="frmSoCTTaiKhoan" type="QuanLyDoanRa.Reports.frmSoCTTaiKhoan, QuanLyDoanRa" singleton="false">
+	</object>
+
+	<object id="B01DR" type="QuanLyDoanRa.Reports.B01DR, QuanLyDoanRa" singleton="false">
+		<property name="VnsGiaoDichService" ref="VnsGiaoDichService"/>
+		<property name="VnsChungTuService" ref="VnsChungTuService"/>
+		<property name="VnsDoanCongTacService" ref="VnsDoanCongTacService"/>
+		<property name="VnsLoaiDoanRaService" ref="VnsLoaiDoanRaService"/>
+		<property name="VnsDmQuocGiaService" ref="VnsDmQuocGiaService"/>
+
+	</object>
+	<object id="ChungTuGhiSo" type="QuanLyDoanRa.Reports.ChungTuGhiSo, QuanLyDoanRa" singleton="false">
+
+
+		<property name="VnsDoanCongTacService" ref="VnsDoanCongTacService"/>
+
+	</object>
+
+	<object id="B02DR_P1" type="QuanLyDoanRa.Reports.B02DR_P1, QuanLyDoanRa" singleton="false">
+		<property name="VnsGiaoDichService" ref="VnsGiaoDichService"/>
+	</object>
+
+	<object id="B02DR_P2" type="QuanLyDoanRa.Reports.B02DR_P2, QuanLyDoanRa" singleton="false">
+		<property name="VnsGiaoDichService" ref="VnsGiaoDichService"/>
+	</object>
+
+	<object id="B02DR_P3" type="QuanLyDoanRa.Reports.B02DR_P3, QuanLyDoanRa" singleton="false">
+		<property name="VnsGiaoDichService" ref="VnsGiaoDichService"/>
+	</object>
+
+	<object id="B03DR" type="QuanLyDoanRa.Reports.B03DR, QuanLyDoanRa" singleton="false">
+	</object>
+
+	<object id="B04DR" type="QuanLyDoanRa.Reports.B04DR, QuanLyDoanRa" singleton="false">
+	</object>
+
+	<object id="B05DR" type="QuanLyDoanRa.Reports.B05DR, QuanLyDoanRa" singleton="false">
+	</object>
+
+	<object id="B06DR" type="QuanLyDoanRa.Reports.B06DR, QuanLyDoanRa" singleton="false">
+	</object>
+
+	<object id="BangKeCtGhi" type="QuanLyDoanRa.Reports.BangKeCtGhi, QuanLyDoanRa" singleton="false">
+	</object>
+
+	<object id="BangKeQuyetToan" type="QuanLyDoanRa.Reports.BangKeQuyetToan, QuanLyDoanRa" singleton="false">
+	</object>
+
+	<object id="BangKeTamUng" type="QuanLyDoanRa.Reports.BangKeTamUng, QuanLyDoanRa" singleton="false">
+		<property name="VnsGiaoDichService" ref="VnsGiaoDichService"/>
+		<property name="VnsChungTuService" ref="VnsChungTuService"/>
+		<property name="VnsDoanCongTacService" ref="VnsDoanCongTacService"/>
+		<property name="VnsLoaiDoanRaService" ref="VnsLoaiDoanRaService"/>
+		<property name="VnsDmQuocGiaService" ref="VnsDmQuocGiaService"/>
+	</object>
+	<object id="FrmKhoiPhucDuLieu" type="QuanLyDoanRa.FrmKhoiPhucDuLieu, QuanLyDoanRa" singleton="false">
+
+	</object>
+	<object id="FrmBackupDuLieu" type="QuanLyDoanRa.FrmBackupDuLieu, QuanLyDoanRa" singleton="false">
+
+	</object>
+
+	<object id="frmSearchChungTu" type="QuanLyDoanRa.frmSearchChungTu, QuanLyDoanRa" singleton="false">
+		<property name="VnsLoaiChungTuService" ref="VnsLoaiChungTuService"/>
+		<property name="VnsDoanCongTacService" ref="VnsDoanCongTacService"/>
+		<property name="VnsLoaiDoanRaService" ref="VnsLoaiDoanRaService"/>
+		<property name="VnsChungTuService" ref="VnsChungTuService"/>
+		<property name="VnsGiaoDichService" ref="VnsGiaoDichService"/>
+		<property name="VnsNghiepVuService" ref="VnsNghiepVuService"/>
+	</object>
+
+	<object id="frmInPhieu" type="QuanLyDoanRa.Reports.frmInPhieu, QuanLyDoanRa" singleton="false">
+		<property name="VnsLoaiDoanRaService" ref="VnsLoaiDoanRaService"/>
+		<property name="VnsLoaiChungTuService" ref="VnsLoaiChungTuService"/>
+
+	</object>
+
+	<object id="FrmTinhTyGia" type="QuanLyDoanRa.FrmTinhTyGia, QuanLyDoanRa" singleton="false">
+		<property name="VnsLoaiDoanRaService" ref="VnsLoaiDoanRaService"/>
+		<property name="VnsDuLuongDauKyService" ref="VnsDuLuongDauKyService"/>
+	</object>
+
+	<object id="ChungTuGhiSoTamUng" type="QuanLyDoanRa.Reports.ChungTuGhiSoTamUng, QuanLyDoanRa" singleton="false">
+		<property name="VnsGiaoDichService" ref="VnsGiaoDichService"/>
+		<property name="VnsLoaiDoanRaService" ref="VnsLoaiDoanRaService"/>
+	</object>
+</objects>
