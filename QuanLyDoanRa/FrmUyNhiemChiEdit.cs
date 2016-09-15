@@ -27,6 +27,7 @@ namespace QuanLyDoanRa
         public IVnsDoanCongTacService VnsDoanCongTacService;
         public IVnsDmMucTieuMucService VnsDmMucTieuMucService;
         public IVnsDmHeThongService VnsDmHeThongService;
+        public IVnsNgoaiTeService VnsNgoaiTeService;
         #endregion
 
         #region "Variable"
@@ -145,6 +146,11 @@ namespace QuanLyDoanRa
             cboTrangThai.Properties.DataSource = lstTrangThai;
             cboTrangThai.Properties.ValueMember = "Ma";
             cboTrangThai.Properties.DisplayMember = "Ten";
+
+            List<VnsNgoaiTe> lstNgoaiTe = new List<VnsNgoaiTe>();
+            //lstNgoaiTe.Add(new VnsNgoaiTe());
+            lstNgoaiTe.AddRange(VnsNgoaiTeService.GetAll());
+            cboNgoaiTe.DataSource = lstNgoaiTe;
         }
 
         private void SetColumnByLoaiPhieu(decimal _LoaiPhieu)

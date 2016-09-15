@@ -4,7 +4,7 @@
 		<id name="Id" column="NgoaiTeID">
 			<generator class="assigned" />
 		</id>
-		<property name="Mangoaite" column="MaNgoaiTe" type="String" length="32" />
-		<property name="Tenngoaite" column="TenNgoaiTe" type="String" length="512" />
+		<property name="MaNgoaiTe" column="MaNgoaiTe" type="String" length="32" />
+		<property name="TenNgoaiTe" column="TenNgoaiTe" type="String" length="512" />
 	</class>
 </hibernate-mapping>

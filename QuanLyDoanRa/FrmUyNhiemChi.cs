@@ -26,6 +26,7 @@ namespace QuanLyDoanRa
         public IVnsDoanCongTacService VnsDoanCongTacService;
         public IVnsLoaiDoanRaService VnsLoaiDoanRaService;
         public IVnsDmKhachHangService VnsDmKhachHangService;
+        public IVnsNgoaiTeService VnsNgoaiTeService;
         private String NhomLoaiChungTu;
         //private VnsLoaiChungTu objLoaiChungTu;
         private VnsChungTu objChungTu = new VnsChungTu();
@@ -147,6 +148,10 @@ namespace QuanLyDoanRa
             cboLoaiDoanRaCoId.DataSource = lstLoaiDoanRa;
             cboLoaiDoanRaNoId.DataSource = lstLoaiDoanRa;
 
+            List<VnsNgoaiTe> lstNgoaiTe = new List<VnsNgoaiTe>();
+            //lstNgoaiTe.Add(new VnsNgoaiTe());
+            lstNgoaiTe.AddRange(VnsNgoaiTeService.GetAll());
+            cboNgoaiTe.DataSource = lstNgoaiTe;
         }
 
         private void SetColumnByLoaiPhieu(decimal _LoaiPhieu)

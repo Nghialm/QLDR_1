@@ -83,6 +83,11 @@
             this.colMucTieuMucCoId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cboMucTieuMucCoId = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNgoaiTeId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cboNgoaiTe = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barView = new DevExpress.XtraBars.BarManager(this.components);
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -120,6 +125,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cboLoaiDoanRaCoId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboMucTieuMucNoId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboMucTieuMucCoId)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboNgoaiTe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popView)).BeginInit();
             this.SuspendLayout();
@@ -444,7 +451,8 @@
             this.cboDoanRaCoId,
             this.cboLoaiDoanRaNoId,
             this.cboMucTieuMucNoId,
-            this.cboMucTieuMucCoId});
+            this.cboMucTieuMucCoId,
+            this.cboNgoaiTe});
             this.grcChiTiet.Size = new System.Drawing.Size(992, 229);
             this.grcChiTiet.TabIndex = 0;
             this.grcChiTiet.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -466,7 +474,8 @@
             this.colLoaiDoanRaCoId,
             this.colMucTieuMucNoId,
             this.colMucTieuMucCoId,
-            this.gridColumn2});
+            this.gridColumn2,
+            this.colNgoaiTeId});
             this.grvChiTiet.GridControl = this.grcChiTiet;
             this.grvChiTiet.Name = "grvChiTiet";
             this.grvChiTiet.OptionsBehavior.Editable = false;
@@ -582,8 +591,8 @@
             this.colTyGia.Name = "colTyGia";
             this.colTyGia.OptionsColumn.ReadOnly = true;
             this.colTyGia.Visible = true;
-            this.colTyGia.VisibleIndex = 5;
-            this.colTyGia.Width = 80;
+            this.colTyGia.VisibleIndex = 6;
+            this.colTyGia.Width = 86;
             // 
             // repositoryItemTextEdit3
             // 
@@ -608,7 +617,7 @@
             this.gridColumn1.SummaryItem.DisplayFormat = "{0:n0}";
             this.gridColumn1.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 6;
+            this.gridColumn1.VisibleIndex = 7;
             this.gridColumn1.Width = 72;
             // 
             // repositoryItemTextEdit2
@@ -629,7 +638,7 @@
             this.colDoanRaNoId.Name = "colDoanRaNoId";
             this.colDoanRaNoId.OptionsColumn.ReadOnly = true;
             this.colDoanRaNoId.Visible = true;
-            this.colDoanRaNoId.VisibleIndex = 7;
+            this.colDoanRaNoId.VisibleIndex = 8;
             this.colDoanRaNoId.Width = 120;
             // 
             // cboDoanRaNoId
@@ -655,7 +664,7 @@
             this.colDoanRaCoId.Name = "colDoanRaCoId";
             this.colDoanRaCoId.OptionsColumn.ReadOnly = true;
             this.colDoanRaCoId.Visible = true;
-            this.colDoanRaCoId.VisibleIndex = 8;
+            this.colDoanRaCoId.VisibleIndex = 9;
             this.colDoanRaCoId.Width = 120;
             // 
             // cboDoanRaCoId
@@ -681,7 +690,7 @@
             this.colLoaiDoanRaNoId.Name = "colLoaiDoanRaNoId";
             this.colLoaiDoanRaNoId.OptionsColumn.ReadOnly = true;
             this.colLoaiDoanRaNoId.Visible = true;
-            this.colLoaiDoanRaNoId.VisibleIndex = 9;
+            this.colLoaiDoanRaNoId.VisibleIndex = 10;
             this.colLoaiDoanRaNoId.Width = 110;
             // 
             // cboLoaiDoanRaNoId
@@ -706,7 +715,7 @@
             this.colLoaiDoanRaCoId.Name = "colLoaiDoanRaCoId";
             this.colLoaiDoanRaCoId.OptionsColumn.ReadOnly = true;
             this.colLoaiDoanRaCoId.Visible = true;
-            this.colLoaiDoanRaCoId.VisibleIndex = 10;
+            this.colLoaiDoanRaCoId.VisibleIndex = 11;
             this.colLoaiDoanRaCoId.Width = 110;
             // 
             // cboLoaiDoanRaCoId
@@ -773,8 +782,55 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 11;
+            this.gridColumn2.VisibleIndex = 12;
             this.gridColumn2.Width = 185;
+            // 
+            // colNgoaiTeId
+            // 
+            this.colNgoaiTeId.Caption = "Ngoại tệ";
+            this.colNgoaiTeId.ColumnEdit = this.cboNgoaiTe;
+            this.colNgoaiTeId.FieldName = "NgoaiTeId";
+            this.colNgoaiTeId.Name = "colNgoaiTeId";
+            this.colNgoaiTeId.Visible = true;
+            this.colNgoaiTeId.VisibleIndex = 5;
+            this.colNgoaiTeId.Width = 86;
+            // 
+            // cboNgoaiTe
+            // 
+            this.cboNgoaiTe.AutoHeight = false;
+            this.cboNgoaiTe.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboNgoaiTe.DisplayMember = "MaNgoaiTe";
+            this.cboNgoaiTe.Name = "cboNgoaiTe";
+            this.cboNgoaiTe.NullText = "";
+            this.cboNgoaiTe.ValueMember = "Id";
+            this.cboNgoaiTe.View = this.repositoryItemGridLookUpEdit1View;
+            // 
+            // repositoryItemGridLookUpEdit1View
+            // 
+            this.repositoryItemGridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn5,
+            this.gridColumn6});
+            this.repositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.repositoryItemGridLookUpEdit1View.Name = "repositoryItemGridLookUpEdit1View";
+            this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.repositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Mã ngoại tệ";
+            this.gridColumn5.FieldName = "MaNgoaiTe";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 0;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Tên ngoại tệ";
+            this.gridColumn6.FieldName = "TenNgoaiTe";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 1;
             // 
             // barView
             // 
@@ -915,6 +971,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cboLoaiDoanRaCoId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboMucTieuMucNoId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboMucTieuMucCoId)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboNgoaiTe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popView)).EndInit();
             this.ResumeLayout(false);
@@ -988,5 +1046,10 @@
         private DevExpress.XtraBars.BarButtonItem barInUNC;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn colNgoaiTeId;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit cboNgoaiTe;
+        private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemGridLookUpEdit1View;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
     }
 }

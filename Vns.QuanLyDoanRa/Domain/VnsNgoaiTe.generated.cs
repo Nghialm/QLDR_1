@@ -12,8 +12,8 @@ namespace Vns.QuanLyDoanRa.Domain
         #region Declarations
 
 
-        private string _Mangoaite = String.Empty;
-        private string _Tenngoaite = String.Empty;
+        private string _MaNgoaiTe = String.Empty;
+        private string _TenNgoaiTe = String.Empty;
 		
 		
 		
@@ -32,8 +32,8 @@ namespace Vns.QuanLyDoanRa.Domain
             System.Text.StringBuilder sb = new System.Text.StringBuilder();
             
             sb.Append(this.GetType().FullName);
-			sb.Append(_Mangoaite);
-			sb.Append(_Tenngoaite);
+			sb.Append(_MaNgoaiTe);
+			sb.Append(_TenNgoaiTe);
 
             return sb.ToString().GetHashCode();
         }
@@ -48,34 +48,34 @@ namespace Vns.QuanLyDoanRa.Domain
 			//ID Field
 			Id = des.Id;
 			//Non ID Field
-			_Mangoaite = des.Mangoaite;
-			_Tenngoaite = des.Tenngoaite;
+			_MaNgoaiTe = des.MaNgoaiTe;
+			_TenNgoaiTe = des.TenNgoaiTe;
 		}
 
         #endregion
 
         #region Properties
 
-		public virtual string Mangoaite
+		public virtual string MaNgoaiTe
         {
-            get { return _Mangoaite; }
+            get { return _MaNgoaiTe; }
 			set
 			{
 				OnMangoaiteChanging();
-				_Mangoaite = value;
+				_MaNgoaiTe = value;
 				OnMangoaiteChanged();
 			}
         }
 		partial void OnMangoaiteChanging();
 		partial void OnMangoaiteChanged();
 		
-		public virtual string Tenngoaite
+		public virtual string TenNgoaiTe
         {
-            get { return _Tenngoaite; }
+            get { return _TenNgoaiTe; }
 			set
 			{
 				OnTenngoaiteChanging();
-				_Tenngoaite = value;
+				_TenNgoaiTe = value;
 				OnTenngoaiteChanged();
 			}
         }

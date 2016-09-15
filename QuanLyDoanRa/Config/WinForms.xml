@@ -37,6 +37,7 @@
 		<property name="VnsLoaiDoanRaService" ref="VnsLoaiDoanRaService"/>
 		<property name="VnsDoanCongTacService" ref="VnsDoanCongTacService"/>
 		<property name="VnsDmKhachHangService" ref="VnsDmKhachHangService"/>
+    <property name="VnsNgoaiTeService" ref="VnsNgoaiTeService"/>
 	</object>
 
 	<object id="frmUyNhiemChiEdit" type="QuanLyDoanRa.frmUyNhiemChiEdit, QuanLyDoanRa" singleton="false">
@@ -49,6 +50,7 @@
 		<property name="VnsDmMucTieuMucService" ref="VnsDmMucTieuMucService"/>
 		<property name="VnsDmKhachHangService" ref="VnsDmKhachHangService"/>
 		<property name="VnsDmHeThongService" ref="VnsDmHeThongService"/>
+    <property name="VnsNgoaiTeService" ref="VnsNgoaiTeService"/>
 	</object>
 
 	<object id="frmMucTieuMuc" type="QuanLyDoanRa.FrmMucTieuMuc, QuanLyDoanRa" singleton="false">
