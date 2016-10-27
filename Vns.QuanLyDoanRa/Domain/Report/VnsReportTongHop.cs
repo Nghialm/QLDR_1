@@ -50,8 +50,18 @@ namespace Vns.QuanLyDoanRa.Domain.Report
         public decimal TU_TK_TM_VND { get; set; }
         public decimal TU_TK_TM_USD { get; set; }
 
+        /// <summary>
+        /// /Số tiền VND tạm ứng cho đoàn ra
+        /// </summary>
+        public decimal TU_TK_TM_B_VND { get; set; }
+
         public decimal TU_TK_CK_VND { get; set; }
         public decimal TU_TK_CK_USD { get; set; }
+
+        /// <summary>
+        /// Số tiền VNĐ tạm ứng chuyển khoản cho đoàn ra
+        /// </summary>
+        public decimal TU_TK_CK_B_VND { get; set; }
 
         public decimal TU_TK_TONG_USD
         {

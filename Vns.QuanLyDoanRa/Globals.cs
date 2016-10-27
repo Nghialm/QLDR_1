@@ -11,6 +11,9 @@ namespace Vns.QuanLyDoanRa
 {
     public class Globals
     {
+        public static Guid NoiTeId = new Guid();
+        public static Guid NgoaiTeId = new Guid();
+
         public string DisplayTk(string s)
         {
             if (s == TkTienMat) return "111";
@@ -19,11 +22,22 @@ namespace Vns.QuanLyDoanRa
 
             return "";
         }
+
         /// <summary>
-        /// Tai khoan 1121
+        /// Tien mat VND - 111.1
+        /// </summary>
+        public static string TkTienMatVND = "111.1";
+
+        /// <summary>
+        /// Tai khoan 111.2 Tien mat Ngoai te
         /// </summary>
         public static string TkTienMat = "111.2"; //"1121";
         public static string TkTienMat_Rp = "111";
+
+        /// <summary>
+        /// Tien chuyen khoan VND - 112.1
+        /// </summary>
+        public static string TkTienChuyenKhoanVND = "112.1";
 
         /// <summary>
         /// Tai khoan 1122

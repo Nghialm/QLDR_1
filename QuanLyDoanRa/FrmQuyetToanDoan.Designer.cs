@@ -366,7 +366,8 @@
             this.grvQuyetToan.GridControl = this.grcQuyetToan;
             this.grvQuyetToan.GroupCount = 1;
             this.grvQuyetToan.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoTien", this.colSoTien, "{0:n0}", "0")});
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoTien", this.colSoTien, "{0:n0}", "0"),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SoTienVND", this.gridColumn4, "{0:n0}", "0")});
             this.grvQuyetToan.Name = "grvQuyetToan";
             this.grvQuyetToan.OptionsBehavior.AutoExpandAllGroups = true;
             this.grvQuyetToan.OptionsNavigation.EnterMoveNextColumn = true;
@@ -443,7 +444,7 @@
             // 
             this.colSoTien.AppearanceCell.Options.UseTextOptions = true;
             this.colSoTien.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.colSoTien.Caption = "Số Tiền";
+            this.colSoTien.Caption = "Số Tiền USD";
             this.colSoTien.DisplayFormat.FormatString = "n0";
             this.colSoTien.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colSoTien.FieldName = "SoTien";
@@ -452,7 +453,7 @@
             this.colSoTien.Name = "colSoTien";
             this.colSoTien.OptionsColumn.AllowEdit = false;
             this.colSoTien.OptionsColumn.ReadOnly = true;
-            this.colSoTien.SummaryItem.DisplayFormat = "Tổng: {0:n0}";
+            this.colSoTien.SummaryItem.DisplayFormat = "{0:n0}";
             this.colSoTien.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             this.colSoTien.Visible = true;
             this.colSoTien.VisibleIndex = 3;
@@ -489,9 +490,13 @@
             this.gridColumn4.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.gridColumn4.Caption = "Số tiền VNĐ";
             this.gridColumn4.ColumnEdit = this.repositoryItemTextEdit2;
+            this.gridColumn4.DisplayFormat.FormatString = "n0";
+            this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn4.FieldName = "SoTienVND";
+            this.gridColumn4.GroupFormat.FormatString = "n0";
+            this.gridColumn4.GroupFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.SummaryItem.DisplayFormat = "n0";
+            this.gridColumn4.SummaryItem.DisplayFormat = "{0:n0}";
             this.gridColumn4.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;

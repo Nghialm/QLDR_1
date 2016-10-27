@@ -116,11 +116,10 @@
             // xtraTabControl1
             // 
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabControl1.Location = new System.Drawing.Point(5, 65);
-            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.xtraTabControl1.Location = new System.Drawing.Point(4, 55);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1166, 654);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1000, 529);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -130,9 +129,8 @@
             // xtraTabPage1
             // 
             this.xtraTabPage1.Controls.Add(this.printControl1);
-            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1161, 624);
+            this.xtraTabPage1.Size = new System.Drawing.Size(995, 503);
             this.xtraTabPage1.Text = "Trang in";
             // 
             // printControl1
@@ -142,19 +140,17 @@
             this.printControl1.ForeColor = System.Drawing.Color.Empty;
             this.printControl1.IsMetric = false;
             this.printControl1.Location = new System.Drawing.Point(0, 0);
-            this.printControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.printControl1.Name = "printControl1";
-            this.printControl1.Size = new System.Drawing.Size(1161, 624);
+            this.printControl1.Size = new System.Drawing.Size(995, 503);
             this.printControl1.TabIndex = 0;
             this.printControl1.TooltipFont = new System.Drawing.Font("Tahoma", 8.25F);
             // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.printControl2);
-            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.PageVisible = false;
-            this.xtraTabPage2.Size = new System.Drawing.Size(1160, 623);
+            this.xtraTabPage2.Size = new System.Drawing.Size(993, 504);
             this.xtraTabPage2.Text = "&2. Phần 2";
             // 
             // printControl2
@@ -164,9 +160,8 @@
             this.printControl2.ForeColor = System.Drawing.Color.Empty;
             this.printControl2.IsMetric = false;
             this.printControl2.Location = new System.Drawing.Point(0, 0);
-            this.printControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.printControl2.Name = "printControl2";
-            this.printControl2.Size = new System.Drawing.Size(1160, 623);
+            this.printControl2.Size = new System.Drawing.Size(993, 504);
             this.printControl2.TabIndex = 0;
             this.printControl2.TooltipFont = new System.Drawing.Font("Tahoma", 8.25F);
             // 
@@ -768,33 +763,29 @@
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(5, 5);
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1166, 60);
+            this.barDockControlTop.Location = new System.Drawing.Point(4, 4);
+            this.barDockControlTop.Size = new System.Drawing.Size(1000, 51);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(5, 719);
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1166, 29);
+            this.barDockControlBottom.Location = new System.Drawing.Point(4, 584);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1000, 24);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(5, 65);
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 654);
+            this.barDockControlLeft.Location = new System.Drawing.Point(4, 55);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 529);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1171, 65);
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 654);
+            this.barDockControlRight.Location = new System.Drawing.Point(1004, 55);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 529);
             // 
             // printPreviewBarCheckItem1
             // 
@@ -970,18 +961,17 @@
             // 
             // frmTabInQuyetToan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1176, 753);
+            this.ClientSize = new System.Drawing.Size(1008, 612);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmTabInQuyetToan";
-            this.Padding = new System.Windows.Forms.Padding(5);
+            this.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "In quyết toán";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

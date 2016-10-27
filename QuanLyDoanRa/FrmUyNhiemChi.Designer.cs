@@ -202,7 +202,7 @@
             this.groupControlDs.Location = new System.Drawing.Point(4, 4);
             this.groupControlDs.Name = "groupControlDs";
             this.groupControlDs.ShowCaption = false;
-            this.groupControlDs.Size = new System.Drawing.Size(1000, 328);
+            this.groupControlDs.Size = new System.Drawing.Size(1000, 327);
             this.groupControlDs.TabIndex = 0;
             this.groupControlDs.Text = "Danh Sách Phiếu Tạm Ứng - Hoàn Ứng";
             // 
@@ -212,7 +212,7 @@
             this.grcDanhSach.Location = new System.Drawing.Point(2, 2);
             this.grcDanhSach.MainView = this.grvDanhSach;
             this.grcDanhSach.Name = "grcDanhSach";
-            this.grcDanhSach.Size = new System.Drawing.Size(996, 324);
+            this.grcDanhSach.Size = new System.Drawing.Size(996, 323);
             this.grcDanhSach.TabIndex = 0;
             this.grcDanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvDanhSach});
@@ -406,9 +406,9 @@
             // splitterControl1
             // 
             this.splitterControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitterControl1.Location = new System.Drawing.Point(4, 332);
+            this.splitterControl1.Location = new System.Drawing.Point(4, 331);
             this.splitterControl1.Name = "splitterControl1";
-            this.splitterControl1.Size = new System.Drawing.Size(1000, 5);
+            this.splitterControl1.Size = new System.Drawing.Size(1000, 6);
             this.splitterControl1.TabIndex = 2;
             this.splitterControl1.TabStop = false;
             // 

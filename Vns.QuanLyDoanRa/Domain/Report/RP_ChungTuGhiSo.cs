@@ -167,6 +167,7 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             // 3: quyet toan
             // 4: chi quyet toan
             // 5: thu quyet toan
+            // 6: rut tien mat
             _LoaiDoanRaId = obj.LoaiDoanRaId;
             _DoanRaId = obj.DoanRaId;
             _TenLoaiDoanRa = TenLoaiDoanRa;
@@ -176,8 +177,8 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             {
                 // tien tu bo tai chinh
                 case 1:
-                    MaTkTm = Globals.TkTienMat_Rp;
-                    MaTkCk = Globals.TkTienChuyenKhoan_Rp;
+                    MaTkTm = Globals.TkTienMat;
+                    MaTkCk = Globals.TkTienChuyenKhoanVND;
                     MaTk = Globals.TkThuNganSach;
                     MaTkK = Globals.TkNghiepVuChiHoatDong;
                     _TrichYeu = "Bộ Tài chính cấp kinh phí bổ sung đoàn ra các Ban đảng để thanh toán các đoàn đi công tác nước ngoài bằng tiền mặt, chuyển khoản, ngoại tệ (USD)";
@@ -186,9 +187,9 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                         _TM_USD = obj.PsTangUSD;
                         _TM_VND = obj.PsTangVND;
                     }
-                    if (obj.MaTkCo.StartsWith(Globals.TkThuNganSach) && obj.MaTkNo.StartsWith(Globals.TkTienChuyenKhoan))
+                    if (obj.MaTkCo.StartsWith(Globals.TkThuNganSach) && obj.MaTkNo.StartsWith(Globals.TkTienChuyenKhoanVND))
                     {
-                        _CK_USD = obj.PsTangUSD;
+                        //_CK_USD = obj.PsTangUSD;
                         _CK_VND = obj.PsTangVND;
                     }
                     if (obj.MaTkCo.StartsWith(Globals.TkThuNganSach) && obj.MaTkNo.StartsWith(Globals.TkNghiepVuChiHoatDong))
@@ -198,19 +199,26 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                     }
                     break;
                 case 2: // Tam Ung
-                    MaTkTm = Globals.TkTienMat_Rp;
-                    MaTkCk = Globals.TkTienChuyenKhoan_Rp;
-                    MaTk = Globals.TkTamUng_Rp;
+                    MaTkTm = Globals.TkTienMatVND;
+                    MaTkCk = Globals.TkTienChuyenKhoanVND;
+                    //MaTk
+                    MaTkK = Globals.TkTienMat;
+                    MaTk = Globals.TkTamUng;
                     _TrichYeu = "Xuất quỹ tiền mặt, chuyển khoản bằng ngoại tệ( USD) cho các cơ quan, đơn vị ở Trung ương đi công tác nước ngoài, Tổng số " + countDr.ToString() + " đoàn";
-                    if (obj.MaTkCo.StartsWith(Globals.TkTienMat))
+                    if (obj.MaTkCo.StartsWith(Globals.TkTienMatVND))
                     {
-                        _TM_USD = obj.PsTangUSD;
+                        //_TM_USD = obj.PsTangUSD;
                         _TM_VND = obj.PsTangVND;
                     }
-                    if (obj.MaTkCo.StartsWith(Globals.TkTienChuyenKhoan))
+                    if (obj.MaTkCo.StartsWith(Globals.TkTienMat))
+                    {
+                        CPK_USD = obj.PsTangUSD;
+                        CPK_VND = obj.PsTangVND;
+                    }
+                    if (obj.MaTkCo.StartsWith(Globals.TkTienChuyenKhoanVND))
                     {
                         _CK_VND = obj.PsTangVND;
-                        _CK_USD = obj.PsTangUSD;
+                        //_CK_USD = obj.PsTangUSD;
                     }
                     break;
                 case 3: // Quyet Toan
@@ -261,6 +269,22 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                         _CK_VND = obj.PsTangVND;
                         _CK_USD = obj.PsTangUSD;
                     }
+                    break;
+                case 6:// Rut tien mat
+                    MaTkTm = Globals.TkTienChuyenKhoanVND;
+                    //MaTkCk = Globals.Tk;
+                    MaTk = Globals.TkTienMatVND;
+                    _TrichYeu = "Rút tiền VNĐ (chi các đoàn cơ quan Đảng ở Trung ương đi công tác nước ngoài) từ Kho bạc Nhà nước  vể nhập quỹ tiền mặt trong tháng.";
+                    if (obj.MaTkNo.StartsWith(Globals.TkTienMatVND) && obj.MaTkCo.StartsWith(Globals.TkTienChuyenKhoanVND))
+                    {
+                        //_TM_USD = obj.PsTangUSD;
+                        _TM_VND += obj.PsTangVND;
+                    }
+                    //if (obj.MaTkNo.StartsWith(Globals.TkTienChuyenKhoan) && obj.MaTkCo.StartsWith(Globals.TkTamUng))
+                    //{
+                    //    _CK_VND = obj.PsTangVND;
+                    //    _CK_USD = obj.PsTangUSD;
+                    //}
                     break;
             }
         }

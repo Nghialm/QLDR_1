@@ -60,6 +60,8 @@
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.cboDienGiai = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.luegPhanLoai = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.btnDuToanBx = new DevExpress.XtraEditors.SimpleButton();
@@ -69,8 +71,6 @@
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gctDoanRa)).BeginInit();
@@ -82,11 +82,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvDuToan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboTenMuc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.luegPhanLoai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -398,13 +398,13 @@
             // 
             // colTien
             // 
-            this.colTien.Caption = "Dự toán";
+            this.colTien.Caption = "Dự toán USD";
             this.colTien.ColumnEdit = this.repositoryItemTextEdit1;
             this.colTien.FieldName = "SoTienDuToan";
             this.colTien.Name = "colTien";
             this.colTien.OptionsColumn.AllowEdit = false;
             this.colTien.OptionsColumn.ReadOnly = true;
-            this.colTien.SummaryItem.DisplayFormat = "Tổng: {0:n0}";
+            this.colTien.SummaryItem.DisplayFormat = "{0:n0}";
             this.colTien.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             this.colTien.Visible = true;
             this.colTien.VisibleIndex = 3;
@@ -436,6 +436,26 @@
             this.gridColumn5.Caption = "Dự toán";
             this.gridColumn5.FieldName = "DienGiaiDuToan";
             this.gridColumn5.Name = "gridColumn5";
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Dự toán VNĐ";
+            this.gridColumn6.ColumnEdit = this.repositoryItemTextEdit2;
+            this.gridColumn6.FieldName = "SoTienDuToanVND";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.SummaryItem.DisplayFormat = "{0:n0}";
+            this.gridColumn6.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 2;
+            this.gridColumn6.Width = 118;
+            // 
+            // repositoryItemTextEdit2
+            // 
+            this.repositoryItemTextEdit2.AutoHeight = false;
+            this.repositoryItemTextEdit2.Mask.EditMask = "n0";
+            this.repositoryItemTextEdit2.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.repositoryItemTextEdit2.Mask.UseMaskAsDisplayFormat = true;
+            this.repositoryItemTextEdit2.Name = "repositoryItemTextEdit2";
             // 
             // luegPhanLoai
             // 
@@ -558,26 +578,6 @@
             this.btnLuu.Visible = false;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // gridColumn6
-            // 
-            this.gridColumn6.Caption = "Dự toán VNĐ";
-            this.gridColumn6.ColumnEdit = this.repositoryItemTextEdit2;
-            this.gridColumn6.FieldName = "SoTienDuToanVND";
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.SummaryItem.DisplayFormat = "Tổng: {0:n0}";
-            this.gridColumn6.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 2;
-            this.gridColumn6.Width = 118;
-            // 
-            // repositoryItemTextEdit2
-            // 
-            this.repositoryItemTextEdit2.AutoHeight = false;
-            this.repositoryItemTextEdit2.Mask.EditMask = "n0";
-            this.repositoryItemTextEdit2.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.repositoryItemTextEdit2.Mask.UseMaskAsDisplayFormat = true;
-            this.repositoryItemTextEdit2.Name = "repositoryItemTextEdit2";
-            // 
             // FrmDuToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -603,11 +603,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvDuToan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboTenMuc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.luegPhanLoai)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
             this.ResumeLayout(false);
 
         }

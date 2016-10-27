@@ -464,6 +464,66 @@
     <Compile Include="Reports\ChungTuGhiSo_NhanTien_BTC.Designer.cs">
       <DependentUpon>ChungTuGhiSo_NhanTien_BTC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\ChungTuGhiSo_RutTienMat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ChungTuGhiSo_RutTienMat.Designer.cs">
+      <DependentUpon>ChungTuGhiSo_RutTienMat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ChungTuGhiSoHeader_RutTienMat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ChungTuGhiSoHeader_RutTienMat.Designer.cs">
+      <DependentUpon>ChungTuGhiSoHeader_RutTienMat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ChungTuGhiSoDetail_RutTienMat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ChungTuGhiSoDetail_RutTienMat.Designer.cs">
+      <DependentUpon>ChungTuGhiSoDetail_RutTienMat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ChungTuGhiSo_V2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ChungTuGhiSo_V2.Designer.cs">
+      <DependentUpon>ChungTuGhiSo_V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ChungTuGhiSoDetail_V2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ChungTuGhiSoDetail_V2.Designer.cs">
+      <DependentUpon>ChungTuGhiSoDetail_V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ChungTuGhiSoHeader_V2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ChungTuGhiSoHeader_V2.Designer.cs">
+      <DependentUpon>ChungTuGhiSoHeader_V2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SoChiTietTK_VND_P3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SoChiTietTK_VND_P3.Designer.cs">
+      <DependentUpon>SoChiTietTK_VND_P3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SoChiTietTK_VND.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SoChiTietTK_VND.Designer.cs">
+      <DependentUpon>SoChiTietTK_VND.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SoChiTietTK_VND_P2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SoChiTietTK_VND_P2.Designer.cs">
+      <DependentUpon>SoChiTietTK_VND_P2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SoChiTietTK_VND_P1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SoChiTietTK_VND_P1.Designer.cs">
+      <DependentUpon>SoChiTietTK_VND_P1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PhuBieuTongHopKinhPhiDoanRa.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -877,6 +937,36 @@
     <EmbeddedResource Include="Reports\ChungTuGhiSo_NhanTien_BTC.resx">
       <DependentUpon>ChungTuGhiSo_NhanTien_BTC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ChungTuGhiSo_RutTienMat.resx">
+      <DependentUpon>ChungTuGhiSo_RutTienMat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ChungTuGhiSoHeader_RutTienMat.resx">
+      <DependentUpon>ChungTuGhiSoHeader_RutTienMat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ChungTuGhiSoDetail_RutTienMat.resx">
+      <DependentUpon>ChungTuGhiSoDetail_RutTienMat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ChungTuGhiSo_V2.resx">
+      <DependentUpon>ChungTuGhiSo_V2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ChungTuGhiSoDetail_V2.resx">
+      <DependentUpon>ChungTuGhiSoDetail_V2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ChungTuGhiSoHeader_V2.resx">
+      <DependentUpon>ChungTuGhiSoHeader_V2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SoChiTietTK_VND_P3.resx">
+      <DependentUpon>SoChiTietTK_VND_P3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SoChiTietTK_VND.resx">
+      <DependentUpon>SoChiTietTK_VND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SoChiTietTK_VND_P2.resx">
+      <DependentUpon>SoChiTietTK_VND_P2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SoChiTietTK_VND_P1.resx">
+      <DependentUpon>SoChiTietTK_VND_P1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\PhuBieuTongHopKinhPhiDoanRa.resx">
       <DependentUpon>PhuBieuTongHopKinhPhiDoanRa.cs</DependentUpon>
     </EmbeddedResource>
@@ -1197,17 +1287,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="VBIDE">
-      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>5</VersionMajor>
-      <VersionMinor>3</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -31,15 +31,15 @@
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.cboTk = new DevExpress.XtraEditors.GridLookUpEdit();
             this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.cboTkCo = new DevExpress.XtraEditors.LookUpEdit();
+            this.dateTimeInput1 = new QuanLyDoanRa.Controls.DateTimeInput();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnHuyBo = new DevExpress.XtraEditors.SimpleButton();
             this.btnNhan = new DevExpress.XtraEditors.SimpleButton();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.dateTimeInput1 = new QuanLyDoanRa.Controls.DateTimeInput();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cboTk.Properties)).BeginInit();
@@ -84,6 +84,24 @@
             this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
             this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            this.gridLookUpEdit1View.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn1, DevExpress.Data.ColumnSortOrder.Ascending)});
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Mã TK";
+            this.gridColumn1.FieldName = "MaNghiepVu";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Tên TK";
+            this.gridColumn2.FieldName = "TenNghiepVu";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
             // 
             // labelControl2
             // 
@@ -112,6 +130,18 @@
             this.cboTkCo.Size = new System.Drawing.Size(183, 20);
             this.cboTkCo.TabIndex = 1;
             this.cboTkCo.Visible = false;
+            // 
+            // dateTimeInput1
+            // 
+            this.dateTimeInput1.ChonDkNam = 0;
+            this.dateTimeInput1.EndDate = new System.DateTime(((long)(0)));
+            this.dateTimeInput1.IsNgay = true;
+            this.dateTimeInput1.IsThang = false;
+            this.dateTimeInput1.Location = new System.Drawing.Point(9, 18);
+            this.dateTimeInput1.Name = "dateTimeInput1";
+            this.dateTimeInput1.Size = new System.Drawing.Size(431, 25);
+            this.dateTimeInput1.StartDate = new System.DateTime(((long)(0)));
+            this.dateTimeInput1.TabIndex = 0;
             // 
             // panelControl1
             // 
@@ -142,32 +172,6 @@
             this.btnNhan.TabIndex = 0;
             this.btnNhan.Text = "&Nhận";
             this.btnNhan.Click += new System.EventHandler(this.simpleButton1_Click_1);
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "Mã TK";
-            this.gridColumn1.FieldName = "MaNghiepVu";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "Tên TK";
-            this.gridColumn2.FieldName = "TenNghiepVu";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            // 
-            // dateTimeInput1
-            // 
-            this.dateTimeInput1.EndDate = new System.DateTime(((long)(0)));
-            this.dateTimeInput1.IsNgay = true;
-            this.dateTimeInput1.Location = new System.Drawing.Point(9, 18);
-            this.dateTimeInput1.Name = "dateTimeInput1";
-            this.dateTimeInput1.Size = new System.Drawing.Size(431, 25);
-            this.dateTimeInput1.StartDate = new System.DateTime(((long)(0)));
-            this.dateTimeInput1.TabIndex = 0;
             // 
             // frmSoCTTaiKhoan
             // 

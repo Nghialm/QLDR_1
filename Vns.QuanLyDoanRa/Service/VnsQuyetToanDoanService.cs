@@ -139,17 +139,35 @@ namespace Vns.QuanLyDoanRa.Service
 
             decimal qt_tm_vnd =0;
             decimal qt_ck_vnd =0;
+
+            decimal qt_tk_tm_vnd = 0;
+            decimal qt_tk_ck_vnd = 0;
             foreach (VnsGiaoDich qt in lstGiaoDich)
             {
-                if (qt.MaTkNo == Globals.TkThanhToanTienMat)
+                if (qt.NgoaiTeId == Globals.NgoaiTeId)
                 {
-                    qt_tm_usd += qt.SoTienNt;
-                    qt_tm_usd_dk += qt.SoTienNt;
+                    if (qt.MaTkNo == Globals.TkThanhToanTienMat)
+                    {
+                        qt_tm_usd += qt.SoTienNt;
+                        qt_tm_usd_dk += qt.SoTienNt;
+                    }
+                    else if (qt.MaTkNo == Globals.TkThanhToanChuyenKhoan)
+                    {
+                        qt_ck_usd += qt.SoTienNt;
+                        qt_ck_usd_dk += qt.SoTienNt;
+                    }
                 }
-                else if (qt.MaTkNo == Globals.TkThanhToanChuyenKhoan)
+
+                if (qt.NgoaiTeId == Globals.NoiTeId)
                 {
-                    qt_ck_usd += qt.SoTienNt;
-                    qt_ck_usd_dk += qt.SoTienNt;
+                    if (qt.MaTkNo == Globals.TkThanhToanTienMat)
+                    {
+                        qt_tk_tm_vnd += qt.SoTien;
+                    }
+                    else if (qt.MaTkNo == Globals.TkThanhToanChuyenKhoan)
+                    {
+                        qt_tk_ck_vnd += qt.SoTien;
+                    }
                 }
             }
 
@@ -160,7 +178,8 @@ namespace Vns.QuanLyDoanRa.Service
             decimal tu_ck_usd = 0;
             decimal tu_ck_vnd = 0;
 
-
+            decimal tu_tk_tm_vnd = 0;
+            decimal tu_tk_ck_vnd = 0;
             /*
              * Dung de check ty gia khi quyet toan
              * Neu tam ung co nhieu ty gia se sinh ra nghiep vu quyet toan co nhieu ty gia
@@ -173,44 +192,64 @@ namespace Vns.QuanLyDoanRa.Service
             #region Tinh so tien da tam ung
             foreach (VnsGiaoDich tu in lstTu)
             {
-                if (tu.MaTkCo == Globals.TkTienMat)
+                //Xu ly truong hop thanh toan bang ngoai te
+                //1. Tien mat: tam ung tien chi khi cong tac
+                //2. Tien Ck: Hien tai doi voi tien ngoai te se ko ung CK nua
+                if (tu.NgoaiTeId == Globals.NgoaiTeId)
                 {
-                    flg_tm_mul_tygia++;
+                    if (tu.MaTkCo == Globals.TkTienMat)
+                    {
+                        flg_tm_mul_tygia++;
 
-                    tu_tm_usd += tu.SoTienNt;
-                    tu_tm_vnd += tu.SoTien;
+                        tu_tm_usd += tu.SoTienNt;
+                        tu_tm_vnd += tu.SoTien;
 
-                    if (tu_tm_usd == qt_tm_usd)
-                    {
-                        qt_tm_vnd = tu_tm_vnd;
+                        if (tu_tm_usd == qt_tm_usd)
+                        {
+                            qt_tm_vnd = tu_tm_vnd;
+                        }
+                        else if (tu_tm_usd > qt_tm_usd)
+                        {
+                            qt_tm_vnd = tu_tm_vnd - (tu_tm_usd - qt_tm_usd) * tu.TyGia;
+                        }
+                        else
+                        {
+                            qt_tm_vnd = -1;
+                        }
                     }
-                    else if (tu_tm_usd > qt_tm_usd)
+                    else if (tu.MaTkCo == Globals.TkTienChuyenKhoan)
                     {
-                        qt_tm_vnd = tu_tm_vnd - (tu_tm_usd - qt_tm_usd) * tu.TyGia;
-                    }
-                    else
-                    {
-                        qt_tm_vnd = -1;
+                        flg_ck_mul_tygia++;
+
+                        tu_ck_usd += tu.SoTienNt;
+                        tu_ck_vnd += tu.SoTien;
+
+                        if (tu_ck_usd == qt_ck_usd)
+                        {
+                            qt_ck_vnd = tu_ck_vnd;
+                        }
+                        else if (tu_ck_usd > qt_ck_usd)
+                        {
+                            qt_ck_vnd = tu_ck_vnd - (tu_ck_usd - qt_ck_usd) * tu.TyGia;
+                        }
+                        else
+                        {
+                            qt_ck_vnd = -1;
+                        }
                     }
                 }
-                else if (tu.MaTkCo == Globals.TkTienChuyenKhoan)
+                //Truong hop tien VND
+                //1. Tien mat: thanh toan 
+                //2. Tien CK: Dung de thanh toan ve may bay ()
+                else if (tu.NgoaiTeId == Globals.NoiTeId)
                 {
-                    flg_ck_mul_tygia++;
-
-                    tu_ck_usd += tu.SoTienNt;
-                    tu_ck_vnd += tu.SoTien;
-
-                    if (tu_ck_usd == qt_ck_usd)
+                    if (tu.MaTkCo == Globals.TkTienMatVND)
                     {
-                        qt_ck_vnd = tu_ck_vnd;
+                        tu_tk_tm_vnd += tu.SoTien;
                     }
-                    else if (tu_ck_usd > qt_ck_usd)
+                    else if (tu.MaTkCo == Globals.TkTienChuyenKhoanVND)
                     {
-                        qt_ck_vnd = tu_ck_vnd - (tu_ck_usd - qt_ck_usd) * tu.TyGia;
-                    }
-                    else
-                    {
-                        qt_ck_vnd = -1;
+                        tu_tk_ck_vnd += tu.SoTien;
                     }
                 }
             }
@@ -325,6 +364,8 @@ namespace Vns.QuanLyDoanRa.Service
                 btQuyetToanTm.TkCoId = tkthanhtoanTm.NghiepVuId; btQuyetToanTm.MaTkCo = tkthanhtoanTm.MaNghiepVu; btQuyetToanTm.TenTkCo = tkthanhtoanTm.TenNghiepVu;
                 if (btQuyetToanTm.SoTienNt != 0)
                     btQuyetToanTm.TyGia = btQuyetToanTm.SoTien / btQuyetToanTm.SoTienNt;
+                btQuyetToanTm.NgoaiTeId = Globals.NgoaiTeId;
+
                 lstGiaoDich.Add(btQuyetToanTm);
             }
             
@@ -413,11 +454,67 @@ namespace Vns.QuanLyDoanRa.Service
 
                 if (btQuyetToanCk.SoTienNt != 0)
                     btQuyetToanCk.TyGia = btQuyetToanCk.SoTien / btQuyetToanCk.SoTienNt;
+                btQuyetToanCk.NgoaiTeId = Globals.NgoaiTeId;
 
                 lstGiaoDich.Add(btQuyetToanCk);
             }
+
+
+            //Quyet toan tien VND
+            //Tien mat
+            VnsGiaoDich btQuyetToanTmVND = new VnsGiaoDich();
+            if (qt_tk_tm_vnd <= tu_tk_tm_vnd)
+            {
+                btQuyetToanTmVND.SoTien = qt_tk_tm_vnd;
+            }
+            else
+            {
+                btQuyetToanTmVND.SoTien = tu_tk_tm_vnd;
+            }
+
+            VnsNghiepVu tkqt_VND = GetNghiepVuByMa(Globals.TkNghiepVuChiHoatDong, lstNghiepVu);
+            VnsNghiepVu tkthanhtoanTM_VND = GetNghiepVuByMa(Globals.TkThanhToanTienMat, lstNghiepVu);
+
+            btQuyetToanTmVND.DoanRaNoId = objDoanCongTac.Id;
+            btQuyetToanTmVND.DoanRaCoId = objDoanCongTac.Id;
+            btQuyetToanTmVND.LoaiDoanRaNoId = objDoanCongTac.LoaiDoanRaId;
+            btQuyetToanTmVND.LoaiDoanRaCoId = objDoanCongTac.LoaiDoanRaId;
+            btQuyetToanTmVND.TkNoId = tkqt_VND.NghiepVuId; btQuyetToanTmVND.MaTkNo = tkqt_VND.MaNghiepVu; btQuyetToanTmVND.TenTkNo = tkqt_VND.TenNghiepVu;
+            btQuyetToanTmVND.TkCoId = tkthanhtoanTM_VND.NghiepVuId; btQuyetToanTmVND.MaTkCo = tkthanhtoanTM_VND.MaNghiepVu; btQuyetToanTmVND.TenTkCo = tkthanhtoanTM_VND.TenNghiepVu;
+
+            btQuyetToanTmVND.SoTienNt = btQuyetToanTmVND.SoTien;
+            btQuyetToanTmVND.TyGia = 1;
+            btQuyetToanTmVND.NgoaiTeId = Globals.NoiTeId;
+            lstGiaoDich.Add(btQuyetToanTmVND);
+
+            //Chuyen khoan
+            VnsGiaoDich btQuyetToanCkVND = new VnsGiaoDich();
+            if (qt_tk_ck_vnd <= tu_tk_ck_vnd)
+            {
+                btQuyetToanCkVND.SoTien = qt_tk_ck_vnd;
+            }
+            else
+            {
+                btQuyetToanCkVND.SoTien = tu_tk_ck_vnd;
+            }
+
+
+            btQuyetToanCkVND.DoanRaNoId = objDoanCongTac.Id;
+            btQuyetToanCkVND.DoanRaCoId = objDoanCongTac.Id;
+            btQuyetToanCkVND.LoaiDoanRaNoId = objDoanCongTac.LoaiDoanRaId;
+            btQuyetToanCkVND.LoaiDoanRaCoId = objDoanCongTac.LoaiDoanRaId;
+            btQuyetToanCkVND.TkNoId = tkqt_VND.NghiepVuId; btQuyetToanCkVND.MaTkNo = tkqt_VND.MaNghiepVu; btQuyetToanCkVND.TenTkNo = tkqt_VND.TenNghiepVu;
+            btQuyetToanCkVND.TkCoId = tkthanhtoanTM_VND.NghiepVuId; btQuyetToanCkVND.MaTkCo = tkthanhtoanTM_VND.MaNghiepVu; btQuyetToanCkVND.TenTkCo = tkthanhtoanTM_VND.TenNghiepVu;
+
+            btQuyetToanCkVND.SoTienNt = btQuyetToanCkVND.SoTien;
+            btQuyetToanCkVND.TyGia = 1;
+            btQuyetToanCkVND.NgoaiTeId = Globals.NoiTeId;
+            lstGiaoDich.Add(btQuyetToanCkVND);
+
             #endregion
-            
+
+            #region Ghi nhan dinh khoan 
+            #endregion
             decimal sumSoTienQtNT = 0;
             foreach (VnsGiaoDich obj in lstGiaoDich)
             {

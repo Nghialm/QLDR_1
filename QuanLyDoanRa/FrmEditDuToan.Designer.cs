@@ -406,11 +406,11 @@
             // 
             // colTien
             // 
-            this.colTien.Caption = "Dự toán";
+            this.colTien.Caption = "Dự toán USD";
             this.colTien.ColumnEdit = this.repositoryItemTextEdit1;
             this.colTien.FieldName = "SoTienDuToan";
             this.colTien.Name = "colTien";
-            this.colTien.SummaryItem.DisplayFormat = "Tổng: {0:n0}";
+            this.colTien.SummaryItem.DisplayFormat = "{0:n0}";
             this.colTien.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             this.colTien.Visible = true;
             this.colTien.VisibleIndex = 3;
@@ -432,7 +432,7 @@
             this.colTienVND.ColumnEdit = this.repositoryItemTextEdit2;
             this.colTienVND.FieldName = "SoTienDuToanVND";
             this.colTienVND.Name = "colTienVND";
-            this.colTienVND.SummaryItem.DisplayFormat = "Tổng: {0:n0}";
+            this.colTienVND.SummaryItem.DisplayFormat = "{0:n0}";
             this.colTienVND.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             this.colTienVND.Visible = true;
             this.colTienVND.VisibleIndex = 4;

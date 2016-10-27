@@ -342,7 +342,7 @@ namespace QuanLyDoanRa.Reports
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error in process.", "Internal Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error in process.", "Internal Error:" + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

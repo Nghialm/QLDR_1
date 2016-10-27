@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using Vns.QuanLyDoanRa.Service.Interface;
 using Vns.QuanLyDoanRa.Domain;
+using Vns.QuanLyDoanRa;
 
 namespace QuanLyDoanRa
 {
@@ -302,9 +303,9 @@ namespace QuanLyDoanRa
                 objqt.CongTacId = (Guid)cboDoanCongTac.EditValue;
 
                 if (objqt.SoTien == 0)
-                    objqt.NgoaiTeId = General.NoiTeId;
+                    objqt.NgoaiTeId = Globals.NoiTeId;
                 else
-                    objqt.NgoaiTeId = General.NgoaiTeId;
+                    objqt.NgoaiTeId = Globals.NgoaiTeId;
             }
             objDoanCongTac.DanhSachQuyetToanDoan = lstQuyetToanDoanRa;
             VnsChungTu objChungTu = new VnsChungTu();

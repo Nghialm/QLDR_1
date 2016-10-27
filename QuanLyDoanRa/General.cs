@@ -34,8 +34,7 @@ namespace QuanLyDoanRa
         public static string ChucDanhDuyetQuyetToan = ""; 
         public static IList<Info> lstThamSo = new List<Info>();
 
-        public static Guid NoiTeId = new Guid();
-        public static Guid NgoaiTeId = new Guid();
+        
 
         public static string GenSignDate(DateTime pdate)
         {

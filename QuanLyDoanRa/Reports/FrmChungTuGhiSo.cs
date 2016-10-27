@@ -54,9 +54,15 @@ namespace QuanLyDoanRa.Reports
                 frm.CreateDocument();
                 frm.ShowPreviewDialog();
             }
+            else if (objHeThong.GiaTri == 6)
+            {
+                Reports.ChungTuGhiSo_RutTienMat frm = new ChungTuGhiSo_RutTienMat(dateTimeInput1.StartDate, dateTimeInput1.EndDate, lstTaiKhoan[0], lstTaiKhoan[1], objHeThong.TrangThaiPhieu, objHeThong.GiaTri, dateTimeInput1.TitleTime); //(ChungTuGhiSo)ObjectFactory.GetObject("ChungTuGhiSo");
+                frm.CreateDocument();
+                frm.ShowPreviewDialog();
+            }
             else
             {
-                Reports.ChungTuGhiSo frm = new ChungTuGhiSo(dateTimeInput1.StartDate, dateTimeInput1.EndDate, lstTaiKhoan[0], lstTaiKhoan[1], objHeThong.TrangThaiPhieu, objHeThong.GiaTri, dateTimeInput1.TitleTime); //(ChungTuGhiSo)ObjectFactory.GetObject("ChungTuGhiSo");
+                Reports.ChungTuGhiSo_V2 frm = new ChungTuGhiSo_V2(dateTimeInput1.StartDate, dateTimeInput1.EndDate, lstTaiKhoan[0], lstTaiKhoan[1], objHeThong.TrangThaiPhieu, objHeThong.GiaTri, dateTimeInput1.TitleTime); //(ChungTuGhiSo)ObjectFactory.GetObject("ChungTuGhiSo");
                 frm.CreateDocument();
                 frm.ShowPreviewDialog();
             }

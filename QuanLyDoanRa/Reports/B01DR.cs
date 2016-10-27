@@ -87,6 +87,7 @@ namespace QuanLyDoanRa.Reports
                     RpFinal.TienMatVND += tmp.TienMatVND;
                     RpFinal.TongUSD += tmp.TongUSD;
                     RpFinal.TongSoVND += tmp.TongSoVND;
+                    RpFinal.TienTamUngVND += tmp.TienTamUngVND;
                 }
             }
 

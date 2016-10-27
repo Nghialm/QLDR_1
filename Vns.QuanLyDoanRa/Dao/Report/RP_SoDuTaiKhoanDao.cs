@@ -70,8 +70,8 @@ namespace Vns.QuanLyDoanRa.Dao.NHibernate
                          "where ct.NgayCt >=: p_TuNgay AND ct.NgayCt <=: p_DenNgay " +
                          (String.IsNullOrEmpty(p_TkCo) ? "" : "AND MaTkCo like :p_TkCo ") +
                          (String.IsNullOrEmpty(p_TkNo) ? "" : "AND MaTkNo like :p_TkNo ") +
-                         "GROUP BY gd.LoaiDoanRaNoId " +
-                         "ORDER BY ct.NgayCt ASC,ct.SoCt ASC ";
+                         "GROUP BY gd.LoaiDoanRaNoId, gd.TyGia ";
+                         //"ORDER BY ct.NgayCt ASC,ct.SoCt ASC ";
             IQuery q = NHibernateSession.CreateQuery(sql);
             q.SetParameter("p_TuNgay", p_TuNgay);
             q.SetParameter("p_DenNgay", p_DenNgay);
@@ -82,7 +82,7 @@ namespace Vns.QuanLyDoanRa.Dao.NHibernate
         }
 
         public IList<RP_SoDuTaiKhoan> GetSoDuCoGroupByLoaiDoanRa(DateTime p_TuNgay, DateTime p_DenNgay, String p_TkCo, String p_TkNo)
-        { 
+        {
             string sql = "select Sum(gd.SoTien) as PsGiamVND, Sum(gd.SoTienNt) as PsGiamUSD, " +
                          "gd.LoaiDoanRaCoId as LoaiDoanRaId ,gd.TyGia as TyGia " +
                          "from VnsGiaoDich gd " +
@@ -90,8 +90,8 @@ namespace Vns.QuanLyDoanRa.Dao.NHibernate
                          "where ct.NgayCt >=: p_TuNgay AND ct.NgayCt <=: p_DenNgay " +
                          (String.IsNullOrEmpty(p_TkCo) ? "" : "AND MaTkCo like :p_TkCo ") +
                          (String.IsNullOrEmpty(p_TkNo) ? "" : "AND MaTkNo like :p_TkNo ") +
-                         "GROUP BY gd.LoaiDoanRaCoId " +
-                         "ORDER BY ct.NgayCt ASC ,ct.SoCt ASC";
+                         "GROUP BY gd.LoaiDoanRaCoId, gd.TyGia "; 
+                         //"ORDER BY ct.NgayCt ASC ,ct.SoCt ASC";
             IQuery q = NHibernateSession.CreateQuery(sql);
             q.SetParameter("p_TuNgay", p_TuNgay);
             q.SetParameter("p_DenNgay", p_DenNgay);

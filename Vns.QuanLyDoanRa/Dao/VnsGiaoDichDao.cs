@@ -83,11 +83,11 @@ namespace Vns.QuanLyDoanRa.Dao.NHibernate
 
         public IList<VnsGiaoDich> GetTUByDoanRaIdGroupByTyGia(Guid p_DoanRaId) 
         {
-            string sql = " Select gd.MaTkCo as MaTkCo, Sum(gd.SoTien) as SoTien, Sum(gd.SoTienNt) as SoTienNt, gd.TyGia as TyGia" +
+            string sql = " Select gd.MaTkCo as MaTkCo, Sum(gd.SoTien) as SoTien, Sum(gd.SoTienNt) as SoTienNt, gd.TyGia as TyGia, gd.NgoaiTeId as NgoaiTeId " +
                          " from VnsChungTu ct inner join ct.LstGiaoDich gd " + 
                          " where gd.DoanRaCoId =: p_DoanRaId and gd.MaTkNo =: p_TkNo " +
                          " and ct.TrangThai = 0 " +
-                         " Group by gd.TyGia, gd.MaTkCo order by gd.TyGia ASC";
+                         " Group by gd.NgoaiTeId, gd.TyGia, gd.MaTkCo order by gd.TyGia ASC";
             IQuery q = NHibernateSession.CreateQuery(sql);
             q.SetParameter("p_DoanRaId", p_DoanRaId);
             q.SetParameter("p_TkNo", Globals.TkTamUng);

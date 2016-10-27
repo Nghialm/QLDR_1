@@ -322,7 +322,7 @@ namespace Vns.QuanLyDoanRa.Service
                 view.GiaoDichId = objGDich.GiaoDichId;
 
                 VnsDoanCongTac objDoanCongTac = VnsDoanCongTacDao.GetByKey("Id",objGDich.DoanRaCoId);
-                decimal dDuToanDoan = 0;
+                decimal dDuToanDoan = 0; decimal dDuToanDoanVND = 0;
                 IList<VnsDuToanDoan> lstDuToan = new List<VnsDuToanDoan>();
                 if (objDoanCongTac != null)
                 {
@@ -371,30 +371,42 @@ namespace Vns.QuanLyDoanRa.Service
                     view.NgayCt = objChungTu.NgayCt;
                 }
                 //view.SoTBDuToan = objDoanCongTac.SoTbDuToan;
-                if (objGDich.MaTkCo.StartsWith(Globals.TkTienMat))
+                if (objGDich.MaTkCo == Globals.TkTienMat)
                 {
                     view.PhieuChiSo = objChungTu.SoCt;
                     view.TienMatVND = objGDich.SoTien;
                     view.TienMatUSD = objGDich.SoTienNt;
                     view.TyGiaTienMat = objGDich.TyGia;
                 }
-                if (objGDich.MaTkCo.StartsWith( Globals.TkTienChuyenKhoan))
+                if (objGDich.MaTkCo == Globals.TkTienChuyenKhoanVND)
                 {
                     view.UNCSo = objChungTu.SoCt;
                     view.ChuyenKhoanVND = objGDich.SoTien;
                     view.ChuyenKhoanUSD = objGDich.SoTienNt;
                     view.TyGiaChuyenKhoan = objGDich.TyGia;
                 }
+
+                if (objGDich.MaTkCo == Globals.TkTienMatVND)
+                {
+                    view.TienTamUngVND = objGDich.SoTien;
+                }
+
                 view.TongSoVND = objGDich.SoTien;
                 view.TongUSD = objGDich.SoTienNt;
                 //view.ThoiGianDuyetDuToan = dTuNgay.Month.ToString() + "/" + dDenNgay.Month.ToString();
+
                 foreach (VnsDuToanDoan objDuToan in lstDuToan)
                 {
-                    dDuToanDoan += objDuToan.SoTienDuToan;
+                    if (objDuToan.NgoaiTeId == Globals.NgoaiTeId)
+                        dDuToanDoan += objDuToan.SoTienDuToan;
+                    else if (objDuToan.NgoaiTeId == Globals.NoiTeId)
+                        dDuToanDoanVND += objDuToan.SoTienDuToanVND;
+
                     view.ThoiGianDuyetDuToan = (objDuToan.NgayDuToan.Month.ToString() + "/" + objDuToan.NgayDuToan.Year.ToString());
 
                 }
                 view.DuToanDuocDuyet = dDuToanDoan;//Get Du Toan
+                view.DuToanDuocDuyetVND = dDuToanDoanVND;
                 
                 lstTamUng.Add(view);
             }

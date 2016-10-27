@@ -656,11 +656,11 @@
             // 
             this.colSoTien.AppearanceCell.Options.UseTextOptions = true;
             this.colSoTien.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.colSoTien.Caption = "Số Tiền ngoại tệ";
+            this.colSoTien.Caption = "Số Tiền USD";
             this.colSoTien.ColumnEdit = this.repositoryItemTextEdit1;
             this.colSoTien.FieldName = "SoTien";
             this.colSoTien.Name = "colSoTien";
-            this.colSoTien.SummaryItem.DisplayFormat = "Tổng: {0:n0}";
+            this.colSoTien.SummaryItem.DisplayFormat = "{0:n0}";
             this.colSoTien.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             this.colSoTien.Visible = true;
             this.colSoTien.VisibleIndex = 5;
@@ -697,7 +697,7 @@
             this.SoTienVND.ColumnEdit = this.repositoryItemTextEdit3;
             this.SoTienVND.FieldName = "SoTienVND";
             this.SoTienVND.Name = "SoTienVND";
-            this.SoTienVND.SummaryItem.DisplayFormat = "Tổng: {0:n0}";
+            this.SoTienVND.SummaryItem.DisplayFormat = "{0:n0}";
             this.SoTienVND.SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             this.SoTienVND.Visible = true;
             this.SoTienVND.VisibleIndex = 4;

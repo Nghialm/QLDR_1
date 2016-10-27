@@ -34,6 +34,7 @@
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.BarDangXuat = new DevExpress.XtraBars.BarButtonItem();
             this.barDangNhap = new DevExpress.XtraBars.BarButtonItem();
+            this.barQuanTriNguoiDung = new DevExpress.XtraBars.BarButtonItem();
             this.barNamKt = new DevExpress.XtraBars.BarButtonItem();
             this.barBackUp = new DevExpress.XtraBars.BarButtonItem();
             this.barRestore = new DevExpress.XtraBars.BarButtonItem();
@@ -95,7 +96,10 @@
             this.barDmNv = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.barQuanTriNguoiDung = new DevExpress.XtraBars.BarButtonItem();
+            this.btPhieuThuVND = new DevExpress.XtraBars.BarButtonItem();
+            this.btPhieuChiVND = new DevExpress.XtraBars.BarButtonItem();
+            this.btGiayBaoNoVND = new DevExpress.XtraBars.BarButtonItem();
+            this.btGiayBaoCoVND = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,9 +172,13 @@
             this.barButtonItem3,
             this.barButtonItem5,
             this.barButtonItem6,
-            this.barQuanTriNguoiDung});
+            this.barQuanTriNguoiDung,
+            this.btPhieuThuVND,
+            this.btPhieuChiVND,
+            this.btGiayBaoNoVND,
+            this.btGiayBaoCoVND});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 65;
+            this.barManager1.MaxItemId = 69;
             this.barManager1.StatusBar = this.bar3;
             // 
             // bar2
@@ -218,6 +226,13 @@
             this.barDangNhap.Id = 6;
             this.barDangNhap.Name = "barDangNhap";
             this.barDangNhap.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barDangNhap_ItemClick);
+            // 
+            // barQuanTriNguoiDung
+            // 
+            this.barQuanTriNguoiDung.Caption = "Quản Trị Người Dùng";
+            this.barQuanTriNguoiDung.Id = 64;
+            this.barQuanTriNguoiDung.Name = "barQuanTriNguoiDung";
+            this.barQuanTriNguoiDung.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barQuanTriNguoiDung_ItemClick);
             // 
             // barNamKt
             // 
@@ -368,6 +383,10 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.BarTu, true),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.BarHu, false),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.BarUNc, false),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btPhieuThuVND, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btPhieuChiVND),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btGiayBaoNoVND),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btGiayBaoCoVND),
             new DevExpress.XtraBars.LinkPersistInfo(this.barTyGia, true),
             new DevExpress.XtraBars.LinkPersistInfo(this.barKTK)});
             this.barSubItem4.Name = "barSubItem4";
@@ -690,12 +709,33 @@
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Blue";
             // 
-            // barQuanTriNguoiDung
+            // btPhieuThuVND
             // 
-            this.barQuanTriNguoiDung.Caption = "Quản Trị Người Dùng";
-            this.barQuanTriNguoiDung.Id = 64;
-            this.barQuanTriNguoiDung.Name = "barQuanTriNguoiDung";
-            this.barQuanTriNguoiDung.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barQuanTriNguoiDung_ItemClick);
+            this.btPhieuThuVND.Caption = "Phiếu thu VNĐ";
+            this.btPhieuThuVND.Id = 65;
+            this.btPhieuThuVND.Name = "btPhieuThuVND";
+            this.btPhieuThuVND.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btPhieuThuVND_ItemClick);
+            // 
+            // btPhieuChiVND
+            // 
+            this.btPhieuChiVND.Caption = "Phiếu chi VNĐ";
+            this.btPhieuChiVND.Id = 66;
+            this.btPhieuChiVND.Name = "btPhieuChiVND";
+            this.btPhieuChiVND.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btPhieuChiVND_ItemClick);
+            // 
+            // btGiayBaoNoVND
+            // 
+            this.btGiayBaoNoVND.Caption = "Giấy báo nợ VNĐ";
+            this.btGiayBaoNoVND.Id = 67;
+            this.btGiayBaoNoVND.Name = "btGiayBaoNoVND";
+            this.btGiayBaoNoVND.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btGiayBaoNoVND_ItemClick);
+            // 
+            // btGiayBaoCoVND
+            // 
+            this.btGiayBaoCoVND.Caption = "Giấy báo có VNĐ";
+            this.btGiayBaoCoVND.Id = 68;
+            this.btGiayBaoCoVND.Name = "btGiayBaoCoVND";
+            this.btGiayBaoCoVND.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btGiayBaoCoVND_ItemClick);
             // 
             // frmMain1
             // 
@@ -784,5 +824,9 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.BarButtonItem barQuanTriNguoiDung;
+        private DevExpress.XtraBars.BarButtonItem btPhieuThuVND;
+        private DevExpress.XtraBars.BarButtonItem btPhieuChiVND;
+        private DevExpress.XtraBars.BarButtonItem btGiayBaoNoVND;
+        private DevExpress.XtraBars.BarButtonItem btGiayBaoCoVND;
     }
 }

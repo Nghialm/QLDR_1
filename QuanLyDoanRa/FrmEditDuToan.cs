@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using Vns.QuanLyDoanRa.Domain;
 using Vns.QuanLyDoanRa.Service.Interface;
+using Vns.QuanLyDoanRa;
 
 namespace QuanLyDoanRa
 {
@@ -140,14 +141,14 @@ namespace QuanLyDoanRa
                     if (tmp.SoTienDuToan != 0)
                     {
                         tmp.SoTienDuToanVND = 0;
-                        tmp.NgoaiTeId = General.NgoaiTeId;
+                        tmp.NgoaiTeId = Globals.NgoaiTeId;
                     }
                     break;
                 case "colTienVND":
                     if (tmp.SoTienDuToanVND != 0)
                     {
                         tmp.SoTienDuToan = 0;
-                        tmp.NgoaiTeId = General.NoiTeId;
+                        tmp.NgoaiTeId = Globals.NoiTeId;
                     }
                     break;
             }
@@ -196,8 +197,8 @@ namespace QuanLyDoanRa
                 obj.LanDuToan = LanDuToan;
                 obj.CongTacId = DoanRa.Id;
 
-                if (obj.SoTienDuToan == 0) obj.NgoaiTeId = General.NoiTeId;
-                if (obj.SoTienDuToanVND == 0) obj.NgoaiTeId = General.NgoaiTeId;
+                if (obj.SoTienDuToan == 0) obj.NgoaiTeId = Globals.NoiTeId;
+                if (obj.SoTienDuToanVND == 0) obj.NgoaiTeId = Globals.NgoaiTeId;
                 
                 VnsDuToanDoanService.Save(obj);
             }

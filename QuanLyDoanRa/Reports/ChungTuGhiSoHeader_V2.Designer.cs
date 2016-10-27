@@ -1,6 +1,6 @@
 ﻿namespace QuanLyDoanRa.Reports
 {
-    partial class ChungTuGhiSoHeader_NhanTien_BTC
+    partial class ChungTuGhiSoHeader_V2
     {
         /// <summary>
         /// Required designer variable.
@@ -309,15 +309,13 @@
             this.xrTableCell10.StylePriority.UseFont = false;
             this.xrTableCell10.StylePriority.UsePadding = false;
             this.xrTableCell10.StylePriority.UseTextAlignment = false;
-            this.xrTableCell10.Text = "Tiền mặt:";
+            this.xrTableCell10.Text = "Tiền mặt VNĐ:";
             this.xrTableCell10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.xrTableCell10.Weight = 0.58670145902670956D;
             // 
             // xrTableCell11
             // 
             this.xrTableCell11.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrTableCell11.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "TM_USD")});
             this.xrTableCell11.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.xrTableCell11.Name = "xrTableCell11";
             this.xrTableCell11.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);
@@ -327,9 +325,7 @@
             this.xrTableCell11.StylePriority.UseTextAlignment = false;
             xrSummary3.FormatString = "{0:#,#}";
             xrSummary3.IgnoreNullValues = true;
-            xrSummary3.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrTableCell11.Summary = xrSummary3;
-            this.xrTableCell11.Text = "xrTableCell11";
             this.xrTableCell11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.xrTableCell11.Weight = 0.31290742657796972D;
             // 
@@ -340,7 +336,6 @@
             this.xrTableCell12.Name = "xrTableCell12";
             this.xrTableCell12.StylePriority.UseBorders = false;
             this.xrTableCell12.StylePriority.UseFont = false;
-            this.xrTableCell12.Text = "USD TĐ";
             this.xrTableCell12.Weight = 0.21512385421812608D;
             // 
             // xrTableCell13
@@ -438,7 +433,7 @@
             this.xrTableCell44.StylePriority.UseBorders = false;
             this.xrTableCell44.StylePriority.UseFont = false;
             this.xrTableCell44.StylePriority.UseTextAlignment = false;
-            this.xrTableCell44.Text = "Phí chuyển tiền: ";
+            this.xrTableCell44.Text = "Tiền mặt USD: ";
             this.xrTableCell44.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.xrTableCell44.Weight = 0.58670145902670956D;
             // 
@@ -1010,7 +1005,6 @@
             // 
             // MaTKK_CO
             // 
-            this.MaTKK_CO.DataSource = this.bindingSource1;
             this.MaTKK_CO.Expression = "Iif([Parameters.Type] == 1,\'\',[MaTkK])";
             this.MaTKK_CO.Name = "MaTKK_CO";
             // 
@@ -1018,7 +1012,7 @@
             // 
             this.bindingSource1.DataSource = typeof(Vns.QuanLyDoanRa.Domain.Report.RP_ChungTuGhiSo);
             // 
-            // ChungTuGhiSoHeader_NhanTien_BTC
+            // ChungTuGhiSoHeader_V2
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.Detail,

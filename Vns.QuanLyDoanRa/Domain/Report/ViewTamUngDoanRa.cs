@@ -147,7 +147,6 @@ namespace Vns.QuanLyDoanRa.Domain.Report
         }
                 
         private string _ThoiGianDuyetDuToan;
-
         public string ThoiGianDuyetDuToan
         {
             get { return _ThoiGianDuyetDuToan; }
@@ -159,6 +158,13 @@ namespace Vns.QuanLyDoanRa.Domain.Report
         {
             get { return _DuToanDuocDuyet; }
             set { _DuToanDuocDuyet = value; }
+        }
+
+        private decimal _DuToanDuocDuyetVND;
+        public decimal DuToanDuocDuyetVND
+        {
+            get { return _DuToanDuocDuyetVND; }
+            set { _DuToanDuocDuyetVND = value; }
         }
          
         private DateTime _NgayDi;
@@ -174,6 +180,16 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             get { return _NgayVe; }
             set { _NgayVe = value; }
         }
+
+        #region Thong tin bo sung them SoTienTamUngVND
+        private decimal _TienTamUngVND;
+        public decimal TienTamUngVND
+        {
+            get { return _TienTamUngVND; }
+            set { _TienTamUngVND = value; }
+        }
+        #endregion
+
 
         #region Ham so sanh
         /// <summary>

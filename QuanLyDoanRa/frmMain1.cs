@@ -108,12 +108,12 @@ namespace QuanLyDoanRa
 
                 if (obj.Ma == "p_NOITE")
                 {
-                    General.NoiTeId = VnsConvert.CGuid(obj.GiaTri);
+                    Vns.QuanLyDoanRa.Globals.NoiTeId = VnsConvert.CGuid(obj.GiaTri);
                 }
 
                 if (obj.Ma == "p_NGOAITE")
                 {
-                    General.NgoaiTeId = VnsConvert.CGuid(obj.GiaTri);
+                    Vns.QuanLyDoanRa.Globals.NgoaiTeId = VnsConvert.CGuid(obj.GiaTri);
                 }
             }
 
@@ -495,6 +495,38 @@ namespace QuanLyDoanRa
         {
             FrmQuanTriNguoiDung FrmQuanTriNguoiDung = (FrmQuanTriNguoiDung)ObjectFactory.GetObject("FrmQuanTriNguoiDung");
             FrmQuanTriNguoiDung.Show();
+        }
+
+        private void btPhieuThuVND_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmUyNhiemChi FrmTamUng = (FrmUyNhiemChi)ObjectFactory.GetObject("frmUyNhiemChi");
+
+            FrmTamUng.AccessibleDescription = "PT_VND";
+            FrmTamUng.Show();
+        }
+
+        private void btPhieuChiVND_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmUyNhiemChi FrmTamUng = (FrmUyNhiemChi)ObjectFactory.GetObject("frmUyNhiemChi");
+
+            FrmTamUng.AccessibleDescription = "PC_VND";
+            FrmTamUng.Show();
+        }
+
+        private void btGiayBaoNoVND_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmUyNhiemChi FrmTamUng = (FrmUyNhiemChi)ObjectFactory.GetObject("frmUyNhiemChi");
+
+            FrmTamUng.AccessibleDescription = "GBN_VND";
+            FrmTamUng.Show();
+        }
+
+        private void btGiayBaoCoVND_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmUyNhiemChi FrmTamUng = (FrmUyNhiemChi)ObjectFactory.GetObject("frmUyNhiemChi");
+
+            FrmTamUng.AccessibleDescription = "GBC_VND";
+            FrmTamUng.Show();
         } 
     }
 }

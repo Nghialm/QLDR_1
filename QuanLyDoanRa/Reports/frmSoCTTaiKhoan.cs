@@ -35,9 +35,20 @@ namespace QuanLyDoanRa.Reports
             switch (reportName)
             {
                 case "CTTK":
-                    Reports.SoChiTietTK SoChiTietTK = new SoChiTietTK(TuNgay,DenNgay,Titletime, cboTk.EditValue.ToString(),"");
-                    SoChiTietTK.CreateDocument();
-                    SoChiTietTK.ShowPreviewDialog();
+                    String MaTaiKhoan = "";
+                    MaTaiKhoan = cboTk.EditValue.ToString();
+                    if (MaTaiKhoan == Vns.QuanLyDoanRa.Globals.TkTienMat || MaTaiKhoan == Vns.QuanLyDoanRa.Globals.TkTienChuyenKhoan)
+                    {
+                        Reports.SoChiTietTK SoChiTietTK = new SoChiTietTK(TuNgay, DenNgay, Titletime, MaTaiKhoan, "");
+                        SoChiTietTK.CreateDocument();
+                        SoChiTietTK.ShowPreviewDialog();
+                    }
+                    else
+                    {
+                        Reports.SoChiTietTK_VND SoChiTietTK = new SoChiTietTK_VND(TuNgay, DenNgay, Titletime, MaTaiKhoan, "");
+                        SoChiTietTK.CreateDocument();
+                        SoChiTietTK.ShowPreviewDialog();
+                    }
                     break;                
             }
         }
@@ -51,7 +62,9 @@ namespace QuanLyDoanRa.Reports
             for (int i = lstNghiepVu.Count -1; i >=0; i--)
             {
                 if (!(lstNghiepVu[i].MaNghiepVu == Vns.QuanLyDoanRa.Globals.TkTienMat ||
-                    lstNghiepVu[i].MaNghiepVu == Vns.QuanLyDoanRa.Globals.TkTienChuyenKhoan))
+                    lstNghiepVu[i].MaNghiepVu == Vns.QuanLyDoanRa.Globals.TkTienChuyenKhoan ||
+                    lstNghiepVu[i].MaNghiepVu == Vns.QuanLyDoanRa.Globals.TkTienChuyenKhoanVND ||
+                    lstNghiepVu[i].MaNghiepVu == Vns.QuanLyDoanRa.Globals.TkTienMatVND))
                 {
                     lstNghiepVu.RemoveAt(i);
                 }
