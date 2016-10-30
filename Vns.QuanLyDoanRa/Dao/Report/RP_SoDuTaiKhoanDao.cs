@@ -19,6 +19,7 @@ namespace Vns.QuanLyDoanRa.Dao.NHibernate
             string sql = "select ct.NgayHt as NgayHt, ct.NgayCt as NgayCt,ct.SoCt as SoCt, gd.NoiDung as DienGiai, " +
                          "gd.TyGia as TyGia,gd.SoTien as PsTangVND, gd.SoTienNt as PsTangUSD, " +
                          "gd.DoanRaNoId as DoanRaId,gd.LoaiDoanRaNoId as LoaiDoanRaId, gd.MaTkCo as MaTkCo, gd.MaTkNo as MaTkNo, " +
+                         "gd.NgoaiTeId  as NgoaiTeId, " +
                          "gd.MoTa as MoTa " + 
                          "from VnsGiaoDich gd " +
                          "inner join gd.objChungTu ct " +
@@ -43,6 +44,7 @@ namespace Vns.QuanLyDoanRa.Dao.NHibernate
             string sql = "select ct.NgayHt as NgayHt, ct.NgayCt as NgayCt,ct.SoCt as SoCt, gd.NoiDung as DienGiai, " +
                          "gd.TyGia as TyGia,gd.SoTien as PsGiamVND, gd.SoTienNt as PsGiamUSD, " +
                          "gd.DoanRaCoId as DoanRaId,gd.LoaiDoanRaCoId as LoaiDoanRaId , gd.MaTkCo as MaTkCo, gd.MaTkNo as MaTkNo, " +
+                         "gd.NgoaiTeId  as NgoaiTeId, " +
                          "gd.MoTa as MoTa " + 
                          "from VnsGiaoDich gd " +
                          "inner join gd.objChungTu ct " +

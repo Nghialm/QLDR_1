@@ -153,6 +153,9 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             set;
         }
 
+        public decimal CPK_TyGia
+        { get; set; }
+
         public decimal CPK_Tong 
         {
             get 

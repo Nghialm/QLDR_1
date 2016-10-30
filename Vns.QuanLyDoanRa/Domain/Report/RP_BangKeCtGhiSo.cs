@@ -26,6 +26,9 @@ namespace Vns.QuanLyDoanRa.Domain.Report
         public virtual decimal TongUSD { get; set; }
         public virtual decimal TongVND { get; set; }
 
+        public virtual decimal VNDTm { get; set; }
+        public virtual decimal VNDCk { get; set; }
+
         public virtual String SoTBDT { get; set; }
         public virtual String SoTBQT { get; set; }
 

@@ -82,8 +82,11 @@ namespace QuanLyDoanRa.Reports
                 objBangke.CkVND = tmp.Tk_Qt_Ck_Vnd;
                 objBangke.CkTyGia = objBangke.CkUSD == 0 ? 0 : tmp.Tk_Qt_Ck_Tg;
 
-                objBangke.TongUSD = objBangke.TmUSD + objBangke.CkUSD;
-                objBangke.TongVND = objBangke.TmVND + objBangke.CkVND;
+                objBangke.VNDTm = tmp.So_QT_VND_TM - tmp.Chi_VND_QT_TM;
+                objBangke.VNDCk = tmp.So_QT_VND_CK - tmp.Chi_VND_QT_CK;
+
+                //objBangke.TongUSD = objBangke.TmUSD + objBangke.CkUSD;
+                objBangke.TongVND = objBangke.TmVND + objBangke.CkVND + objBangke.VNDTm + objBangke.VNDCk;
 
                 if (tmp.ThangDuyetQt >= p_TuNgay && tmp.ThangDuyetQt <= p_DenNgay)
                     lstBangKe.Add(objBangke);    

@@ -119,6 +119,7 @@ namespace Vns.QuanLyDoanRa.Dao.NHibernate
                          "gd.GiaoDichId as GiaoDichId, gd.MaTkNo as MaTkNo,gd.MaTkCo as MaTkCo, gd.SoTien as SoTien, " +
                          "gd.SoTienNt as SoTienNt,gd.NoiDung as NoiDung, gd.DoanRaNoId as DoanRaNoId," +
                          "gd.DoanRaCoId as DoanRaCoId ,gd.LoaiDoanRaNoId as LoaiDoanRaNoId,gd.LoaiDoanRaCoId as LoaiDoanRaCoId,gd.TyGia as TyGia, " +
+                         "gd.NgoaiTeId as NgoaiTeId, " +
                          "gd.MucTieuMucNoId as MucTieuMucNoId ,gd.MucTieuMucCoId as MucTieuMucCoId,gd.ChungTuId as ChungTuId " +
                          "from VnsGiaoDich gd " +
                          "inner join gd.objChungTu ct " +

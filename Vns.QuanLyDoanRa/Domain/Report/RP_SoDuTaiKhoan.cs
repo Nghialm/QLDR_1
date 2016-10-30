@@ -26,7 +26,9 @@ namespace Vns.QuanLyDoanRa.Domain.Report
         public virtual String MaTkNo { get; set; }
         public virtual String MaTkCo { get; set; }
         public virtual String MaTkDoiUng { get; set; }
-        public virtual String TenTkDoiUng { get; set; } 
+        public virtual String TenTkDoiUng { get; set; }
+
+        public virtual Guid NgoaiTeId { get; set; }
 
         public virtual String MoTa { get; set; }
         public virtual String DisplayMoTa

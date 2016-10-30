@@ -53,7 +53,7 @@ namespace Vns.QuanLyDoanRa.Domain.Report
         /// <summary>
         /// /Số tiền VND tạm ứng cho đoàn ra
         /// </summary>
-        public decimal TU_TK_TM_B_VND { get; set; }
+        public decimal TU_VND_TK_TM { get; set; }
 
         public decimal TU_TK_CK_VND { get; set; }
         public decimal TU_TK_CK_USD { get; set; }
@@ -61,7 +61,7 @@ namespace Vns.QuanLyDoanRa.Domain.Report
         /// <summary>
         /// Số tiền VNĐ tạm ứng chuyển khoản cho đoàn ra
         /// </summary>
-        public decimal TU_TK_CK_B_VND { get; set; }
+        public decimal TU_VND_TK_CK { get; set; }
 
         public decimal TU_TK_TONG_USD
         {
@@ -107,6 +107,15 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             get { return TU_TM_VND + TU_CK_VND; }
         }
 
+        /// <summary>
+        /// Tạm ứng bằng tiền mặt VNĐ 
+        /// </summary>
+        public decimal TU_VND_TM { get; set; }
+
+        /// <summary>
+        /// Tạm ứng chuyển khoản VNĐ
+        /// </summary>
+        public decimal TU_VND_CK { get; set; }
         #endregion
 
         #region THU HOAN = so tien đã thu sau khi quyet toan
@@ -122,6 +131,12 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                     return TH_TM_VND / TH_TM_USD;
             }
         }
+
+        /// <summary>
+        /// Thu hoàn tiền mặt VNĐ
+        /// </summary>
+        public decimal TH_VND_TM { get; set; }
+
         public decimal TH_CK_USD { get; set; }
         public decimal TH_CK_VND { get; set; }
         public decimal TH_CK_TG
@@ -134,6 +149,12 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                     return TH_CK_VND / TH_CK_USD;
             }
         }
+
+        /// <summary>
+        /// Thu hoàn chuyển khoản VNĐ
+        /// </summary>
+        public decimal TH_VND_CK { get; set; }
+
         public decimal TH_TONG_USD
         {
             get { return TH_TM_USD + TH_CK_USD; }
@@ -218,6 +239,10 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                 else return TH_CHUA_QT_TM_VND / TH_CHUA_QT_TM_USD;
             }
         }
+        /// <summary>
+        /// Thu hoàn chưa quyết toán tiền mặt
+        /// </summary>
+        public decimal TH_VND_CHUA_QT_TM { get; set; }
 
         public decimal TH_CHUA_QT_CK_USD { get; set; }
         public decimal TH_CHUA_QT_CK_VND { get; set; }
@@ -229,6 +254,11 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                 else return TH_CHUA_QT_CK_VND / TH_CHUA_QT_CK_USD;
             }
         }
+
+        /// <summary>
+        /// Thu hoàn chưa quyết toán chuyển khoản
+        /// </summary>
+        public decimal TH_VND_CHUA_QT_CK { get; set; }
         #endregion
 
         #region CHI QUYET TOAN = So tien phai tra sau khi quyet toan QT_TU >0
@@ -244,6 +274,12 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             }
         }
         public decimal Chi_QT_CK_VND { get; set; }
+
+        /// <summary>
+        /// Chi quyết toán chuyển khoản VNĐ
+        /// </summary>
+        public decimal Chi_VND_QT_CK { get; set; }
+
         public decimal Chi_QT_TM_USD { get; set; }
         public decimal Chi_QT_TM_TG
         {
@@ -256,6 +292,12 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             }
         }
         public decimal Chi_QT_TM_VND { get; set; }
+
+        /// <summary>
+        /// Chi quyết toán tiền mặt VNĐ
+        /// </summary>
+        public decimal Chi_VND_QT_TM { get; set; }
+
         public decimal Chi_QT_TONG_USD
         {
             get { return Chi_QT_TM_USD + Chi_QT_CK_USD; }
@@ -359,6 +401,27 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                 return 0;
             }
         }
+
+        public decimal So_QT_VND_TM
+        {
+            get
+            {
+                decimal temp = TU_VND_TM + Chi_VND_QT_TM - CN_VND_PhaiThu_TM - TH_VND_TM;
+                if (temp > 0) return temp;
+                return 0;
+            }
+        }
+
+        public decimal So_QT_VND_CK
+        {
+            get
+            {
+                decimal temp = TU_VND_CK + Chi_VND_QT_CK - CN_VND_PhaiThu_CK - TH_VND_CK;
+                if (temp > 0) return temp;
+                return 0;
+            }
+        }
+
         public decimal So_QT_USD_Tong
         {
             get
@@ -388,6 +451,12 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             }
         }
         public decimal QT_CK_VND { get; set; }
+
+        /// <summary>
+        /// Số tiền quyết toán chuyển khoản VNĐ
+        /// </summary>
+        public decimal QT_VND_CK { get; set; }
+
         public decimal QT_TM_USD { get; set; }
         public decimal QT_TM_TG
         {
@@ -400,6 +469,12 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             }
         }
         public decimal QT_TM_VND { get; set; }
+
+        /// <summary>
+        /// Số tiền quyết toán tiền mặt VNĐ
+        /// </summary>
+        public decimal QT_VND_TM { get; set; }
+
         public decimal QT_TONG_VND
         {
             get { return QT_TM_VND + QT_CK_VND; }
@@ -445,6 +520,9 @@ namespace Vns.QuanLyDoanRa.Domain.Report
 
         public decimal Tk_Qt_Usd { get; set; }
         public decimal Tk_Qt_Vnd { get; set; }
+
+        public decimal Tk_VND_Qt_CK { get; set; }
+        public decimal Tk_VND_Qt_Tm { get; set; }
         #endregion
 
         #region So Quyet toan lay theo tai khoan luy ke tu dau toi thoi diem bao cao
@@ -513,6 +591,25 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                 }
             }
         }
+
+        public decimal CN_VND_PhaiThu_TM
+        {
+            get
+            {
+                decimal phaiThu = DuNo141_VND_TM - DuCo141_VND_TM;
+                if (phaiThu > 0)
+                {
+                    CN_VND_PhaiTra_TM = 0;
+                    return phaiThu;
+                }
+                else
+                {
+                    CN_VND_PhaiTra_TM = Math.Abs(phaiThu);
+                    return 0;
+                }
+            }
+        }
+
         public decimal CN_PhaiThu_CK_USD
         {
             get
@@ -526,6 +623,24 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                 else
                 {
                     CN_PhaiTra_CK_USD = Math.Abs(phaiThu);
+                    return 0;
+                }
+            }
+        }
+
+        public decimal CN_VND_PhaiThu_CK
+        {
+            get
+            {
+                decimal phaiThu = DuNo141_VND_CK - DuCo141_VND_CK;
+                if (phaiThu > 0)
+                {
+                    CN_VND_PhaiTra_CK = 0;
+                    return phaiThu;
+                }
+                else
+                {
+                    CN_VND_PhaiTra_CK = Math.Abs(phaiThu);
                     return 0;
                 }
             }
@@ -607,6 +722,8 @@ namespace Vns.QuanLyDoanRa.Domain.Report
         public decimal CN_PhaiTra_TM_USD{get; set;}
         public decimal CN_PhaiTra_CK_USD { get; set; }
 
+        public decimal CN_VND_PhaiTra_CK { get; set; }
+
         public decimal CN_PhaiTra_TG
         {
             get
@@ -626,6 +743,7 @@ namespace Vns.QuanLyDoanRa.Domain.Report
         }
         public decimal CN_PhaiTra_TM_VND { get; set; }
         public decimal CN_PhaiTra_CK_VND { get; set; }
+        public decimal CN_VND_PhaiTra_TM { get; set; }
         #endregion
 
         #region Số phải thu, phải trả dựa trên việc đoàn ra đã quyết toán
@@ -1073,6 +1191,24 @@ namespace Vns.QuanLyDoanRa.Domain.Report
         public decimal DuCo141_TM_VND { get; set; }
         public decimal DuCo141_CK_VND { get; set; }
 
+        /// <summary>
+        /// Du co 141 bằng tiền VNĐ Tiền mặt
+        /// </summary>
+        public decimal DuCo141_VND_TM { get; set; }
+        /// <summary>
+        /// Du co 141 bằng VNĐ Chuyển khoản
+        /// </summary>
+        public decimal DuCo141_VND_CK { get; set; }
+
+        /// <summary>
+        /// Du no 141 bằng tiền VNĐ Tiền mặt
+        /// </summary>
+        public decimal DuNo141_VND_TM { get; set; }
+        /// <summary>
+        /// Du no 141 bằng VNĐ Chuyển khoản
+        /// </summary>
+        public decimal DuNo141_VND_CK { get; set; }
+
         public decimal DuCo141_USD { get; set; }
         public decimal DuCo141_TM_USD { get; set; }
         public decimal DuCo141_CK_USD { get; set; }
@@ -1087,8 +1223,17 @@ namespace Vns.QuanLyDoanRa.Domain.Report
 
         public decimal HU_TRONGTHANG_TM_VND { get; set; }
         public decimal HU_TRONGTHANG_TM_USD { get; set; }
+        /// <summary>
+        /// Thu hoàn ứng trong tháng tiền mặt
+        /// </summary>
+        public decimal HU_VND_TRONGTHANG_TM { get; set; }
+
         public decimal HU_TRONGTHANG_CK_VND { get; set; }
         public decimal HU_TRONGTHANG_CK_USD { get; set; }
+        /// <summary>
+        /// Thu hoàn ứng trong tháng chuyển khoản
+        /// </summary>
+        public decimal HU_VND_TRONGTHANG_CK { get; set; }
         #endregion
 
         #region Ham so sanh
