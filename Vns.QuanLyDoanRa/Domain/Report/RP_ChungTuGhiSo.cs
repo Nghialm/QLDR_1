@@ -246,15 +246,21 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                     MaTkCk = Globals.TkTienChuyenKhoan_Rp;
                     MaTk = Globals.TkNghiepVuChiHoatDong;
                     _TrichYeu = "Chi quyết toán đoàn ra bằng ngoại tệ tiền mặt, chuyển khoản ( USD ) các Ban Đảng Trung ương đi công tác nước ngoài, " + countDr.ToString() + " đoàn.";
+                    //Quy dinh cpk la chi quyet toan tien USD
                     if (obj.MaTkCo.StartsWith(Globals.TkTienMat))
                     {
-                        _TM_USD = obj.PsTangUSD;
+                        CPK_USD = obj.PsTangUSD;
+                        CPK_VND = obj.PsTangVND;
+                    }
+
+                    if (obj.MaTkCo.StartsWith(Globals.TkTienMatVND))
+                    {
                         _TM_VND = obj.PsTangVND;
                     }
-                    if (obj.MaTkCo.StartsWith(Globals.TkTienChuyenKhoan))
+
+                    if (obj.MaTkCo.StartsWith(Globals.TkTienChuyenKhoanVND))
                     {
                         _CK_VND = obj.PsTangVND;
-                        _CK_USD = obj.PsTangUSD;
                     }
                     break;
                 case 5:// Thu QT
@@ -262,12 +268,19 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                     MaTkCk = Globals.TkTienChuyenKhoan_Rp;
                     MaTk = Globals.TkTamUng_Rp;
                     _TrichYeu = "Thu chênh lệch Quyết toán/tạm ứng các đoàn ra bằng ngoại tệ (USD) tiền mặt các Ban Đảng Trung ương đi công tác  nước ngoài, " + countDr.ToString() + " đoàn.";
-                    if (obj.MaTkNo.StartsWith(Globals.TkTienMat) && obj.MaTkCo.StartsWith(Globals.TkTamUng))
+                    if (obj.MaTkNo.StartsWith(Globals.TkTienMatVND) && obj.MaTkCo.StartsWith(Globals.TkTamUng))
                     {
                         _TM_USD = obj.PsTangUSD;
                         _TM_VND += obj.PsTangVND;
                     }
-                    if (obj.MaTkNo.StartsWith(Globals.TkTienChuyenKhoan) && obj.MaTkCo.StartsWith(Globals.TkTamUng))
+
+                    if (obj.MaTkNo.StartsWith(Globals.TkTienMat) && obj.MaTkCo.StartsWith(Globals.TkTamUng))
+                    {
+                        CPK_USD = obj.PsTangUSD;
+                        CPK_VND += obj.PsTangVND;
+                    }
+
+                    if (obj.MaTkNo.StartsWith(Globals.TkTienChuyenKhoanVND) && obj.MaTkCo.StartsWith(Globals.TkTamUng))
                     {
                         _CK_VND = obj.PsTangVND;
                         _CK_USD = obj.PsTangUSD;

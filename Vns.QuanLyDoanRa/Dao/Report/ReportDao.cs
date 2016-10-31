@@ -186,6 +186,7 @@ namespace Vns.QuanLyDoanRa.Dao.NHibernate
             string SqlTT = GenSqlByTrangThai(p_TrangThaiCt);
             string sql = "select ct.Id as CtId, ct.NgayHt as NgayHt, ct.NgayCt as NgayCt,ct.SoCt as SoCt, ct.NoiDung as DienGiai, " +
                          "gd.TyGia as TyGia,gd.SoTien as Ps{0}VND, gd.SoTienNt as Ps{0}USD, " +
+                         "gd.NgoaiTeId as NgoaiTeId, " +
                          "gd.DoanRa{1}Id as DoanRaId,gd.LoaiDoanRa{1}Id as LoaiDoanRaId, gd.MaTkCo as MaTkCo, gd.MaTkNo as MaTkNo " +
                          "from VnsGiaoDich gd " +
                          "inner join gd.objChungTu ct " +

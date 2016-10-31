@@ -77,9 +77,17 @@ namespace QuanLyDoanRa.Reports
                             break;
                     }
 
+                    if (objSoDu.NgoaiTeId == Vns.QuanLyDoanRa.Globals.NoiTeId)
+                    {
+                        objSoDu.TyGia = 0;
+                        objSoDu.PsTangUSD = 0;
+                    }
+
+                    if (objSoDu.MaTkDoiUng == Vns.QuanLyDoanRa.Globals.TkTienMatVND)
+                        objSoDu.TenTkDoiUng = string.Format("{0} {1}", objSoDu.TenLoaiDoanRa, "tiền mặt VNĐ");
                     if (objSoDu.MaTkDoiUng == Vns.QuanLyDoanRa.Globals.TkTienMat)
-                        objSoDu.TenTkDoiUng = string.Format("{0} {1}", objSoDu.TenLoaiDoanRa, "tiền mặt");
-                    else if (objSoDu.MaTkDoiUng == Vns.QuanLyDoanRa.Globals.TkTienChuyenKhoan)
+                        objSoDu.TenTkDoiUng = string.Format("{0} {1}", objSoDu.TenLoaiDoanRa, "tiền mặt ngoại tệ");
+                    else if (objSoDu.MaTkDoiUng == Vns.QuanLyDoanRa.Globals.TkTienChuyenKhoanVND)
                         objSoDu.TenTkDoiUng = string.Format("{0} {1}", objSoDu.TenLoaiDoanRa, "tiền chuyển khoản");
 
                     objSoDu.DienGiai = giatri_diengiai + String.Format(" - đoàn: đc {0} - {1} - Theo TBQT {2} -TB/VPTW/nb ngày {3} đi {4} ",
