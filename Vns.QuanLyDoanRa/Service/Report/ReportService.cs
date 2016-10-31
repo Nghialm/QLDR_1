@@ -830,18 +830,36 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 foreach (VnsGiaoDich objGiaoDich in lstTamUng)
                     if (objGiaoDich.DoanRaCoId == objDoanRa.Id)
                     {
-                        if (objGiaoDich.MaTkCo.StartsWith(Globals.TkTienMat) ||
+                        if (objGiaoDich.NgoaiTeId == Globals.NgoaiTeId)
+                        {
+                            if (objGiaoDich.MaTkCo.StartsWith(Globals.TkTienMat) ||
                             objGiaoDich.MaTkNo.StartsWith(Globals.TkTienMat))
-                        {
-                            objReport.TienMatUSD += objGiaoDich.SoTienNt;
-                            objReport.TienMatVND += objGiaoDich.SoTien;
+                            {
+                                objReport.TienMatUSD += objGiaoDich.SoTienNt;
+                                objReport.TienMatVND += objGiaoDich.SoTien;
+                            }
+                            else if (objGiaoDich.MaTkCo.StartsWith(Globals.TkTienChuyenKhoan) ||
+                                objGiaoDich.MaTkNo.StartsWith(Globals.TkTienChuyenKhoan))
+                            {
+                                objReport.ChuyenKhoanUSD += objGiaoDich.SoTienNt;
+                                objReport.ChuyenKhoanVND += objGiaoDich.SoTien;
+                            }
                         }
-                        else if (objGiaoDich.MaTkCo.StartsWith(Globals.TkTienChuyenKhoan) ||
-                            objGiaoDich.MaTkNo.StartsWith(Globals.TkTienChuyenKhoan))
+                        else if (objGiaoDich.NgoaiTeId == Globals.NoiTeId)
                         {
-                            objReport.ChuyenKhoanUSD += objGiaoDich.SoTienNt;
-                            objReport.ChuyenKhoanVND += objGiaoDich.SoTien;
+                            if (objGiaoDich.MaTkCo.StartsWith(Globals.TkTienMatVND) ||
+                                                       objGiaoDich.MaTkNo.StartsWith(Globals.TkTienMatVND))
+                            {
+                                objReport.TienTamUngVND += objGiaoDich.SoTien;
+                            }
+                            else if (objGiaoDich.MaTkCo.StartsWith(Globals.TkTienChuyenKhoanVND) ||
+                                objGiaoDich.MaTkNo.StartsWith(Globals.TkTienChuyenKhoanVND))
+                            {
+                                objReport.ChuyenKhoanVND += objGiaoDich.SoTien;
+                            }
                         }
+
+                        
                     }
                 //if (objReport.TienMatUSD != 0 || objReport.TienMatVND != 0
                 //    || objReport.ChuyenKhoanUSD != 0 || objReport.ChuyenKhoanVND != 0)

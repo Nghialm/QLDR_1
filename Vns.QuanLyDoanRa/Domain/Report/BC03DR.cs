@@ -17,7 +17,10 @@ namespace Vns.QuanLyDoanRa.Domain.Report
         public virtual String TruongDoan { get; set; }
         public virtual String ThangDuyetDt { get; set; }
         public virtual String SoTbDt { get; set; }
+        
         public virtual decimal DtDuocDuyet { get; set; }
+        public virtual decimal DuToanDuocDuyetVND { get; set; }
+        
         public virtual String NguoiTamUng { get; set; }
         public virtual decimal TongUSD { get; set; }
         public virtual decimal TongVND { get; set; }
@@ -31,6 +34,10 @@ namespace Vns.QuanLyDoanRa.Domain.Report
         public virtual String TenGroupThang { get; set; }
         public virtual DateTime NgayDuyetDt { get; set; }
 
+        #region Thong tin bo sung them SoTienTamUngVND
+        public virtual decimal TienTamUngVND { get; set; }
+        #endregion
+
         public BC03DR(VnsReportChuaQt obj, int type)
         {
             LoaiDoanRaId = obj.LoaiDoanRaId;
@@ -43,6 +50,7 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             ThangDuyetDt = obj.ThangDuyetDt;
             SoTbDt = obj.SoTbDt;
             DtDuocDuyet = obj.DtDuocDuyet;
+            DuToanDuocDuyetVND = obj.DuToanDuocDuyetVND;
             NguoiTamUng = obj.NguoiTamUng;
             TongUSD = obj.TongUSD;
             TongVND = obj.TongVND;
@@ -52,6 +60,8 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             ChuyenKhoanTG = obj.ChuyenKhoanTG;
             ChuyenKhoanUSD = obj.ChuyenKhoanUSD;
             ChuyenKhoanVND = obj.ChuyenKhoanVND;
+
+            TienTamUngVND = obj.TienTamUngVND;
             GroupThang = type;
             if (type == 1)
                 TenGroupThang = "Kỳ trước chuyển sang";

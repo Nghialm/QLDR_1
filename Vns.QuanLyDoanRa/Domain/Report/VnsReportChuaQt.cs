@@ -58,27 +58,30 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             get { return _TruongDoan; }
             set { _TruongDoan = value; }
         }
+        
         private String _ThangDuyetDt;
-
         public String ThangDuyetDt
         {
             get { return _ThangDuyetDt; }
             set { _ThangDuyetDt = value; }
         }
+        
         private String _SoTbDt;
-
         public String SoTbDt
         {
             get { return _SoTbDt; }
             set { _SoTbDt = value; }
         }
-        private decimal _DtDuocDuyet;
 
+        private decimal _DtDuocDuyet;
         public decimal DtDuocDuyet
         {
             get { return _DtDuocDuyet; }
             set { _DtDuocDuyet = value; }
         }
+
+        public virtual decimal DuToanDuocDuyetVND { get; set; }
+
         private String _NguoiTamUng;
 
         public String NguoiTamUng
@@ -86,6 +89,7 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             get { return _NguoiTamUng; }
             set { _NguoiTamUng = value; }
         }
+
         public decimal TongUSD
         {
             get { return _TienMatUSD + _ChuyenKhoanUSD; }
@@ -94,19 +98,17 @@ namespace Vns.QuanLyDoanRa.Domain.Report
 
         public decimal TongVND
         {
-            get { return _TienMatVND + _ChuyenKhoanVND; }
+            get { return _TienMatVND + _ChuyenKhoanVND + TienTamUngVND; }
         }
 
-
         private decimal _TienMatUSD;
-
         public decimal TienMatUSD
         {
             get { return _TienMatUSD; }
             set { _TienMatUSD = value; }
         }
-        private decimal _TienMatTG;
 
+        private decimal _TienMatTG;
         public decimal TienMatTG
         {
             get {
@@ -116,22 +118,22 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                     return _TienMatVND / _TienMatUSD;
             }
         }
-        private decimal _TienMatVND;
 
+        private decimal _TienMatVND;
         public decimal TienMatVND
         {
             get { return _TienMatVND; }
             set { _TienMatVND = value; }
         }
+        
         private decimal _ChuyenKhoanUSD;
-
         public decimal ChuyenKhoanUSD
         {
             get { return _ChuyenKhoanUSD; }
             set { _ChuyenKhoanUSD = value; }
         }
+        
         private decimal _ChuyenKhoanTG;
-
         public decimal ChuyenKhoanTG
         {
             get
@@ -142,13 +144,17 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                     return _ChuyenKhoanVND / _ChuyenKhoanUSD;
             }
         }
-        private decimal _ChuyenKhoanVND;
 
+        private decimal _ChuyenKhoanVND;
         public decimal ChuyenKhoanVND
         {
             get { return _ChuyenKhoanVND; }
             set { _ChuyenKhoanVND = value; }
         }
+
+        #region Thong tin bo sung them SoTienTamUngVND
+        public virtual decimal TienTamUngVND { get; set; }
+        #endregion
 
         private DateTime _NgayQt;
         public DateTime NgayQt
@@ -173,6 +179,7 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             _TruongDoan = obj.TenTruongDoan;
             _ThangDuyetDt = obj.DanhSachDuToanDoan.Count > 0 ? obj.DanhSachDuToanDoan[0].NgayDuToan.ToString("MM/yyyy") : "";
             _DtDuocDuyet = GetSoTienDuToan(obj.DanhSachDuToanDoan);
+            DuToanDuocDuyetVND = GetSoTienDuToanVND(obj.DanhSachDuToanDoan);
             _SoTbDt = obj.SoThongBaoDuToan;
             _NgayQt = obj.NgayQuyetToan;
             _NgayDt = obj.DanhSachDuToanDoan.Count > 0 ? obj.DanhSachDuToanDoan[0].NgayDuToan : DateTime.MaxValue;
@@ -184,6 +191,16 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             foreach (VnsDuToanDoan objQt in lst)
             {
                 sotienQt += objQt.SoTienDuToan;
+            }
+            return sotienQt;
+        }
+
+        private decimal GetSoTienDuToanVND(IList<VnsDuToanDoan> lst)
+        {
+            decimal sotienQt = 0;
+            foreach (VnsDuToanDoan objQt in lst)
+            {
+                sotienQt += objQt.SoTienDuToanVND;
             }
             return sotienQt;
         }
