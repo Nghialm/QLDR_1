@@ -2160,8 +2160,8 @@ namespace Vns.QuanLyDoanRa.Service.Report
             {
                 RP_BC06DR objThangTruoc = new RP_BC06DR(objrp, objrp.LoaiDoanRaId, objrp.DoanRaId, objrp.TenLoaiDoanRa, objrp.TenDoanRaVietTat, objrp.TruongDoanFullName,
                     objrp.NuocCongTac, objrp.ThangDuyetQt,
-                    objrp.CN_QT_PhaiThu_USD, objrp.CN_QT_PhaiThu_VND, objrp.CN_QT_PhaiThu_TG,
-                    objrp.CN_PhaiTra_TM_USD, objrp.CN_PhaiTra_CK_USD, objrp.CN_PhaiTra_USD,
+                    objrp.CN_QT_PhaiThu_USD, objrp.CN_QT_PhaiThu_VND, objrp.CN_QT_PhaiThu_TG, objrp.CN_QT_VND_PhaiThu,
+                    objrp.CN_PhaiTra_TM_USD, objrp.CN_VND_PhaiTra_TM,
                     //objrp.Chi_QT_TM_USD, objrp.Chi_QT_CK_USD, objrp.Chi_QT_TONG_USD,
                     "Kỳ trước chuyển sang", 1, type);
 
@@ -2180,8 +2180,8 @@ namespace Vns.QuanLyDoanRa.Service.Report
             {
                 RP_BC06DR objThangNay = new RP_BC06DR(objrp, objrp.LoaiDoanRaId, objrp.DoanRaId, objrp.TenLoaiDoanRa, objrp.TenDoanRaVietTat, objrp.TruongDoanFullName,
                     objrp.NuocCongTac, objrp.ThangDuyetQt,
-                    objrp.CN_QT_PhaiThu_USD, objrp.CN_QT_PhaiThu_VND, objrp.CN_QT_PhaiThu_TG,
-                    objrp.CN_PhaiTra_TM_USD, objrp.CN_PhaiTra_CK_USD, objrp.CN_PhaiTra_USD,
+                    objrp.CN_QT_PhaiThu_USD, objrp.CN_QT_PhaiThu_VND, objrp.CN_QT_PhaiThu_TG, objrp.CN_QT_VND_PhaiThu,
+                    objrp.CN_PhaiTra_TM_USD, objrp.CN_VND_PhaiTra_TM,
                     //objrp.Chi_QT_TM_USD, objrp.Chi_QT_CK_USD, objrp.Chi_QT_TONG_USD,
                     "Kỳ này", 2, type);
 

@@ -861,6 +861,17 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             }
         }
 
+        public decimal CN_QT_VND_PhaiThu
+        {
+            get
+            {
+                if (ThangDuyetQt >= _TU_NGAY && ThangDuyetQt <= _DEN_NGAY)
+                    return CN_VND_PhaiThu_TM + CN_VND_PhaiThu_CK;
+                else
+                    return 0;
+            }
+        }
+
         /// <summary>
         /// So CN phai tra trong ky,
         /// Neu trong ky => co so tien

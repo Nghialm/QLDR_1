@@ -34,9 +34,9 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 obj06Dr.TenLoaiDoanRa = objDoanCongTac.TenLoaiDoanRa;
                 obj06Dr.TenDoanRa = objDoanCongTac.TenLoaiDoanRa + " đ/c " + objDoanCongTac.TruongDoan + " đi " + GetLichCongTac(objDoanCongTac.Id);
                 obj06Dr.USD = objPhaiThu.SoTienNt;
-                obj06Dr.VND = objPhaiThu.SoTienVND;
+                obj06Dr.QuyDoiVND = objPhaiThu.SoTienVND;
                 if (obj06Dr.USD > 0)
-                    obj06Dr.TG = obj06Dr.VND / obj06Dr.USD;
+                    obj06Dr.TG = obj06Dr.QuyDoiVND / obj06Dr.USD;
                 obj06Dr.NguoiTamUng = "";
                 obj06Dr.GroupByTime = 1;
                 obj06Dr.Note = "Kỳ trước chuyển sang";
@@ -62,9 +62,9 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 obj06Dr.TenLoaiDoanRa = objDoanCongTac.TenLoaiDoanRa;
                 obj06Dr.TenDoanRa = objDoanCongTac.TenLoaiDoanRa + " đ/c " + objDoanCongTac.TruongDoan + " đi " + GetLichCongTac(objDoanCongTac.Id); 
                 obj06Dr.USD = objPhaiThu.SoTienNt;
-                obj06Dr.VND = objPhaiThu.SoTienVND;
+                obj06Dr.QuyDoiVND = objPhaiThu.SoTienVND;
                 if (obj06Dr.USD > 0)
-                    obj06Dr.TG = obj06Dr.VND / obj06Dr.USD;
+                    obj06Dr.TG = obj06Dr.QuyDoiVND / obj06Dr.USD;
                 obj06Dr.NguoiTamUng = "";
                 obj06Dr.GroupByTime = 2;
                 obj06Dr.Note = "Kỳ này";
@@ -102,9 +102,9 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 obj06Dr.TenLoaiDoanRa = objDoanCongTac.TenLoaiDoanRa;
                 obj06Dr.TenDoanRa = objDoanCongTac.TenLoaiDoanRa + " đ/c " + objDoanCongTac.TruongDoan + " đi " + GetLichCongTac(objDoanCongTac.Id); 
                 obj06Dr.USD = objPhaiThu.SoTienNt;
-                obj06Dr.VND = objPhaiThu.SoTienVND;
+                obj06Dr.QuyDoiVND = objPhaiThu.SoTienVND;
                 if (obj06Dr.USD > 0)
-                    obj06Dr.TG = obj06Dr.VND / obj06Dr.USD;
+                    obj06Dr.TG = obj06Dr.QuyDoiVND / obj06Dr.USD;
                 obj06Dr.NguoiTamUng = "";
                 obj06Dr.GroupByTime = 1;
                 obj06Dr.Note = "Kỳ trước chuyển sang";
@@ -130,9 +130,9 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 obj06Dr.TenLoaiDoanRa = objDoanCongTac.TenLoaiDoanRa;
                 obj06Dr.TenDoanRa = objDoanCongTac.TenLoaiDoanRa + " đ/c " + objDoanCongTac.TruongDoan + " đi " + GetLichCongTac(objDoanCongTac.Id); 
                 obj06Dr.USD = objPhaiThu.SoTienNt;
-                obj06Dr.VND = objPhaiThu.SoTienVND;
+                obj06Dr.QuyDoiVND = objPhaiThu.SoTienVND;
                 if (obj06Dr.USD > 0)
-                    obj06Dr.TG = obj06Dr.VND / obj06Dr.USD;
+                    obj06Dr.TG = obj06Dr.QuyDoiVND / obj06Dr.USD;
                 obj06Dr.NguoiTamUng = "";
                 obj06Dr.GroupByTime = 2;
                 obj06Dr.Note = "Kỳ này";

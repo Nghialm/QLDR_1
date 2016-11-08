@@ -22,57 +22,59 @@ namespace Vns.QuanLyDoanRa.Domain.Report
         }
 
         private Guid _LoaiDoanRaId;
-
         public Guid LoaiDoanRaId
         {
             get { return _LoaiDoanRaId; }
             set { _LoaiDoanRaId = value; }
         }
-        private Guid _DoanRaId;
 
+        private Guid _DoanRaId;
         public Guid DoanRaId
         {
             get { return _DoanRaId; }
             set { _DoanRaId = value; }
         }
-        private String _TenLoaiDoanRa;
 
+        private String _TenLoaiDoanRa;
         public String TenLoaiDoanRa
         {
             get { return _TenLoaiDoanRa; }
             set { _TenLoaiDoanRa = value; }
         }
+        
         private String _TenDoanRa;
-
         public String TenDoanRa
         {
             get { return _TenDoanRa; }
             set { _TenDoanRa = value; }
         }
+        
         private decimal _USD;
-
         public decimal USD
         {
             get { return _USD; }
             set { _USD = value; }
         }
-        private decimal _TG;
 
+        private decimal _TG;
         public decimal TG
         {
             get { return _TG; }
             set { _TG = value; }
         }
-        private decimal _VND;
-
-        public decimal VND
+        
+        private decimal _QuyDoiVND;
+        public decimal QuyDoiVND
         {
-            get { return _VND; }
-            set { _VND = value; }
+            get { return _QuyDoiVND; }
+            set { _QuyDoiVND = value; }
         }
 
-        private decimal _Tong;
+        private decimal _VND;
+        public decimal VND
+        { get { return _VND; } set { _VND = value; } }
 
+        private decimal _Tong;
         public decimal Tong
         {
             get { return _Tong; }
@@ -128,23 +130,43 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             if (type == 1)
             {
                 _USD = obj.CN_PhaiThu_USD;
-                _VND = obj.CN_PhaiThu_VND;
+                _QuyDoiVND = obj.CN_PhaiThu_VND;
                 _TG = obj.CN_PhaiThu_TG;
             }
             else
             {
 
                 _USD = obj.CN_PhaiTra_TM_USD;
-                _VND = obj.CN_PhaiTra_CK_VND;
+                _QuyDoiVND = obj.CN_PhaiTra_CK_VND;
                 _Tong = obj.CN_PhaiTra_USD;
                 _TG = obj.CN_PhaiTra_TG;
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="objrp"></param>
+        /// <param name="loaidoanra"></param>
+        /// <param name="doanraid"></param>
+        /// <param name="tenloaidoanra"></param>
+        /// <param name="tendoanra"></param>
+        /// <param name="truongdoan"></param>
+        /// <param name="nuoccongtac"></param>
+        /// <param name="thangduyetqt"></param>
+        /// <param name="cnphaithuusd"></param>
+        /// <param name="cnphaithuvnd"></param>
+        /// <param name="cnphaithutg"></param>
+        /// <param name="cnphaitrausd_USD"></param>
+        /// <param name="cnphaitrausd_VND"></param>
+        /// <param name="cnphaitratong"></param>
+        /// <param name="p_Note"></param>
+        /// <param name="group"></param>
+        /// <param name="type"></param>
         public RP_BC06DR(VnsReportTongHop objrp, Guid loaidoanra, Guid doanraid, string tenloaidoanra, string tendoanra,
             string truongdoan, string nuoccongtac, DateTime thangduyetqt,
-            decimal cnphaithuusd, decimal cnphaithuvnd, decimal cnphaithutg,
-            decimal cnphaitrausd_TM, decimal cnphaitrausd_CK, decimal cnphaitratong,
+            decimal cnphaithuusd, decimal cnphaithuvnd, decimal cnphaithutg, decimal cnphaithuVnd,
+            decimal cnphaitrausd_USD, decimal cnphaitrausd_VND,
             string p_Note, int group, int type)
         {
             _LoaiDoanRaId = loaidoanra;
@@ -158,14 +180,14 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             if (type == 1)
             {
                 _USD = cnphaithuusd;
-                _VND = cnphaithuvnd;
+                _QuyDoiVND = cnphaithuvnd;
                 _TG = cnphaithutg;
+                _VND = cnphaithuVnd;
             }
             else
             {
-                _USD = cnphaitrausd_TM;
-                _VND = cnphaitrausd_CK;
-                _Tong = cnphaitratong;
+                _USD = cnphaitrausd_USD;
+                _VND = cnphaitrausd_VND;
             }
         }
 
