@@ -52,10 +52,10 @@ namespace QuanLyDoanRa.Reports
                     //B01DR.CreateDocument();
                     B01DR.ShowPreviewDialog();
                     break;
-               case "05DN":
-                    Reports.B05DR B05DR = new B05DR(dTuNgay, dDenNgay, TitleTime);
-                    B05DR.ShowPreviewDialog();
-                    break;
+               //case "05DN":
+               //     Reports.B05DR B05DR = new B05DR(dTuNgay, dDenNgay, TitleTime);
+               //     B05DR.ShowPreviewDialog();
+               //     break;
                 case "06DN1":
                     Reports.B06DR B06DR1 = new B06DR(dTuNgay, dDenNgay,1, TitleTime);
                     B06DR1.ShowPreviewDialog();

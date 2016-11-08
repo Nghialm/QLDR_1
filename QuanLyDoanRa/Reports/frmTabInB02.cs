@@ -44,6 +44,7 @@ namespace QuanLyDoanRa.Reports
             B02DR_P1 Phan1;
             B02DR_P2 Phan2;
             B02DR_P3 Phan3;
+            B02DR_P4 Phan4;
 
             IReportService ReportService = (IReportService)ObjectFactory.GetObject("ReportService");
             IList<VnsReportTongHop> lstBaoCaoTongHop = ReportService.BaoCaoTongHopDoanRa(mTuNgay, mDenNgay, mLoaiDoanRaId, 2, ReportType.RP02);
@@ -70,6 +71,12 @@ namespace QuanLyDoanRa.Reports
             Phan3.LoadData(lstrp);
             Phan3.CreateDocument();
 
+            Phan4 = new B02DR_P4();
+            printControl4.PrintingSystem = Phan4.PrintingSystem;
+            Phan4.strTitle = mTitleTime;
+            Phan4.LoadData(lstrp);
+            Phan4.CreateDocument();
+
 
         }
 
@@ -86,6 +93,10 @@ namespace QuanLyDoanRa.Reports
                     printBarManager1.PrintControl = printControl2;
                 }
                 else if (xtraTabControl1.SelectedTabPage == tabQuyetToan)
+                {
+                    printBarManager1.PrintControl = printControl4;
+                }
+                else if (xtraTabControl1.SelectedTabPage == tabQTChiTiet)
                 {
                     printBarManager1.PrintControl = printControl3;
                 }

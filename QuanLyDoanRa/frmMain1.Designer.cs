@@ -61,6 +61,10 @@
             this.BarTu = new DevExpress.XtraBars.BarButtonItem();
             this.BarHu = new DevExpress.XtraBars.BarButtonItem();
             this.BarUNc = new DevExpress.XtraBars.BarButtonItem();
+            this.btPhieuThuVND = new DevExpress.XtraBars.BarButtonItem();
+            this.btPhieuChiVND = new DevExpress.XtraBars.BarButtonItem();
+            this.btGiayBaoNoVND = new DevExpress.XtraBars.BarButtonItem();
+            this.btGiayBaoCoVND = new DevExpress.XtraBars.BarButtonItem();
             this.barTyGia = new DevExpress.XtraBars.BarButtonItem();
             this.barKTK = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem5 = new DevExpress.XtraBars.BarSubItem();
@@ -96,10 +100,6 @@
             this.barDmNv = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.btPhieuThuVND = new DevExpress.XtraBars.BarButtonItem();
-            this.btPhieuChiVND = new DevExpress.XtraBars.BarButtonItem();
-            this.btGiayBaoNoVND = new DevExpress.XtraBars.BarButtonItem();
-            this.btGiayBaoCoVND = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -438,6 +438,34 @@
             this.BarUNc.Name = "BarUNc";
             this.BarUNc.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
+            // btPhieuThuVND
+            // 
+            this.btPhieuThuVND.Caption = "Phiếu thu VNĐ";
+            this.btPhieuThuVND.Id = 65;
+            this.btPhieuThuVND.Name = "btPhieuThuVND";
+            this.btPhieuThuVND.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btPhieuThuVND_ItemClick);
+            // 
+            // btPhieuChiVND
+            // 
+            this.btPhieuChiVND.Caption = "Phiếu chi VNĐ";
+            this.btPhieuChiVND.Id = 66;
+            this.btPhieuChiVND.Name = "btPhieuChiVND";
+            this.btPhieuChiVND.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btPhieuChiVND_ItemClick);
+            // 
+            // btGiayBaoNoVND
+            // 
+            this.btGiayBaoNoVND.Caption = "Giấy báo nợ VNĐ";
+            this.btGiayBaoNoVND.Id = 67;
+            this.btGiayBaoNoVND.Name = "btGiayBaoNoVND";
+            this.btGiayBaoNoVND.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btGiayBaoNoVND_ItemClick);
+            // 
+            // btGiayBaoCoVND
+            // 
+            this.btGiayBaoCoVND.Caption = "Giấy báo có VNĐ";
+            this.btGiayBaoCoVND.Id = 68;
+            this.btGiayBaoCoVND.Name = "btGiayBaoCoVND";
+            this.btGiayBaoCoVND.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btGiayBaoCoVND_ItemClick);
+            // 
             // barTyGia
             // 
             this.barTyGia.Caption = "Tính tỷ giá";
@@ -466,7 +494,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.bar02Dr),
             new DevExpress.XtraBars.LinkPersistInfo(this.Bar03Dr01),
             new DevExpress.XtraBars.LinkPersistInfo(this.bar04Dr01),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bar06Dr),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.None, false, this.bar06Dr, false),
             new DevExpress.XtraBars.LinkPersistInfo(this.bar06Dr01),
             new DevExpress.XtraBars.LinkPersistInfo(this.bar06Dr02),
             new DevExpress.XtraBars.LinkPersistInfo(this.barbkqt, true),
@@ -538,18 +566,19 @@
             this.bar06Dr.Caption = "05/ĐR-Tổng hợp công nợ đoàn ra";
             this.bar06Dr.Id = 45;
             this.bar06Dr.Name = "bar06Dr";
+            this.bar06Dr.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.bar06Dr.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar06Dr_ItemClick);
             // 
             // bar06Dr01
             // 
-            this.bar06Dr01.Caption = "06/ĐR-Theo dõi công nợ-Thu hoàn tạm ứng";
+            this.bar06Dr01.Caption = "05/ĐR-Theo dõi công nợ-Thu hoàn tạm ứng";
             this.bar06Dr01.Id = 46;
             this.bar06Dr01.Name = "bar06Dr01";
             this.bar06Dr01.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar06Dr01_ItemClick);
             // 
             // bar06Dr02
             // 
-            this.bar06Dr02.Caption = "07/ĐR-Theo dõi công nợ- Chi Quyết Toán";
+            this.bar06Dr02.Caption = "06/ĐR-Theo dõi công nợ- Chi Quyết Toán";
             this.bar06Dr02.Id = 47;
             this.bar06Dr02.Name = "bar06Dr02";
             this.bar06Dr02.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar06Dr02_ItemClick);
@@ -708,34 +737,6 @@
             // defaultLookAndFeel1
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Blue";
-            // 
-            // btPhieuThuVND
-            // 
-            this.btPhieuThuVND.Caption = "Phiếu thu VNĐ";
-            this.btPhieuThuVND.Id = 65;
-            this.btPhieuThuVND.Name = "btPhieuThuVND";
-            this.btPhieuThuVND.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btPhieuThuVND_ItemClick);
-            // 
-            // btPhieuChiVND
-            // 
-            this.btPhieuChiVND.Caption = "Phiếu chi VNĐ";
-            this.btPhieuChiVND.Id = 66;
-            this.btPhieuChiVND.Name = "btPhieuChiVND";
-            this.btPhieuChiVND.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btPhieuChiVND_ItemClick);
-            // 
-            // btGiayBaoNoVND
-            // 
-            this.btGiayBaoNoVND.Caption = "Giấy báo nợ VNĐ";
-            this.btGiayBaoNoVND.Id = 67;
-            this.btGiayBaoNoVND.Name = "btGiayBaoNoVND";
-            this.btGiayBaoNoVND.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btGiayBaoNoVND_ItemClick);
-            // 
-            // btGiayBaoCoVND
-            // 
-            this.btGiayBaoCoVND.Caption = "Giấy báo có VNĐ";
-            this.btGiayBaoCoVND.Id = 68;
-            this.btGiayBaoCoVND.Name = "btGiayBaoCoVND";
-            this.btGiayBaoCoVND.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btGiayBaoCoVND_ItemClick);
             // 
             // frmMain1
             // 

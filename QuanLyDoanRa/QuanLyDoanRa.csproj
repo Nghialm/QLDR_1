@@ -500,6 +500,12 @@
     <Compile Include="Reports\ChungTuGhiSoHeader_V2.Designer.cs">
       <DependentUpon>ChungTuGhiSoHeader_V2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\B02DR_P4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\B02DR_P4.Designer.cs">
+      <DependentUpon>B02DR_P4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\SoChiTietTK_VND_P3.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -706,12 +712,6 @@
     </Compile>
     <Compile Include="Reports\B04DR.Designer.cs">
       <DependentUpon>B04DR.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\B05DR.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\B05DR.Designer.cs">
-      <DependentUpon>B05DR.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\B06DR.cs">
       <SubType>Component</SubType>
@@ -955,6 +955,9 @@
     <EmbeddedResource Include="Reports\ChungTuGhiSoHeader_V2.resx">
       <DependentUpon>ChungTuGhiSoHeader_V2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\B02DR_P4.resx">
+      <DependentUpon>B02DR_P4.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\SoChiTietTK_VND_P3.resx">
       <DependentUpon>SoChiTietTK_VND_P3.cs</DependentUpon>
     </EmbeddedResource>
@@ -1017,9 +1020,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\B04DR.resx">
       <DependentUpon>B04DR.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\B05DR.resx">
-      <DependentUpon>B05DR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\B06DR.resx">
       <DependentUpon>B06DR.cs</DependentUpon>

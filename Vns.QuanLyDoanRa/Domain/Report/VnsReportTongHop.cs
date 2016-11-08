@@ -22,6 +22,7 @@ namespace Vns.QuanLyDoanRa.Domain.Report
         public string SoTbDt { get; set; }
         public string SoTbQt { get; set; }
         public decimal TienQt { get; set; }
+        public decimal TienVNDQt { get; set; }
         public string NguoiQt { get; set; }
         public string NguoiQTVietTat { get; set; }
 
@@ -202,6 +203,15 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             }
         }
 
+        public decimal TH_Vnd_TM_Thang_Truoc
+        {
+            get
+            {
+                if (ThangDuyetQt < TU_NGAY) return TH_VND_TM;
+                else return 0;
+            }
+        }
+
         public decimal TH_Usd_Thang_Nay
         {
             get
@@ -223,6 +233,15 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             get
             {
                 if (ThangDuyetQt >= TU_NGAY && ThangDuyetQt <= DEN_NGAY) return TH_TONG_TG;
+                else return 0;
+            }
+        }
+
+        public decimal TH_Vnd_TM_Thang_Nay
+        {
+            get
+            {
+                if (ThangDuyetQt >= TU_NGAY && ThangDuyetQt <= DEN_NGAY) return TH_VND_TM;
                 else return 0;
             }
         }
@@ -436,6 +455,14 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                 return So_QT_TM_VND + So_QT_CK_VND;
             }
         }
+
+        public decimal So_QT_VND
+        {
+            get
+            {
+                return So_QT_TM_VND + So_QT_CK_VND + So_QT_VND_TM + So_QT_VND_CK;
+            }
+        }
         #endregion
 
         #region SO THONG BAO QUYET TOAN = Tien Trong Bang Qt
@@ -546,11 +573,20 @@ namespace Vns.QuanLyDoanRa.Domain.Report
         public decimal M_6805 { get; set; }
         public decimal M_6806 { get; set; }
         public decimal M_6849 { get; set; }
+
+        public decimal M_VND_6801 { get; set; }
+        public decimal M_VND_6802 { get; set; }
+        public decimal M_VND_6803 { get; set; }
+        public decimal M_VND_6804 { get; set; }
+        public decimal M_VND_6805 { get; set; }
+        public decimal M_VND_6806 { get; set; }
+        public decimal M_VND_6849 { get; set; }
         #endregion
 
         /*
          * Th1: Khi quyet toan tao ra nghiep vu 661-331(Thanh toan voi nguoi ban)
          * Th2: Khi Chi quyet toan: 141-111(Tien mat hoac chuyen khoan)-Tinh chat cua chung tu (Thang truoc || thang nay
+         * Không thấy dùng hoặc gán ở đâu (2016-11-08)
          */
         #region So quyet toan lay theo nghiep vu
         public decimal Qt_Tm_Usd_Qt { get; set; }
@@ -839,6 +875,22 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                 else
                     return 0;
             }
+        }
+
+        /// <summary>
+        /// So CN phai tra trong ky,
+        /// Neu trong ky => co so tien
+        /// Neu ngoai ky => khong co so tien
+        /// </summary>
+        public decimal CN_QT_TK_PhaiTra_VND
+        {
+            get
+            {
+                if (ThangDuyetQt >= _TU_NGAY && ThangDuyetQt <= _DEN_NGAY)
+                    return CN_VND_PhaiTra_TM;
+                else
+                    return 0;
+            }
         } 
 
         public decimal CN_QT_PhaiTra_USD
@@ -960,6 +1012,7 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             NuocCongTac = GetLichCongTac(objDoanCongTac.DanhSachLichCongTac);
             SoNguoiDi = GetTongThanhVien(objDoanCongTac.DanhSachThanhVien);
             TienQt = GetSoTienQuyetToan(objDoanCongTac.DanhSachQuyetToanDoan);
+            TienVNDQt = GetSoTienVNDQuyetToan(objDoanCongTac.DanhSachQuyetToanDoan);
 
             if (objDoanCongTac.Id == objDoanCongTac.IdBanDau)
             {
@@ -988,20 +1041,40 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                 {
                     if (objQt.objMucTieuMuc != null)
                     {
-                        if (objQt.objMucTieuMuc.MaMuc.Equals("6801"))
-                            M_6801 += objQt.SoTien;
-                        else if (objQt.objMucTieuMuc.MaMuc.Equals("6802"))
-                            M_6802 += objQt.SoTien;
-                        else if (objQt.objMucTieuMuc.MaMuc.Equals("6803"))
-                            M_6803 += objQt.SoTien;
-                        else if (objQt.objMucTieuMuc.MaMuc.Equals("6804"))
-                            M_6804 += objQt.SoTien;
-                        else if (objQt.objMucTieuMuc.MaMuc.Equals("6805"))
-                            M_6805 += objQt.SoTien;
-                        else if (objQt.objMucTieuMuc.MaMuc.Equals("6806"))
-                            M_6806 += objQt.SoTien;
-                        else if (objQt.objMucTieuMuc.MaMuc.Equals("6849"))
-                            M_6849 += objQt.SoTien;
+                        if (objQt.NgoaiTeId == Globals.NgoaiTeId)
+                        {
+                            if (objQt.objMucTieuMuc.MaMuc.Equals("6801"))
+                                M_6801 += objQt.SoTien;
+                            else if (objQt.objMucTieuMuc.MaMuc.Equals("6802"))
+                                M_6802 += objQt.SoTien;
+                            else if (objQt.objMucTieuMuc.MaMuc.Equals("6803"))
+                                M_6803 += objQt.SoTien;
+                            else if (objQt.objMucTieuMuc.MaMuc.Equals("6804"))
+                                M_6804 += objQt.SoTien;
+                            else if (objQt.objMucTieuMuc.MaMuc.Equals("6805"))
+                                M_6805 += objQt.SoTien;
+                            else if (objQt.objMucTieuMuc.MaMuc.Equals("6806"))
+                                M_6806 += objQt.SoTien;
+                            else if (objQt.objMucTieuMuc.MaMuc.Equals("6849"))
+                                M_6849 += objQt.SoTien;
+                        }
+                        else if (objQt.NgoaiTeId == Globals.NoiTeId)
+                        {
+                            if (objQt.objMucTieuMuc.MaMuc == "6801")
+                                M_VND_6801 += objQt.SoTienVND;
+                            else if (objQt.objMucTieuMuc.MaMuc == "6802")
+                                M_VND_6802 += objQt.SoTienVND;
+                            else if (objQt.objMucTieuMuc.MaMuc == "6803")
+                                M_VND_6803 += objQt.SoTienVND;
+                            else if (objQt.objMucTieuMuc.MaMuc == "6804")
+                                M_VND_6804 += objQt.SoTienVND;
+                            else if (objQt.objMucTieuMuc.MaMuc == "6805")
+                                M_VND_6805 += objQt.SoTienVND;
+                            else if (objQt.objMucTieuMuc.MaMuc == "6806")
+                                M_VND_6806 += objQt.SoTienVND;
+                            else if (objQt.objMucTieuMuc.MaMuc == "6849")
+                                M_VND_6849 += objQt.SoTienVND;
+                        }
                     }
                 }
             }
@@ -1019,7 +1092,24 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             {
                 foreach (VnsQuyetToanDoan objQt in lst)
                 {
-                    sotienQt += objQt.SoTien;
+                    if (objQt.NgoaiTeId== Globals.NgoaiTeId)
+                        sotienQt += objQt.SoTien;
+                }
+            }
+            else
+                sotienQt = 0;
+            return sotienQt;
+        }
+
+        private decimal GetSoTienVNDQuyetToan(IList<VnsQuyetToanDoan> lst)
+        {
+            decimal sotienQt = 0;
+            if (ThangDuyetQt >= TU_NGAY && ThangDuyetQt <= DEN_NGAY)
+            {
+                foreach (VnsQuyetToanDoan objQt in lst)
+                {
+                    if (objQt.NgoaiTeId == Globals.NoiTeId)
+                        sotienQt += objQt.SoTienVND;
                 }
             }
             else
@@ -1064,14 +1154,13 @@ namespace Vns.QuanLyDoanRa.Domain.Report
         #region Property mo rong
 
         private DateTime _TU_NGAY;
-
         public DateTime TU_NGAY
         {
             get { return _TU_NGAY; }
             set { _TU_NGAY = value; }
         }
-        private DateTime _DEN_NGAY;
 
+        private DateTime _DEN_NGAY;
         public DateTime DEN_NGAY
         {
             get { return _DEN_NGAY; }
@@ -1169,6 +1258,42 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             }
         }
 
+        public decimal TU_VND_TM_MR
+        {
+            get
+            {
+                if (TYPE == ReportType.RP02)
+                {
+                    if (ThangDuyetQt >= VnsConvert.CStartOfDate(_TU_NGAY) && ThangDuyetQt <= VnsConvert.CEndOfDate(_DEN_NGAY))
+                        return TU_VND_TM;
+                    else
+                        return 0;
+                }
+                else
+                {
+                    return TU_VND_TM;
+                }
+            }
+        }
+
+        public decimal TU_VND_CK_MR
+        {
+            get
+            {
+                if (TYPE == ReportType.RP02)
+                {
+                    if (ThangDuyetQt >= VnsConvert.CStartOfDate(_TU_NGAY) && ThangDuyetQt <= VnsConvert.CEndOfDate(_DEN_NGAY))
+                        return TU_VND_CK;
+                    else
+                        return 0;
+                }
+                else
+                {
+                    return TU_VND_CK;
+                }
+            }
+        }
+
         public decimal TongTamUngVND
         {
             get
@@ -1182,6 +1307,14 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             get
             {
                 return TU_TM_USD_MR + TU_CK_USD_MR;
+            }
+        }
+
+        public decimal TongTamUngDoanMR
+        {
+            get
+            {
+                return TU_TM_VND_MR + TU_VND_TM_MR + TU_VND_CK_MR;
             }
         }
 

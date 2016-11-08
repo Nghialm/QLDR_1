@@ -105,8 +105,10 @@
             this.tabHoanUng = new DevExpress.XtraTab.XtraTabPage();
             this.printControl2 = new DevExpress.XtraPrinting.Control.PrintControl();
             this.tabQuyetToan = new DevExpress.XtraTab.XtraTabPage();
-            this.printControl3 = new DevExpress.XtraPrinting.Control.PrintControl();
+            this.printControl4 = new DevExpress.XtraPrinting.Control.PrintControl();
             this.ucExports1 = new QuanLyDoanRa.Controls.ucExports();
+            this.tabQTChiTiet = new DevExpress.XtraTab.XtraTabPage();
+            this.printControl3 = new DevExpress.XtraPrinting.Control.PrintControl();
             ((System.ComponentModel.ISupportInitialize)(this.printBarManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.printPreviewRepositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemProgressBar1)).BeginInit();
@@ -116,6 +118,7 @@
             this.tabTamUng.SuspendLayout();
             this.tabHoanUng.SuspendLayout();
             this.tabQuyetToan.SuspendLayout();
+            this.tabQTChiTiet.SuspendLayout();
             this.SuspendLayout();
             // 
             // previewBar4
@@ -946,6 +949,7 @@
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tabTamUng,
             this.tabHoanUng,
+            this.tabQTChiTiet,
             this.tabQuyetToan});
             this.xtraTabControl1.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.xtraTabControl1_SelectedPageChanged);
             // 
@@ -977,22 +981,22 @@
             // 
             // tabQuyetToan
             // 
-            this.tabQuyetToan.Controls.Add(this.printControl3);
+            this.tabQuyetToan.Controls.Add(this.printControl4);
             this.tabQuyetToan.Name = "tabQuyetToan";
             this.tabQuyetToan.Size = new System.Drawing.Size(1002, 453);
-            this.tabQuyetToan.Text = "3.Quyết toán tháng";
+            this.tabQuyetToan.Text = "4.Quyết toán tháng";
             // 
-            // printControl3
+            // printControl4
             // 
-            this.printControl3.BackColor = System.Drawing.Color.Empty;
-            this.printControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.printControl3.ForeColor = System.Drawing.Color.Empty;
-            this.printControl3.IsMetric = false;
-            this.printControl3.Location = new System.Drawing.Point(0, 0);
-            this.printControl3.Name = "printControl3";
-            this.printControl3.Size = new System.Drawing.Size(1002, 453);
-            this.printControl3.TabIndex = 0;
-            this.printControl3.TooltipFont = new System.Drawing.Font("Tahoma", 8.25F);
+            this.printControl4.BackColor = System.Drawing.Color.Empty;
+            this.printControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.printControl4.ForeColor = System.Drawing.Color.Empty;
+            this.printControl4.IsMetric = false;
+            this.printControl4.Location = new System.Drawing.Point(0, 0);
+            this.printControl4.Name = "printControl4";
+            this.printControl4.Size = new System.Drawing.Size(1002, 453);
+            this.printControl4.TabIndex = 0;
+            this.printControl4.TooltipFont = new System.Drawing.Font("Tahoma", 8.25F);
             // 
             // ucExports1
             // 
@@ -1015,6 +1019,25 @@
             this.ucExports1.TemplateSheet = null;
             this.ucExports1.Visible = false;
             // 
+            // tabQTChiTiet
+            // 
+            this.tabQTChiTiet.Controls.Add(this.printControl3);
+            this.tabQTChiTiet.Name = "tabQTChiTiet";
+            this.tabQTChiTiet.Size = new System.Drawing.Size(1002, 453);
+            this.tabQTChiTiet.Text = "3. Chi tiết Mục - Tiểu mục";
+            // 
+            // printControl3
+            // 
+            this.printControl3.BackColor = System.Drawing.Color.Empty;
+            this.printControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.printControl3.ForeColor = System.Drawing.Color.Empty;
+            this.printControl3.IsMetric = false;
+            this.printControl3.Location = new System.Drawing.Point(0, 0);
+            this.printControl3.Name = "printControl3";
+            this.printControl3.Size = new System.Drawing.Size(1002, 453);
+            this.printControl3.TabIndex = 1;
+            this.printControl3.TooltipFont = new System.Drawing.Font("Tahoma", 8.25F);
+            // 
             // frmTabInB02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1030,7 +1053,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "In biểu B02";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            
             ((System.ComponentModel.ISupportInitialize)(this.printBarManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.printPreviewRepositoryItemComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemProgressBar1)).EndInit();
@@ -1040,6 +1062,7 @@
             this.tabTamUng.ResumeLayout(false);
             this.tabHoanUng.ResumeLayout(false);
             this.tabQuyetToan.ResumeLayout(false);
+            this.tabQTChiTiet.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1122,7 +1145,9 @@
         private DevExpress.XtraTab.XtraTabPage tabQuyetToan;
         private DevExpress.XtraPrinting.Control.PrintControl printControl1;
         private DevExpress.XtraPrinting.Control.PrintControl printControl2;
-        private DevExpress.XtraPrinting.Control.PrintControl printControl3;
+        private DevExpress.XtraPrinting.Control.PrintControl printControl4;
         private Controls.ucExports ucExports1;
+        private DevExpress.XtraTab.XtraTabPage tabQTChiTiet;
+        private DevExpress.XtraPrinting.Control.PrintControl printControl3;
     }
 }
