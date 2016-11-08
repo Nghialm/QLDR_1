@@ -17,8 +17,9 @@ namespace Vns.QuanLyDoanRa.Domain.Report
         public virtual String NoiDung { get; set; }
         public virtual decimal TongVND { get; set; }
         public virtual decimal TongUSD { get; set; }
-        public virtual decimal TienMatVND { get; set; }
+        public virtual decimal TienMatVND_QD { get; set; }
         public virtual decimal TienMatUSD { get; set; }
+        public virtual decimal TienMatVND { get; set; }
         public virtual decimal ChuyenKhoanVND { get; set; }
         public virtual decimal ChuyenKhoanUSD { get; set; }
 

@@ -861,6 +861,28 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             }
         }
 
+        public decimal CN_QT_VND_TM_PhaiThu
+        {
+            get
+            {
+                if (ThangDuyetQt >= _TU_NGAY && ThangDuyetQt <= _DEN_NGAY)
+                    return CN_VND_PhaiThu_TM;
+                else
+                    return 0;
+            }
+        }
+
+        public decimal CN_QT_VND_CK_PhaiThu
+        {
+            get
+            {
+                if (ThangDuyetQt >= _TU_NGAY && ThangDuyetQt <= _DEN_NGAY)
+                    return CN_VND_PhaiThu_CK;
+                else
+                    return 0;
+            }
+        }
+
         public decimal CN_QT_VND_PhaiThu
         {
             get

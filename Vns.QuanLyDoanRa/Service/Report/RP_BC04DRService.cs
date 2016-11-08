@@ -28,7 +28,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 if (objGiaoDich.MaTkCo.StartsWith(Globals.TkTienMat))
                 {
                     obj04DR.TienMatUSD += objGiaoDich.SoTienNt;
-                    obj04DR.TienMatVND += objGiaoDich.SoTien;
+                    obj04DR.TienMatVND_QD += objGiaoDich.SoTien;
                 }
                 else if (objGiaoDich.MaTkCo.StartsWith(Globals.TkTienChuyenKhoan))
                 {
@@ -38,7 +38,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
             }
 
             obj04DR.TongUSD = obj04DR.TienMatUSD + obj04DR.ChuyenKhoanUSD;
-            obj04DR.TongVND = obj04DR.TienMatVND + obj04DR.ChuyenKhoanVND;
+            obj04DR.TongVND = obj04DR.TienMatVND_QD + obj04DR.ChuyenKhoanVND;
 
             return obj04DR;
         }
@@ -58,7 +58,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 if (objGiaoDich.MaTkCo.StartsWith(Globals.TkTienMat))
                 {
                     obj04DR.TienMatUSD += objGiaoDich.SoTienNt;
-                    obj04DR.TienMatVND += objGiaoDich.SoTien;
+                    obj04DR.TienMatVND_QD += objGiaoDich.SoTien;
                 }
                 else if (objGiaoDich.MaTkCo.StartsWith(Globals.TkTienChuyenKhoan))
                 {
@@ -68,7 +68,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
             }
 
             obj04DR.TongUSD = obj04DR.TienMatUSD + obj04DR.ChuyenKhoanUSD;
-            obj04DR.TongVND = obj04DR.TienMatVND + obj04DR.ChuyenKhoanVND;
+            obj04DR.TongVND = obj04DR.TienMatVND_QD + obj04DR.ChuyenKhoanVND;
 
             return obj04DR;
         }
@@ -93,7 +93,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 if (objGiaoDich.MaTkNo.StartsWith(Globals.TkTienMat) || objGiaoDich.MaTkCo.StartsWith(Globals.TkTienMat))
                 {
                     obj04DR.TienMatUSD += objGiaoDich.SoTienNt;
-                    obj04DR.TienMatVND += objGiaoDich.SoTien;
+                    obj04DR.TienMatVND_QD += objGiaoDich.SoTien;
                 }
                 if (objGiaoDich.MaTkNo.StartsWith(Globals.TkTienChuyenKhoan) || objGiaoDich.MaTkCo.StartsWith(Globals.TkTienChuyenKhoan))
                 {
@@ -107,7 +107,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 if (obj.MaTkNo.StartsWith(Globals.TkTienMat) || obj.MaTkCo.StartsWith(Globals.TkTienMat))
                 {
                     obj04DR.TienMatUSD -= obj.SoTienNt;
-                    obj04DR.TienMatVND -= obj.SoTien;
+                    obj04DR.TienMatVND_QD -= obj.SoTien;
                 }
                 if (obj.MaTkNo.StartsWith(Globals.TkTienChuyenKhoan) || obj.MaTkCo.StartsWith(Globals.TkTienChuyenKhoan))
                 {
@@ -117,7 +117,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
             }
 
             obj04DR.TongUSD = obj04DR.TienMatUSD + obj04DR.ChuyenKhoanUSD;
-            obj04DR.TongVND = obj04DR.TienMatVND + obj04DR.ChuyenKhoanVND;
+            obj04DR.TongVND = obj04DR.TienMatVND_QD + obj04DR.ChuyenKhoanVND;
             return obj04DR;
         }
 
@@ -135,7 +135,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 if (objGiaoDich.MaTkCo.StartsWith(Globals.TkTienMat) )
                 {
                     obj04DR.TienMatUSD += objGiaoDich.SoTienNt;
-                    obj04DR.TienMatVND += objGiaoDich.SoTien;
+                    obj04DR.TienMatVND_QD += objGiaoDich.SoTien;
                 }
                 if (objGiaoDich.MaTkCo.StartsWith(Globals.TkTienChuyenKhoan))
                 {
@@ -145,7 +145,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
             }
 
             obj04DR.TongUSD = obj04DR.ChuyenKhoanUSD + obj04DR.TienMatUSD;
-            obj04DR.TongVND = obj04DR.ChuyenKhoanVND + obj04DR.TienMatVND;
+            obj04DR.TongVND = obj04DR.ChuyenKhoanVND + obj04DR.TienMatVND_QD;
             obj04DR.NoiDung = "Chi quyết toán trong kỳ";
             
             return obj04DR;
@@ -164,7 +164,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 if (objGiaoDich.MaTkNo.StartsWith(Globals.TkTienMat))
                 {
                     obj04DR.TienMatUSD += objGiaoDich.SoTienNt;
-                    obj04DR.TienMatVND += objGiaoDich.SoTien;
+                    obj04DR.TienMatVND_QD += objGiaoDich.SoTien;
                 }
                 else if (objGiaoDich.MaTkNo.StartsWith(Globals.TkTienChuyenKhoan))
                 {
@@ -174,7 +174,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
             }
 
             obj04DR.TongUSD = obj04DR.TienMatUSD + obj04DR.ChuyenKhoanUSD;
-            obj04DR.TongVND = obj04DR.TienMatVND + obj04DR.ChuyenKhoanVND;
+            obj04DR.TongVND = obj04DR.TienMatVND_QD + obj04DR.ChuyenKhoanVND;
             obj04DR.NoiDung = "Thu hoàn tạm ứng trong kỳ";
             return obj04DR;
         }
@@ -194,7 +194,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
             objChi.ChuyenKhoanUSD = objTU.ChuyenKhoanUSD + objChiQt.ChuyenKhoanUSD;
             objChi.ChuyenKhoanVND = objTU.ChuyenKhoanVND + objChiQt.ChuyenKhoanVND;
             objChi.TienMatUSD = objTU.TienMatUSD + objChiQt.TienMatUSD;
-            objChi.TienMatVND = objTU.TienMatVND + objChiQt.TienMatVND;
+            objChi.TienMatVND_QD = objTU.TienMatVND_QD + objChiQt.TienMatVND_QD;
             
             //Get so tien quyet toan
             IList<VnsGiaoDich> lstQt = ReportDao.GetLstGiaoDich(TuNgay, DenNgay, p_LoaiDoanRaId,GuidEmpty, GuidEmpty, GuidEmpty, Globals.LikeTkQt, Globals.TkTamUng, 0, 2);
@@ -205,7 +205,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 if (objGiaoDich.MaTkNo.StartsWith(Globals.TkThanhToanTienMat))
                 {
                     objQt.TienMatUSD += objGiaoDich.SoTienNt;
-                    objQt.TienMatVND += objGiaoDich.SoTien;
+                    objQt.TienMatVND_QD += objGiaoDich.SoTien;
                 }
                 else if (objGiaoDich.MaTkNo.StartsWith(Globals.TkThanhToanChuyenKhoan))
                 {
@@ -214,7 +214,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 }
             }
             objQt.TongUSD = objQt.TienMatUSD + objQt.ChuyenKhoanUSD;
-            objQt.TongVND = objQt.TienMatVND + objQt.ChuyenKhoanVND;
+            objQt.TongVND = objQt.TienMatVND_QD + objQt.ChuyenKhoanVND;
 
             //Get so tien HU
             RP_BC04DR objHu = GetSoTienThuHoanTamUng(TuNgay, DenNgay, p_LoaiDoanRaId);
@@ -225,7 +225,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
             objQT_HU.ChuyenKhoanUSD = objQt.ChuyenKhoanUSD + objHu.ChuyenKhoanUSD;
             objQT_HU.ChuyenKhoanVND = objQt.ChuyenKhoanVND + objHu.ChuyenKhoanVND;
             objQT_HU.TienMatUSD = objQt.TienMatUSD + objHu.TienMatUSD;
-            objQT_HU.TienMatVND = objQt.TienMatVND + objHu.TienMatVND;
+            objQT_HU.TienMatVND_QD = objQt.TienMatVND_QD + objHu.TienMatVND_QD;
 
             //So tien phai thu
             RP_BC04DR ObjTienPhaiThu = new RP_BC04DR();
@@ -233,15 +233,15 @@ namespace Vns.QuanLyDoanRa.Service.Report
             decimal ChuyenKhoanVND = objChi.ChuyenKhoanVND - objQT_HU.ChuyenKhoanVND;
             decimal ChuyenKhoanUSD = objChi.ChuyenKhoanUSD - objQT_HU.ChuyenKhoanUSD;
             decimal TienMatUSD = objChi.TienMatUSD - objQT_HU.TienMatUSD;
-            decimal TienMatVND = objChi.TienMatVND - objQT_HU.TienMatVND;
+            decimal TienMatVND = objChi.TienMatVND_QD - objQT_HU.TienMatVND_QD;
 
             ObjTienPhaiThu.NoiDung = "Số tiền phải thu kỳ trước";
             ObjTienPhaiThu.ChuyenKhoanUSD = ChuyenKhoanUSD < 0 ? 0: ChuyenKhoanUSD;
             ObjTienPhaiThu.ChuyenKhoanVND = ChuyenKhoanVND < 0 ? 0: ChuyenKhoanVND;
             ObjTienPhaiThu.TienMatUSD = TienMatUSD < 0 ? 0 : TienMatUSD;
-            ObjTienPhaiThu.TienMatVND = TienMatVND < 0 ? 0 : TienMatVND ;
+            ObjTienPhaiThu.TienMatVND_QD = TienMatVND < 0 ? 0 : TienMatVND ;
 
-            ObjTienPhaiThu.TongVND = ObjTienPhaiThu.TienMatVND + ObjTienPhaiThu.ChuyenKhoanVND;
+            ObjTienPhaiThu.TongVND = ObjTienPhaiThu.TienMatVND_QD + ObjTienPhaiThu.ChuyenKhoanVND;
             ObjTienPhaiThu.TongUSD = ObjTienPhaiThu.TienMatUSD + ObjTienPhaiThu.ChuyenKhoanUSD;
             
             return ObjTienPhaiThu;
@@ -267,7 +267,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
             objRp04Dr.TongUSD = lstRp04Dr[0].TongUSD + lstRp04Dr[1].TongUSD - lstRp04Dr[2].TongUSD + lstRp04Dr[3].TongUSD - lstRp04Dr[4].TongUSD - lstRp04Dr[5].TongUSD;
             objRp04Dr.TongVND = lstRp04Dr[0].TongVND + lstRp04Dr[1].TongVND - lstRp04Dr[2].TongVND + lstRp04Dr[3].TongVND - lstRp04Dr[4].TongVND - lstRp04Dr[5].TongVND;
             objRp04Dr.TienMatUSD = lstRp04Dr[0].TienMatUSD + lstRp04Dr[1].TienMatUSD - lstRp04Dr[2].TienMatUSD + lstRp04Dr[3].TienMatUSD - lstRp04Dr[4].TienMatUSD - lstRp04Dr[5].TienMatUSD;
-            objRp04Dr.TienMatVND = lstRp04Dr[0].TienMatVND + lstRp04Dr[1].TienMatVND - lstRp04Dr[2].TienMatVND + lstRp04Dr[3].TienMatVND - lstRp04Dr[4].TienMatVND - lstRp04Dr[5].TienMatVND;
+            objRp04Dr.TienMatVND_QD = lstRp04Dr[0].TienMatVND_QD + lstRp04Dr[1].TienMatVND_QD - lstRp04Dr[2].TienMatVND_QD + lstRp04Dr[3].TienMatVND_QD - lstRp04Dr[4].TienMatVND_QD - lstRp04Dr[5].TienMatVND_QD;
             objRp04Dr.ChuyenKhoanUSD = lstRp04Dr[0].ChuyenKhoanUSD + lstRp04Dr[1].ChuyenKhoanUSD - lstRp04Dr[2].ChuyenKhoanUSD + lstRp04Dr[3].ChuyenKhoanUSD - lstRp04Dr[4].ChuyenKhoanUSD - lstRp04Dr[5].ChuyenKhoanUSD;
             objRp04Dr.ChuyenKhoanVND = lstRp04Dr[0].ChuyenKhoanVND + lstRp04Dr[1].ChuyenKhoanVND - lstRp04Dr[2].ChuyenKhoanVND + lstRp04Dr[3].ChuyenKhoanVND - lstRp04Dr[4].ChuyenKhoanVND - lstRp04Dr[5].ChuyenKhoanVND;
             lstRp04Dr.Add(objRp04Dr);

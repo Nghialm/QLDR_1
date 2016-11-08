@@ -453,7 +453,7 @@ namespace QuanLyDoanRa.Reports
                     objRT.TongVND += obj.PsTangVND;
 
                     objRT.TienMatUSD += obj.PsTangUSD;
-                    objRT.TienMatVND += obj.PsTangVND;
+                    objRT.TienMatVND_QD += obj.PsTangVND;
                 }
             }
 
@@ -492,7 +492,7 @@ namespace QuanLyDoanRa.Reports
             sum.TongUSD = so1.TongUSD + so2.TongUSD;
             sum.TongVND = so1.TongVND + so2.TongVND;
             sum.TienMatUSD = so1.TienMatUSD + so2.TienMatUSD;
-            sum.TienMatVND = so1.TienMatVND + so2.TienMatVND;
+            sum.TienMatVND_QD = so1.TienMatVND_QD + so2.TienMatVND_QD;
             sum.ChuyenKhoanUSD = so1.ChuyenKhoanUSD + so2.ChuyenKhoanUSD;
             sum.ChuyenKhoanVND = so1.ChuyenKhoanVND + so2.ChuyenKhoanVND;
             return sum;
@@ -504,7 +504,7 @@ namespace QuanLyDoanRa.Reports
             sum.TongUSD = so1.TongUSD + so2.TongUSD + so3.TongUSD + so4.TongUSD;
             sum.TongVND = so1.TongVND + so2.TongVND + so3.TongVND + so4.TongVND;
             sum.TienMatUSD = so1.TienMatUSD + so2.TienMatUSD + so3.TienMatUSD + so4.TienMatUSD;
-            sum.TienMatVND = so1.TienMatVND + so2.TienMatVND + so3.TienMatVND + so4.TienMatVND;
+            sum.TienMatVND_QD = so1.TienMatVND_QD + so2.TienMatVND_QD + so3.TienMatVND_QD + so4.TienMatVND_QD;
             sum.ChuyenKhoanUSD = so1.ChuyenKhoanUSD + so2.ChuyenKhoanUSD + so3.ChuyenKhoanUSD + so4.ChuyenKhoanUSD;
             sum.ChuyenKhoanVND = so1.ChuyenKhoanVND + so2.ChuyenKhoanVND + so3.ChuyenKhoanVND + so4.ChuyenKhoanVND;
             return sum;
@@ -516,7 +516,7 @@ namespace QuanLyDoanRa.Reports
             sum.TongUSD = so1.TongUSD + so2.TongUSD + so3.TongUSD;
             sum.TongVND = so1.TongVND + so2.TongVND + so3.TongVND;
             sum.TienMatUSD = so1.TienMatUSD + so2.TienMatUSD + so3.TienMatUSD;
-            sum.TienMatVND = so1.TienMatVND + so2.TienMatVND + so3.TienMatVND;
+            sum.TienMatVND_QD = so1.TienMatVND_QD + so2.TienMatVND_QD + so3.TienMatVND_QD;
             sum.ChuyenKhoanUSD = so1.ChuyenKhoanUSD + so2.ChuyenKhoanUSD + so3.ChuyenKhoanUSD;
             sum.ChuyenKhoanVND = so1.ChuyenKhoanVND + so2.ChuyenKhoanVND + so3.ChuyenKhoanVND;
             return sum;
@@ -532,7 +532,7 @@ namespace QuanLyDoanRa.Reports
                 sum.TongVND += tmp.TongVND;
 
                 sum.TienMatUSD += tmp.TienMatUSD;
-                sum.TienMatVND += tmp.TienMatVND;
+                sum.TienMatVND_QD += tmp.TienMatVND_QD;
 
                 sum.ChuyenKhoanUSD += tmp.ChuyenKhoanUSD;
                 sum.ChuyenKhoanVND += tmp.ChuyenKhoanVND;

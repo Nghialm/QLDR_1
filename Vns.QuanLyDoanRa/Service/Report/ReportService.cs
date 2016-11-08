@@ -905,39 +905,32 @@ namespace Vns.QuanLyDoanRa.Service.Report
 
                     if (obj04D2 != null)
                     {
-                        obj04D2.TongUSD = obj04D2.TienMatUSD + obj04D2.ChuyenKhoanUSD;
-                        obj04D2.TongVND = obj04D2.TienMatVND + obj04D2.ChuyenKhoanVND;
-                        obj04D2.MaNoiDung = "1";                        
+                        obj04D2.TongVND = obj04D2.TienMatVND_QD + obj04D2.TienMatVND + obj04D2.ChuyenKhoanVND;
+                        obj04D2.MaNoiDung = "2";
                         obj04D2.NoiDung = "Số tiền tạm ứng trong kỳ";
 
-                        obj04D3.TongUSD = obj04D3.TienMatUSD + obj04D3.ChuyenKhoanUSD;
-                        obj04D3.TongVND = obj04D3.TienMatVND + obj04D3.ChuyenKhoanVND;
-                        obj04D3.MaNoiDung = "2";
-                        obj04D3.NoiDung = "Số quyết toán trong kỳ";
+                        obj04D3.TongVND = obj04D3.TienMatVND_QD + obj04D3.TienMatVND + obj04D3.ChuyenKhoanVND;
+                        obj04D3.MaNoiDung = "3";
+                        obj04D3.NoiDung = "Số tiền quyết toán trong kỳ";
 
-                        obj04D4.TongUSD = obj04D4.TienMatUSD + obj04D4.ChuyenKhoanUSD;
-                        obj04D4.TongVND = obj04D4.TienMatVND + obj04D4.ChuyenKhoanVND;
-                        obj04D4.MaNoiDung = "3";
+                        obj04D4.TongVND = obj04D4.TienMatVND_QD + obj04D4.TienMatVND + obj04D4.ChuyenKhoanVND;
+                        obj04D4.MaNoiDung = "4";
                         obj04D4.NoiDung = "Chi quyết toán trong kỳ";
 
-                        obj04D5.TongUSD = obj04D5.TienMatUSD + obj04D5.ChuyenKhoanUSD;
-                        obj04D5.TongVND = obj04D5.TienMatVND + obj04D5.ChuyenKhoanVND;
-                        obj04D5.MaNoiDung = "4";
+                        obj04D5.TongVND = obj04D5.TienMatVND_QD + obj04D5.TienMatVND + obj04D5.ChuyenKhoanVND;
+                        obj04D5.MaNoiDung = "5";
                         obj04D5.NoiDung = "Thu hoàn tạm ứng trong kỳ";
 
-                        obj04D6.TongUSD = obj04D6.TienMatUSD + obj04D6.ChuyenKhoanUSD;
-                        obj04D6.TongVND = obj04D6.TienMatVND + obj04D6.ChuyenKhoanVND;
-                        obj04D6.MaNoiDung = "5";
+                        obj04D6.TongVND = obj04D6.TienMatVND_QD + obj04D6.TienMatVND + obj04D6.ChuyenKhoanVND;
+                        obj04D6.MaNoiDung = "6";
                         obj04D6.NoiDung = "Phải thu trong kỳ";
 
-                        obj04D7.TienMatVND = obj04D1.TienMatVND + obj04D2.TienMatVND - obj04D3.TienMatVND + obj04D4.TienMatVND - obj04D5.TienMatVND - obj04D6.TienMatVND;
+                        obj04D7.TienMatVND_QD = obj04D1.TienMatVND_QD + obj04D2.TienMatVND_QD - obj04D3.TienMatVND_QD + obj04D4.TienMatVND_QD - obj04D5.TienMatVND_QD - obj04D6.TienMatVND_QD;
                         obj04D7.TienMatUSD = obj04D1.TienMatUSD + obj04D2.TienMatUSD - obj04D3.TienMatUSD + obj04D4.TienMatUSD - obj04D5.TienMatUSD - obj04D6.TienMatUSD;
-
                         obj04D7.ChuyenKhoanVND = obj04D1.ChuyenKhoanVND + obj04D2.ChuyenKhoanVND - obj04D3.ChuyenKhoanVND + obj04D4.ChuyenKhoanVND - obj04D5.ChuyenKhoanVND - obj04D6.ChuyenKhoanVND;
-                        obj04D7.ChuyenKhoanUSD = obj04D1.ChuyenKhoanUSD + obj04D2.ChuyenKhoanUSD - obj04D3.ChuyenKhoanUSD + obj04D4.ChuyenKhoanUSD - obj04D5.ChuyenKhoanUSD - obj04D6.ChuyenKhoanUSD;
+                        obj04D7.TienMatVND = obj04D1.TienMatVND + obj04D2.TienMatVND - obj04D3.TienMatVND + obj04D4.TienMatVND - obj04D5.TienMatVND - obj04D6.TienMatVND;
 
-                        obj04D7.TongUSD = obj04D7.TienMatUSD + obj04D7.ChuyenKhoanUSD;
-                        obj04D7.TongVND = obj04D7.TienMatVND + obj04D7.ChuyenKhoanVND;
+                        obj04D7.TongVND = obj04D7.TienMatVND_QD + obj04D7.TienMatVND + obj04D7.ChuyenKhoanVND;
                         obj04D7.MaNoiDung = "6";
                         obj04D7.NoiDung = "Số tiền chưa quyết toán kỳ trước chuyển sang";
 
@@ -981,79 +974,71 @@ namespace Vns.QuanLyDoanRa.Service.Report
 
                 }
                 //DOng 2: tam  ung
-                obj04D2.TienMatVND += obj.TU_TK_TM_VND; /*obj.TU_TM_VND_MR;*/
+                obj04D2.TienMatVND_QD += obj.TU_TK_TM_VND; /*obj.TU_TM_VND_MR;*/
                 obj04D2.TienMatUSD += obj.TU_TK_TM_USD; /*obj.TU_TM_USD_MR;*/
-
-                obj04D2.ChuyenKhoanVND += obj.TU_TK_CK_VND; /*obj.TU_CK_VND_MR;*/
-                obj04D2.ChuyenKhoanUSD += obj.TU_TK_CK_USD; /*obj.TU_CK_USD_MR;*/
+                obj04D2.TienMatVND += obj.TU_VND_TK_TM;
+                obj04D2.ChuyenKhoanVND += obj.TU_VND_TK_CK; /*obj.TU_CK_VND_MR;*/
 
                 //Dong 3 tien quyet toan
-                obj04D3.TienMatVND += obj.So_QT_TM_VND;
+                obj04D3.TienMatVND_QD += obj.So_QT_TM_VND;
                 obj04D3.TienMatUSD += obj.So_QT_TM_USD;
-
-                obj04D3.ChuyenKhoanVND += obj.So_QT_CK_VND;
-                obj04D3.ChuyenKhoanUSD += obj.So_QT_CK_USD;
+                obj04D3.TienMatVND += obj.So_QT_VND_TM;
+                obj04D3.ChuyenKhoanVND += obj.So_QT_VND_CK;
 
                 //Dong 4 Chi quyet toan
-                obj04D4.TienMatVND += obj.Chi_QT_TM_VND;
+                obj04D4.TienMatVND_QD += obj.Chi_QT_TM_VND;
                 obj04D4.TienMatUSD += obj.Chi_QT_TM_USD;
-
-                obj04D4.ChuyenKhoanVND += obj.Chi_QT_CK_VND;
-                obj04D4.ChuyenKhoanUSD += obj.Chi_QT_CK_USD;
+                obj04D4.ChuyenKhoanVND += obj.Chi_VND_QT_CK;
+                obj04D4.TienMatVND += obj.Chi_VND_QT_TM;
 
                 //Dong 5 thu hoan tam ung (= thu hoan trong thang + thu hoan tam ung chua qt trong thang
-                obj04D5.TienMatVND += obj.HU_TRONGTHANG_TM_VND + obj.TH_CHUA_QT_TM_VND;
-                obj04D5.TienMatUSD += obj.HU_TRONGTHANG_TM_USD + obj.TH_CHUA_QT_TM_USD;
+                obj04D5.TienMatVND_QD += obj.TH_TM_VND;  //obj.HU_TRONGTHANG_TM_VND + obj.TH_CHUA_QT_TM_VND;
+                obj04D5.TienMatUSD += obj.TH_TM_USD;  //obj.HU_TRONGTHANG_TM_USD + obj.TH_CHUA_QT_TM_USD;
+                obj04D5.ChuyenKhoanVND += obj.TH_VND_CK; //obj.HU_TRONGTHANG_CK_VND + obj.TH_CHUA_QT_CK_VND;
+                obj04D5.TienMatVND += obj.TH_VND_TM; //obj.HU_TRONGTHANG_CK_USD + obj.TH_CHUA_QT_CK_USD;
 
-                obj04D5.ChuyenKhoanVND += obj.HU_TRONGTHANG_CK_VND + obj.TH_CHUA_QT_CK_VND;
-                obj04D5.ChuyenKhoanUSD += obj.HU_TRONGTHANG_CK_USD + obj.TH_CHUA_QT_CK_USD;
-
-                //Dong 6 :
-                obj04D6.TienMatVND += obj.CN_QT_PhaiThu_TM_VND;
+                //Dong 6 : Phai thu trong ky
+                obj04D6.TienMatVND_QD += obj.CN_QT_PhaiThu_TM_VND;
                 obj04D6.TienMatUSD += obj.CN_QT_PhaiThu_TM_USD;
-
-                obj04D6.ChuyenKhoanUSD += obj.CN_QT_PhaiThu_CK_USD;
-                obj04D6.ChuyenKhoanVND += obj.CN_QT_PhaiThu_CK_VND;
+                obj04D6.TienMatVND += obj.CN_QT_VND_TM_PhaiThu;
+                obj04D6.ChuyenKhoanVND += obj.CN_QT_VND_CK_PhaiThu;
             }
 
             if (obj04D1 != null)
             {
-                obj04D2.TongUSD = obj04D2.TienMatUSD + obj04D2.ChuyenKhoanUSD;
-                obj04D2.TongVND = obj04D2.TienMatVND + obj04D2.ChuyenKhoanVND;
+                obj04D1.TongVND = obj04D1.TienMatVND_QD + obj04D1.TienMatVND + obj04D1.ChuyenKhoanVND;
+                obj04D1.MaNoiDung = "1";
+                obj04D1.NoiDung = "Số tiền chưa quyết toán kỳ trước chuyển sang";
+
+                obj04D2.TongVND = obj04D2.TienMatVND_QD + obj04D2.TienMatVND + obj04D2.ChuyenKhoanVND;
+                obj04D2.MaNoiDung = "2";
                 obj04D2.NoiDung = "Số tiền tạm ứng trong kỳ";
 
-                obj04D3.TongUSD = obj04D3.TienMatUSD + obj04D3.ChuyenKhoanUSD;
-                obj04D3.TongVND = obj04D3.TienMatVND + obj04D3.ChuyenKhoanVND;
-                obj04D3.NoiDung = "Số quyết toán trong kỳ";
+                obj04D3.TongVND = obj04D3.TienMatVND_QD + obj04D3.TienMatVND + obj04D3.ChuyenKhoanVND;
+                obj04D3.MaNoiDung = "3";
+                obj04D3.NoiDung = "Số tiền tạm ứng trong kỳ";
 
-                obj04D4.TongUSD = obj04D4.TienMatUSD + obj04D4.ChuyenKhoanUSD;
-                obj04D4.TongVND = obj04D4.TienMatVND + obj04D4.ChuyenKhoanVND;
-                obj04D4.NoiDung = "Chi quyết toán trong kỳ";
+                obj04D4.TongVND = obj04D4.TienMatVND_QD + obj04D4.TienMatVND + obj04D4.ChuyenKhoanVND;
+                obj04D4.MaNoiDung = "4";
+                obj04D4.NoiDung = "Số quyết toán trong kỳ";
 
-                obj04D5.TongUSD = obj04D5.TienMatUSD + obj04D5.ChuyenKhoanUSD;
-                obj04D5.TongVND = obj04D5.TienMatVND + obj04D5.ChuyenKhoanVND;
-                obj04D5.NoiDung = "Thu hoàn tạm ứng trong kỳ";
+                obj04D5.TongVND = obj04D5.TienMatVND_QD + obj04D5.TienMatVND + obj04D5.ChuyenKhoanVND;
+                obj04D5.MaNoiDung = "5";
+                obj04D5.NoiDung = "Chi quyết toán trong kỳ";
 
-                obj04D6.TongUSD = obj04D6.TienMatUSD + obj04D6.ChuyenKhoanUSD;
-                obj04D6.TongVND = obj04D6.TienMatVND + obj04D6.ChuyenKhoanVND;
-                obj04D6.NoiDung = "Phải thu trong kỳ";
+                obj04D6.TongVND = obj04D6.TienMatVND_QD + obj04D6.TienMatVND + obj04D6.ChuyenKhoanVND;
+                obj04D6.MaNoiDung = "6";
+                obj04D6.NoiDung = "Thu hoàn tạm ứng trong kỳ";
 
-                obj04D7.TienMatVND = obj04D1.TienMatVND + obj04D2.TienMatVND - obj04D3.TienMatVND + obj04D4.TienMatVND - obj04D5.TienMatVND - obj04D6.TienMatVND;
+                obj04D7.TienMatVND_QD = obj04D1.TienMatVND_QD + obj04D2.TienMatVND_QD - obj04D3.TienMatVND_QD + obj04D4.TienMatVND_QD - obj04D5.TienMatVND_QD - obj04D6.TienMatVND_QD;
                 obj04D7.TienMatUSD = obj04D1.TienMatUSD + obj04D2.TienMatUSD - obj04D3.TienMatUSD + obj04D4.TienMatUSD - obj04D5.TienMatUSD - obj04D6.TienMatUSD;
-
                 obj04D7.ChuyenKhoanVND = obj04D1.ChuyenKhoanVND + obj04D2.ChuyenKhoanVND - obj04D3.ChuyenKhoanVND + obj04D4.ChuyenKhoanVND - obj04D5.ChuyenKhoanVND - obj04D6.ChuyenKhoanVND;
-                obj04D7.ChuyenKhoanUSD = obj04D1.ChuyenKhoanUSD + obj04D2.ChuyenKhoanUSD - obj04D3.ChuyenKhoanUSD + obj04D4.ChuyenKhoanUSD - obj04D5.ChuyenKhoanUSD - obj04D6.ChuyenKhoanUSD;
+                obj04D7.TienMatVND = obj04D1.TienMatVND + obj04D2.TienMatVND - obj04D3.TienMatVND + obj04D4.TienMatVND - obj04D5.TienMatVND - obj04D6.TienMatVND;
 
-                obj04D7.TongUSD = obj04D7.TienMatUSD + obj04D7.ChuyenKhoanUSD;
-                obj04D7.TongVND = obj04D7.TienMatVND + obj04D7.ChuyenKhoanVND;
-                obj04D7.NoiDung = "Số tiền chưa quyết toán kỳ trước chuyển sang";
+                obj04D7.TongVND = obj04D7.TienMatVND_QD + obj04D7.TienMatVND + obj04D7.ChuyenKhoanVND;
+                obj04D7.MaNoiDung = "7";
+                obj04D7.NoiDung = "Số tiền chưa quyết toán cuối kỳ";
 
-                //lstData.Add(obj04D1);
-                //lstData.Add(obj04D2);
-                //lstData.Add(obj04D3);
-                //lstData.Add(obj04D4);
-                //lstData.Add(obj04D5);
-                //lstData.Add(obj04D6);
                 lstData.Add(obj04D7);
             }
 
@@ -1095,44 +1080,37 @@ namespace Vns.QuanLyDoanRa.Service.Report
 
                     if (obj04D2 != null)
                     {
-                        obj04D1.TongUSD = obj04D1.TienMatUSD + obj04D1.ChuyenKhoanUSD;
-                        obj04D1.TongVND = obj04D1.TienMatVND + obj04D1.ChuyenKhoanVND;
+                        obj04D1.TongVND = obj04D1.TienMatVND_QD + obj04D1.TienMatVND + obj04D1.ChuyenKhoanVND;
                         obj04D1.MaNoiDung = "1";
                         obj04D1.NoiDung = "Số tiền chưa quyết toán kỳ trước chuyển sang";
 
-                        obj04D2.TongUSD = obj04D2.TienMatUSD + obj04D2.ChuyenKhoanUSD;
-                        obj04D2.TongVND = obj04D2.TienMatVND + obj04D2.ChuyenKhoanVND;
+                        obj04D2.TongVND = obj04D2.TienMatVND_QD + obj04D2.TienMatVND + obj04D2.ChuyenKhoanVND;
                         obj04D2.MaNoiDung = "2";
                         obj04D2.NoiDung = "Số tiền tạm ứng trong kỳ";
 
-                        obj04D3.TongUSD = obj04D3.TienMatUSD + obj04D3.ChuyenKhoanUSD;
-                        obj04D3.TongVND = obj04D3.TienMatVND + obj04D3.ChuyenKhoanVND;
+                        obj04D3.TongVND = obj04D3.TienMatVND_QD + obj04D3.TienMatVND + obj04D3.ChuyenKhoanVND;
                         obj04D3.MaNoiDung = "3";
                         obj04D3.NoiDung = "Số tiền quyết toán trong kỳ";
 
-                        obj04D4.TongUSD = obj04D4.TienMatUSD + obj04D4.ChuyenKhoanUSD;
-                        obj04D4.TongVND = obj04D4.TienMatVND + obj04D4.ChuyenKhoanVND;
+                        obj04D4.TongVND = obj04D4.TienMatVND_QD + obj04D4.TienMatVND + obj04D4.ChuyenKhoanVND;
                         obj04D4.MaNoiDung = "4";
                         obj04D4.NoiDung = "Chi quyết toán trong kỳ";
 
-                        obj04D5.TongUSD = obj04D5.TienMatUSD + obj04D5.ChuyenKhoanUSD;
-                        obj04D5.TongVND = obj04D5.TienMatVND + obj04D5.ChuyenKhoanVND;
+                        obj04D5.TongVND = obj04D5.TienMatVND_QD + obj04D5.TienMatVND + obj04D5.ChuyenKhoanVND;
                         obj04D5.MaNoiDung = "5";
                         obj04D5.NoiDung = "Thu hoàn tạm ứng trong kỳ";
 
-                        obj04D6.TongUSD = obj04D6.TienMatUSD + obj04D6.ChuyenKhoanUSD;
-                        obj04D6.TongVND = obj04D6.TienMatVND + obj04D6.ChuyenKhoanVND;
+                        obj04D6.TongVND = obj04D6.TienMatVND_QD + obj04D6.TienMatVND + obj04D6.ChuyenKhoanVND;
                         obj04D6.MaNoiDung = "6";
                         obj04D6.NoiDung = "Phải thu trong kỳ";
 
-                        obj04D7.TienMatVND = obj04D1.TienMatVND + obj04D2.TienMatVND - obj04D3.TienMatVND + obj04D4.TienMatVND - obj04D5.TienMatVND - obj04D6.TienMatVND;
+                        obj04D7.TienMatVND_QD = obj04D1.TienMatVND_QD + obj04D2.TienMatVND_QD - obj04D3.TienMatVND_QD + obj04D4.TienMatVND_QD - obj04D5.TienMatVND_QD - obj04D6.TienMatVND_QD;
                         obj04D7.TienMatUSD = obj04D1.TienMatUSD + obj04D2.TienMatUSD - obj04D3.TienMatUSD + obj04D4.TienMatUSD - obj04D5.TienMatUSD - obj04D6.TienMatUSD;
 
                         obj04D7.ChuyenKhoanVND = obj04D1.ChuyenKhoanVND + obj04D2.ChuyenKhoanVND - obj04D3.ChuyenKhoanVND + obj04D4.ChuyenKhoanVND - obj04D5.ChuyenKhoanVND - obj04D6.ChuyenKhoanVND;
-                        obj04D7.ChuyenKhoanUSD = obj04D1.ChuyenKhoanUSD + obj04D2.ChuyenKhoanUSD - obj04D3.ChuyenKhoanUSD + obj04D4.ChuyenKhoanUSD - obj04D5.ChuyenKhoanUSD - obj04D6.ChuyenKhoanUSD;
+                        obj04D7.TienMatVND = obj04D1.TienMatVND + obj04D2.TienMatVND - obj04D3.TienMatVND + obj04D4.TienMatVND - obj04D5.TienMatVND - obj04D6.TienMatVND;
 
-                        obj04D7.TongUSD = obj04D7.TienMatUSD + obj04D7.ChuyenKhoanUSD;
-                        obj04D7.TongVND = obj04D7.TienMatVND + obj04D7.ChuyenKhoanVND;
+                        obj04D7.TongVND = obj04D7.TienMatVND_QD + obj04D7.TienMatVND + obj04D7.ChuyenKhoanVND;
                         obj04D7.MaNoiDung = "7";
                         obj04D7.NoiDung = "Số tiền chưa quyết toán cuối kỳ";
 
@@ -1176,81 +1154,68 @@ namespace Vns.QuanLyDoanRa.Service.Report
 
                 }
                 //DOng 2: tam  ung
-                obj04D2.TienMatVND += obj.TU_TK_TM_VND; /*obj.TU_TM_VND_MR;*/
+                obj04D2.TienMatVND_QD += obj.TU_TK_TM_VND; /*obj.TU_TM_VND_MR;*/
                 obj04D2.TienMatUSD += obj.TU_TK_TM_USD; /*obj.TU_TM_USD_MR;*/
-
-                obj04D2.ChuyenKhoanVND += obj.TU_TK_CK_VND; /*obj.TU_CK_VND_MR;*/
-                obj04D2.ChuyenKhoanUSD += obj.TU_TK_CK_USD; /*obj.TU_CK_USD_MR;*/
+                obj04D2.TienMatVND += obj.TU_VND_TK_TM;
+                obj04D2.ChuyenKhoanVND += obj.TU_VND_TK_CK; /*obj.TU_CK_VND_MR;*/
 
                 //Dong 3 tien quyet toan
-                obj04D3.TienMatVND += obj.So_QT_TM_VND;
+                obj04D3.TienMatVND_QD += obj.So_QT_TM_VND;
                 obj04D3.TienMatUSD += obj.So_QT_TM_USD;
-
-                obj04D3.ChuyenKhoanVND += obj.So_QT_CK_VND;
-                obj04D3.ChuyenKhoanUSD += obj.So_QT_CK_USD;
+                obj04D3.TienMatVND += obj.So_QT_VND_TM;
+                obj04D3.ChuyenKhoanVND += obj.So_QT_VND_CK;
 
                 //Dong 4 Chi quyet toan
-                obj04D4.TienMatVND += obj.Chi_QT_TM_VND;
+                obj04D4.TienMatVND_QD += obj.Chi_QT_TM_VND;
                 obj04D4.TienMatUSD += obj.Chi_QT_TM_USD;
-
-                obj04D4.ChuyenKhoanVND += obj.Chi_QT_CK_VND;
-                obj04D4.ChuyenKhoanUSD += obj.Chi_QT_CK_USD;
+                obj04D4.ChuyenKhoanVND += obj.Chi_VND_QT_CK;
+                obj04D4.TienMatVND += obj.Chi_VND_QT_TM;
 
                 //Dong 5 thu hoan tam ung (= thu hoan trong thang + thu hoan tam ung chua qt trong thang
-                obj04D5.TienMatVND += obj.TH_TM_VND;  //obj.HU_TRONGTHANG_TM_VND + obj.TH_CHUA_QT_TM_VND;
+                obj04D5.TienMatVND_QD += obj.TH_TM_VND;  //obj.HU_TRONGTHANG_TM_VND + obj.TH_CHUA_QT_TM_VND;
                 obj04D5.TienMatUSD += obj.TH_TM_USD;  //obj.HU_TRONGTHANG_TM_USD + obj.TH_CHUA_QT_TM_USD;
-
-                obj04D5.ChuyenKhoanVND += obj.TH_CK_VND; //obj.HU_TRONGTHANG_CK_VND + obj.TH_CHUA_QT_CK_VND;
-                obj04D5.ChuyenKhoanUSD += obj.TH_CK_USD; //obj.HU_TRONGTHANG_CK_USD + obj.TH_CHUA_QT_CK_USD;
+                obj04D5.ChuyenKhoanVND += obj.TH_VND_CK; //obj.HU_TRONGTHANG_CK_VND + obj.TH_CHUA_QT_CK_VND;
+                obj04D5.TienMatVND += obj.TH_VND_TM; //obj.HU_TRONGTHANG_CK_USD + obj.TH_CHUA_QT_CK_USD;
 
                 //Dong 6 : Phai thu trong ky
-                obj04D6.TienMatVND += obj.CN_QT_PhaiThu_TM_VND;
+                obj04D6.TienMatVND_QD += obj.CN_QT_PhaiThu_TM_VND;
                 obj04D6.TienMatUSD += obj.CN_QT_PhaiThu_TM_USD;
-
-                obj04D6.ChuyenKhoanUSD += obj.CN_QT_PhaiThu_CK_USD;
-                obj04D6.ChuyenKhoanVND += obj.CN_QT_PhaiThu_CK_VND;
+                obj04D6.TienMatVND += obj.CN_QT_VND_TM_PhaiThu;
+                obj04D6.ChuyenKhoanVND += obj.CN_QT_VND_CK_PhaiThu;
             }
 
             if (obj04D1 != null)
             {
-                obj04D1.TongUSD = obj04D1.TienMatUSD + obj04D1.ChuyenKhoanUSD;
-                obj04D1.TongVND = obj04D1.TienMatVND + obj04D1.ChuyenKhoanVND;
+                obj04D1.TongVND = obj04D1.TienMatVND_QD + obj04D1.TienMatVND + obj04D1.ChuyenKhoanVND;
                 obj04D1.MaNoiDung = "1";
                 obj04D1.NoiDung = "Số tiền chưa quyết toán kỳ trước chuyển sang";
 
-                obj04D2.TongUSD = obj04D2.TienMatUSD + obj04D2.ChuyenKhoanUSD;
-                obj04D2.TongVND = obj04D2.TienMatVND + obj04D2.ChuyenKhoanVND;
+                obj04D2.TongVND = obj04D2.TienMatVND_QD + obj04D2.TienMatVND + obj04D2.ChuyenKhoanVND;
                 obj04D2.MaNoiDung = "2";
                 obj04D2.NoiDung = "Số tiền tạm ứng trong kỳ";
 
-                obj04D3.TongUSD = obj04D3.TienMatUSD + obj04D3.ChuyenKhoanUSD;
-                obj04D3.TongVND = obj04D3.TienMatVND + obj04D3.ChuyenKhoanVND;
+                obj04D3.TongVND = obj04D3.TienMatVND_QD + obj04D3.TienMatVND + obj04D3.ChuyenKhoanVND;
                 obj04D3.MaNoiDung = "3";
                 obj04D3.NoiDung = "Số tiền tạm ứng trong kỳ";
 
-                obj04D4.TongUSD = obj04D4.TienMatUSD + obj04D4.ChuyenKhoanUSD;
-                obj04D4.TongVND = obj04D4.TienMatVND + obj04D4.ChuyenKhoanVND;
+                obj04D4.TongVND = obj04D4.TienMatVND_QD + obj04D4.TienMatVND + obj04D4.ChuyenKhoanVND;
                 obj04D4.MaNoiDung = "4";
                 obj04D4.NoiDung = "Số quyết toán trong kỳ";
 
-                obj04D5.TongUSD = obj04D5.TienMatUSD + obj04D5.ChuyenKhoanUSD;
-                obj04D5.TongVND = obj04D5.TienMatVND + obj04D5.ChuyenKhoanVND;
+                obj04D5.TongVND = obj04D5.TienMatVND_QD + obj04D5.TienMatVND + obj04D5.ChuyenKhoanVND;
                 obj04D5.MaNoiDung = "5";
                 obj04D5.NoiDung = "Chi quyết toán trong kỳ";
 
-                obj04D6.TongUSD = obj04D6.TienMatUSD + obj04D6.ChuyenKhoanUSD;
-                obj04D6.TongVND = obj04D6.TienMatVND + obj04D6.ChuyenKhoanVND;
+                obj04D6.TongVND = obj04D6.TienMatVND_QD + obj04D6.TienMatVND + obj04D6.ChuyenKhoanVND;
                 obj04D6.MaNoiDung = "6";
                 obj04D6.NoiDung = "Thu hoàn tạm ứng trong kỳ";
 
-                obj04D7.TienMatVND = obj04D1.TienMatVND + obj04D2.TienMatVND - obj04D3.TienMatVND + obj04D4.TienMatVND - obj04D5.TienMatVND - obj04D6.TienMatVND;
+                obj04D7.TienMatVND_QD = obj04D1.TienMatVND_QD + obj04D2.TienMatVND_QD - obj04D3.TienMatVND_QD + obj04D4.TienMatVND_QD - obj04D5.TienMatVND_QD - obj04D6.TienMatVND_QD;
                 obj04D7.TienMatUSD = obj04D1.TienMatUSD + obj04D2.TienMatUSD - obj04D3.TienMatUSD + obj04D4.TienMatUSD - obj04D5.TienMatUSD - obj04D6.TienMatUSD;
-
                 obj04D7.ChuyenKhoanVND = obj04D1.ChuyenKhoanVND + obj04D2.ChuyenKhoanVND - obj04D3.ChuyenKhoanVND + obj04D4.ChuyenKhoanVND - obj04D5.ChuyenKhoanVND - obj04D6.ChuyenKhoanVND;
-                obj04D7.ChuyenKhoanUSD = obj04D1.ChuyenKhoanUSD + obj04D2.ChuyenKhoanUSD - obj04D3.ChuyenKhoanUSD + obj04D4.ChuyenKhoanUSD - obj04D5.ChuyenKhoanUSD - obj04D6.ChuyenKhoanUSD;
+                obj04D7.TienMatVND = obj04D1.TienMatVND + obj04D2.TienMatVND - obj04D3.TienMatVND + obj04D4.TienMatVND - obj04D5.TienMatVND - obj04D6.TienMatVND;
 
-                obj04D7.TongUSD = obj04D7.TienMatUSD + obj04D7.ChuyenKhoanUSD;
-                obj04D7.TongVND = obj04D7.TienMatVND + obj04D7.ChuyenKhoanVND;
+                obj04D7.TongVND = obj04D7.TienMatVND_QD + obj04D7.TienMatVND + obj04D7.ChuyenKhoanVND;
                 obj04D7.MaNoiDung = "7";
                 obj04D7.NoiDung = "Số tiền chưa quyết toán cuối kỳ";
 
@@ -1283,74 +1248,63 @@ namespace Vns.QuanLyDoanRa.Service.Report
             foreach (VnsReportTongHop obj in lstDataTemp)
             {
                 //DOng 2: tam  ung
-                obj04D2.TienMatVND += obj.TU_TK_TM_VND; /*obj.TU_TM_VND_MR;*/
+                obj04D2.TienMatVND_QD += obj.TU_TK_TM_VND; /*obj.TU_TM_VND_MR;*/
                 obj04D2.TienMatUSD += obj.TU_TK_TM_USD; /*obj.TU_TM_USD_MR;*/
-
-                obj04D2.ChuyenKhoanVND += obj.TU_TK_CK_VND; /*obj.TU_CK_VND_MR;*/
-                obj04D2.ChuyenKhoanUSD += obj.TU_TK_CK_USD; /*obj.TU_CK_USD_MR;*/
+                obj04D2.TienMatVND += obj.TU_VND_TK_TM;
+                obj04D2.ChuyenKhoanVND += obj.TU_VND_TK_CK; /*obj.TU_CK_VND_MR;*/
 
                 //Dong 3 tien quyet toan
-                obj04D3.TienMatVND += obj.So_QT_TM_VND;
+                obj04D3.TienMatVND_QD += obj.So_QT_TM_VND;
                 obj04D3.TienMatUSD += obj.So_QT_TM_USD;
-
-                obj04D3.ChuyenKhoanVND += obj.So_QT_CK_VND;
-                obj04D3.ChuyenKhoanUSD += obj.So_QT_CK_USD;
+                obj04D3.TienMatVND += obj.So_QT_VND_TM;
+                obj04D3.ChuyenKhoanVND += obj.So_QT_VND_CK;
 
                 //Dong 4 Chi quyet toan
-                obj04D4.TienMatVND += obj.Chi_QT_TM_VND;
+                obj04D4.TienMatVND_QD += obj.Chi_QT_TM_VND;
                 obj04D4.TienMatUSD += obj.Chi_QT_TM_USD;
-
-                obj04D4.ChuyenKhoanVND += obj.Chi_QT_CK_VND;
-                obj04D4.ChuyenKhoanUSD += obj.Chi_QT_CK_USD;
+                obj04D4.TienMatVND += obj.Chi_VND_QT_TM;
+                obj04D4.ChuyenKhoanUSD += obj.Chi_VND_QT_CK;
 
                 //Dong 5 thu hoan tam ung (= thu hoan trong thang + thu hoan tam ung chua qt trong thang
-                obj04D5.TienMatVND += obj.TH_TM_VND; //obj.HU_TRONGTHANG_TM_VND + obj.TH_CHUA_QT_TM_VND;
+                obj04D5.TienMatVND_QD += obj.TH_TM_VND; //obj.HU_TRONGTHANG_TM_VND + obj.TH_CHUA_QT_TM_VND;
                 obj04D5.TienMatUSD += obj.TH_TM_USD; //obj.HU_TRONGTHANG_TM_USD + obj.TH_CHUA_QT_TM_USD;
-
-                obj04D5.ChuyenKhoanVND += obj.TH_CK_VND; //obj.HU_TRONGTHANG_CK_VND + obj.TH_CHUA_QT_CK_VND;
-                obj04D5.ChuyenKhoanUSD += obj.TH_CK_USD; //obj.HU_TRONGTHANG_CK_USD + obj.TH_CHUA_QT_CK_USD;
+                obj04D5.TienMatVND += obj.TH_VND_TM;
+                obj04D5.ChuyenKhoanVND += obj.TH_VND_TM; //obj.HU_TRONGTHANG_CK_VND + obj.TH_CHUA_QT_CK_VND;
 
                 //Dong 6 :
-                obj04D6.TienMatVND += obj.CN_QT_PhaiThu_TM_VND;
+                obj04D6.TienMatVND_QD += obj.CN_QT_PhaiThu_TM_VND;
                 obj04D6.TienMatUSD += obj.CN_QT_PhaiThu_TM_USD;
-
-                obj04D6.ChuyenKhoanUSD += obj.CN_QT_PhaiThu_CK_USD;
-                obj04D6.ChuyenKhoanVND += obj.CN_QT_PhaiThu_CK_VND;
+                obj04D6.TienMatVND += obj.CN_QT_VND_TM_PhaiThu;
+                obj04D6.ChuyenKhoanVND += obj.CN_QT_VND_CK_PhaiThu;
             }
 
-            obj04D2.TongUSD = obj04D2.TienMatUSD + obj04D2.ChuyenKhoanUSD;
-            obj04D2.TongVND = obj04D2.TienMatVND + obj04D2.ChuyenKhoanVND;
+            obj04D2.TongVND = obj04D2.TienMatVND_QD + obj04D2.TienMatVND + obj04D2.ChuyenKhoanVND;
             obj04D2.MaNoiDung = "2";
             obj04D2.NoiDung = "Số tiền tạm ứng trong kỳ";
 
-            obj04D3.TongUSD = obj04D3.TienMatUSD + obj04D3.ChuyenKhoanUSD;
-            obj04D3.TongVND = obj04D3.TienMatVND + obj04D3.ChuyenKhoanVND;
+            obj04D3.TongVND = obj04D3.TienMatVND_QD + obj04D3.TienMatVND + obj04D3.ChuyenKhoanVND;
             obj04D3.MaNoiDung = "3";
             obj04D3.NoiDung = "Số quyết toán trong kỳ";
 
-            obj04D4.TongUSD = obj04D4.TienMatUSD + obj04D4.ChuyenKhoanUSD;
-            obj04D4.TongVND = obj04D4.TienMatVND + obj04D4.ChuyenKhoanVND;
+            obj04D4.TongVND = obj04D4.TienMatVND_QD + obj04D4.TienMatVND + obj04D4.ChuyenKhoanVND;
             obj04D4.MaNoiDung = "4";
             obj04D4.NoiDung = "Chi quyết toán trong kỳ";
 
-            obj04D5.TongUSD = obj04D5.TienMatUSD + obj04D5.ChuyenKhoanUSD;
-            obj04D5.TongVND = obj04D5.TienMatVND + obj04D5.ChuyenKhoanVND;
+            obj04D5.TongVND = obj04D5.TienMatVND_QD + obj04D5.TienMatVND + obj04D5.ChuyenKhoanVND;
             obj04D5.MaNoiDung = "5";
             obj04D5.NoiDung = "Thu hoàn tạm ứng trong kỳ";
 
-            obj04D6.TongUSD = obj04D6.TienMatUSD + obj04D6.ChuyenKhoanUSD;
-            obj04D6.TongVND = obj04D6.TienMatVND + obj04D6.ChuyenKhoanVND;
+            obj04D6.TongVND = obj04D6.TienMatVND_QD + obj04D6.TienMatVND + obj04D6.ChuyenKhoanVND;
             obj04D6.MaNoiDung = "6";
             obj04D6.NoiDung = "Phải thu trong kỳ";
 
-            obj04D7.TienMatVND = obj04D1.TienMatVND + obj04D2.TienMatVND - obj04D3.TienMatVND + obj04D4.TienMatVND - obj04D5.TienMatVND - obj04D6.TienMatVND;
+            obj04D7.TienMatVND_QD = obj04D1.TienMatVND_QD + obj04D2.TienMatVND_QD - obj04D3.TienMatVND_QD + obj04D4.TienMatVND_QD - obj04D5.TienMatVND_QD - obj04D6.TienMatVND_QD;
             obj04D7.TienMatUSD = obj04D1.TienMatUSD + obj04D2.TienMatUSD - obj04D3.TienMatUSD + obj04D4.TienMatUSD - obj04D5.TienMatUSD - obj04D6.TienMatUSD;
 
             obj04D7.ChuyenKhoanVND = obj04D1.ChuyenKhoanVND + obj04D2.ChuyenKhoanVND - obj04D3.ChuyenKhoanVND + obj04D4.ChuyenKhoanVND - obj04D5.ChuyenKhoanVND - obj04D6.ChuyenKhoanVND;
-            obj04D7.ChuyenKhoanUSD = obj04D1.ChuyenKhoanUSD + obj04D2.ChuyenKhoanUSD - obj04D3.ChuyenKhoanUSD + obj04D4.ChuyenKhoanUSD - obj04D5.ChuyenKhoanUSD - obj04D6.ChuyenKhoanUSD;
+            obj04D7.TienMatVND = obj04D1.TienMatVND + obj04D2.TienMatVND - obj04D3.TienMatVND + obj04D4.TienMatVND - obj04D5.TienMatVND - obj04D6.TienMatVND;
 
-            obj04D7.TongUSD = obj04D7.TienMatUSD + obj04D7.ChuyenKhoanUSD;
-            obj04D7.TongVND = obj04D7.TienMatVND + obj04D7.ChuyenKhoanVND;
+            obj04D7.TongVND = obj04D7.TienMatVND_QD + obj04D7.TienMatVND + obj04D7.ChuyenKhoanVND;
             obj04D7.MaNoiDung = "1";
             obj04D7.NoiDung = "Số tiền chưa quyết toán tháng trước chuyển sang";
 
@@ -1381,81 +1335,76 @@ namespace Vns.QuanLyDoanRa.Service.Report
             foreach (VnsReportTongHop obj in lstDataTemp)
             {
                 //DOng 2: tam  ung
-                obj04D2.TienMatVND += obj.TU_TK_TM_VND; /*obj.TU_TM_VND_MR;*/
+                obj04D2.TienMatVND_QD += obj.TU_TK_TM_VND; /*obj.TU_TM_VND_MR;*/
                 obj04D2.TienMatUSD += obj.TU_TK_TM_USD; /*obj.TU_TM_USD_MR;*/
 
-                obj04D2.ChuyenKhoanVND += obj.TU_TK_CK_VND; /*obj.TU_CK_VND_MR;*/
-                obj04D2.ChuyenKhoanUSD += obj.TU_TK_CK_USD; /*obj.TU_CK_USD_MR;*/
+                obj04D2.TienMatVND += obj.TU_VND_TK_TM;
+                obj04D2.ChuyenKhoanVND += obj.TU_VND_TK_CK;
 
                 //Dong 3 tien quyet toan
-                obj04D3.TienMatVND += obj.So_QT_TM_VND;
+                obj04D3.TienMatVND_QD += obj.So_QT_TM_VND;
                 obj04D3.TienMatUSD += obj.So_QT_TM_USD;
 
-                obj04D3.ChuyenKhoanVND += obj.So_QT_CK_VND;
-                obj04D3.ChuyenKhoanUSD += obj.So_QT_CK_USD;
+                obj04D3.TienMatVND += obj.So_QT_VND_TM;
+                obj04D3.ChuyenKhoanVND += obj.So_QT_VND_CK;
 
                 //Dong 4 Chi quyet toan
-                obj04D4.TienMatVND += obj.Chi_QT_TM_VND;
+                obj04D4.TienMatVND_QD += obj.Chi_QT_TM_VND;
                 obj04D4.TienMatUSD += obj.Chi_QT_TM_USD;
 
-                obj04D4.ChuyenKhoanVND += obj.Chi_QT_CK_VND;
-                obj04D4.ChuyenKhoanUSD += obj.Chi_QT_CK_USD;
+                obj04D4.TienMatVND += obj.Chi_VND_QT_TM;
+                obj04D4.ChuyenKhoanVND += obj.Chi_VND_QT_CK;
 
                 //Dong 5 thu hoan tam ung (= thu hoan trong thang + thu hoan tam ung chua qt trong thang
-                obj04D5.TienMatVND += obj.HU_TRONGTHANG_TM_VND + obj.TH_CHUA_QT_TM_VND;
+                obj04D5.TienMatVND_QD += obj.HU_TRONGTHANG_TM_VND + obj.TH_CHUA_QT_TM_VND;
                 obj04D5.TienMatUSD += obj.HU_TRONGTHANG_TM_USD + obj.TH_CHUA_QT_TM_USD;
 
-                obj04D5.ChuyenKhoanVND += obj.TH_CK_VND; //obj.HU_TRONGTHANG_CK_VND + obj.TH_CHUA_QT_CK_VND;
-                obj04D5.ChuyenKhoanUSD += obj.TH_CK_USD; //obj.HU_TRONGTHANG_CK_USD + obj.TH_CHUA_QT_CK_USD;
+                obj04D5.TienMatVND += obj.HU_VND_TRONGTHANG_TM + obj.TH_VND_CHUA_QT_TM;
+                obj04D5.ChuyenKhoanVND += obj.HU_VND_TRONGTHANG_CK + obj.TH_VND_CHUA_QT_CK;
 
-                //Dong 6 :
-                obj04D6.TienMatVND += obj.CN_QT_PhaiThu_TM_VND;
+                //Dong 6 :phai thu thang tiep theo
+                obj04D6.TienMatVND_QD += obj.CN_QT_PhaiThu_TM_VND;
                 obj04D6.TienMatUSD += obj.CN_QT_PhaiThu_TM_USD;
 
-                obj04D6.ChuyenKhoanUSD += obj.CN_QT_PhaiThu_CK_USD;
-                obj04D6.ChuyenKhoanVND += obj.CN_QT_PhaiThu_CK_VND;
+                obj04D6.TienMatVND += obj.CN_QT_VND_TM_PhaiThu;
+                obj04D6.ChuyenKhoanVND += obj.CN_QT_VND_CK_PhaiThu;
+
             }
 
-            obj04D2.TongUSD = obj04D2.TienMatUSD + obj04D2.ChuyenKhoanUSD;
-            obj04D2.TongVND = obj04D2.TienMatVND + obj04D2.ChuyenKhoanVND;
+            obj04D2.TongVND = obj04D2.TienMatVND_QD + obj04D2.TienMatVND + obj04D2.ChuyenKhoanVND;
             obj04D2.MaNoiDung = "2";
             obj04D2.NoiDung = "Số tiền tạm ứng trong tháng";
             if (isQuy)
                 obj04D2.NoiDung = "Số tiền tạm ứng {0}";
 
-            obj04D3.TongUSD = obj04D3.TienMatUSD + obj04D3.ChuyenKhoanUSD;
-            obj04D3.TongVND = obj04D3.TienMatVND + obj04D3.ChuyenKhoanVND;
+            obj04D3.TongVND = obj04D3.TienMatVND_QD + obj04D3.TienMatVND + obj04D3.ChuyenKhoanVND;
             obj04D3.MaNoiDung = "3";
             obj04D3.NoiDung = "Số quyết toán trong tháng";
             if (isQuy)
                 obj04D3.NoiDung = "Số tiền quyết toán {0}";
-            obj04D4.TongUSD = obj04D4.TienMatUSD + obj04D4.ChuyenKhoanUSD;
-            obj04D4.TongVND = obj04D4.TienMatVND + obj04D4.ChuyenKhoanVND;
+            obj04D4.TongVND = obj04D4.TienMatVND_QD + obj04D4.TienMatVND + obj04D4.ChuyenKhoanVND;
             obj04D4.MaNoiDung = "4";
             obj04D4.NoiDung = "Chi quyết toán trong tháng";
             if (isQuy)
                 obj04D4.NoiDung = "Số tiền chi quyết toán {0}";
-            obj04D5.TongUSD = obj04D5.TienMatUSD + obj04D5.ChuyenKhoanUSD;
-            obj04D5.TongVND = obj04D5.TienMatVND + obj04D5.ChuyenKhoanVND;
+            obj04D5.TongVND = obj04D5.TienMatVND_QD + obj04D5.TienMatVND + obj04D5.ChuyenKhoanVND;
             obj04D5.MaNoiDung = "5";
             obj04D5.NoiDung = "Thu hoàn tạm ứng trong tháng";
             if (isQuy)
                 obj04D5.NoiDung = "Số tiền thu hoàn tạm ứng {0}";
 
-            obj04D6.TongUSD = obj04D6.TienMatUSD + obj04D6.ChuyenKhoanUSD;
-            obj04D6.TongVND = obj04D6.TienMatVND + obj04D6.ChuyenKhoanVND;
+            obj04D6.TongVND = obj04D6.TienMatVND_QD + obj04D6.TienMatVND + obj04D6.ChuyenKhoanVND;
             obj04D6.MaNoiDung = "6";
             obj04D6.NoiDung = "Phải thu trong tháng tiếp theo";
             if (isQuy)
                 obj04D6.NoiDung = "Số phải thu chênh lệch tạm ứng quyết toán {0}";
-            obj04D7.TienMatVND = obj04D1.TienMatVND + obj04D2.TienMatVND - obj04D3.TienMatVND + obj04D4.TienMatVND - obj04D5.TienMatVND - obj04D6.TienMatVND;
+
+            obj04D7.TienMatVND_QD = obj04D1.TienMatVND_QD + obj04D2.TienMatVND_QD - obj04D3.TienMatVND_QD + obj04D4.TienMatVND_QD - obj04D5.TienMatVND_QD - obj04D6.TienMatVND_QD;
             obj04D7.TienMatUSD = obj04D1.TienMatUSD + obj04D2.TienMatUSD - obj04D3.TienMatUSD + obj04D4.TienMatUSD - obj04D5.TienMatUSD - obj04D6.TienMatUSD;
-
+            obj04D7.TienMatVND = obj04D1.TienMatVND + obj04D2.TienMatVND - obj04D3.TienMatVND + obj04D4.TienMatVND - obj04D5.TienMatVND - obj04D6.TienMatVND;
             obj04D7.ChuyenKhoanVND = obj04D1.ChuyenKhoanVND + obj04D2.ChuyenKhoanVND - obj04D3.ChuyenKhoanVND + obj04D4.ChuyenKhoanVND - obj04D5.ChuyenKhoanVND - obj04D6.ChuyenKhoanVND;
-            obj04D7.ChuyenKhoanUSD = obj04D1.ChuyenKhoanUSD + obj04D2.ChuyenKhoanUSD - obj04D3.ChuyenKhoanUSD + obj04D4.ChuyenKhoanUSD - obj04D5.ChuyenKhoanUSD - obj04D6.ChuyenKhoanUSD;
 
-            obj04D7.TongUSD = obj04D7.TienMatUSD + obj04D7.ChuyenKhoanUSD;
-            obj04D7.TongVND = obj04D7.TienMatVND + obj04D7.ChuyenKhoanVND;
+            obj04D7.TongVND = obj04D7.TienMatVND_QD + obj04D7.TienMatVND + obj04D7.ChuyenKhoanVND;
             obj04D7.MaNoiDung = "7";
             obj04D7.NoiDung = "Tổng số tiền chưa quyết toán chuyển sang tháng sau";
             if (isQuy)
@@ -1480,7 +1429,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
             foreach (VnsReportChuaQt obj in lstChuaQt)
             {
                 //DOng 2: tam  ung
-                obj04D1.TienMatVND += obj.TienMatVND;
+                obj04D1.TienMatVND_QD += obj.TienMatVND;
                 obj04D1.TienMatUSD += obj.TienMatUSD;
 
                 obj04D1.ChuyenKhoanVND += obj.ChuyenKhoanVND;
@@ -1488,7 +1437,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
             }
 
             obj04D1.TongUSD = obj04D1.TienMatUSD + obj04D1.ChuyenKhoanUSD;
-            obj04D1.TongVND = obj04D1.TienMatVND + obj04D1.ChuyenKhoanVND;
+            obj04D1.TongVND = obj04D1.TienMatVND_QD + obj04D1.ChuyenKhoanVND;
             obj04D1.NoiDung = "Số tiền chưa quyết toán kỳ trước chuyển sang";
 
             return obj04D1;

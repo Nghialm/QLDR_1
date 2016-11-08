@@ -76,7 +76,7 @@ namespace QuanLyDoanRa.Reports
                 objRT.TongVND += obj.PsTangVND;
 
                 objRT.TienMatUSD += obj.PsTangUSD;
-                objRT.TienMatVND += obj.PsTangVND;
+                objRT.TienMatVND_QD += obj.PsTangVND;
             }
 
             return objRT;
