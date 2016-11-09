@@ -1016,19 +1016,19 @@ namespace Vns.QuanLyDoanRa.Service.Report
 
                 obj04D3.TongVND = obj04D3.TienMatVND_QD + obj04D3.TienMatVND + obj04D3.ChuyenKhoanVND;
                 obj04D3.MaNoiDung = "3";
-                obj04D3.NoiDung = "Số tiền tạm ứng trong kỳ";
+                obj04D3.NoiDung = "Số tiền quyết toán trong kỳ";
 
                 obj04D4.TongVND = obj04D4.TienMatVND_QD + obj04D4.TienMatVND + obj04D4.ChuyenKhoanVND;
                 obj04D4.MaNoiDung = "4";
-                obj04D4.NoiDung = "Số quyết toán trong kỳ";
+                obj04D4.NoiDung = "Chi quyết toán trong kỳ";
 
                 obj04D5.TongVND = obj04D5.TienMatVND_QD + obj04D5.TienMatVND + obj04D5.ChuyenKhoanVND;
                 obj04D5.MaNoiDung = "5";
-                obj04D5.NoiDung = "Chi quyết toán trong kỳ";
+                obj04D5.NoiDung = "Thu hoàn tạm ứng trong kỳ";
 
                 obj04D6.TongVND = obj04D6.TienMatVND_QD + obj04D6.TienMatVND + obj04D6.ChuyenKhoanVND;
                 obj04D6.MaNoiDung = "6";
-                obj04D6.NoiDung = "Thu hoàn tạm ứng trong kỳ";
+                obj04D6.NoiDung = "Phải thu trong kỳ";
 
                 obj04D7.TienMatVND_QD = obj04D1.TienMatVND_QD + obj04D2.TienMatVND_QD - obj04D3.TienMatVND_QD + obj04D4.TienMatVND_QD - obj04D5.TienMatVND_QD - obj04D6.TienMatVND_QD;
                 obj04D7.TienMatUSD = obj04D1.TienMatUSD + obj04D2.TienMatUSD - obj04D3.TienMatUSD + obj04D4.TienMatUSD - obj04D5.TienMatUSD - obj04D6.TienMatUSD;
@@ -2110,7 +2110,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 RP_BC06DR objThangTruoc = new RP_BC06DR(objrp, objrp.LoaiDoanRaId, objrp.DoanRaId, objrp.TenLoaiDoanRa, objrp.TenDoanRaVietTat, objrp.TruongDoanFullName,
                     objrp.NuocCongTac, objrp.ThangDuyetQt,
                     objrp.CN_QT_PhaiThu_USD, objrp.CN_QT_PhaiThu_VND, objrp.CN_QT_PhaiThu_TG, objrp.CN_QT_VND_PhaiThu,
-                    objrp.CN_PhaiTra_TM_USD, objrp.CN_VND_PhaiTra_TM,
+                    objrp.CN_QT_TK_PhaiTra_USD, objrp.CN_QT_TK_PhaiTra_VND,
                     //objrp.Chi_QT_TM_USD, objrp.Chi_QT_CK_USD, objrp.Chi_QT_TONG_USD,
                     "Kỳ trước chuyển sang", 1, type);
 
@@ -2118,8 +2118,8 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 objThangTruoc.SoTbDuToan = objrp.SoTbDt;
                 objThangTruoc.SoTbQuyetToan = objrp.SoTbQt;
 
-                if ((objThangTruoc.Tong != 0 && type == 2) ||
-                    (objThangTruoc.USD != 0 && type == 1))
+                if ((objThangTruoc.HasData && type == 2) ||
+                    (objThangTruoc.HasData && type == 1))
                 {
                     lstData.Add(objThangTruoc);
                 }
@@ -2130,7 +2130,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 RP_BC06DR objThangNay = new RP_BC06DR(objrp, objrp.LoaiDoanRaId, objrp.DoanRaId, objrp.TenLoaiDoanRa, objrp.TenDoanRaVietTat, objrp.TruongDoanFullName,
                     objrp.NuocCongTac, objrp.ThangDuyetQt,
                     objrp.CN_QT_PhaiThu_USD, objrp.CN_QT_PhaiThu_VND, objrp.CN_QT_PhaiThu_TG, objrp.CN_QT_VND_PhaiThu,
-                    objrp.CN_PhaiTra_TM_USD, objrp.CN_VND_PhaiTra_TM,
+                    objrp.CN_QT_TK_PhaiTra_USD, objrp.CN_QT_TK_PhaiTra_VND,
                     //objrp.Chi_QT_TM_USD, objrp.Chi_QT_CK_USD, objrp.Chi_QT_TONG_USD,
                     "Kỳ này", 2, type);
 
@@ -2138,8 +2138,8 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 objThangNay.SoTbDuToan = objrp.SoTbDt;
                 objThangNay.SoTbQuyetToan = objrp.SoTbQt;
 
-                if ((objThangNay.Tong != 0 && type == 2) ||
-                    (objThangNay.USD != 0 && type == 1))
+                if ((objThangNay.HasData && type == 2) ||
+                    (objThangNay.HasData && type == 1))
                 {
                     lstData.Add(objThangNay);
                 }

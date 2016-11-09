@@ -270,7 +270,7 @@ namespace Vns.QuanLyDoanRa.Service
                 ty_gia_tb = qt_tm_vnd / qt_tm_usd;
                 foreach (VnsGiaoDich qt in lstGiaoDich)
                 {
-                    if (qt.MaTkNo == Globals.TkThanhToanTienMat)
+                    if (qt.MaTkNo == Globals.TkThanhToanTienMat && qt.NgoaiTeId == Globals.NgoaiTeId)
                     {
                         qt_tm_usd -= qt.SoTienNt;
                         if (qt_tm_usd == 0)

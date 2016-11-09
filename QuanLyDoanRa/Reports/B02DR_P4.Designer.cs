@@ -378,7 +378,7 @@
             // xrTableCell50
             // 
             this.xrTableCell50.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "CN_QT_PhaiThu_USD", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "CN_QT_VND_TM_PhaiThu", "{0:#,#}")});
             this.xrTableCell50.Name = "xrTableCell50";
             this.xrTableCell50.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);
             this.xrTableCell50.StylePriority.UsePadding = false;
@@ -908,21 +908,23 @@
             // 
             // xrTableCell35
             // 
+            this.xrTableCell35.Borders = DevExpress.XtraPrinting.BorderSide.Right;
             this.xrTableCell35.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
             this.xrTableCell35.Name = "xrTableCell35";
+            this.xrTableCell35.StylePriority.UseBorders = false;
             this.xrTableCell35.StylePriority.UseFont = false;
             this.xrTableCell35.Text = "USD";
-            this.xrTableCell35.Weight = 0.32256881309487512D;
+            this.xrTableCell35.Weight = 0.33869747654165427D;
             // 
             // xrTableCell94
             // 
-            this.xrTableCell94.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
+            this.xrTableCell94.Borders = DevExpress.XtraPrinting.BorderSide.Right;
             this.xrTableCell94.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
             this.xrTableCell94.Name = "xrTableCell94";
             this.xrTableCell94.StylePriority.UseBorders = false;
             this.xrTableCell94.StylePriority.UseFont = false;
             this.xrTableCell94.Text = "TG";
-            this.xrTableCell94.Weight = 0.35482569477534132D;
+            this.xrTableCell94.Weight = 0.33869703132856216D;
             // 
             // xrTableCell34
             // 
@@ -1183,10 +1185,12 @@
             this.xrTableCell106.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold);
             this.xrTableCell106.Name = "xrTableCell106";
             this.xrTableCell106.StylePriority.UseFont = false;
+            this.xrTableCell106.StylePriority.UseTextAlignment = false;
             xrSummary4.FormatString = "{0:#,#}";
             xrSummary4.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrTableCell106.Summary = xrSummary4;
             this.xrTableCell106.Text = "xrTableCell106";
+            this.xrTableCell106.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.xrTableCell106.Weight = 0.13684697958080327D;
             // 
             // xrTableCell46
@@ -1282,7 +1286,7 @@
             // xrTableCell73
             // 
             this.xrTableCell73.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "CN_QT_PhaiThu_USD")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "CN_QT_VND_TM_PhaiThu")});
             this.xrTableCell73.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold);
             this.xrTableCell73.Name = "xrTableCell73";
             this.xrTableCell73.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);
@@ -1537,7 +1541,7 @@
             // xrTableCell90
             // 
             this.xrTableCell90.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "CN_QT_PhaiThu_USD")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "CN_QT_VND_TM_PhaiThu")});
             this.xrTableCell90.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold);
             this.xrTableCell90.Name = "xrTableCell90";
             this.xrTableCell90.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);

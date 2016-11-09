@@ -111,6 +111,8 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             set { _STT = value; }
         }
 
+        public bool HasData = false;
+
         public RP_BC06DR()
         {
         }
@@ -132,6 +134,7 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                 _USD = obj.CN_PhaiThu_USD;
                 _QuyDoiVND = obj.CN_PhaiThu_VND;
                 _TG = obj.CN_PhaiThu_TG;
+                HasData = true;
             }
             else
             {
@@ -140,6 +143,7 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                 _QuyDoiVND = obj.CN_PhaiTra_CK_VND;
                 _Tong = obj.CN_PhaiTra_USD;
                 _TG = obj.CN_PhaiTra_TG;
+                HasData = true;
             }
         }
 
@@ -183,11 +187,17 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                 _QuyDoiVND = cnphaithuvnd;
                 _TG = cnphaithutg;
                 _VND = cnphaithuVnd;
+
+                if (_USD != 0 || _QuyDoiVND != 0 || _VND != 0)
+                    HasData = true;
             }
             else
             {
                 _USD = cnphaitrausd_USD;
                 _VND = cnphaitrausd_VND;
+
+                if (_USD != 0 || _VND != 0)
+                    HasData = true;
             }
         }
 

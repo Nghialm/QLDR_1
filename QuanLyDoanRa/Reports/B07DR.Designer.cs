@@ -104,7 +104,6 @@
             this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
             this.GroupHeader1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.formattingRule1 = new DevExpress.XtraReports.UI.FormattingRule();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.GroupHeader4 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.xrTable7 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow5 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -139,16 +138,17 @@
             this.KN_COUNT = new DevExpress.XtraReports.UI.CalculatedField();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -227,7 +227,7 @@
             // xrTableCell17
             // 
             this.xrTableCell17.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Tong", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "VND", "{0:#,#}")});
             this.xrTableCell17.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTableCell17.Name = "xrTableCell17";
             this.xrTableCell17.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);
@@ -582,7 +582,7 @@
             // xrTableCell23
             // 
             this.xrTableCell23.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Tong")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "VND")});
             this.xrTableCell23.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTableCell23.Name = "xrTableCell23";
             this.xrTableCell23.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -681,7 +681,7 @@
             // xrTableCell11
             // 
             this.xrTableCell11.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Tong")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "VND")});
             this.xrTableCell11.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTableCell11.Name = "xrTableCell11";
             this.xrTableCell11.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);
@@ -782,10 +782,6 @@
             this.formattingRule1.Formatting.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.formattingRule1.Name = "formattingRule1";
             // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = typeof(Vns.QuanLyDoanRa.Domain.Report.RP_BC06DR);
-            // 
             // GroupHeader4
             // 
             this.GroupHeader4.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -862,7 +858,7 @@
             // xrTableCell29
             // 
             this.xrTableCell29.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Tong")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "VND")});
             this.xrTableCell29.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTableCell29.Name = "xrTableCell29";
             this.xrTableCell29.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);
@@ -959,7 +955,7 @@
             // xrTableCell35
             // 
             this.xrTableCell35.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "KT_USD_SUM")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "KT_VND")});
             this.xrTableCell35.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTableCell35.Name = "xrTableCell35";
             this.xrTableCell35.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);
@@ -986,16 +982,19 @@
             // 
             // KT_VND
             // 
+            this.KT_VND.DataSource = this.bindingSource1;
             this.KT_VND.Expression = "Iif([GroupByTime] == 1, [VND] , 0)";
             this.KT_VND.Name = "KT_VND";
             // 
             // KN_USD
             // 
+            this.KN_USD.DataSource = this.bindingSource1;
             this.KN_USD.Expression = "Iif([GroupByTime] == 2, [USD] , 0)";
             this.KN_USD.Name = "KN_USD";
             // 
             // KN_VND
             // 
+            this.KN_VND.DataSource = this.bindingSource1;
             this.KN_VND.Expression = "Iif([GroupByTime] == 2, [VND] , 0)";
             this.KN_VND.Name = "KN_VND";
             // 
@@ -1077,7 +1076,7 @@
             // xrTableCell37
             // 
             this.xrTableCell37.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "KN_USD_SUM")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "KN_VND")});
             this.xrTableCell37.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTableCell37.Name = "xrTableCell37";
             this.xrTableCell37.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);
@@ -1098,6 +1097,7 @@
             // 
             // KT_USD_SUM
             // 
+            this.KT_USD_SUM.DataSource = this.bindingSource1;
             this.KT_USD_SUM.Expression = "Iif([GroupByTime] == 1, [Tong] , 0)";
             this.KT_USD_SUM.Name = "KT_USD_SUM";
             // 
@@ -1109,11 +1109,13 @@
             // 
             // KT_COUNT
             // 
+            this.KT_COUNT.DataSource = this.bindingSource1;
             this.KT_COUNT.Expression = "Iif([GroupByTime] ==1, [STT] , 0)";
             this.KT_COUNT.Name = "KT_COUNT";
             // 
             // KN_COUNT
             // 
+            this.KN_COUNT.DataSource = this.bindingSource1;
             this.KN_COUNT.Expression = "Iif([GroupByTime] ==2, [STT] , 0)";
             this.KN_COUNT.Name = "KN_COUNT";
             // 
@@ -1131,6 +1133,10 @@
             this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLine1.Name = "xrLine1";
             this.xrLine1.SizeF = new System.Drawing.SizeF(755.42F, 2F);
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = typeof(Vns.QuanLyDoanRa.Domain.Report.RP_BC06DR);
             // 
             // B07DR
             // 
@@ -1170,10 +1176,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -1253,7 +1259,6 @@
         private DevExpress.XtraReports.UI.XRTableCell lblChucDanhNguoiLapBieu;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow8;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell53;
-        private System.Windows.Forms.BindingSource bindingSource1;
         private DevExpress.XtraReports.UI.XRLabel lblTenBaoCao;
         private DevExpress.XtraReports.UI.CalculatedField KT_USD;
         private DevExpress.XtraReports.UI.CalculatedField KT_VND;
@@ -1274,5 +1279,6 @@
         private DevExpress.XtraReports.UI.XRPageInfo pageInfo1;
         private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
         private DevExpress.XtraReports.UI.XRLine xrLine1;
+        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }
