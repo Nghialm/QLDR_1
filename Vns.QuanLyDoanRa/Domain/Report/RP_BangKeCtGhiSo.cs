@@ -43,31 +43,75 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             objBangKe.DienGiai = objSoDu.DienGiai;
             objBangKe.TenLoaiDoanRa = objSoDu.TenLoaiDoanRa;
             objBangKe.TenDoanRa = objSoDu.TenDoanRa;
-            if (objSoDu.MaTkCo == Globals.TkTienMat && GiaTri == 2)
+            if (GiaTri == 2)
             {
-                objBangKe.TmTyGia = objSoDu.TyGia;
-                objBangKe.TmUSD = objSoDu.PsTangUSD;
-                objBangKe.TmVND = objSoDu.PsTangVND;
-            }
-            else if (objSoDu.MaTkCo == Globals.TkTienChuyenKhoan && GiaTri == 2)
-            {
-                objBangKe.CkTyGia = objSoDu.TyGia;
-                objBangKe.CkUSD = objSoDu.PsTangUSD;
-                objBangKe.CkVND = objSoDu.PsTangVND;
+                if (objSoDu.NgoaiTeId == Globals.NgoaiTeId)
+                {
+                    if (objSoDu.MaTkCo == Globals.TkTienMat)
+                    {
+                        objBangKe.TmTyGia = objSoDu.TyGia;
+                        objBangKe.TmUSD = objSoDu.PsTangUSD;
+                        objBangKe.TmVND = objSoDu.PsTangVND;
+                    }
+                    else if (objSoDu.MaTkCo == Globals.TkTienChuyenKhoan)
+                    {
+                        objBangKe.CkTyGia = objSoDu.TyGia;
+                        objBangKe.CkUSD = objSoDu.PsTangUSD;
+                        objBangKe.CkVND = objSoDu.PsTangVND;
+                    }
+                }
+                else if (objSoDu.NgoaiTeId == Globals.NoiTeId)
+                {
+                    if (objSoDu.MaTkCo == Globals.TkTienMatVND)
+                    {
+                        //objBangKe.TmTyGia = objSoDu.TyGia;
+                        //objBangKe.TmUSD = objSoDu.PsTangUSD;
+                        objBangKe.TmVND = objSoDu.PsTangVND;
+                    }
+                    else if (objSoDu.MaTkCo == Globals.TkTienChuyenKhoanVND)
+                    {
+                        //objBangKe.CkTyGia = objSoDu.TyGia;
+                        //objBangKe.CkUSD = objSoDu.PsTangUSD;
+                        objBangKe.CkVND = objSoDu.PsTangVND;
+                    }
+                }
             }
 
-            else if (objSoDu.MaTkNo == Globals.TkThanhToanTienMat && GiaTri == 3)
+            if (GiaTri == 3)
             {
-                objBangKe.TmTyGia = objSoDu.TyGia;
-                objBangKe.TmUSD = objSoDu.PsTangUSD;
-                objBangKe.TmVND = objSoDu.PsTangVND;
+                if (objSoDu.NgoaiTeId == Globals.NgoaiTeId)
+                {
+                    if (objSoDu.MaTkNo == Globals.TkThanhToanTienMat)
+                    {
+                        objBangKe.TmTyGia = objSoDu.TyGia;
+                        objBangKe.TmUSD = objSoDu.PsTangUSD;
+                        objBangKe.TmVND = objSoDu.PsTangVND;
+                    }
+                    else if (objSoDu.MaTkNo == Globals.TkThanhToanChuyenKhoan)
+                    {
+                        objBangKe.CkTyGia = objSoDu.TyGia;
+                        objBangKe.CkUSD = objSoDu.PsTangUSD;
+                        objBangKe.CkVND = objSoDu.PsTangVND;
+                    }
+                }
+                else if (objSoDu.NgoaiTeId == Globals.NoiTeId)
+                {
+                    if (objSoDu.MaTkNo == Globals.TkThanhToanTienMat)
+                    {
+                        //objBangKe.TmTyGia = objSoDu.TyGia;
+                        //objBangKe.TmUSD = objSoDu.PsTangUSD;
+                        objBangKe.TmVND = objSoDu.PsTangVND;
+                    }
+                    else if (objSoDu.MaTkNo == Globals.TkThanhToanChuyenKhoan)
+                    {
+                        //objBangKe.CkTyGia = objSoDu.TyGia;
+                        //objBangKe.CkUSD = objSoDu.PsTangUSD;
+                        objBangKe.CkVND = objSoDu.PsTangVND;
+                    }
+                }
+
             }
-            else if (objSoDu.MaTkNo == Globals.TkThanhToanChuyenKhoan && GiaTri == 3)
-            {
-                objBangKe.CkTyGia = objSoDu.TyGia;
-                objBangKe.CkUSD = objSoDu.PsTangUSD;
-                objBangKe.CkVND = objSoDu.PsTangVND;
-            }
+            
 
             objBangKe.TongUSD = objBangKe.TmUSD + objBangKe.CkUSD;
             objBangKe.TongVND = objBangKe.TmVND + objBangKe.CkVND;
