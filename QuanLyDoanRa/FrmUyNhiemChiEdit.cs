@@ -468,6 +468,13 @@ namespace QuanLyDoanRa
                             tmp.LoaiDoanRaNoId = tmp.LoaiDoanRaCoId;
                         }
                         break;
+                    case "colNgoaiTeId":
+                        if (tmp.NgoaiTeId == Vns.QuanLyDoanRa.Globals.NoiTeId)
+                        {
+                            tmp.SoTienNt = 1;
+                            tmp.TyGia = 1;
+                        }
+                        break;
 
                 }
                 _GridControl.RefreshDataSource();
@@ -671,6 +678,26 @@ namespace QuanLyDoanRa
 
             _GridControl.DataSource = lstGiaoDich;
             _GridControl.RefreshDataSource();
+        }
+
+        private void _GridView_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        {
+
+        }
+
+        private void _GridView_ShowingEditor(object sender, CancelEventArgs e)
+        {
+            if (_GridView.FocusedRowHandle < 0) return;
+            VnsGiaoDich tmp = (VnsGiaoDich)_GridView.GetRow(_GridView.FocusedRowHandle);
+
+            if (_GridView.FocusedColumn.Name == "colSoTienNte" || _GridView.FocusedColumn.Name == "colTyGia")
+            {
+                if (tmp.NgoaiTeId == Vns.QuanLyDoanRa.Globals.NoiTeId)
+                {
+                    e.Cancel = true;
+                }
+            }
+
         }
 
         //private void FrmUyNhiemChiEdit_Load(object sender, EventArgs e)

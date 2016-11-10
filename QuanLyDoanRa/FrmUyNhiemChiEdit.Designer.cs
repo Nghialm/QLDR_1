@@ -718,6 +718,8 @@
             this._GridView.OptionsView.ColumnAutoWidth = false;
             this._GridView.OptionsView.ShowFooter = true;
             this._GridView.OptionsView.ShowGroupPanel = false;
+            this._GridView.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this._GridView_RowCellStyle);
+            this._GridView.ShowingEditor += new System.ComponentModel.CancelEventHandler(this._GridView_ShowingEditor);
             this._GridView.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gvTamUng_CellValueChanged);
             this._GridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gvTamUng_KeyDown);
             // 
