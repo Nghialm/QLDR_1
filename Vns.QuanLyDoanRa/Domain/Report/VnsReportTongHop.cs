@@ -64,6 +64,13 @@ namespace Vns.QuanLyDoanRa.Domain.Report
         /// </summary>
         public decimal TU_VND_TK_CK { get; set; }
 
+        public decimal TU_VND_TONG_VND_USD
+        {
+            get {
+                return TU_VND_TK_CK + TU_TK_CK_VND;
+            }
+        }
+
         public decimal TU_TK_TONG_USD
         {
             get { return TU_TK_TM_USD + TU_TK_CK_USD; }
@@ -438,6 +445,17 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                 decimal temp = TU_VND_CK + Chi_VND_QT_CK - CN_VND_PhaiThu_CK - TH_VND_CK;
                 if (temp > 0) return temp;
                 return 0;
+            }
+        }
+
+        /// <summary>
+        /// Số tiền quyết toán chuyển khoản VND + CK ngoại tệ quy đổi ra VNĐ
+        /// </summary>
+        public decimal So_QT_TONG_VND_USD
+        {
+            get 
+            {
+                return So_QT_CK_VND + So_QT_VND_CK;
             }
         }
 
@@ -1172,6 +1190,7 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             string lct = "";
             foreach (VnsLichCongTac obj in lst)
             {
+                if (obj.objNuocDen != null)
                 if (lct == "")
                 {
                     lct = obj.objNuocDen.TenNuoc;
@@ -1324,6 +1343,17 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                 {
                     return TU_VND_CK;
                 }
+            }
+        }
+
+        /// <summary>
+        /// Tạm ứng CK VND + CK USD (Quy ra VNĐ)
+        /// </summary>
+        public decimal TU_VND_TONG_CK_VND_USD
+        {
+            get
+            {
+                return TU_VND_CK_MR + TU_CK_VND_MR;
             }
         }
 

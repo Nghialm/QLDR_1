@@ -977,13 +977,13 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 obj04D2.TienMatVND_QD += obj.TU_TK_TM_VND; /*obj.TU_TM_VND_MR;*/
                 obj04D2.TienMatUSD += obj.TU_TK_TM_USD; /*obj.TU_TM_USD_MR;*/
                 obj04D2.TienMatVND += obj.TU_VND_TK_TM;
-                obj04D2.ChuyenKhoanVND += obj.TU_VND_TK_CK; /*obj.TU_CK_VND_MR;*/
+                obj04D2.ChuyenKhoanVND += obj.TU_VND_TONG_VND_USD; //Bao gồm tạm ứng CK VNĐ + tiền USD ck (quy đổi ra VNĐ)
 
                 //Dong 3 tien quyet toan
                 obj04D3.TienMatVND_QD += obj.So_QT_TM_VND;
                 obj04D3.TienMatUSD += obj.So_QT_TM_USD;
                 obj04D3.TienMatVND += obj.So_QT_VND_TM;
-                obj04D3.ChuyenKhoanVND += obj.So_QT_VND_CK;
+                obj04D3.ChuyenKhoanVND += obj.So_QT_TONG_VND_USD; //Bao gồm tiền VNĐ Ck và tiền USD chuyển khoản (quy đổi ra VNĐ)
 
                 //Dong 4 Chi quyet toan
                 obj04D4.TienMatVND_QD += obj.Chi_QT_TM_VND;
@@ -1157,13 +1157,13 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 obj04D2.TienMatVND_QD += obj.TU_TK_TM_VND; /*obj.TU_TM_VND_MR;*/
                 obj04D2.TienMatUSD += obj.TU_TK_TM_USD; /*obj.TU_TM_USD_MR;*/
                 obj04D2.TienMatVND += obj.TU_VND_TK_TM;
-                obj04D2.ChuyenKhoanVND += obj.TU_VND_TK_CK; /*obj.TU_CK_VND_MR;*/
+                obj04D2.ChuyenKhoanVND += obj.TU_VND_TONG_VND_USD; //Bao gồm tạm ứng CK VNĐ + tiền USD ck (quy đổi ra VNĐ)
 
                 //Dong 3 tien quyet toan
                 obj04D3.TienMatVND_QD += obj.So_QT_TM_VND;
                 obj04D3.TienMatUSD += obj.So_QT_TM_USD;
                 obj04D3.TienMatVND += obj.So_QT_VND_TM;
-                obj04D3.ChuyenKhoanVND += obj.So_QT_VND_CK;
+                obj04D3.ChuyenKhoanVND += obj.So_QT_TONG_VND_USD; //Bao gồm tiền VNĐ Ck và tiền USD chuyển khoản (quy đổi ra VNĐ)
 
                 //Dong 4 Chi quyet toan
                 obj04D4.TienMatVND_QD += obj.Chi_QT_TM_VND;
@@ -1196,19 +1196,19 @@ namespace Vns.QuanLyDoanRa.Service.Report
 
                 obj04D3.TongVND = obj04D3.TienMatVND_QD + obj04D3.TienMatVND + obj04D3.ChuyenKhoanVND;
                 obj04D3.MaNoiDung = "3";
-                obj04D3.NoiDung = "Số tiền tạm ứng trong kỳ";
+                obj04D3.NoiDung = "Số quyết toán trong kỳ";
 
                 obj04D4.TongVND = obj04D4.TienMatVND_QD + obj04D4.TienMatVND + obj04D4.ChuyenKhoanVND;
                 obj04D4.MaNoiDung = "4";
-                obj04D4.NoiDung = "Số quyết toán trong kỳ";
+                obj04D4.NoiDung = "Chi quyết toán trong kỳ";
 
                 obj04D5.TongVND = obj04D5.TienMatVND_QD + obj04D5.TienMatVND + obj04D5.ChuyenKhoanVND;
                 obj04D5.MaNoiDung = "5";
-                obj04D5.NoiDung = "Chi quyết toán trong kỳ";
+                obj04D5.NoiDung = "Thu hoàn tạm ứng trong kỳ";
 
                 obj04D6.TongVND = obj04D6.TienMatVND_QD + obj04D6.TienMatVND + obj04D6.ChuyenKhoanVND;
                 obj04D6.MaNoiDung = "6";
-                obj04D6.NoiDung = "Thu hoàn tạm ứng trong kỳ";
+                obj04D6.NoiDung = "Phải thu trong kỳ";
 
                 obj04D7.TienMatVND_QD = obj04D1.TienMatVND_QD + obj04D2.TienMatVND_QD - obj04D3.TienMatVND_QD + obj04D4.TienMatVND_QD - obj04D5.TienMatVND_QD - obj04D6.TienMatVND_QD;
                 obj04D7.TienMatUSD = obj04D1.TienMatUSD + obj04D2.TienMatUSD - obj04D3.TienMatUSD + obj04D4.TienMatUSD - obj04D5.TienMatUSD - obj04D6.TienMatUSD;
@@ -1251,13 +1251,13 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 obj04D2.TienMatVND_QD += obj.TU_TK_TM_VND; /*obj.TU_TM_VND_MR;*/
                 obj04D2.TienMatUSD += obj.TU_TK_TM_USD; /*obj.TU_TM_USD_MR;*/
                 obj04D2.TienMatVND += obj.TU_VND_TK_TM;
-                obj04D2.ChuyenKhoanVND += obj.TU_VND_TK_CK; /*obj.TU_CK_VND_MR;*/
+                obj04D2.ChuyenKhoanVND += obj.TU_VND_TONG_VND_USD; //Bao gồm tạm ứng CK VNĐ + tiền USD ck (quy đổi ra VNĐ)
 
                 //Dong 3 tien quyet toan
                 obj04D3.TienMatVND_QD += obj.So_QT_TM_VND;
                 obj04D3.TienMatUSD += obj.So_QT_TM_USD;
                 obj04D3.TienMatVND += obj.So_QT_VND_TM;
-                obj04D3.ChuyenKhoanVND += obj.So_QT_VND_CK;
+                obj04D3.ChuyenKhoanVND += obj.So_QT_TONG_VND_USD; //Bao gồm tiền VNĐ Ck và tiền USD chuyển khoản (quy đổi ra VNĐ)
 
                 //Dong 4 Chi quyet toan
                 obj04D4.TienMatVND_QD += obj.Chi_QT_TM_VND;
@@ -1339,14 +1339,14 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 obj04D2.TienMatUSD += obj.TU_TK_TM_USD; /*obj.TU_TM_USD_MR;*/
 
                 obj04D2.TienMatVND += obj.TU_VND_TK_TM;
-                obj04D2.ChuyenKhoanVND += obj.TU_VND_TK_CK;
+                obj04D2.ChuyenKhoanVND += obj.TU_VND_TONG_VND_USD; //Bao gồm tạm ứng CK VNĐ + tiền USD ck (quy đổi ra VNĐ)
 
                 //Dong 3 tien quyet toan
                 obj04D3.TienMatVND_QD += obj.So_QT_TM_VND;
                 obj04D3.TienMatUSD += obj.So_QT_TM_USD;
 
                 obj04D3.TienMatVND += obj.So_QT_VND_TM;
-                obj04D3.ChuyenKhoanVND += obj.So_QT_VND_CK;
+                obj04D3.ChuyenKhoanVND += obj.So_QT_TONG_VND_USD; //Bao gồm tiền VNĐ Ck và tiền USD chuyển khoản (quy đổi ra VNĐ)
 
                 //Dong 4 Chi quyet toan
                 obj04D4.TienMatVND_QD += obj.Chi_QT_TM_VND;

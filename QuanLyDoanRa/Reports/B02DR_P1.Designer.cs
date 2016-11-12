@@ -448,7 +448,7 @@
             this.xrTableCell52.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTableCell52.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "TU_VND_CK_MR", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "TU_VND_TONG_CK_VND_USD", "{0:#,#}")});
             this.xrTableCell52.Font = new System.Drawing.Font("Times New Roman", 8.25F);
             this.xrTableCell52.Name = "xrTableCell52";
             this.xrTableCell52.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);
@@ -1299,7 +1299,7 @@
             // xrTableCell77
             // 
             this.xrTableCell77.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "TU_VND_CK_MR")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "TU_VND_TONG_CK_VND_USD")});
             this.xrTableCell77.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold);
             this.xrTableCell77.Name = "xrTableCell77";
             this.xrTableCell77.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);
@@ -1541,7 +1541,7 @@
             // xrTableCell92
             // 
             this.xrTableCell92.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "TU_VND_CK_MR")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "TU_VND_TONG_CK_VND_USD")});
             this.xrTableCell92.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold);
             this.xrTableCell92.Name = "xrTableCell92";
             this.xrTableCell92.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);
