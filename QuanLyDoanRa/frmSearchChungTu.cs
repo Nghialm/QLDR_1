@@ -29,6 +29,7 @@ namespace QuanLyDoanRa
         public IVnsChungTuService VnsChungTuService;
         public IVnsGiaoDichService VnsGiaoDichService;
         public IVnsNghiepVuService VnsNghiepVuService;
+        public IVnsNgoaiTeService VnsNgoaiTeService;
         #endregion
 
         #region"Variables"
@@ -63,6 +64,10 @@ namespace QuanLyDoanRa
             cboLoaiDoanRa.Properties.ValueMember = "Id";
             cboLoaiDoanRa.Properties.DisplayMember = "TenLoaiDoanRa";
 
+            List<VnsNgoaiTe> lstNgoaiTe = new List<VnsNgoaiTe>();
+            lstNgoaiTe.Add(new VnsNgoaiTe());
+            lstNgoaiTe.AddRange(VnsNgoaiTeService.GetAll());
+            cboNgoaiTe.DataSource = lstNgoaiTe;
 
             ////_GridView.Columns
             IList<VnsNghiepVu> lstNghiepVu = VnsNghiepVuService.GetAll();
@@ -76,6 +81,10 @@ namespace QuanLyDoanRa
             cboLoaiDoanRaCoId.DataSource = lstLoaiDoanRa;
             cboLoaiDoanRaNoId.DataSource = lstLoaiDoanRa;
 
+            cboNgoaiTeId.Properties.DataSource = lstNgoaiTe;
+            cboNgoaiTeId.Properties.DisplayMember = "MaNgoaiTe";
+            cboNgoaiTeId.Properties.ValueMember = "Id";
+
         }
 
         private void Search()
@@ -85,6 +94,8 @@ namespace QuanLyDoanRa
             DateTime pDenNgay = dteDenNgay.DateTime;
             Guid pDoanRaId =(cboDoanRa.EditValue == null ? new Guid() : new Guid(cboDoanRa.EditValue.ToString()));
             Guid pLoaiDoanRaId =(cboLoaiDoanRa.EditValue == null ? new Guid() : new Guid(cboLoaiDoanRa.EditValue.ToString()));
+            Guid pNgoaiTeId = (cboNgoaiTeId.EditValue == null ? new Guid() : new Guid(cboNgoaiTeId.EditValue.ToString()));
+
             Decimal pSoTienTu;
             if (txtSoTienTu.Text.Trim ()== "")
                 pSoTienTu=0;
@@ -98,11 +109,28 @@ namespace QuanLyDoanRa
             else
                 pSoTienDen= decimal.Parse(txtSoTienDen.Text);
 
+            Decimal pSoTienVNDTu;
+            if (txtSoTienVNDTu.Text.Trim() == "")
+                pSoTienVNDTu = 0;
+            else
+                pSoTienVNDTu = decimal.Parse(txtSoTienVNDTu.Text);
+
+            Decimal pSoTienVNDDen;
+
+            if (txtSoTienVNDDen.Text.Trim() == "")
+                pSoTienVNDDen = 0;
+            else
+                pSoTienVNDDen = decimal.Parse(txtSoTienVNDDen.Text);
+
             String pNguoiTamUng = txtNguoiTamUng.Text;
             String pNoiDung = txtNoiDung.Text;
             String pMaTkCo = txtMaTkCo.Text.Trim();
             String pMaTkNo = txtMaTkNo.Text.Trim();
-            IList<VnsChungTu> lstChungTu = VnsChungTuService.SearchChungTu(pMaLoaiCt, pTuNgay, pDenNgay,pMaTkNo,pMaTkCo, pDoanRaId, pLoaiDoanRaId, pSoTienTu, pSoTienDen, pNguoiTamUng, pNoiDung);
+            IList<VnsChungTu> lstChungTu = VnsChungTuService.SearchChungTu(pMaLoaiCt, pTuNgay, pDenNgay,pMaTkNo,pMaTkCo, pDoanRaId, pLoaiDoanRaId, 
+                pNgoaiTeId, 
+                pSoTienTu, pSoTienDen, 
+                pSoTienVNDTu, pSoTienVNDDen,
+                pNguoiTamUng, pNoiDung);
             grcDanhSach.DataSource = lstChungTu;
 
             if (lstChungTu.Count == 0)

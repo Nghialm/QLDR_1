@@ -41,9 +41,17 @@ namespace Vns.QuanLyDoanRa.Service
             return VnsChungTuDao.ListChungTuTuNgayDenNgay(dTuNgay, dDenNgay, strMaLoaiChungTu);
         }
 
-        public IList<VnsChungTu> SearchChungTu(String p_MaLoaiCt, DateTime p_TuNgay, DateTime p_DenNgay, String p_MaTkNo, String p_MaTkCo, Guid p_DoanRaId, Guid p_LoaiDoanRaId, Decimal p_SoTienTu, Decimal p_SoTienDen, String p_NguoiTamUng, String p_NoiDung)
+        public IList<VnsChungTu> SearchChungTu(String p_MaLoaiCt, DateTime p_TuNgay, DateTime p_DenNgay, String p_MaTkNo, String p_MaTkCo, Guid p_DoanRaId, Guid p_LoaiDoanRaId, 
+            Guid pNgoaiTeId,
+            Decimal p_SoTienTu, Decimal p_SoTienDen,
+            Decimal p_SoTienVndTu, Decimal p_SoTienVndDen, 
+            String p_NguoiTamUng, String p_NoiDung)
         {
-            return VnsChungTuDao.SearchChungTu(p_MaLoaiCt, p_TuNgay, p_DenNgay, p_MaTkNo, p_MaTkCo, p_DoanRaId, p_LoaiDoanRaId, p_SoTienTu, p_SoTienDen, p_NguoiTamUng, p_NoiDung);
+            return VnsChungTuDao.SearchChungTu(p_MaLoaiCt, p_TuNgay, p_DenNgay, p_MaTkNo, p_MaTkCo, p_DoanRaId, p_LoaiDoanRaId, 
+                pNgoaiTeId,
+                p_SoTienTu, p_SoTienDen, 
+                p_SoTienVndTu, p_SoTienVndDen,
+                p_NguoiTamUng, p_NoiDung);
         }
 
         public void DeleteChungTu(VnsChungTu objChungTu)

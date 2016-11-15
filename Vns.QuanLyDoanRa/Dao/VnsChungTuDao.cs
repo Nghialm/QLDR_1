@@ -54,7 +54,11 @@ namespace Vns.QuanLyDoanRa.Dao.NHibernate
             return q.List<VnsChungTu>();
         }
 
-        public IList<VnsChungTu> SearchChungTu(String p_MaLoaiCt, DateTime p_TuNgay, DateTime p_DenNgay,String p_MaTkNo, String p_MaTkCo, Guid p_DoanRaId, Guid p_LoaiDoanRaId, Decimal p_SoTienTu, Decimal p_SoTienDen, String p_NguoiTamUng, String p_NoiDung)
+        public IList<VnsChungTu> SearchChungTu(String p_MaLoaiCt, DateTime p_TuNgay, DateTime p_DenNgay,String p_MaTkNo, String p_MaTkCo, Guid p_DoanRaId, Guid p_LoaiDoanRaId,
+            Guid p_NgoaiTeId,
+            Decimal p_SoTienTu, Decimal p_SoTienDen,
+            Decimal p_SoTienVndTu, Decimal p_SoTienVndDen, 
+            String p_NguoiTamUng, String p_NoiDung)
         {
             string sql = "select DISTINCT ct.id as id, ct.NgayCt as NgayCt,ct.NgayHt as NgayHt, ct.SoCt as SoCt , ct.LoaiChungTutId as LoaiChungTutId, ct.MaLoaiChungTu as MaLoaiChungTu, ct.NoiDung as NoiDung, ct.NguoiLapPhieu as NguoiLapPhieu, ct.NguoiGiaoDich as NguoiGiaoDich " +
                          "from VnsChungTu ct " +
@@ -64,8 +68,11 @@ namespace Vns.QuanLyDoanRa.Dao.NHibernate
                          (string.IsNullOrEmpty(p_MaTkCo) ? "" : "AND gd.MaTkCo like :p_MaTkCo ") +
                          (p_DoanRaId == new Guid() ? "" : "AND (gd.DoanRaNoId =: p_DoanRaId OR gd.DoanRaCoId =:p_DoanRaId) ") +
                          (p_LoaiDoanRaId == new Guid() ? "" : "AND (gd.LoaiDoanRaNoId =: p_LoaiDoanRaId OR gd.LoaiDoanRaCoId =:p_LoaiDoanRaId) ") +
+                         (p_NgoaiTeId == new Guid() ? "" : "AND (gd.NgoaiTeId =: p_NgoaiTeId) ") +
                          (p_SoTienTu == 0 ? "" : "AND SoTienNt >=:p_SoTienTu ") +
                          (p_SoTienDen == 0 ? "" : "AND SoTienNt <=:p_SoTienDen ") +
+                         (p_SoTienVndTu == 0 ? "" : "AND gd.SoTien >=:p_SoTienVndTu ") +
+                         (p_SoTienVndDen == 0 ? "" : "AND gd.SoTien <=:p_SoTienVndDen ") +
                          (String.IsNullOrEmpty(p_NguoiTamUng) ? "" : "AND ct.NguoiGiaoDich like :p_NguoiTamUng ") +
                          (String.IsNullOrEmpty(p_NoiDung) ? "" : "AND ct.NoiDung like :p_NoiDung ") +
                          (String.IsNullOrEmpty(p_MaLoaiCt) ? "" : "AND ct.MaLoaiChungTu =: p_MaLoaiCt ") +
@@ -83,6 +90,10 @@ namespace Vns.QuanLyDoanRa.Dao.NHibernate
             if (!String.IsNullOrEmpty(p_NoiDung)) q.SetParameter("p_NoiDung", "%" + p_NoiDung + "%");
             if (!(p_SoTienTu == 0)) q.SetParameter("p_SoTienTu", p_SoTienTu);
             if (!(p_SoTienDen == 0)) q.SetParameter("p_SoTienDen", p_SoTienDen);
+            if (!(p_SoTienVndTu == 0)) q.SetParameter("p_SoTienVndTu", p_SoTienVndTu);
+            if (!(p_SoTienVndDen == 0)) q.SetParameter("p_SoTienVndDen", p_SoTienVndDen);
+            if (p_NgoaiTeId != new Guid()) q.SetParameter("p_NgoaiTeId", p_NgoaiTeId);
+            
             q.SetResultTransformer(Transformers.AliasToBean<VnsChungTu>());
             return q.List<VnsChungTu>();
         }

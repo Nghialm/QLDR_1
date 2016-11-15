@@ -53,8 +53,10 @@ namespace QuanLyDoanRa
             m_objChungTu = p_objChungTu;
             m_groupCt = groupCt;
 
+            
+
             /*Trong truong hop giay bao no, nguoi dung can chi tiet so can cu quyet toan => dung truong MoTa de luu thong tin nay*/
-            if (groupCt == "GBN")
+            if (groupCt == "GBN" || groupCt == "GBN_VND")
             {
                 colMoTa.Visible = true;
             }
@@ -82,26 +84,30 @@ namespace QuanLyDoanRa
 
         private void InitControl()
         {
+            VnsLoaiChungTu objLoaiChungTu = VnsLoaiChungTuService.GetByMa(m_groupCt);
+            if (objLoaiChungTu != null)
+                this.Text = objLoaiChungTu.Ten;
+
             if (m_groupCt == "NPT")
             {
-                this.Text = "Phiếu thu";
+                //this.Text = "Phiếu thu";
                 btDSKhoNte.Visible = false;
             }
             else if (m_groupCt == "NPC")
             {
-                this.Text = "Phiếu chi";
+                //this.Text = "Phiếu chi";
                 btDSKhoNte.Visible = true;
             }
             else if (m_groupCt == "KTK")
                 this.Text = "Phiếu kế toán khác";
             else if (m_groupCt == "GBN")
             {
-                this.Text = "Giấy báo nợ";
+                //this.Text = "Giấy báo nợ";
                 btDSKhoNte.Visible = true;
             }
             else if (m_groupCt == "GBC")
             {
-                this.Text = "Giấy báo có";
+                //this.Text = "Giấy báo có";
                 btDSKhoNte.Visible = false;
             }
             if (m_FormStatus == FormUpdate.Insert)

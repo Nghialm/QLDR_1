@@ -81,9 +81,10 @@ namespace QuanLyDoanRa
             lueTrangThai.Properties.DisplayMember = "Ten";
             lueTrangThai.Properties.ValueMember = "GiaTri";
 
-            cboNuocDen.DataSource = this.VnsDmQuocGiaService.GetAll();
-            cboNuocDen.DisplayMember = "TenNuoc";
-            cboNuocDen.ValueMember = "Id";
+            //cboNuocDen.DataSource = this.VnsDmQuocGiaService.GetAll();
+            //cboNuocDen.DisplayMember = "TenNuoc";
+            //cboNuocDen.ValueMember = "Id";
+            rcboNuocDen.DataSource = this.VnsDmQuocGiaService.GetAll();
 
             luegTrangThai.DataSource = VnsDmHeThongService.GetByDoiTuong("TRANGTHAI_DOANRA");
             luegTrangThai.DisplayMember = "Ten";

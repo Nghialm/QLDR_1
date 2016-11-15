@@ -1146,7 +1146,7 @@
             // 
             // colNgoaiTeId
             // 
-            this.colNgoaiTeId.Caption = "Ngoại tệ";
+            this.colNgoaiTeId.Caption = "Loại tiền";
             this.colNgoaiTeId.ColumnEdit = this.cboNgoaiTe;
             this.colNgoaiTeId.FieldName = "NgoaiTeId";
             this.colNgoaiTeId.Name = "colNgoaiTeId";

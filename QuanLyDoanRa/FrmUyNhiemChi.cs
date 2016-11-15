@@ -213,29 +213,30 @@ namespace QuanLyDoanRa
         {
             NhomLoaiChungTu = this.AccessibleDescription;
 
-            //objLoaiChungTu = VnsLoaiChungTuService.GetByMa(MaLoaiChungTu);
-            //if (objLoaiChungTu != null)
-            //    this.Text = objLoaiChungTu.Ten;
-            if (NhomLoaiChungTu == "NPT")
-            {
-                this.Text = "Phiếu thu";
-            }
-            else if(NhomLoaiChungTu =="NPC")
-            {
-                this.Text = "Phiếu chi";
-            }
-            else if (NhomLoaiChungTu == "KTK")
-            {
-                this.Text = "Phiếu kế toán khác";
-            }
-            else if (NhomLoaiChungTu == "GBN")
-            {
-                this.Text = "Giấy báo nợ";
-            }
-            else if (NhomLoaiChungTu == "GBC")
-            {
-                this.Text = "Giấy báo có";
-            }
+            VnsLoaiChungTu objLoaiChungTu = VnsLoaiChungTuService.GetByMa(NhomLoaiChungTu);
+            if (objLoaiChungTu != null)
+                this.Text = objLoaiChungTu.Ten;
+
+            //if (NhomLoaiChungTu == "NPT")
+            //{
+            //    this.Text = "Phiếu thu";
+            //}
+            //else if(NhomLoaiChungTu =="NPC")
+            //{
+            //    this.Text = "Phiếu chi";
+            //}
+            //else if (NhomLoaiChungTu == "KTK")
+            //{
+            //    this.Text = "Phiếu kế toán khác";
+            //}
+            //else if (NhomLoaiChungTu == "GBN")
+            //{
+            //    this.Text = "Giấy báo nợ";
+            //}
+            //else if (NhomLoaiChungTu == "GBC")
+            //{
+            //    this.Text = "Giấy báo có";
+            //}
             
             BindCombo();
             LoadData(CurrentPageIndex);

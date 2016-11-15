@@ -267,6 +267,7 @@
 		<property name="VnsChungTuService" ref="VnsChungTuService"/>
 		<property name="VnsGiaoDichService" ref="VnsGiaoDichService"/>
 		<property name="VnsNghiepVuService" ref="VnsNghiepVuService"/>
+    <property name="VnsNgoaiTeService" ref="VnsNgoaiTeService"/>
 	</object>
 
 	<object id="frmInPhieu" type="QuanLyDoanRa.Reports.frmInPhieu, QuanLyDoanRa" singleton="false">
