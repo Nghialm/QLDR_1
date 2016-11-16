@@ -389,6 +389,7 @@ namespace Vns.QuanLyDoanRa.Service
                 if (objGDich.MaTkCo == Globals.TkTienMatVND)
                 {
                     view.TienTamUngVND = objGDich.SoTien;
+                    view.PhieuChiVndSo = objChungTu.SoCt;
                 }
 
                 view.TongSoVND = objGDich.SoTien;

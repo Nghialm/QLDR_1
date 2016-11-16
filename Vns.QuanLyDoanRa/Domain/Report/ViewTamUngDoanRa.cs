@@ -51,20 +51,28 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             get { return _TruongDoan; }
             set { _TruongDoan = value; }
         }
-        private string _PhieuChiSo;
 
+        private string _PhieuChiSo;
         public string PhieuChiSo
         {
             get { return _PhieuChiSo; }
             set { _PhieuChiSo = value; }
         }
+        
         private string _UNCSo;
-
         public string UNCSo
         {
             get { return _UNCSo; }
             set { _UNCSo = value; }
         }
+
+        private string _PhieuChiVndSo;
+        public string PhieuChiVndSo
+        {
+            get { return _PhieuChiVndSo; }
+            set { _PhieuChiVndSo = value; }
+        }
+
         private string _SoTBDuToan;
 
         public string SoTBDuToan
