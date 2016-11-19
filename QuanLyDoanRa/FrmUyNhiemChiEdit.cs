@@ -578,17 +578,21 @@ namespace QuanLyDoanRa
             {
                 if (!CheckInput())
                     return;
-                VnsDmKhachHang objKhachHang = (VnsDmKhachHang)cboMaKhachHang.Properties.GetRowByKeyValue(cboMaKhachHang.EditValue);
-                if (objKhachHang == null)
-                    objKhachHang = new VnsDmKhachHang();
-                Decimal SoTien = 0;
-                foreach (VnsGiaoDich obj in lstGiaoDich)
-                {
-                    SoTien = SoTien + obj.SoTienNt;
-                    obj.NoiDung = txtNoiDung.Text;
-                }
-                InUyNhiemChi PrintUyNhiem = new InUyNhiemChi(m_objChungTu, objKhachHang, lstGiaoDich, SoTien, dteNgayCt.DateTime);
-                PrintUyNhiem.ShowPreviewDialog();
+
+                ReportHelper rpHelper = new ReportHelper();
+                rpHelper.CallReportUyNhiemChi(m_objChungTu, lstGiaoDich);
+
+                //VnsDmKhachHang objKhachHang = (VnsDmKhachHang)cboMaKhachHang.Properties.GetRowByKeyValue(cboMaKhachHang.EditValue);
+                //if (objKhachHang == null)
+                //    objKhachHang = new VnsDmKhachHang();
+                //Decimal SoTien = 0;
+                //foreach (VnsGiaoDich obj in lstGiaoDich)
+                //{
+                //    SoTien = SoTien + obj.SoTienNt;
+                //    obj.NoiDung = txtNoiDung.Text;
+                //}
+                //InUyNhiemChi PrintUyNhiem = new InUyNhiemChi(m_objChungTu, objKhachHang, lstGiaoDich, SoTien, dteNgayCt.DateTime);
+                //PrintUyNhiem.ShowPreviewDialog();
             }
             catch (Exception ex)
             {

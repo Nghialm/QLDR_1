@@ -7,6 +7,10 @@ using System.Xml;
 using Vns.Erp.Core;
 using System.Windows.Forms;
 
+using Vns.QuanLyDoanRa.Service.Interface;
+using QuanLyDoanRa.Reports;
+//using Vns.QuanLyDoanRa.Service;
+
 namespace QuanLyDoanRa
 {
     public class General
@@ -133,5 +137,41 @@ namespace QuanLyDoanRa
     public enum FormUpdate
     {
         Insert, Update, Edit, Delete, View
+    }
+
+    public class ReportHelper
+    {
+        public void CallReportUyNhiemChi(VnsChungTu objChungTu, IList<VnsGiaoDich> lstGiaoDich)
+        {
+            Boolean IsNgoaiTe = false;
+
+            IVnsDmKhachHangService VnsDmKhachHangService = (IVnsDmKhachHangService)ObjectFactory.GetObject("VnsDmKhachHangService");
+            VnsDmKhachHang objKhachHang = VnsDmKhachHangService.GetById(lstGiaoDich[0].KhachHangCoId);
+
+            if (objKhachHang == null)
+                objKhachHang = new VnsDmKhachHang();
+            Decimal SoTienNte = 0;
+            Decimal SoTienVnd = 0;
+            foreach (VnsGiaoDich obj in lstGiaoDich)
+            {
+                if (obj.NgoaiTeId == Vns.QuanLyDoanRa.Globals.NoiTeId) IsNgoaiTe = false;
+                else IsNgoaiTe = true;
+
+                SoTienNte += obj.SoTienNt;
+                SoTienVnd += obj.SoTien;
+                obj.NoiDung = objChungTu.NoiDung;
+            }
+
+            if (IsNgoaiTe)
+            {
+                InUyNhiemChi PrintUyNhiem = new InUyNhiemChi(objChungTu, objKhachHang, lstGiaoDich, SoTienNte, objChungTu.NgayCt);
+                PrintUyNhiem.ShowPreviewDialog();
+            }
+            else
+            {
+                InUyNhiemChiVnd PrintUyNhiemVnd = new InUyNhiemChiVnd(objChungTu, objKhachHang, lstGiaoDich, SoTienVnd, objChungTu.NgayCt);
+                PrintUyNhiemVnd.ShowPreviewDialog();
+            }
+        }
     }
 }

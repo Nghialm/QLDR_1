@@ -409,17 +409,20 @@ namespace QuanLyDoanRa
                     return;
                 }
 
-                VnsDmKhachHang objKhachHang = VnsDmKhachHangService.GetById(lstGiaoDich[0].KhachHangCoId);
-                if (objKhachHang == null)
-                    objKhachHang = new VnsDmKhachHang();
-                Decimal SoTien = 0;
-                foreach (VnsGiaoDich obj in lstGiaoDich)
-                {
-                    SoTien = SoTien + obj.SoTienNt;
-                    obj.NoiDung = objChungTu.NoiDung;
-                }
-                InUyNhiemChi PrintUyNhiem = new InUyNhiemChi(objChungTu,objKhachHang, lstGiaoDich, SoTien, objChungTu.NgayCt);
-                PrintUyNhiem.ShowPreviewDialog();
+                ReportHelper rpHelper = new ReportHelper();
+                rpHelper.CallReportUyNhiemChi(objChungTu, lstGiaoDich);
+
+                //VnsDmKhachHang objKhachHang = VnsDmKhachHangService.GetById(lstGiaoDich[0].KhachHangCoId);
+                //if (objKhachHang == null)
+                //    objKhachHang = new VnsDmKhachHang();
+                //Decimal SoTien = 0;
+                //foreach (VnsGiaoDich obj in lstGiaoDich)
+                //{
+                //    SoTien = SoTien + obj.SoTienNt;
+                //    obj.NoiDung = objChungTu.NoiDung;
+                //}
+                //InUyNhiemChi PrintUyNhiem = new InUyNhiemChi(objChungTu,objKhachHang, lstGiaoDich, SoTien, objChungTu.NgayCt);
+                //PrintUyNhiem.ShowPreviewDialog();
             }
             catch (Exception ex)
             {
