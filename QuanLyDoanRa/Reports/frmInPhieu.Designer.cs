@@ -51,6 +51,8 @@
             this.btnXem = new DevExpress.XtraEditors.SimpleButton();
             this.lkeTemplate = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.cboUSD = new System.Windows.Forms.RadioButton();
+            this.cboVND = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenBaoCao.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PanelControl2)).BeginInit();
             this.PanelControl2.SuspendLayout();
@@ -235,18 +237,20 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.cboVND);
+            this.panelControl1.Controls.Add(this.cboUSD);
             this.panelControl1.Controls.Add(this.btnXem);
             this.panelControl1.Controls.Add(this.lkeTemplate);
             this.panelControl1.Controls.Add(this.labelControl2);
             this.panelControl1.Location = new System.Drawing.Point(7, 207);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(468, 42);
+            this.panelControl1.Size = new System.Drawing.Size(468, 56);
             this.panelControl1.TabIndex = 6;
             // 
             // btnXem
             // 
             this.btnXem.ImageIndex = 7;
-            this.btnXem.Location = new System.Drawing.Point(368, 10);
+            this.btnXem.Location = new System.Drawing.Point(366, 27);
             this.btnXem.Name = "btnXem";
             this.btnXem.Size = new System.Drawing.Size(92, 23);
             this.btnXem.TabIndex = 1;
@@ -255,7 +259,7 @@
             // 
             // lkeTemplate
             // 
-            this.lkeTemplate.Location = new System.Drawing.Point(195, 11);
+            this.lkeTemplate.Location = new System.Drawing.Point(193, 28);
             this.lkeTemplate.Name = "lkeTemplate";
             this.lkeTemplate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -265,17 +269,39 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(95, 14);
+            this.labelControl2.Location = new System.Drawing.Point(98, 31);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(89, 13);
             this.labelControl2.TabIndex = 4;
             this.labelControl2.Text = "Chọn mẫu báo cáo";
             // 
+            // cboUSD
+            // 
+            this.cboUSD.AutoSize = true;
+            this.cboUSD.Location = new System.Drawing.Point(315, 5);
+            this.cboUSD.Name = "cboUSD";
+            this.cboUSD.Size = new System.Drawing.Size(45, 17);
+            this.cboUSD.TabIndex = 5;
+            this.cboUSD.TabStop = true;
+            this.cboUSD.Text = "USD";
+            this.cboUSD.UseVisualStyleBackColor = true;
+            // 
+            // cboVND
+            // 
+            this.cboVND.AutoSize = true;
+            this.cboVND.Location = new System.Drawing.Point(193, 5);
+            this.cboVND.Name = "cboVND";
+            this.cboVND.Size = new System.Drawing.Size(46, 17);
+            this.cboVND.TabIndex = 6;
+            this.cboVND.TabStop = true;
+            this.cboVND.Text = "VNĐ";
+            this.cboVND.UseVisualStyleBackColor = true;
+            // 
             // frmInPhieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 258);
+            this.ClientSize = new System.Drawing.Size(482, 268);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.PanelControl2);
             this.Controls.Add(this.txtTenBaoCao);
@@ -335,6 +361,8 @@
         internal DevExpress.XtraEditors.TextEdit txtKemTheo;
         internal DevExpress.XtraEditors.LabelControl labelControl3;
         internal DevExpress.XtraEditors.LabelControl labelControl6;
+        private System.Windows.Forms.RadioButton cboVND;
+        private System.Windows.Forms.RadioButton cboUSD;
 
     }
 }

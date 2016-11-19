@@ -35,24 +35,33 @@ namespace QuanLyDoanRa.Reports
 
             m_objLoaiChungTu = p_objLoaiChungTu;
             txtTenBaoCao.Text = m_objLoaiChungTu.Ten;
+
+            if (m_objLoaiChungTu.MaLoaiChungTu.EndsWith("VND")) cboVND.Checked = true;
+            else cboUSD.Checked = true;
         }
 
         public void tempVi()
         {
-            if (m_objLoaiChungTu.MaLoaiChungTu == "PT" || m_objLoaiChungTu.MaLoaiChungTu == "HU" || m_objLoaiChungTu.MaLoaiChungTu == "GBC")
+            List<string> lst = new List<string>();
+            if (m_objLoaiChungTu.MaLoaiChungTu.StartsWith("PT") || m_objLoaiChungTu.MaLoaiChungTu == "HU" || m_objLoaiChungTu.MaLoaiChungTu == "GBC")
             {
                 //Load template phieu chi
-                List<string> lst = new List<string>();
                 lst.Add("thu.repx");
                 lkeTemplate.Properties.DataSource = lst;
                 lkeTemplate.ItemIndex = 0;
             }
-            else if (m_objLoaiChungTu.MaLoaiChungTu == "PC" || m_objLoaiChungTu.MaLoaiChungTu == "TU" || m_objLoaiChungTu.MaLoaiChungTu == "GBN")
+            else if (m_objLoaiChungTu.MaLoaiChungTu.StartsWith("PC") || m_objLoaiChungTu.MaLoaiChungTu == "TU" || m_objLoaiChungTu.MaLoaiChungTu == "GBN")
             {
                 //Load template phieu thu
-                List<string> ls = new List<string>();
-                ls.Add("chi.repx");
-                lkeTemplate.Properties.DataSource = ls;
+                lst.Add("chi.repx");
+                lkeTemplate.Properties.DataSource = lst;
+                lkeTemplate.ItemIndex = 0;
+            }
+            else
+            {
+                lst.Add("thu.repx");
+                lst.Add("chi.repx");
+                lkeTemplate.Properties.DataSource = lst;
                 lkeTemplate.ItemIndex = 0;
             }
         }
@@ -65,8 +74,18 @@ namespace QuanLyDoanRa.Reports
 
         private IList<Info> getParamValue()
         {
-            decimal sotien = GetSoTien(m_lstGiaoDich);
-            String strSoTien = Commons.Commons.DocTienBangChu((long)sotien, " đô la Mỹ");
+            String strSoTien = "";
+            decimal sotien = 0;
+            if (cboUSD.Checked)
+            {
+                sotien = GetSoTien(m_lstGiaoDich);
+                strSoTien = Commons.Commons.DocTienBangChu((long)sotien, " đô la Mỹ");
+            }
+            else
+            {
+                sotien = GetSoTienVND(m_lstGiaoDich);
+                strSoTien = Commons.Commons.DocTienBangChu((long)sotien, " đồng");
+            }
             IList<Info> lst = General.lstThamSo;
 
             Info objThamSo = new Info();
@@ -182,6 +201,8 @@ namespace QuanLyDoanRa.Reports
             table.Columns.Add("KemTheo", typeof(string));
             table.Columns.Add("CtGoc", typeof(string));
 
+            table.Columns.Add("LoaiTien", typeof(string));
+
             return table;
         }
 
@@ -190,9 +211,19 @@ namespace QuanLyDoanRa.Reports
             decimal sotien=0;
             foreach(VnsGiaoDich obj in lstGiaoDich)
             {
-                sotien = sotien+ obj.SoTienNt;
+                sotien += obj.SoTienNt;
             }
             return sotien;
+        }
+
+        private decimal GetSoTienVND(IList<VnsGiaoDich> lstGiaoDich)
+        {
+            decimal sotienVND = 0;
+            foreach (VnsGiaoDich obj in lstGiaoDich)
+            {
+                sotienVND += obj.SoTien;
+            }
+            return sotienVND;
         }
 
         private DataTable GetDataSource()
@@ -221,7 +252,8 @@ namespace QuanLyDoanRa.Reports
             dr["DienGiai"] = m_objChungTu.NoiDung;
             dr["MaTkNo"] = m_objLoaiChungTu.MaTkNo;
             dr["MaTkCo"] =m_objLoaiChungTu.MaTkCo;
-            dr["SoTienNte"] = GetSoTien(m_lstGiaoDich);
+            //dr["SoTienNte"] = GetSoTien(m_lstGiaoDich);
+            //dr["SoTien"] = GetSoTienVND(m_lstGiaoDich);
             dr["NgayCt"] = String.Format("Ngày {0} tháng {1} năm {2}", m_objChungTu.NgayCt.Day, m_objChungTu.NgayCt.Month, m_objChungTu.NgayCt.Year);
             dr["DiaChi"] = m_objChungTu.DiaChi;
             //if (objLoaiDoanRa != null)
@@ -230,6 +262,17 @@ namespace QuanLyDoanRa.Reports
             //}
             dr["KemTheo"] = txtKemTheo.Text;
             dr["CtGoc"] = txtCtGoc.Text;
+
+            if (cboVND.Checked)
+            {
+                dr["LoaiTien"] = "VNĐ";
+                dr["SoTienNte"] = GetSoTienVND(m_lstGiaoDich);
+            }
+            else
+            {
+                dr["LoaiTien"] = "USD";
+                dr["SoTienNte"] = GetSoTien(m_lstGiaoDich);
+            }
 
             dtSource.Rows.Add(dr);
             return dtSource;

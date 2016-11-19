@@ -1,6 +1,6 @@
 /// <XRTypeInfo>
 ///   <AssemblyFullName>DevExpress.XtraReports.v10.2, Version=10.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</AssemblyFullName>
-///   <AssemblyLocation>C:\Windows\assembly\GAC_MSIL\DevExpress.XtraReports.v10.2\10.2.4.0__b88d1754d700e49a\DevExpress.XtraReports.v10.2.dll</AssemblyLocation>
+///   <AssemblyLocation>C:\WINDOWS\assembly\GAC_MSIL\DevExpress.XtraReports.v10.2\10.2.4.0__b88d1754d700e49a\DevExpress.XtraReports.v10.2.dll</AssemblyLocation>
 ///   <TypeName>DevExpress.XtraReports.UI.XtraReport</TypeName>
 ///   <Localization>en-US</Localization>
 /// </XRTypeInfo>
@@ -201,7 +201,7 @@ namespace XtraReportSerialization {
                     string resourceString = "zsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJza" +
                         "W9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4O" +
                         "SNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAABAAAAAAAAAFBBRFBBRFA141seA" +
-                        "AAAAO0AAAAsJAB0AGgAaQBzAC4ARABhAHQAYQBTAG8AdQByAGMAZQBTAGMAaABlAG0AYQAAAAAAAZsmP" +
+                        "AAAAO0AAAAsJAB0AGgAaQBzAC4ARABhAHQAYQBTAG8AdQByAGMAZQBTAGMAaABlAG0AYQAAAAAAAbIoP" +
                         "D94bWwgdmVyc2lvbj0iMS4wIj8+DQo8eHM6c2NoZW1hIGlkPSJQaGlldUtlVG9hbiIgdGFyZ2V0TmFtZ" +
                         "XNwYWNlPSJodHRwOi8vdGVtcHVyaS5vcmcvUGhpZXVLZVRvYW4ueHNkIiB4bWxuczptc3Rucz0iaHR0c" +
                         "DovL3RlbXB1cmkub3JnL1BoaWV1S2VUb2FuLnhzZCIgeG1sbnM9Imh0dHA6Ly90ZW1wdXJpLm9yZy9Qa" +
@@ -281,9 +281,14 @@ namespace XtraReportSerialization {
                         "2x1bW4iIG1zcHJvcDpHZW5lcmF0b3JfQ29sdW1uVmFyTmFtZUluVGFibGU9ImNvbHVtbkN0R29jIiBtc" +
                         "3Byb3A6R2VuZXJhdG9yX0NvbHVtblByb3BOYW1lSW5Sb3c9IkN0R29jIiBtc3Byb3A6R2VuZXJhdG9yX" +
                         "1VzZXJDb2x1bW5OYW1lPSJDdEdvYyIgdHlwZT0ieHM6c3RyaW5nIiBtaW5PY2N1cnM9IjAiIC8+DQogI" +
-                        "CAgICAgICAgICA8L3hzOnNlcXVlbmNlPg0KICAgICAgICAgIDwveHM6Y29tcGxleFR5cGU+DQogICAgI" +
-                        "CAgIDwveHM6ZWxlbWVudD4NCiAgICAgIDwveHM6Y2hvaWNlPg0KICAgIDwveHM6Y29tcGxleFR5cGU+D" +
-                        "QogIDwveHM6ZWxlbWVudD4NCjwveHM6c2NoZW1hPg==";
+                        "CAgICAgICAgICAgIDx4czplbGVtZW50IG5hbWU9IkxvYWlUaWVuIiBtc3Byb3A6R2VuZXJhdG9yX0Nvb" +
+                        "HVtblByb3BOYW1lSW5UYWJsZT0iTG9haVRpZW5Db2x1bW4iIG1zcHJvcDpHZW5lcmF0b3JfQ29sdW1uV" +
+                        "mFyTmFtZUluVGFibGU9ImNvbHVtbkxvYWlUaWVuIiBtc3Byb3A6R2VuZXJhdG9yX0NvbHVtblByb3BOY" +
+                        "W1lSW5Sb3c9IkxvYWlUaWVuIiBtc3Byb3A6R2VuZXJhdG9yX1VzZXJDb2x1bW5OYW1lPSJMb2FpVGllb" +
+                        "iIgdHlwZT0ieHM6c3RyaW5nIiBtaW5PY2N1cnM9IjAiIC8+DQogICAgICAgICAgICA8L3hzOnNlcXVlb" +
+                        "mNlPg0KICAgICAgICAgIDwveHM6Y29tcGxleFR5cGU+DQogICAgICAgIDwveHM6ZWxlbWVudD4NCiAgI" +
+                        "CAgIDwveHM6Y2hvaWNlPg0KICAgIDwveHM6Y29tcGxleFR5cGU+DQogIDwveHM6ZWxlbWVudD4NCjwve" +
+                        "HM6c2NoZW1hPg==";
                     this._resources = new DevExpress.XtraReports.Serialization.XRResourceManager(resourceString);
                 }
                 return this._resources;
@@ -1244,17 +1249,19 @@ namespace XtraReportSerialization {
             this.xrTableCell45.StylePriority.UseTextAlignment = false;
             this.xrTableCell45.Text = "xrTableCell61";
             this.xrTableCell45.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.xrTableCell45.Weight = 0.31597097647251626;
+            this.xrTableCell45.Weight = 0.41000357795617293;
             // 
             // xrTableCell46
             // 
+            this.xrTableCell46.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "PhieuKeToan.LoaiTien")});
             this.xrTableCell46.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTableCell46.Name = "xrTableCell46";
             this.xrTableCell46.StylePriority.UseFont = false;
             this.xrTableCell46.StylePriority.UseTextAlignment = false;
-            this.xrTableCell46.Text = " USD";
+            this.xrTableCell46.Text = "xrTableCell46";
             this.xrTableCell46.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableCell46.Weight = 0.19434937182407236;
+            this.xrTableCell46.Weight = 0.19335309324424602;
             // 
             // xrTableCell47
             // 
@@ -1264,7 +1271,7 @@ namespace XtraReportSerialization {
             this.xrTableCell47.StylePriority.UseTextAlignment = false;
             this.xrTableCell47.Text = "(Viết bằng chữ: ";
             this.xrTableCell47.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableCell47.Weight = 0.49828842579892513;
+            this.xrTableCell47.Weight = 0.47897616234894508;
             // 
             // xrTableCell48
             // 
@@ -1276,7 +1283,7 @@ namespace XtraReportSerialization {
             this.xrTableCell48.StylePriority.UseTextAlignment = false;
             this.xrTableCell48.Text = "xrTableCell21";
             this.xrTableCell48.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableCell48.Weight = 1.7053072816426893;
+            this.xrTableCell48.Weight = 1.6315832221888391;
             // 
             // xrTableCell49
             // 
@@ -1950,17 +1957,19 @@ namespace XtraReportSerialization {
             this.xrTableCell61.StylePriority.UseTextAlignment = false;
             this.xrTableCell61.Text = "xrTableCell61";
             this.xrTableCell61.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.xrTableCell61.Weight = 0.3159764140679811;
+            this.xrTableCell61.Weight = 0.41000357795617293;
             // 
             // xrTableCell66
             // 
+            this.xrTableCell66.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding("Text", null, "PhieuKeToan.LoaiTien")});
             this.xrTableCell66.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTableCell66.Name = "xrTableCell66";
             this.xrTableCell66.StylePriority.UseFont = false;
             this.xrTableCell66.StylePriority.UseTextAlignment = false;
-            this.xrTableCell66.Text = " USD";
+            this.xrTableCell66.Text = "xrTableCell66";
             this.xrTableCell66.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableCell66.Weight = 0.19436795027524406;
+            this.xrTableCell66.Weight = 0.19335853083971088;
             // 
             // xrTableCell60
             // 
@@ -1970,7 +1979,7 @@ namespace XtraReportSerialization {
             this.xrTableCell60.StylePriority.UseTextAlignment = false;
             this.xrTableCell60.Text = "(Viết bằng chữ: ";
             this.xrTableCell60.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.xrTableCell60.Weight = 0.498278442256714;
+            this.xrTableCell60.Weight = 0.478976162348945;
             // 
             // xrTableCell21
             // 
@@ -1982,7 +1991,7 @@ namespace XtraReportSerialization {
             this.xrTableCell21.StylePriority.UseTextAlignment = false;
             this.xrTableCell21.Text = "xrTableCell21";
             this.xrTableCell21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrTableCell21.Weight = 1.705293249138264;
+            this.xrTableCell21.Weight = 1.6315777845933745;
             // 
             // xrTableCell16
             // 
