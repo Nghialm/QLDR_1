@@ -83,7 +83,7 @@ namespace QuanLyDoanRa.Reports
                 objBangke.CkTyGia = objBangke.CkUSD == 0 ? 0 : tmp.Tk_Qt_Ck_Tg;
 
                 objBangke.VNDTm = tmp.So_QT_VND_TM - tmp.Chi_VND_QT_TM;
-                objBangke.VNDCk = tmp.So_QT_VND_CK - tmp.Chi_VND_QT_CK;
+                objBangke.VNDCk = tmp.So_QT_TONG_VND_USD - tmp.Chi_VND_QT_CK;// tmp.So_QT_VND_CK - tmp.Chi_VND_QT_CK;
 
                 //objBangke.TongUSD = objBangke.TmUSD + objBangke.CkUSD;
                 objBangke.TongVND = objBangke.TmVND + objBangke.CkVND + objBangke.VNDTm + objBangke.VNDCk;

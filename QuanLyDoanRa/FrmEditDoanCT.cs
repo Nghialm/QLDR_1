@@ -474,10 +474,10 @@ namespace QuanLyDoanRa
         {
             if (gvLichCongTac.FocusedRowHandle < 0) return;
             LichCongTacThanhVien tmp = (LichCongTacThanhVien)gvLichCongTac.GetRow(gvLichCongTac.FocusedRowHandle);
-            switch (e.Column.Name)
+            switch (e.Column.FieldName)
             {
-                case "colNuocDen":
-                    VnsDmQuocGia tmpquocgia = (VnsDmQuocGia)cboNuocDen.GetDataSourceRowByKeyValue(tmp.NuocId);
+                case "NuocId":
+                    VnsDmQuocGia tmpquocgia = (VnsDmQuocGia)rcboNuocDen.GetRowByKeyValue(tmp.NuocId);
                     if (tmpquocgia != null)
                     {
                         tmp.LoaiQuocGia = tmpquocgia.PhanLoai;

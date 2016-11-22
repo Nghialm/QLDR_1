@@ -1550,7 +1550,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
 
                 objBangke.CkTyGia = tmp.So_QT_CK_TG;
                 objBangke.CkUSD = tmp.So_QT_CK_USD - tmp.Chi_QT_CK_USD;
-                objBangke.CkVND = tmp.So_QT_CK_VND - tmp.Chi_QT_CK_VND;
+                objBangke.CkVND = tmp.So_QT_TONG_VND_USD - tmp.Chi_QT_CK_VND;//tmp.So_QT_CK_VND - tmp.Chi_QT_CK_VND;
 
                 objBangke.TongUSD = objBangke.TmUSD + objBangke.CkUSD;
                 objBangke.TongVND = objBangke.TmVND + objBangke.CkVND;
@@ -1564,11 +1564,11 @@ namespace Vns.QuanLyDoanRa.Service.Report
                     objctgs.TM_VND = tmp.So_QT_VND_TM - tmp.Chi_VND_QT_TM;// objBangke.TmVND;
 
                     objctgs.CPK_USD = tmp.So_QT_TM_USD - tmp.Chi_QT_TM_USD;
-                    objctgs.CPK_VND = tmp.So_QT_TM_VND - tmp.Chi_QT_TM_VND;
+                    objctgs.CPK_VND = tmp.So_QT_TM_VND - tmp.Chi_QT_TM_VND;//tmp.So_QT_TM_VND - tmp.Chi_QT_TM_VND;
                     objctgs.CPK_TyGia = tmp.So_QT_TM_TG;
 
                     objctgs.CK_USD = 0;// objBangke.CkUSD;
-                    objctgs.CK_VND = tmp.So_QT_VND_CK - tmp.Chi_VND_QT_CK;// objBangke.CkVND;
+                    objctgs.CK_VND = tmp.So_QT_TONG_VND_USD - tmp.Chi_VND_QT_CK;       //tmp.So_QT_VND_CK - tmp.Chi_VND_QT_CK;
                     lstctgs.Add(objctgs);
                 }
             }

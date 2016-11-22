@@ -58,6 +58,9 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                         objBangKe.CkTyGia = objSoDu.TyGia;
                         objBangKe.CkUSD = objSoDu.PsTangUSD;
                         objBangKe.CkVND = objSoDu.PsTangVND;
+
+                        //Truong hop doan ra chi tien do de mua ve may bay (van phai cong vao tong)
+
                     }
                 }
                 else if (objSoDu.NgoaiTeId == Globals.NoiTeId)
