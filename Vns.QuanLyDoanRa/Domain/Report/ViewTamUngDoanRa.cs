@@ -109,12 +109,20 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             set { _TienMatVND = value; }
         }
         private decimal _TyGiaTienMat;
-
         public decimal TyGiaTienMat
         {
-            get { return _TyGiaTienMat; }
+            get 
+            {
+                if (_TienMatUSD != 0)
+                    return _TienMatVND / _TienMatUSD;
+                else
+                    return 0;
+            }
+
             set { _TyGiaTienMat = value; }
         }
+
+
         private decimal _ChuyenKhoanUSD;
 
         public decimal ChuyenKhoanUSD
