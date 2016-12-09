@@ -76,17 +76,25 @@ namespace QuanLyDoanRa.Reports
         {
             String strSoTien = "";
             decimal sotien = 0;
+
+            Info objThamSoQuyen = new Info();
+
             if (cboUSD.Checked)
             {
                 sotien = GetSoTien(m_lstGiaoDich);
                 strSoTien = Commons.Commons.DocTienBangChu((long)sotien, " đô la Mỹ");
+                objThamSoQuyen.Ma = "p_QuyenSo";
+                objThamSoQuyen.GiaTri = "02";
             }
             else
             {
                 sotien = GetSoTienVND(m_lstGiaoDich);
                 strSoTien = Commons.Commons.DocTienBangChu((long)sotien, " đồng");
+                objThamSoQuyen.Ma = "p_QuyenSo";
+                objThamSoQuyen.GiaTri = "01";
             }
             IList<Info> lst = General.lstThamSo;
+            lst.Add(objThamSoQuyen);
 
             Info objThamSo = new Info();
             objThamSo.Ma = "p_SoTienBangChu";
@@ -163,6 +171,7 @@ namespace QuanLyDoanRa.Reports
                     obj.GiaTri = txtNguoiLap.Text;
                 }
             }
+
 
             return lst;
         }

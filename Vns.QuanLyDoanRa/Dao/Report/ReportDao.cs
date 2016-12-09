@@ -190,7 +190,7 @@ namespace Vns.QuanLyDoanRa.Dao.NHibernate
                          "gd.DoanRa{1}Id as DoanRaId,gd.LoaiDoanRa{1}Id as LoaiDoanRaId, gd.MaTkCo as MaTkCo, gd.MaTkNo as MaTkNo " +
                          "from VnsGiaoDich gd " +
                          "inner join gd.objChungTu ct " +
-                         "where ct.NgayCt >=: p_TuNgay AND ct.NgayCt <=: p_DenNgay " +
+                         "where ct.NgayCt >=:p_TuNgay AND ct.NgayCt <=:p_DenNgay " +
                          (String.IsNullOrEmpty(p_TkCo) ? "" : string.Format("AND {0} ",SqlTkCo)) +
                          (String.IsNullOrEmpty(p_TkNo) ? "" : string.Format("AND {0} ", SqlTkNo)) +
                          ((p_TrangThaiCt == "-1") ? "" : string.Format("AND {0} ",SqlTT)) +

@@ -8,6 +8,7 @@ delete from Role;
 delete from Roles;
 delete from UserInRole;
 
+delete from VnsLoaiChungTu;
 delete from VnsDanhMucChucVu;
 delete from VnsDinhMuc;
 delete from VnsDmHeThong;

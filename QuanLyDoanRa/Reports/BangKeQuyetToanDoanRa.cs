@@ -17,8 +17,7 @@ namespace QuanLyDoanRa.Reports
         public string strTenBC = "";
         public void LoadData(IList<VnsReport> lstBaoCaoTongHop)
         {   
-            lblChucDanhNguoiLapBieu.Text = General.ChucDanhNguoiLapBieu;            
-            //lblTenNguoiLapBieu.Text = General.TenNguoiLapBieu;
+            
             string str = "";
             if (lstBaoCaoTongHop.Count > 0)
             {
@@ -26,7 +25,8 @@ namespace QuanLyDoanRa.Reports
                 str = a.TenDoanRa + " " + ". Quyết toán đoàn đ.c " + a.TenTruongDoan + " đi công tác tại " + a.NuocCongTac + " " + a.NgayDi;
             }
             lblTenTongHop.Text = str;
-            lblThongBao2.Text = str;
+            lblTenTongHop3.Text = str;
+            lblTenTongHop2.Text = str;
             this.DataSource = lstBaoCaoTongHop;
         }
 

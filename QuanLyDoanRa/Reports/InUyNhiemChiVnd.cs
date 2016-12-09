@@ -50,7 +50,7 @@ namespace QuanLyDoanRa.Reports
                 lblMaCTMT.Text = m_KhachHang.MaCTMT;
                 lblNganHang.Text = m_KhachHang.GhiChu2;
                 lblTaiKhoan.Text = m_KhachHang.SoTaiKhoan;
-                lblTongTienBangChu.Text = Commons.Commons.DocTienBangChu((long)m_SoTien, " Việt Nam đồng.");
+                lblTongTienBangChu.Text = Commons.Commons.DocTienBangChu((long)m_SoTien, " đồng.");
                 lblSoTienNopThue.Text = "Số tiền nộp thuế (Ghi bằng chữ) :Không đồng";
                 lblSoTienThanhToan.Text = lblTongTienBangChu.Text;
                 lblNgay.Text="Lập ngày "+m_NgayCt.Day.ToString()+" Tháng "+m_NgayCt.Month.ToString()+" Năm "+m_NgayCt.Year.ToString();

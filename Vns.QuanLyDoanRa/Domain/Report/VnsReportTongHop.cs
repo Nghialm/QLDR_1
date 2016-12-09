@@ -179,6 +179,17 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                 else return TH_TONG_VND / TH_TONG_USD;
             }
         }
+
+        /// <summary>
+        /// Thu hoàn Ck tổng VND CK và USD CK (theo tỷ giá)
+        /// </summary>
+        public decimal TH_TONG_CK_VND_USD
+        {
+            get
+            {
+                return TH_VND_CK + TH_CK_VND;
+            }
+        }
         #endregion
 
         /*Lay so tien tam ung thang truoc, thang nay dua theo ngay quyet toan cua doan ra
@@ -285,6 +296,14 @@ namespace Vns.QuanLyDoanRa.Domain.Report
         /// Thu hoàn chưa quyết toán chuyển khoản
         /// </summary>
         public decimal TH_VND_CHUA_QT_CK { get; set; }
+
+        public decimal TH_VND_CHUA_QT_CK_VND_USD
+        {
+            get
+            {
+                return TH_VND_CHUA_QT_CK + TH_CHUA_QT_CK_VND;
+            }
+        }
         #endregion
 
         #region CHI QUYET TOAN = So tien phai tra sau khi quyet toan QT_TU >0
@@ -323,6 +342,18 @@ namespace Vns.QuanLyDoanRa.Domain.Report
         /// Chi quyết toán tiền mặt VNĐ
         /// </summary>
         public decimal Chi_VND_QT_TM { get; set; }
+
+        /// <summary>
+        /// Chi quyết toán chuyển khoản VND tiền CK (VND) + tiền CK (USD theo tỷ giá)
+        /// </summary>
+        public decimal Chi_QT_CK_VND_USD
+        {
+            get
+            {
+                return Chi_QT_CK_VND + Chi_VND_QT_CK;
+            }
+        }
+
 
         public decimal Chi_QT_TONG_USD
         {
@@ -901,6 +932,14 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             }
         }
 
+        public decimal CN_QT_VND_CK_PhaiThu_TONG_USD_VND
+        {
+            get
+            {
+                return CN_QT_VND_CK_PhaiThu + CN_QT_PhaiThu_CK_VND;
+            }
+        }
+
         public decimal CN_QT_VND_PhaiThu
         {
             get
@@ -1430,6 +1469,18 @@ namespace Vns.QuanLyDoanRa.Domain.Report
         /// Thu hoàn ứng trong tháng chuyển khoản
         /// </summary>
         public decimal HU_VND_TRONGTHANG_CK { get; set; }
+
+        /// <summary>
+        /// Hoàn ứng CK tổng trong tháng VNĐ + USD theo tỷ giá
+        /// </summary>
+        public decimal HU_TONG_TRONGTHANG_CK_VND_USD
+        {
+            get 
+            {
+                return HU_VND_TRONGTHANG_CK + HU_TRONGTHANG_CK_VND;
+            }
+        }
+
         #endregion
 
         #region Ham so sanh

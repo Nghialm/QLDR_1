@@ -137,6 +137,9 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 Guid id = objDoanCongTac.Id;
                 objReport = new VnsReportTongHop(objDoanCongTac, p_TuNgay, p_DenNgay);
 
+                String F = "F";
+                if (objDoanCongTac.SoThongBaoDuToan == "F")
+                    F = "f";
 
                 #region Tinh so tam ung
                 /*Truong hop ngay quuyet toan trong ky, so tien tam ung se lay gia tri tu truoc den gio cong vao
@@ -476,6 +479,10 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 #endregion
 
                 #region Tinh cong no
+                string s = "";
+                if (objReport.SoTbDt == "F")
+                    s = "F";
+
                 foreach (RP_SoDuTaiKhoan objDuNo in DuNo141)
                 {
                     if (objReport.DoanRaId == objDuNo.DoanRaId)
@@ -501,7 +508,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
                             {
                                 objReport.DuNo141_VND_TM += objDuNo.PsTangVND;
                             }
-                            if (objDuNo.MaTkCo.StartsWith(Globals.TkTienChuyenKhoan) || objDuNo.MaTkCo.StartsWith(Globals.TkThanhToanChuyenKhoan))
+                            if (objDuNo.MaTkCo.StartsWith(Globals.TkTienChuyenKhoanVND) || objDuNo.MaTkCo.StartsWith(Globals.TkThanhToanChuyenKhoan))
                             {
                                 objReport.DuNo141_VND_CK += objDuNo.PsTangVND;
                             }
@@ -536,7 +543,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
                             {
                                 objReport.DuCo141_VND_TM += objDuCo.PsGiamVND;
                             }
-                            if (objDuCo.MaTkNo.StartsWith(Globals.TkTienChuyenKhoan) || objDuCo.MaTkNo.StartsWith(Globals.TkThanhToanChuyenKhoan))
+                            if (objDuCo.MaTkNo.StartsWith(Globals.TkTienChuyenKhoanVND) || objDuCo.MaTkNo.StartsWith(Globals.TkThanhToanChuyenKhoan))
                             {
                                 objReport.DuCo141_VND_CK += objDuCo.PsGiamVND;
                             }
@@ -630,174 +637,171 @@ namespace Vns.QuanLyDoanRa.Service.Report
             return dt;
         }
 
-        
+        //public IList<VnsReport> BaoCaoTongHopDoanRaChungTuGhiSo(DateTime p_TuNgay, DateTime p_DenNgay, Guid p_LoaiDoanRaId, Guid p_DoanRaId)
+        //{
+        //    DateTime MinValueDate = Null.NullDate;
+        //    VnsReport objReport;
+        //    Guid GuidEmpty = new Guid();
+
+        //    IList<VnsReport> lstReport = new List<VnsReport>();
+        //    IList<VnsGiaoDich> lstTamUng = new List<VnsGiaoDich>();
+        //    IList<VnsGiaoDich> lstQuyetToan = new List<VnsGiaoDich>();
+        //    IList<VnsGiaoDich> lstDaThuThangTruoc = new List<VnsGiaoDich>();
+        //    IList<VnsGiaoDich> lstDaThuThangNay = new List<VnsGiaoDich>();
+        //    IList<VnsGiaoDich> lstDaTraThangTruoc = new List<VnsGiaoDich>();
+        //    IList<VnsGiaoDich> lstDaTraThangNay = new List<VnsGiaoDich>();
+        //    IList<VnsDoanCongTac> lstDoanCongTac = new List<VnsDoanCongTac>();
+        //    VnsDoanCongTac objDoanCongTactemp = VnsDoanCongTacDao.GetByKey("Id", p_DoanRaId);
+        //    if (objDoanCongTactemp != null)
+        //        lstDoanCongTac.Add(objDoanCongTactemp);
+        //    // DUng Add
+        //    if (p_DoanRaId == new Guid())
+        //        lstDoanCongTac = VnsDoanCongTacDao.GetByLoaiDoanRa(p_LoaiDoanRaId);
+        //    // IList<VnsDoanCongTac> lstDoanCongTacTemp = VnsDoanCongTacDao.GetByNgayQT(2, DateTime.MinValue, p_DenNgay, p_LoaiDoanRaId);
+        //    //IList<RP_Doan_CongNo> LstDoanRaTheoCongNo = ReportDao.GetLstDoanRaTheoCongNo(MinValueDate, p_DenNgay, p_LoaiDoanRaId, p_LoaiDoanRaId,p_DoanRaId,p_DoanRaId, Globals.TkTamUng, Globals.TkTamUng, 2);
+
+        //    //foreach (VnsDoanCongTac objDoanCongTac in lstDoanCongTacTemp)
+        //    //{
+        //    //    foreach (RP_Doan_CongNo objCongNo in LstDoanRaTheoCongNo)
+        //    //    {
+        //    //        if (objCongNo.DoanRaCoId == objDoanCongTac.Id)
+        //    //        {
+        //    //            lstDoanCongTac.Add(objDoanCongTac);
+        //    //            break;
+        //    //        }
+        //    //    }
+        //    //}
+
+        //    //Khong hien thi
+        //    //đoàn chưa qt
+        //    //đoàn đã qt rồi nhưng qt không phải trong tháng đấy 
+        //    //công nợ =0
+
+        //    lstTamUng = ReportDao.GetLstGiaoDich(p_TuNgay, p_DenNgay, p_LoaiDoanRaId, GuidEmpty, p_DoanRaId, p_DoanRaId, Globals.TkTamUng, Globals.TkTienLike, 0, 2);
+        //    lstQuyetToan = ReportDao.GetLstGiaoDich(p_TuNgay, p_DenNgay, p_LoaiDoanRaId, GuidEmpty, p_DoanRaId, p_DoanRaId, Globals.LikeTkQt, Globals.TkTamUng, -1, 2);
+
+        //    // thang truoc trang thai =1, thang nay trang thai =2, chi xet doan ra da quyet toan
+        //    lstDaThuThangTruoc = ReportDao.GetLstGiaoDich(p_TuNgay, p_DenNgay, GuidEmpty, p_LoaiDoanRaId, p_DoanRaId, p_DoanRaId, Globals.TkTienLike, Globals.TkTamUng, 1, 2);
+        //    lstDaThuThangNay = ReportDao.GetLstGiaoDich(p_TuNgay, p_DenNgay, GuidEmpty, p_LoaiDoanRaId, p_DoanRaId, p_DoanRaId, Globals.TkTienLike, Globals.TkTamUng, 2, 2);
+        //    lstDaTraThangTruoc = ReportDao.GetLstGiaoDich(p_TuNgay, p_DenNgay, p_LoaiDoanRaId, GuidEmpty, p_DoanRaId, p_DoanRaId, Globals.TkTamUng, Globals.LikeTkTienMat, 1, 2);
+        //    lstDaTraThangNay = ReportDao.GetLstGiaoDich(p_TuNgay, p_DenNgay, p_LoaiDoanRaId, GuidEmpty, p_DoanRaId, p_DoanRaId, Globals.TkTamUng, Globals.LikeTkTienMat, 2, 2);
+
+        //    //Get doan cong tac
+        //    foreach (VnsDoanCongTac objDoanCongTac in lstDoanCongTac)
+        //    {
+        //        objReport = new VnsReport(objDoanCongTac, p_TuNgay, p_DenNgay);
+
+        //        foreach (VnsGiaoDich objTamUng in lstTamUng)
+        //        {
+        //            if (objTamUng.DoanRaCoId == objDoanCongTac.Id)
+        //            {
+        //                if (objTamUng.MaTkCo.Equals(Globals.TkTienMat))
+        //                {
+        //                    objReport.TU_TM_VND += objTamUng.SoTien;
+        //                    objReport.TU_TM_USD += objTamUng.SoTienNt;
+        //                }
+        //                else
+        //                {
+        //                    objReport.TU_CK_VND += objTamUng.SoTien;
+        //                    objReport.TU_CK_USD += objTamUng.SoTienNt;
+        //                }
+        //            }
+        //        }
+
+        //        //So tien quyet toan
+        //        foreach (VnsGiaoDich objQuyetToan in lstQuyetToan)
+        //        {
+        //            if (objQuyetToan.DoanRaCoId == objDoanCongTac.Id)
+        //            {
+        //                if (objQuyetToan.MaTkNo.Equals(Globals.TkThanhToanTienMat))
+        //                {
+        //                    objReport.QT_TM_VND += objQuyetToan.SoTien;
+        //                    objReport.QT_TM_USD += objQuyetToan.SoTienNt;
+        //                }
+        //                else
+        //                {
+        //                    objReport.QT_CK_VND += objQuyetToan.SoTien;
+        //                    objReport.QT_CK_USD += objQuyetToan.SoTienNt;
+        //                }
+        //            }
+        //        }
+
+        //        //So tien da thu thang truóc
+        //        foreach (VnsGiaoDich objDathuTT in lstDaThuThangTruoc)
+        //        {
+        //            if (objDathuTT.DoanRaCoId == objDoanCongTac.Id)
+        //            {
+        //                objReport.TH_USD += objDathuTT.SoTienNt;
+        //                objReport.TH_VND += objDathuTT.SoTien;
+        //            }
+        //        }
+
+        //        //So tien da thu thang nay
+        //        foreach (VnsGiaoDich objDathuTN in lstDaThuThangNay)
+        //        {
+        //            if (objDathuTN.DoanRaCoId == objDoanCongTac.Id)
+        //            {
+        //                objReport.TH_USD += objDathuTN.SoTienNt;
+        //                objReport.TH_VND += objDathuTN.SoTien;
+
+        //                if (objDathuTN.MaTkNo.StartsWith(Globals.TkTienChuyenKhoan))
+        //                {
+        //                    objReport.HU_TrongThang_CK_USD += objDathuTN.SoTienNt;
+        //                    objReport.HU_TrongThang_CK_VND += objDathuTN.SoTien;
+        //                }
+        //                else
+        //                {
+        //                    objReport.HU_TrongThang_TM_USD += objDathuTN.SoTienNt;
+        //                    objReport.HU_TrongThang_TM_VND += objDathuTN.SoTien;
+        //                }
+        //            }
+        //        }
+
+        //        //So tien chi quyet toan thang truoc
+        //        foreach (VnsGiaoDich objDaTraTT in lstDaTraThangTruoc)
+        //        {
+        //            if (objDaTraTT.DoanRaCoId == objDoanCongTac.Id)
+        //            {
+        //                if (objDaTraTT.MaTkCo.Equals(Globals.TkTienMat))
+        //                {
+        //                    objReport.QT_DT_TM_VND += objDaTraTT.SoTien;
+        //                    objReport.QT_DT_TM_USD += objDaTraTT.SoTienNt;
+        //                }
+        //                else
+        //                {
+        //                    objReport.QT_DT_CK_VND += objDaTraTT.SoTien;
+        //                    objReport.QT_DT_CK_USD += objDaTraTT.SoTienNt;
+        //                }
+        //            }
+        //        }
+
+        //        //So tien Chi quyet toan thang nay
+        //        foreach (VnsGiaoDich objDaTraTN in lstDaTraThangNay)
+        //        {
+        //            if (objDaTraTN.DoanRaCoId == objDoanCongTac.Id)
+        //            {
+        //                if (objDaTraTN.MaTkCo.Equals(Globals.TkTienMat))
+        //                {
+        //                    objReport.QT_DT_TM_VND += objDaTraTN.SoTien;
+        //                    objReport.QT_DT_TM_USD += objDaTraTN.SoTienNt;
+        //                }
+        //                else
+        //                {
+        //                    objReport.QT_DT_CK_VND += objDaTraTN.SoTien;
+        //                    objReport.QT_DT_CK_USD += objDaTraTN.SoTienNt;
+        //                }
+        //            }
+        //        }
+
+        //        //CongNoPhaiThu = objReport.TamUngTienMat + objReport.TamUngChuyenKhoan - objReport.QuyetToan - objReport.ThuThangTruoc - objReport.ThuThangTruoc;
+        //        //CongNoPhaiTra = objReport.QuyetToan - objReport.TamUngTienMat - objReport.TamUngChuyenKhoan  - objReport.TraThangNay - objReport.TraThangTruoc;
+
+        //        lstReport.Add(objReport);
+        //    }
 
 
-        public IList<VnsReport> BaoCaoTongHopDoanRaChungTuGhiSo(DateTime p_TuNgay, DateTime p_DenNgay, Guid p_LoaiDoanRaId, Guid p_DoanRaId)
-        {
-            DateTime MinValueDate = Null.NullDate;
-            VnsReport objReport;
-            Guid GuidEmpty = new Guid();
-
-            IList<VnsReport> lstReport = new List<VnsReport>();
-            IList<VnsGiaoDich> lstTamUng = new List<VnsGiaoDich>();
-            IList<VnsGiaoDich> lstQuyetToan = new List<VnsGiaoDich>();
-            IList<VnsGiaoDich> lstDaThuThangTruoc = new List<VnsGiaoDich>();
-            IList<VnsGiaoDich> lstDaThuThangNay = new List<VnsGiaoDich>();
-            IList<VnsGiaoDich> lstDaTraThangTruoc = new List<VnsGiaoDich>();
-            IList<VnsGiaoDich> lstDaTraThangNay = new List<VnsGiaoDich>();
-            IList<VnsDoanCongTac> lstDoanCongTac = new List<VnsDoanCongTac>();
-            VnsDoanCongTac objDoanCongTactemp = VnsDoanCongTacDao.GetByKey("Id", p_DoanRaId);
-            if (objDoanCongTactemp != null)
-                lstDoanCongTac.Add(objDoanCongTactemp);
-            // DUng Add
-            if (p_DoanRaId == new Guid())
-                lstDoanCongTac = VnsDoanCongTacDao.GetByLoaiDoanRa(p_LoaiDoanRaId);
-            // IList<VnsDoanCongTac> lstDoanCongTacTemp = VnsDoanCongTacDao.GetByNgayQT(2, DateTime.MinValue, p_DenNgay, p_LoaiDoanRaId);
-            //IList<RP_Doan_CongNo> LstDoanRaTheoCongNo = ReportDao.GetLstDoanRaTheoCongNo(MinValueDate, p_DenNgay, p_LoaiDoanRaId, p_LoaiDoanRaId,p_DoanRaId,p_DoanRaId, Globals.TkTamUng, Globals.TkTamUng, 2);
-
-            //foreach (VnsDoanCongTac objDoanCongTac in lstDoanCongTacTemp)
-            //{
-            //    foreach (RP_Doan_CongNo objCongNo in LstDoanRaTheoCongNo)
-            //    {
-            //        if (objCongNo.DoanRaCoId == objDoanCongTac.Id)
-            //        {
-            //            lstDoanCongTac.Add(objDoanCongTac);
-            //            break;
-            //        }
-            //    }
-            //}
-
-            //Khong hien thi
-            //đoàn chưa qt
-            //đoàn đã qt rồi nhưng qt không phải trong tháng đấy 
-            //công nợ =0
-
-            lstTamUng = ReportDao.GetLstGiaoDich(p_TuNgay, p_DenNgay, p_LoaiDoanRaId, GuidEmpty, p_DoanRaId, p_DoanRaId, Globals.TkTamUng, Globals.TkTienLike, 0, 2);
-            lstQuyetToan = ReportDao.GetLstGiaoDich(p_TuNgay, p_DenNgay, p_LoaiDoanRaId, GuidEmpty, p_DoanRaId, p_DoanRaId, Globals.LikeTkQt, Globals.TkTamUng, -1, 2);
-
-            // thang truoc trang thai =1, thang nay trang thai =2, chi xet doan ra da quyet toan
-            lstDaThuThangTruoc = ReportDao.GetLstGiaoDich(p_TuNgay, p_DenNgay, GuidEmpty, p_LoaiDoanRaId, p_DoanRaId, p_DoanRaId, Globals.TkTienLike, Globals.TkTamUng, 1, 2);
-            lstDaThuThangNay = ReportDao.GetLstGiaoDich(p_TuNgay, p_DenNgay, GuidEmpty, p_LoaiDoanRaId, p_DoanRaId, p_DoanRaId, Globals.TkTienLike, Globals.TkTamUng, 2, 2);
-            lstDaTraThangTruoc = ReportDao.GetLstGiaoDich(p_TuNgay, p_DenNgay, p_LoaiDoanRaId, GuidEmpty, p_DoanRaId, p_DoanRaId, Globals.TkTamUng, Globals.LikeTkTienMat, 1, 2);
-            lstDaTraThangNay = ReportDao.GetLstGiaoDich(p_TuNgay, p_DenNgay, p_LoaiDoanRaId, GuidEmpty, p_DoanRaId, p_DoanRaId, Globals.TkTamUng, Globals.LikeTkTienMat, 2, 2);
-
-            //Get doan cong tac
-            foreach (VnsDoanCongTac objDoanCongTac in lstDoanCongTac)
-            {
-                objReport = new VnsReport(objDoanCongTac, p_TuNgay, p_DenNgay);
-
-                foreach (VnsGiaoDich objTamUng in lstTamUng)
-                {
-                    if (objTamUng.DoanRaCoId == objDoanCongTac.Id)
-                    {
-                        if (objTamUng.MaTkCo.Equals(Globals.TkTienMat))
-                        {
-                            objReport.TU_TM_VND += objTamUng.SoTien;
-                            objReport.TU_TM_USD += objTamUng.SoTienNt;
-                        }
-                        else
-                        {
-                            objReport.TU_CK_VND += objTamUng.SoTien;
-                            objReport.TU_CK_USD += objTamUng.SoTienNt;
-                        }
-                    }
-                }
-
-                //So tien quyet toan
-                foreach (VnsGiaoDich objQuyetToan in lstQuyetToan)
-                {
-                    if (objQuyetToan.DoanRaCoId == objDoanCongTac.Id)
-                    {
-                        if (objQuyetToan.MaTkNo.Equals(Globals.TkThanhToanTienMat))
-                        {
-                            objReport.QT_TM_VND += objQuyetToan.SoTien;
-                            objReport.QT_TM_USD += objQuyetToan.SoTienNt;
-                        }
-                        else
-                        {
-                            objReport.QT_CK_VND += objQuyetToan.SoTien;
-                            objReport.QT_CK_USD += objQuyetToan.SoTienNt;
-                        }
-                    }
-                }
-
-                //So tien da thu thang truóc
-                foreach (VnsGiaoDich objDathuTT in lstDaThuThangTruoc)
-                {
-                    if (objDathuTT.DoanRaCoId == objDoanCongTac.Id)
-                    {
-                        objReport.TH_USD += objDathuTT.SoTienNt;
-                        objReport.TH_VND += objDathuTT.SoTien;
-                    }
-                }
-
-                //So tien da thu thang nay
-                foreach (VnsGiaoDich objDathuTN in lstDaThuThangNay)
-                {
-                    if (objDathuTN.DoanRaCoId == objDoanCongTac.Id)
-                    {
-                        objReport.TH_USD += objDathuTN.SoTienNt;
-                        objReport.TH_VND += objDathuTN.SoTien;
-
-                        if (objDathuTN.MaTkNo.StartsWith(Globals.TkTienChuyenKhoan))
-                        {
-                            objReport.HU_TrongThang_CK_USD += objDathuTN.SoTienNt;
-                            objReport.HU_TrongThang_CK_VND += objDathuTN.SoTien;
-                        }
-                        else
-                        {
-                            objReport.HU_TrongThang_TM_USD += objDathuTN.SoTienNt;
-                            objReport.HU_TrongThang_TM_VND += objDathuTN.SoTien;
-                        }
-                    }
-                }
-
-                //So tien chi quyet toan thang truoc
-                foreach (VnsGiaoDich objDaTraTT in lstDaTraThangTruoc)
-                {
-                    if (objDaTraTT.DoanRaCoId == objDoanCongTac.Id)
-                    {
-                        if (objDaTraTT.MaTkCo.Equals(Globals.TkTienMat))
-                        {
-                            objReport.QT_DT_TM_VND += objDaTraTT.SoTien;
-                            objReport.QT_DT_TM_USD += objDaTraTT.SoTienNt;
-                        }
-                        else
-                        {
-                            objReport.QT_DT_CK_VND += objDaTraTT.SoTien;
-                            objReport.QT_DT_CK_USD += objDaTraTT.SoTienNt;
-                        }
-                    }
-                }
-
-                //So tien Chi quyet toan thang nay
-                foreach (VnsGiaoDich objDaTraTN in lstDaTraThangNay)
-                {
-                    if (objDaTraTN.DoanRaCoId == objDoanCongTac.Id)
-                    {
-                        if (objDaTraTN.MaTkCo.Equals(Globals.TkTienMat))
-                        {
-                            objReport.QT_DT_TM_VND += objDaTraTN.SoTien;
-                            objReport.QT_DT_TM_USD += objDaTraTN.SoTienNt;
-                        }
-                        else
-                        {
-                            objReport.QT_DT_CK_VND += objDaTraTN.SoTien;
-                            objReport.QT_DT_CK_USD += objDaTraTN.SoTienNt;
-                        }
-                    }
-                }
-
-                //CongNoPhaiThu = objReport.TamUngTienMat + objReport.TamUngChuyenKhoan - objReport.QuyetToan - objReport.ThuThangTruoc - objReport.ThuThangTruoc;
-                //CongNoPhaiTra = objReport.QuyetToan - objReport.TamUngTienMat - objReport.TamUngChuyenKhoan  - objReport.TraThangNay - objReport.TraThangTruoc;
-
-                lstReport.Add(objReport);
-            }
-
-
-            return lstReport;
-        }
+        //    return lstReport;
+        //}
 
         public IList<VnsReportChuaQt> GetSoTienChuaQuyetToan(DateTime p_TuNgay, DateTime p_DenNgay, Guid LoaiDoanRa, string p_TkNo, string p_TkCo, bool isThangTruoc)
         {
@@ -901,7 +905,9 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 if (id != obj.DoanRaId)
                 {
                     id = obj.DoanRaId;
-
+                    String FFF;
+                    if (obj.SoTbQt == "57") 
+                        FFF = "";
 
                     if (obj04D2 != null)
                     {
@@ -988,20 +994,20 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 //Dong 4 Chi quyet toan
                 obj04D4.TienMatVND_QD += obj.Chi_QT_TM_VND;
                 obj04D4.TienMatUSD += obj.Chi_QT_TM_USD;
-                obj04D4.ChuyenKhoanVND += obj.Chi_VND_QT_CK;
+                obj04D4.ChuyenKhoanVND += obj.Chi_QT_CK_VND_USD; //Bao gồm tiền VNĐ Ck và tiền USD chuyển khoản  (Quy đổi ra VNĐ)
                 obj04D4.TienMatVND += obj.Chi_VND_QT_TM;
 
                 //Dong 5 thu hoan tam ung (= thu hoan trong thang + thu hoan tam ung chua qt trong thang
                 obj04D5.TienMatVND_QD += obj.TH_TM_VND;  //obj.HU_TRONGTHANG_TM_VND + obj.TH_CHUA_QT_TM_VND;
                 obj04D5.TienMatUSD += obj.TH_TM_USD;  //obj.HU_TRONGTHANG_TM_USD + obj.TH_CHUA_QT_TM_USD;
-                obj04D5.ChuyenKhoanVND += obj.TH_VND_CK; //obj.HU_TRONGTHANG_CK_VND + obj.TH_CHUA_QT_CK_VND;
+                obj04D5.ChuyenKhoanVND += obj.TH_TONG_CK_VND_USD; //obj.HU_TRONGTHANG_CK_VND + obj.TH_CHUA_QT_CK_VND;
                 obj04D5.TienMatVND += obj.TH_VND_TM; //obj.HU_TRONGTHANG_CK_USD + obj.TH_CHUA_QT_CK_USD;
 
                 //Dong 6 : Phai thu trong ky
                 obj04D6.TienMatVND_QD += obj.CN_QT_PhaiThu_TM_VND;
                 obj04D6.TienMatUSD += obj.CN_QT_PhaiThu_TM_USD;
                 obj04D6.TienMatVND += obj.CN_QT_VND_TM_PhaiThu;
-                obj04D6.ChuyenKhoanVND += obj.CN_QT_VND_CK_PhaiThu;
+                obj04D6.ChuyenKhoanVND += obj.CN_QT_VND_CK_PhaiThu_TONG_USD_VND; //obj.CN_QT_VND_CK_PhaiThu;
             }
 
             if (obj04D1 != null)
@@ -1076,7 +1082,9 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 if (id != obj.DoanRaId)
                 {
                     id = obj.DoanRaId;
-
+                    String FFF;
+                    if (obj.SoTbDt == "F")
+                        FFF = "";
 
                     if (obj04D2 != null)
                     {
@@ -1168,20 +1176,20 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 //Dong 4 Chi quyet toan
                 obj04D4.TienMatVND_QD += obj.Chi_QT_TM_VND;
                 obj04D4.TienMatUSD += obj.Chi_QT_TM_USD;
-                obj04D4.ChuyenKhoanVND += obj.Chi_VND_QT_CK;
+                obj04D4.ChuyenKhoanVND += obj.Chi_QT_CK_VND_USD; //Bao gồm tiền VNĐ Ck và tiền USD chuyển khoản (Quy đổi ra VNĐ)
                 obj04D4.TienMatVND += obj.Chi_VND_QT_TM;
 
                 //Dong 5 thu hoan tam ung (= thu hoan trong thang + thu hoan tam ung chua qt trong thang
                 obj04D5.TienMatVND_QD += obj.TH_TM_VND;  //obj.HU_TRONGTHANG_TM_VND + obj.TH_CHUA_QT_TM_VND;
                 obj04D5.TienMatUSD += obj.TH_TM_USD;  //obj.HU_TRONGTHANG_TM_USD + obj.TH_CHUA_QT_TM_USD;
-                obj04D5.ChuyenKhoanVND += obj.TH_VND_CK; //obj.HU_TRONGTHANG_CK_VND + obj.TH_CHUA_QT_CK_VND;
+                obj04D5.ChuyenKhoanVND += obj.TH_TONG_CK_VND_USD; //obj.HU_TRONGTHANG_CK_VND + obj.TH_CHUA_QT_CK_VND;
                 obj04D5.TienMatVND += obj.TH_VND_TM; //obj.HU_TRONGTHANG_CK_USD + obj.TH_CHUA_QT_CK_USD;
 
                 //Dong 6 : Phai thu trong ky
                 obj04D6.TienMatVND_QD += obj.CN_QT_PhaiThu_TM_VND;
                 obj04D6.TienMatUSD += obj.CN_QT_PhaiThu_TM_USD;
                 obj04D6.TienMatVND += obj.CN_QT_VND_TM_PhaiThu;
-                obj04D6.ChuyenKhoanVND += obj.CN_QT_VND_CK_PhaiThu;
+                obj04D6.ChuyenKhoanVND += obj.CN_QT_VND_CK_PhaiThu_TONG_USD_VND; // obj.CN_QT_VND_CK_PhaiThu;
             }
 
             if (obj04D1 != null)
@@ -1263,19 +1271,19 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 obj04D4.TienMatVND_QD += obj.Chi_QT_TM_VND;
                 obj04D4.TienMatUSD += obj.Chi_QT_TM_USD;
                 obj04D4.TienMatVND += obj.Chi_VND_QT_TM;
-                obj04D4.ChuyenKhoanUSD += obj.Chi_VND_QT_CK;
+                obj04D4.ChuyenKhoanVND += obj.Chi_QT_CK_VND_USD; //Bao gồm tiền VNĐ Ck và tiền USD chuyển khoản (Quy đổi ra VNĐ)
 
                 //Dong 5 thu hoan tam ung (= thu hoan trong thang + thu hoan tam ung chua qt trong thang
                 obj04D5.TienMatVND_QD += obj.TH_TM_VND; //obj.HU_TRONGTHANG_TM_VND + obj.TH_CHUA_QT_TM_VND;
                 obj04D5.TienMatUSD += obj.TH_TM_USD; //obj.HU_TRONGTHANG_TM_USD + obj.TH_CHUA_QT_TM_USD;
                 obj04D5.TienMatVND += obj.TH_VND_TM;
-                obj04D5.ChuyenKhoanVND += obj.TH_VND_TM; //obj.HU_TRONGTHANG_CK_VND + obj.TH_CHUA_QT_CK_VND;
+                obj04D5.ChuyenKhoanVND += obj.TH_TONG_CK_VND_USD; //Bao gồm tiền VNĐ Ck và tiền USD chuyển khoản (Quy đổi ra VNĐ)
 
                 //Dong 6 :
                 obj04D6.TienMatVND_QD += obj.CN_QT_PhaiThu_TM_VND;
                 obj04D6.TienMatUSD += obj.CN_QT_PhaiThu_TM_USD;
                 obj04D6.TienMatVND += obj.CN_QT_VND_TM_PhaiThu;
-                obj04D6.ChuyenKhoanVND += obj.CN_QT_VND_CK_PhaiThu;
+                obj04D6.ChuyenKhoanVND += obj.CN_QT_VND_CK_PhaiThu_TONG_USD_VND; // obj.CN_QT_VND_CK_PhaiThu;
             }
 
             obj04D2.TongVND = obj04D2.TienMatVND_QD + obj04D2.TienMatVND + obj04D2.ChuyenKhoanVND;
@@ -1353,21 +1361,24 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 obj04D4.TienMatUSD += obj.Chi_QT_TM_USD;
 
                 obj04D4.TienMatVND += obj.Chi_VND_QT_TM;
-                obj04D4.ChuyenKhoanVND += obj.Chi_VND_QT_CK;
+                obj04D4.ChuyenKhoanVND += obj.Chi_QT_CK_VND_USD; //Bao gồm tiền VNĐ Ck và tiền USD chuyển khoản (quy đổi ra VNĐ)
 
                 //Dong 5 thu hoan tam ung (= thu hoan trong thang + thu hoan tam ung chua qt trong thang
-                obj04D5.TienMatVND_QD += obj.HU_TRONGTHANG_TM_VND + obj.TH_CHUA_QT_TM_VND;
-                obj04D5.TienMatUSD += obj.HU_TRONGTHANG_TM_USD + obj.TH_CHUA_QT_TM_USD;
+                obj04D5.TienMatVND_QD += obj.TH_TM_VND;  //obj.HU_TRONGTHANG_TM_VND + obj.TH_CHUA_QT_TM_VND;
+                obj04D5.TienMatUSD += obj.TH_TM_USD;  //obj.HU_TRONGTHANG_TM_USD + obj.TH_CHUA_QT_TM_USD;
+                obj04D5.ChuyenKhoanVND += obj.TH_TONG_CK_VND_USD; //obj.HU_TRONGTHANG_CK_VND + obj.TH_CHUA_QT_CK_VND;
+                obj04D5.TienMatVND += obj.TH_VND_TM; //obj.HU_TRONGTHANG_CK_USD + obj.TH_CHUA_QT_CK_USD;
 
-                obj04D5.TienMatVND += obj.HU_VND_TRONGTHANG_TM + obj.TH_VND_CHUA_QT_TM;
-                obj04D5.ChuyenKhoanVND += obj.HU_VND_TRONGTHANG_CK + obj.TH_VND_CHUA_QT_CK;
+                //obj04D5.TienMatVND_QD += obj.HU_TRONGTHANG_TM_VND + obj.TH_CHUA_QT_TM_VND;
+                //obj04D5.TienMatUSD += obj.HU_TRONGTHANG_TM_USD + obj.TH_CHUA_QT_TM_USD;
+                //obj04D5.TienMatVND += obj.HU_VND_TRONGTHANG_TM + obj.TH_VND_CHUA_QT_TM;
+                //obj04D5.ChuyenKhoanVND += obj.HU_TONG_TRONGTHANG_CK_VND_USD + obj.TH_VND_CHUA_QT_CK_VND_USD;
 
                 //Dong 6 :phai thu thang tiep theo
                 obj04D6.TienMatVND_QD += obj.CN_QT_PhaiThu_TM_VND;
                 obj04D6.TienMatUSD += obj.CN_QT_PhaiThu_TM_USD;
-
                 obj04D6.TienMatVND += obj.CN_QT_VND_TM_PhaiThu;
-                obj04D6.ChuyenKhoanVND += obj.CN_QT_VND_CK_PhaiThu;
+                obj04D6.ChuyenKhoanVND += obj.CN_QT_VND_CK_PhaiThu_TONG_USD_VND; //obj.CN_QT_VND_CK_PhaiThu;
 
             }
 

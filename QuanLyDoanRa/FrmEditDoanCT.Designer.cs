@@ -70,7 +70,10 @@
             this.tabLichCongTac = new DevExpress.XtraTab.XtraTabPage();
             this.gctLichCongTac = new DevExpress.XtraGrid.GridControl();
             this.gvLichCongTac = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.cboNuocDen = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.colNuocDen1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.rcboNuocDen = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDiaDiem = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTrangThai = new DevExpress.XtraGrid.Columns.GridColumn();
             this.luegTrangThai = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
@@ -82,10 +85,7 @@
             this.colThanhVienA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colThanhVienB = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNgayCongTac = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNuocDen1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.rcboNuocDen = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
-            this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cboNuocDen = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.tabThanhVien = new DevExpress.XtraTab.XtraTabPage();
             this.gctThanhVien = new DevExpress.XtraGrid.GridControl();
@@ -128,14 +128,14 @@
             this.tabLichCongTac.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gctLichCongTac)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvLichCongTac)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboNuocDen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rcboNuocDen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.luegTrangThai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgNgayDi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgNgayDi.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgNgayVe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgNgayVe.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rcboNuocDen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboNuocDen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             this.tabThanhVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gctThanhVien)).BeginInit();
@@ -246,9 +246,9 @@
             // 
             this.labelControl15.Location = new System.Drawing.Point(572, 163);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(72, 13);
+            this.labelControl15.Size = new System.Drawing.Size(68, 13);
             this.labelControl15.TabIndex = 66;
-            this.labelControl15.Text = "Ngày duyệt DT";
+            this.labelControl15.Text = "Ngày tạm ứng";
             // 
             // dtNgayDuyetDuToan
             // 
@@ -601,16 +601,45 @@
             this.gvLichCongTac.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gvLichCongTac_CellValueChanged);
             this.gvLichCongTac.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gvLichCongTac_KeyDown);
             // 
-            // cboNuocDen
+            // colNuocDen1
             // 
-            this.cboNuocDen.AutoHeight = false;
-            this.cboNuocDen.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.colNuocDen1.Caption = "Nước đến";
+            this.colNuocDen1.ColumnEdit = this.rcboNuocDen;
+            this.colNuocDen1.FieldName = "NuocId";
+            this.colNuocDen1.Name = "colNuocDen1";
+            this.colNuocDen1.Visible = true;
+            this.colNuocDen1.VisibleIndex = 0;
+            // 
+            // rcboNuocDen
+            // 
+            this.rcboNuocDen.AutoHeight = false;
+            this.rcboNuocDen.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cboNuocDen.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenNuoc", "Tên nước"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default)});
-            this.cboNuocDen.Name = "cboNuocDen";
-            this.cboNuocDen.NullText = "";
+            this.rcboNuocDen.DisplayMember = "TenNuoc";
+            this.rcboNuocDen.ImmediatePopup = true;
+            this.rcboNuocDen.Name = "rcboNuocDen";
+            this.rcboNuocDen.NullText = "";
+            this.rcboNuocDen.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.rcboNuocDen.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.rcboNuocDen.ValueMember = "Id";
+            this.rcboNuocDen.View = this.repositoryItemGridLookUpEdit1View;
+            // 
+            // repositoryItemGridLookUpEdit1View
+            // 
+            this.repositoryItemGridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn2});
+            this.repositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.repositoryItemGridLookUpEdit1View.Name = "repositoryItemGridLookUpEdit1View";
+            this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.repositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Tên nước";
+            this.gridColumn2.FieldName = "TenNuoc";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 0;
             // 
             // colDiaDiem
             // 
@@ -713,45 +742,16 @@
             this.colNgayCongTac.Visible = true;
             this.colNgayCongTac.VisibleIndex = 7;
             // 
-            // colNuocDen1
+            // cboNuocDen
             // 
-            this.colNuocDen1.Caption = "Nước đến";
-            this.colNuocDen1.ColumnEdit = this.rcboNuocDen;
-            this.colNuocDen1.FieldName = "NuocId";
-            this.colNuocDen1.Name = "colNuocDen1";
-            this.colNuocDen1.Visible = true;
-            this.colNuocDen1.VisibleIndex = 0;
-            // 
-            // rcboNuocDen
-            // 
-            this.rcboNuocDen.AutoHeight = false;
-            this.rcboNuocDen.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cboNuocDen.AutoHeight = false;
+            this.cboNuocDen.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.rcboNuocDen.DisplayMember = "TenNuoc";
-            this.rcboNuocDen.ImmediatePopup = true;
-            this.rcboNuocDen.Name = "rcboNuocDen";
-            this.rcboNuocDen.NullText = "";
-            this.rcboNuocDen.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
-            this.rcboNuocDen.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.rcboNuocDen.ValueMember = "Id";
-            this.rcboNuocDen.View = this.repositoryItemGridLookUpEdit1View;
-            // 
-            // repositoryItemGridLookUpEdit1View
-            // 
-            this.repositoryItemGridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn2});
-            this.repositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.repositoryItemGridLookUpEdit1View.Name = "repositoryItemGridLookUpEdit1View";
-            this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.repositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "Tên nước";
-            this.gridColumn2.FieldName = "TenNuoc";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 0;
+            this.cboNuocDen.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenNuoc", "Tên nước"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default)});
+            this.cboNuocDen.Name = "cboNuocDen";
+            this.cboNuocDen.NullText = "";
             // 
             // repositoryItemLookUpEdit1
             // 
@@ -914,14 +914,14 @@
             this.tabLichCongTac.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gctLichCongTac)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvLichCongTac)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboNuocDen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rcboNuocDen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.luegTrangThai)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgNgayDi.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgNgayDi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgNgayVe.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgNgayVe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rcboNuocDen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cboNuocDen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             this.tabThanhVien.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gctThanhVien)).EndInit();

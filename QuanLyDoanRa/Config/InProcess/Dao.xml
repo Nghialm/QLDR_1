@@ -59,8 +59,8 @@
         <entry key="dialect" value="NHibernate.Dialect.MsSql2000Dialect"/>
         <entry key="connection.driver_class" value="NHibernate.Driver.SqlClientDriver"/>
         <entry key="use_proxy_validator" value="false" />
-        <!--<entry key="hbm2ddl.auto" value="update"/>
-        <entry key="hbm2ddl.auto" value="create"/>-->
+        <!--<entry key="hbm2ddl.auto" value="update"/>-->
+        <!--<entry key="hbm2ddl.auto" value="create"/>-->
         <!--
         <entry key="hbm2ddl.auto" value="create"/>
         -->

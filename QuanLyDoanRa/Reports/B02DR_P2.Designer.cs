@@ -421,7 +421,7 @@
             // xrTableCell50
             // 
             this.xrTableCell50.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Chi_VND_QT_CK", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Chi_QT_CK_VND_USD", "{0:#,#}")});
             this.xrTableCell50.Name = "xrTableCell50";
             this.xrTableCell50.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);
             this.xrTableCell50.StylePriority.UsePadding = false;
@@ -1339,7 +1339,7 @@
             // xrTableCell78
             // 
             this.xrTableCell78.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Chi_VND_QT_CK")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Chi_QT_CK_VND_USD")});
             this.xrTableCell78.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold);
             this.xrTableCell78.Name = "xrTableCell78";
             this.xrTableCell78.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);
@@ -1606,7 +1606,7 @@
             // xrTableCell93
             // 
             this.xrTableCell93.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Chi_VND_QT_CK")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Chi_QT_CK_VND_USD")});
             this.xrTableCell93.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold);
             this.xrTableCell93.Name = "xrTableCell93";
             this.xrTableCell93.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);

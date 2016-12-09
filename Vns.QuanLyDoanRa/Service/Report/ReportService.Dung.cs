@@ -71,106 +71,117 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 {
                     if (objTamUng.DoanRaCoId == objDoanCongTac.Id)
                     {
-                        if (objTamUng.MaTkCo.Equals(Globals.TkTienMat))
+                        if (objTamUng.NgoaiTeId == Globals.NgoaiTeId)
                         {
-                            objReport.TU_TM_VND += objTamUng.SoTien;
-                            objReport.TU_TM_USD += objTamUng.SoTienNt;
+                            if (objTamUng.MaTkCo == Globals.TkTienMat)
+                            {
+                                objReport.TU_TM_VND += objTamUng.SoTien;
+                                objReport.TU_TM_USD += objTamUng.SoTienNt;
+                            }
+                            else if (objTamUng.MaTkCo == Globals.TkTienChuyenKhoan)
+                            {
+                                objReport.TU_CK_VND += objTamUng.SoTien;
+                                objReport.TU_CK_USD += objTamUng.SoTienNt;
+                            }
                         }
-                        else
+                        else if (objTamUng.NgoaiTeId == Globals.NoiTeId)
                         {
-                            objReport.TU_CK_VND += objTamUng.SoTien;
-                            objReport.TU_CK_USD += objTamUng.SoTienNt;
+                            if (objTamUng.MaTkCo == Globals.TkTienMatVND)
+                            {
+                                objReport.TU_VND_TM += objTamUng.SoTien;
+                            }
+                            else if (objTamUng.MaTkCo == Globals.TkTienChuyenKhoanVND)
+                            {
+                                objReport.TU_VND_CK += objTamUng.SoTien;
+                            }
                         }
                     }
                 }
 
                 //So tien quyet toan
-                foreach (VnsGiaoDich objQuyetToan in lstQuyetToan)
-                {
-                    if (objQuyetToan.DoanRaCoId == objDoanCongTac.Id)
-                    {
-                        if (objQuyetToan.MaTkNo.Equals(Globals.TkThanhToanTienMat))
-                        {
-                            objReport.QT_TM_VND += objQuyetToan.SoTien;
-                            objReport.QT_TM_USD += objQuyetToan.SoTienNt;
-                        }
-                        else
-                        {
-                            objReport.QT_CK_VND += objQuyetToan.SoTien;
-                            objReport.QT_CK_USD += objQuyetToan.SoTienNt;
-                        }
-                    }
-                }
+                //foreach (VnsGiaoDich objQuyetToan in lstQuyetToan)
+                //{
+                //    if (objQuyetToan.DoanRaCoId == objDoanCongTac.Id)
+                //    {
+                //        if (objQuyetToan.MaTkNo.Equals(Globals.TkThanhToanTienMat))
+                //        {
+                //            objReport.QT_TM_VND += objQuyetToan.SoTien;
+                //            objReport.QT_TM_USD += objQuyetToan.SoTienNt;
+                //        }
+                //        else
+                //        {
+                //            objReport.QT_CK_VND += objQuyetToan.SoTien;
+                //            objReport.QT_CK_USD += objQuyetToan.SoTienNt;
+                //        }
+                //    }
+                //}
 
                 //So tien da thu thang truóc
-                foreach (VnsGiaoDich objDathuTT in lstDaThuThangTruoc)
-                {
-                    if (objDathuTT.DoanRaCoId == objDoanCongTac.Id)
-                    {
-                        objReport.TH_USD += objDathuTT.SoTienNt;
-                        objReport.TH_VND += objDathuTT.SoTien;
-                    }
-                }
+                //foreach (VnsGiaoDich objDathuTT in lstDaThuThangTruoc)
+                //{
+                //    if (objDathuTT.DoanRaCoId == objDoanCongTac.Id)
+                //    {
+                //        objReport.TH_USD += objDathuTT.SoTienNt;
+                //        objReport.TH_VND += objDathuTT.SoTien;
+                //    }
+                //}
 
                 //So tien da thu thang nay
-                foreach (VnsGiaoDich objDathuTN in lstDaThuThangNay)
-                {
-                    if (objDathuTN.DoanRaCoId == objDoanCongTac.Id)
-                    {
-                        objReport.TH_USD += objDathuTN.SoTienNt;
-                        objReport.TH_VND += objDathuTN.SoTien;
+                //foreach (VnsGiaoDich objDathuTN in lstDaThuThangNay)
+                //{
+                //    if (objDathuTN.DoanRaCoId == objDoanCongTac.Id)
+                //    {
+                //        objReport.TH_USD += objDathuTN.SoTienNt;
+                //        objReport.TH_VND += objDathuTN.SoTien;
 
-                        if (objDathuTN.MaTkNo.StartsWith(Globals.TkTienChuyenKhoan))
-                        {
-                            objReport.HU_TrongThang_CK_USD += objDathuTN.SoTienNt;
-                            objReport.HU_TrongThang_CK_VND += objDathuTN.SoTien;
-                        }
-                        else
-                        {
-                            objReport.HU_TrongThang_TM_USD += objDathuTN.SoTienNt;
-                            objReport.HU_TrongThang_TM_VND += objDathuTN.SoTien;
-                        }
-                    }
-                }
+                //        if (objDathuTN.MaTkNo.StartsWith(Globals.TkTienChuyenKhoan))
+                //        {
+                //            objReport.HU_TrongThang_CK_USD += objDathuTN.SoTienNt;
+                //            objReport.HU_TrongThang_CK_VND += objDathuTN.SoTien;
+                //        }
+                //        else
+                //        {
+                //            objReport.HU_TrongThang_TM_USD += objDathuTN.SoTienNt;
+                //            objReport.HU_TrongThang_TM_VND += objDathuTN.SoTien;
+                //        }
+                //    }
+                //}
 
                 //So tien chi quyet toan thang truoc
-                foreach (VnsGiaoDich objDaTraTT in lstDaTraThangTruoc)
-                {
-                    if (objDaTraTT.DoanRaCoId == objDoanCongTac.Id)
-                    {
-                        if (objDaTraTT.MaTkCo.Equals(Globals.TkTienMat))
-                        {
-                            objReport.QT_DT_TM_VND += objDaTraTT.SoTien;
-                            objReport.QT_DT_TM_USD += objDaTraTT.SoTienNt;
-                        }
-                        else
-                        {
-                            objReport.QT_DT_CK_VND += objDaTraTT.SoTien;
-                            objReport.QT_DT_CK_USD += objDaTraTT.SoTienNt;
-                        }
-                    }
-                }
+                //foreach (VnsGiaoDich objDaTraTT in lstDaTraThangTruoc)
+                //{
+                //    if (objDaTraTT.DoanRaCoId == objDoanCongTac.Id)
+                //    {
+                //        if (objDaTraTT.MaTkCo.Equals(Globals.TkTienMat))
+                //        {
+                //            objReport.QT_DT_TM_VND += objDaTraTT.SoTien;
+                //            objReport.QT_DT_TM_USD += objDaTraTT.SoTienNt;
+                //        }
+                //        else
+                //        {
+                //            objReport.QT_DT_CK_VND += objDaTraTT.SoTien;
+                //            objReport.QT_DT_CK_USD += objDaTraTT.SoTienNt;
+                //        }
+                //    }
+                //}
 
                 //So tien Chi quyet toan thang nay
-                foreach (VnsGiaoDich objDaTraTN in lstDaTraThangNay)
-                {
-                    if (objDaTraTN.DoanRaCoId == objDoanCongTac.Id)
-                    {
-                        if (objDaTraTN.MaTkCo.Equals(Globals.TkTienMat))
-                        {
-                            objReport.QT_DT_TM_VND += objDaTraTN.SoTien;
-                            objReport.QT_DT_TM_USD += objDaTraTN.SoTienNt;
-                        }
-                        else
-                        {
-                            objReport.QT_DT_CK_VND += objDaTraTN.SoTien;
-                            objReport.QT_DT_CK_USD += objDaTraTN.SoTienNt;
-                        }
-                    }
-                }
-
-                //CongNoPhaiThu = objReport.TamUngTienMat + objReport.TamUngChuyenKhoan - objReport.QuyetToan - objReport.ThuThangTruoc - objReport.ThuThangTruoc;
-                //CongNoPhaiTra = objReport.QuyetToan - objReport.TamUngTienMat - objReport.TamUngChuyenKhoan  - objReport.TraThangNay - objReport.TraThangTruoc;
+                //foreach (VnsGiaoDich objDaTraTN in lstDaTraThangNay)
+                //{
+                //    if (objDaTraTN.DoanRaCoId == objDoanCongTac.Id)
+                //    {
+                //        if (objDaTraTN.MaTkCo.Equals(Globals.TkTienMat))
+                //        {
+                //            objReport.QT_DT_TM_VND += objDaTraTN.SoTien;
+                //            objReport.QT_DT_TM_USD += objDaTraTN.SoTienNt;
+                //        }
+                //        else
+                //        {
+                //            objReport.QT_DT_CK_VND += objDaTraTN.SoTien;
+                //            objReport.QT_DT_CK_USD += objDaTraTN.SoTienNt;
+                //        }
+                //    }
+                //}
 
                 lstReport.Add(objReport);
             }

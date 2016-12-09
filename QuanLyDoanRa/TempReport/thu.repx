@@ -95,6 +95,7 @@ namespace XtraReportSerialization {
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow16;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell23;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell24;
+        private DevExpress.XtraReports.Parameters.Parameter p_QuyenSo;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow17;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell25;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell26;
@@ -479,6 +480,7 @@ namespace XtraReportSerialization {
             this.p_CtGoc = new DevExpress.XtraReports.Parameters.Parameter();
             this.p_DonVi1 = new DevExpress.XtraReports.Parameters.Parameter();
             this.p_DonVi2 = new DevExpress.XtraReports.Parameters.Parameter();
+            this.p_QuyenSo = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable7)).BeginInit();
@@ -1599,11 +1601,13 @@ namespace XtraReportSerialization {
             // 
             // xrTableCell24
             // 
+            this.xrTableCell24.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding(this.p_QuyenSo, "Text", "")});
             this.xrTableCell24.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTableCell24.Name = "xrTableCell24";
             this.xrTableCell24.StylePriority.UseFont = false;
             this.xrTableCell24.StylePriority.UseTextAlignment = false;
-            this.xrTableCell24.Text = " 01";
+            this.xrTableCell24.Text = "xrTableCell24";
             this.xrTableCell24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.xrTableCell24.Weight = 0.518128485584408;
             // 
@@ -2057,11 +2061,13 @@ namespace XtraReportSerialization {
             // 
             // xrTableCell77
             // 
+            this.xrTableCell77.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+                        new DevExpress.XtraReports.UI.XRBinding(this.p_QuyenSo, "Text", "")});
             this.xrTableCell77.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrTableCell77.Name = "xrTableCell77";
             this.xrTableCell77.StylePriority.UseFont = false;
             this.xrTableCell77.StylePriority.UseTextAlignment = false;
-            this.xrTableCell77.Text = "01";
+            this.xrTableCell77.Text = "xrTableCell77";
             this.xrTableCell77.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.xrTableCell77.Weight = 0.51812864402564918;
             // 
@@ -2336,6 +2342,12 @@ namespace XtraReportSerialization {
             this.p_DonVi2.Value = "";
             this.p_DonVi2.Visible = false;
             // 
+            // p_QuyenSo
+            // 
+            this.p_QuyenSo.Name = "p_QuyenSo";
+            this.p_QuyenSo.Value = "";
+            this.p_QuyenSo.Visible = false;
+            // 
             // design
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2367,7 +2379,8 @@ namespace XtraReportSerialization {
                         this.p_KemTheo,
                         this.p_CtGoc,
                         this.p_DonVi1,
-                        this.p_DonVi2});
+                        this.p_DonVi2,
+                        this.p_QuyenSo});
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
                         this.xrControlStyle1,
                         this.xrControlStyle2});

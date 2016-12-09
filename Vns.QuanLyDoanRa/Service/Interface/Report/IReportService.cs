@@ -23,7 +23,7 @@ namespace Vns.QuanLyDoanRa.Service.Interface.Report
         IList<RP_ChungTuGhiSo> RPChungTuGhiSo(DateTime p_TuNgay, DateTime p_DenNgay, string str_TKCo, string str_TKNo, string str_TrangThaiCt, int GiaTri, string TimeTile);
         IList<RP_ChungTuGhiSo> RPChungTuGhiSo_QT(DateTime p_TuNgay, DateTime p_DenNgay, string str_TKCo, string str_TKNo, string str_TrangThaiCt, int GiaTri, string TimeTile);
 
-        IList<VnsReport> BaoCaoTongHopDoanRaChungTuGhiSo(DateTime p_TuNgay, DateTime p_DenNgay, Guid p_LoaiDoanRaId, Guid p_DoanRaId);
+        //IList<VnsReport> BaoCaoTongHopDoanRaChungTuGhiSo(DateTime p_TuNgay, DateTime p_DenNgay, Guid p_LoaiDoanRaId, Guid p_DoanRaId);
         IList<PhuBieuChiQT> PhuBieuChiQt(DateTime p_TuNgay, DateTime p_DenNgay, out IList<PhuBieuChiQt_Dem> lst_dem);
         
     }
