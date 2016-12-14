@@ -506,6 +506,30 @@
     <Compile Include="Reports\B02DR_P4.Designer.cs">
       <DependentUpon>B02DR_P4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\SoChiTietTK_CK_VND_P3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SoChiTietTK_CK_VND_P3.Designer.cs">
+      <DependentUpon>SoChiTietTK_CK_VND_P3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SoChiTietTK_CK_VND_P2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SoChiTietTK_CK_VND_P2.Designer.cs">
+      <DependentUpon>SoChiTietTK_CK_VND_P2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SoChiTietTK_CK_VND_P1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SoChiTietTK_CK_VND_P1.Designer.cs">
+      <DependentUpon>SoChiTietTK_CK_VND_P1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SoChiTietTK_CK_VND.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SoChiTietTK_CK_VND.Designer.cs">
+      <DependentUpon>SoChiTietTK_CK_VND.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\InUyNhiemChiVnd.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -963,6 +987,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\B02DR_P4.resx">
       <DependentUpon>B02DR_P4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SoChiTietTK_CK_VND_P3.resx">
+      <DependentUpon>SoChiTietTK_CK_VND_P3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SoChiTietTK_CK_VND_P2.resx">
+      <DependentUpon>SoChiTietTK_CK_VND_P2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SoChiTietTK_CK_VND_P1.resx">
+      <DependentUpon>SoChiTietTK_CK_VND_P1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SoChiTietTK_CK_VND.resx">
+      <DependentUpon>SoChiTietTK_CK_VND.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\InUyNhiemChiVnd.resx">
       <DependentUpon>InUyNhiemChiVnd.cs</DependentUpon>

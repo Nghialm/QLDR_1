@@ -821,7 +821,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
             {
                 for (int i = lstDoanRa.Count - 1; i >= 0; i--)
                 {
-                    if (lstDoanRa[i].NgayQuyetToan < NgayBaoCao || //Ngay quyet toan
+                    if (lstDoanRa[i].NgayQuyetToan.Date <= NgayBaoCao.Date || //Ngay quyet toan
                         (!VnsCheck.IsNullGuid(LoaiDoanRa) && lstDoanRa[i].LoaiDoanRaId == LoaiDoanRa)) //Loc theo loai doan ra
                         lstDoanRa.RemoveAt(i);
                 }
@@ -830,6 +830,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
             foreach (VnsDoanCongTac objDoanRa in lstDoanRa)
             {
                 objReport = new VnsReportChuaQt(objDoanRa);
+                objReport.NgayDt = p_DenNgay;
 
                 foreach (VnsGiaoDich objGiaoDich in lstTamUng)
                     if (objGiaoDich.DoanRaCoId == objDoanRa.Id)
@@ -865,9 +866,8 @@ namespace Vns.QuanLyDoanRa.Service.Report
 
                         
                     }
-                //if (objReport.TienMatUSD != 0 || objReport.TienMatVND != 0
-                //    || objReport.ChuyenKhoanUSD != 0 || objReport.ChuyenKhoanVND != 0)
-                lstChuaQt.Add(objReport);
+                if (objReport.TongVND != 0)
+                    lstChuaQt.Add(objReport);
             }
 
             return lstChuaQt;

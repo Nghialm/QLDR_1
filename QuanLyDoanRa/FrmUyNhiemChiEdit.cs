@@ -120,6 +120,15 @@ namespace QuanLyDoanRa
                 btnInPhieu.Enabled = true;
                 btnXoa.Enabled = true;
             }
+
+            if (m_groupCt.Contains("VND"))
+            {
+                colNgoaiTeId.Visible = false;
+                colTyGia.Visible = false;
+                colSoTienNte.Visible = false;
+
+                btDSKhoNte.Visible = false;
+            }
         }
         private void BindData()
         {
@@ -235,7 +244,15 @@ namespace QuanLyDoanRa
         {
             if (lstGiaoDich == null) lstGiaoDich = new List<VnsGiaoDich>();
 
-            lstGiaoDich.Add(new VnsGiaoDich());
+            VnsGiaoDich obj = new VnsGiaoDich();
+            if (m_groupCt.Contains("VND"))
+            {
+                obj.NgoaiTeId = Vns.QuanLyDoanRa.Globals.NoiTeId;
+                obj.SoTienNt = 1;
+                obj.TyGia = 1;
+            }
+
+            lstGiaoDich.Add(obj);
             _GridControl.DataSource = lstGiaoDich;
             _GridControl.RefreshDataSource();
 

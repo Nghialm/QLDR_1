@@ -37,6 +37,24 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             set;
         }
 
+        public virtual decimal PsGiamVND_CK
+        {
+            get
+            {
+                if (MaTkNo == Globals.TkTamUng) return PsGiamVND;
+                else return 0;
+            }
+        }
+
+        public virtual decimal PsGiamVND_RutTm
+        {
+            get
+            {
+                if (MaTkNo == Globals.TkTienMatVND) return PsGiamVND;
+                return 0;
+            }
+        }
+
         public static int CompareSoCt(RP_SoDuTaiKhoan x, RP_SoDuTaiKhoan y)
         {
             if (x == null)

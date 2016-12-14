@@ -43,9 +43,15 @@ namespace QuanLyDoanRa.Reports
                         SoChiTietTK.CreateDocument();
                         SoChiTietTK.ShowPreviewDialog();
                     }
-                    else
+                    else if (MaTaiKhoan == Vns.QuanLyDoanRa.Globals.TkTienMatVND)
                     {
                         Reports.SoChiTietTK_VND SoChiTietTK = new SoChiTietTK_VND(TuNgay, DenNgay, Titletime, MaTaiKhoan, "");
+                        SoChiTietTK.CreateDocument();
+                        SoChiTietTK.ShowPreviewDialog();
+                    }
+                    else if (MaTaiKhoan == Vns.QuanLyDoanRa.Globals.TkTienChuyenKhoanVND)
+                    {
+                        Reports.SoChiTietTK_CK_VND SoChiTietTK = new SoChiTietTK_CK_VND(TuNgay, DenNgay, Titletime, MaTaiKhoan, "");
                         SoChiTietTK.CreateDocument();
                         SoChiTietTK.ShowPreviewDialog();
                     }
