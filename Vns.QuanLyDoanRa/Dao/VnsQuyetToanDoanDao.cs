@@ -68,7 +68,8 @@ namespace Vns.QuanLyDoanRa.Dao.NHibernate
                             "m.IdMucCha as IdMucCha,' ' as MaMucCha , m.MaMuc as MaMuc,m.TenMuc as TenMuc," +
                             "qt.DienGiai as DienGiai, " +
                             "qt.SoTien as SoTien, qt.SoTienVND as SoTienVND, " +
-                            "qt.TenKhoanChi as TenKhoanChi " +
+                            "qt.TenKhoanChi as TenKhoanChi, " +
+                            "qt.NgoaiTeId as NgoaiTeId " +
                          "from VnsQuyetToanDoan qt " +
                          "inner join qt.objMucTieuMuc m " +
                          "where qt.CongTacId =:CongTacId ";
@@ -85,7 +86,8 @@ namespace Vns.QuanLyDoanRa.Dao.NHibernate
                             "m.IdMucCha as IdMucCha,' ' as MaMucCha , m.MaMuc as MaMuc,m.TenMuc as TenMuc," +
                             "qt.DienGiai as DienGiai, " +
                             "qt.SoTien as SoTien, qt.SoTienVND as SoTienVND," + 
-                            "qt.TenKhoanChi as TenKhoanChi " +
+                            "qt.TenKhoanChi as TenKhoanChi, " +
+                            "qt.NgoaiTeId as NgoaiTeId " +
                          "from VnsQuyetToanDoan qt " +
                          "Inner Join qt.objMucTieuMuc m " +
                          "where qt.CongTacId = :CongTacId " +

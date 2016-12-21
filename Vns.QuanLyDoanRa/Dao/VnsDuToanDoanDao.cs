@@ -56,6 +56,7 @@ namespace Vns.QuanLyDoanRa.Dao.NHibernate
                             "dt.DienGiai as DienGiai, " +
                             "dt.SoTienDuToan as SoTien, dt.SoTienDuToanVND as SoTienVND, " + 
                             "dt.TenKhoanChi as TenKhoanChi, " +
+                            "dt.NgoaiTeId as NgoaiTeId, " +
                             "dt.LanDuToan as LanDuToan " +
                          "from VnsDuToanDoan dt " +
                          "inner join dt.Muc m " +

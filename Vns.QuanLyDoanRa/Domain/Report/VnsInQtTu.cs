@@ -17,6 +17,7 @@ namespace Vns.QuanLyDoanRa.Domain.Report
         public virtual decimal SoTienVND { get; set; }
         public virtual String TenKhoanChi { get; set; }
         public virtual int LanDuToan { get; set; }
+        public virtual Guid NgoaiTeId { get; set; }
 
         public VnsInQtTu()
         {

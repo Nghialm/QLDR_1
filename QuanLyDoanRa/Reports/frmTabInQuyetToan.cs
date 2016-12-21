@@ -443,11 +443,17 @@ namespace QuanLyDoanRa.Reports
                 tbl.Cell(dem, 6).Range.Font.Bold = 0;
                 if (tmp.SoTienVND != 0) tbl.Cell(dem, 6).Range.Text = tmp.SoTienVND.ToString("n0");
 
-                tongtien += tmp.SoTien;
-                tongtiengroup += tmp.SoTien;
+                if (tmp.NgoaiTeId == Vns.QuanLyDoanRa.Globals.NgoaiTeId)
+                {
+                    tongtien += tmp.SoTien;
+                    tongtiengroup += tmp.SoTien;
+                }
 
-                tongtienVND += tmp.SoTienVND;
-                tongtiengroupVND += tmp.SoTienVND;
+                if (tmp.NgoaiTeId == Vns.QuanLyDoanRa.Globals.NoiTeId)
+                {
+                    tongtienVND += tmp.SoTienVND;
+                    tongtiengroupVND += tmp.SoTienVND;
+                }
             }
 
             if (dongnhomtruoc != 0)
@@ -457,7 +463,10 @@ namespace QuanLyDoanRa.Reports
             }
 
             if (tongtien != 0) tbl.Cell(2, 5).Range.Text = tongtien.ToString("n0");
+            else tbl.Cell(2, 5).Range.Text = "";
+
             if (tongtienVND != 0) tbl.Cell(2, 6).Range.Text = tongtienVND.ToString("n0");
+            else tbl.Cell(2, 6).Range.Text = "";
         }
 
 
