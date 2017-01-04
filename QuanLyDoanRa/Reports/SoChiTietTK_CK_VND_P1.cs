@@ -19,7 +19,8 @@ namespace QuanLyDoanRa.Reports
 
         public DataTable GetData(IList<RP_SoDuTaiKhoan> lstData, string sTk)
         {
-            if (sTk == Vns.QuanLyDoanRa.Globals.TkTienChuyenKhoan)
+            if (sTk == Vns.QuanLyDoanRa.Globals.TkTienChuyenKhoan || 
+                sTk == Vns.QuanLyDoanRa.Globals.TkTienChuyenKhoanVND)
             {
                 xrTableCell4.Text = "Số QT TD QT";
             }

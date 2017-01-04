@@ -52,7 +52,7 @@ namespace QuanLyDoanRa.Commons
         public static void Message_Error(Exception ex)
         {
             // Message_Error(ex, "");
-            Message_Warning("Đã có lỗi xảy ra, vui lòng kiểm tra lại hệ thống");
+            Message_Warning("Đã có lỗi xảy ra, vui lòng kiểm tra lại hệ thống." + ex.Message);
 
         }
 
@@ -296,6 +296,34 @@ namespace QuanLyDoanRa.Commons
                     return obj;
             }
             return null;
+        }
+
+        public static List<String> Spilit(string s, int number)
+        {
+            string s1 = "";
+            string s2 = "";
+
+            List<String> lst = new List<string>();
+            string[] arr;
+            arr = s.Split(' ');
+
+            string s1tmp = "";
+
+            foreach (string tmp in arr)
+            {
+                s1tmp += tmp + " ";
+                if (s1tmp.Length <= number)
+                {
+                    s1 += tmp + " ";
+                }
+                else
+                {
+                    s2 += tmp + " ";
+                }
+            }
+
+            lst.Add(s1); lst.Add(s2);
+            return lst;
         }
     }
 

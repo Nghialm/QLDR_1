@@ -50,9 +50,19 @@ namespace QuanLyDoanRa.Reports
                 lblMaCTMT.Text = m_KhachHang.MaCTMT;
                 lblNganHang.Text = m_KhachHang.GhiChu2;
                 lblTaiKhoan.Text = m_KhachHang.SoTaiKhoan;
-                lblTongTienBangChu.Text = Commons.Commons.DocTienBangChu((long)m_SoTien, " đô la Mỹ.");
+
+                string stbc = Commons.Commons.DocTienBangChu((long)m_SoTien, " đô la Mỹ.");
+                List<String> slst1 = Commons.Commons.Spilit(stbc, 81);
+
+                lblTongTienBangChu1.Text = slst1[0];
+                lblTongTienBangChu2.Text = slst1[1];
+
                 lblSoTienNopThue.Text = "Số tiền nộp thuế (Ghi bằng chữ) :Không đồng";
-                lblSoTienThanhToan.Text = lblTongTienBangChu.Text;
+
+                List<String> slst2 = Commons.Commons.Spilit(stbc, 61);
+                lblSoTienThanhToan1.Text = slst2[0];
+                lblSoTienThanhToan2.Text = slst2[1];
+
                 lblNgay.Text="Lập ngày "+m_NgayCt.Day.ToString()+" Tháng "+m_NgayCt.Month.ToString()+" Năm "+m_NgayCt.Year.ToString();
                 
                 Commons.Report.SetParamValue(General.lstThamSo, this.Parameters);

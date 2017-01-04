@@ -267,41 +267,30 @@ namespace Vns.QuanLyDoanRa.Service
             //Gan so tien VND vao quyet toan tien mat
             if (qt_tm_vnd > 0)
             {
-                ty_gia_tb = qt_tm_vnd / qt_tm_usd;
-                foreach (VnsGiaoDich qt in lstGiaoDich)
+                if (qt_tm_usd != 0)
                 {
-                    if (qt.MaTkNo == Globals.TkThanhToanTienMat && qt.NgoaiTeId == Globals.NgoaiTeId)
+                    ty_gia_tb = qt_tm_vnd / qt_tm_usd;
+                    foreach (VnsGiaoDich qt in lstGiaoDich)
                     {
-                        qt_tm_usd -= qt.SoTienNt;
-                        if (qt_tm_usd == 0)
+                        if (qt.MaTkNo == Globals.TkThanhToanTienMat && qt.NgoaiTeId == Globals.NgoaiTeId)
                         {
-                            qt.SoTien = qt_tm_vnd;
-                            qt.TyGia = qt.SoTien / qt.SoTienNt;
-                        }
-                        else
-                        {
-                            qt.SoTien = ty_gia_tb * qt.SoTienNt;
-                            qt.TyGia = ty_gia_tb;
-                            qt_tm_vnd -= qt.SoTien;
+                            qt_tm_usd -= qt.SoTienNt;
+                            if (qt_tm_usd == 0)
+                            {
+                                qt.SoTien = qt_tm_vnd;
+                                qt.TyGia = qt.SoTien / qt.SoTienNt;
+                            }
+                            else
+                            {
+                                qt.SoTien = ty_gia_tb * qt.SoTienNt;
+                                qt.TyGia = ty_gia_tb;
+                                qt_tm_vnd -= qt.SoTien;
+                            }
                         }
                     }
                 }
             }
-
-            /*Tinh ty gia tien quyet toan
-             * Neu co nhieu ty gia tam ung se xuat ty gia nho truoc
-            */
-            //foreach (VnsGiaoDich tu in lstTu)
-            //{
-            //    if (tu.MaTkCo == Globals.TkTienMat)
-            //    {
-
-            //    }
-            //    else if (tu.MaTkCo == Globals.TkTienChuyenKhoan)
-            //    {
-            //    }
-            //}
-
+            
             //Tao nghiep vu quyet toan tien mat
             if (qt_tm_usd_dk != 0 && tu_tm_usd != 0)
             {
@@ -333,12 +322,12 @@ namespace Vns.QuanLyDoanRa.Service
                         }
                     }
 
-                    //btQuyetToanTm.SoTienNt = qt_tm_usd_dk;
-                    btQuyetToanTm.TyGia = tu_tm_vnd / tu_tm_usd;
+                    if (tu_tm_usd != 0)
+                        btQuyetToanTm.TyGia = tu_tm_vnd / tu_tm_usd;
+                    else
+                        btQuyetToanTm.TyGia = 1;
 
                     btQuyetToanTm.TyGiaTuDong = flg_tm_mul_tygia;
-
-                    //btQuyetToanTm.SoTien = btQuyetToanTm.SoTienNt * btQuyetToanTm.TyGia;
                 }
                 else
                 {
@@ -349,7 +338,11 @@ namespace Vns.QuanLyDoanRa.Service
                     btQuyetToanTm.TyGiaTuDong = flg_tm_mul_tygia;
 
                     btQuyetToanTm.SoTienNt = tu_tm_usd;
-                    btQuyetToanTm.TyGia = tu_tm_vnd / tu_tm_usd;
+                    if (tu_tm_usd != 0)
+                        btQuyetToanTm.TyGia = tu_tm_vnd / tu_tm_usd;
+                    else
+                        btQuyetToanTm.TyGia = 1;
+
                     btQuyetToanTm.SoTien = tu_tm_vnd;
                 }
 
@@ -369,14 +362,13 @@ namespace Vns.QuanLyDoanRa.Service
                 lstGiaoDich.Add(btQuyetToanTm);
             }
             
-
             //Gan so tien VND cho quyet toan chuyen tien
             if (qt_ck_vnd > 0)
             {
                 ty_gia_tb = qt_ck_vnd / qt_ck_usd;
                 foreach (VnsGiaoDich qt in lstGiaoDich)
                 {
-                    if (qt.MaTkNo == Globals.TkThanhToanChuyenKhoan)
+                    if (qt.MaTkNo == Globals.TkThanhToanChuyenKhoan && qt.NgoaiTeId == Globals.NgoaiTeId)
                     {
                         qt_ck_usd -= qt.SoTienNt;
                         if (qt_tm_usd == 0)

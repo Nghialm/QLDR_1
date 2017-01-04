@@ -111,7 +111,8 @@ namespace Vns.QuanLyDoanRa.Service.Report
             lstPhatSinh.AddRange(lstGetDuNoCtTk112(p_TuNgay, p_DenNgay,MaTk,MaTkDu));
             foreach (RP_SoDuTaiKhoan obj in lstPhatSinh)
             {
-                if (MaTk == Globals.TkTienChuyenKhoan)
+                if (MaTk == Globals.TkTienChuyenKhoan ||
+                    MaTk == Globals.TkTienChuyenKhoanVND)
                 {
                     obj.DisplayMoTa = obj.MoTa;
                 }
