@@ -304,12 +304,12 @@ namespace Vns.QuanLyDoanRa.Service.Report
                     {
                         if (objDathuTT.NgoaiTeId == Globals.NgoaiTeId)
                         {
-                            if (objDathuTT.MaTkNo == Globals.TkThanhToanChuyenKhoan)
+                            if (objDathuTT.MaTkNo == Globals.TkTienChuyenKhoan)
                             {
                                 objReport.TH_CK_USD += objDathuTT.SoTienNt;
                                 objReport.TH_CK_VND += objDathuTT.SoTien;
                             }
-                            else if (objDathuTT.MaTkNo == Globals.TkThanhToanTienMat)
+                            else if (objDathuTT.MaTkNo == Globals.TkTienMat)
                             {
                                 objReport.TH_TM_USD += objDathuTT.SoTienNt;
                                 objReport.TH_TM_VND += objDathuTT.SoTien;
@@ -317,11 +317,11 @@ namespace Vns.QuanLyDoanRa.Service.Report
                         }
                         else if (objDathuTT.NgoaiTeId == Globals.NoiTeId)
                         {
-                            if (objDathuTT.MaTkNo == Globals.TkThanhToanChuyenKhoan)
+                            if (objDathuTT.MaTkNo == Globals.TkTienChuyenKhoanVND)
                             {
                                 objReport.TH_VND_CK += objDathuTT.SoTien;
                             }
-                            else if (objDathuTT.MaTkNo == Globals.TkThanhToanTienMat)
+                            else if (objDathuTT.MaTkNo == Globals.TkTienMatVND)
                             {
                                 objReport.TH_VND_TM += objDathuTT.SoTien;
                             }
@@ -353,12 +353,12 @@ namespace Vns.QuanLyDoanRa.Service.Report
                         }
                         else if (objDathuTN.NgoaiTeId == Globals.NoiTeId)
                         {
-                            if (objDathuTN.MaTkNo == Globals.TkTienChuyenKhoan)
+                            if (objDathuTN.MaTkNo == Globals.TkTienChuyenKhoanVND)
                             {
                                 objReport.TH_VND_CK += objDathuTN.SoTien;
                                 objReport.HU_VND_TRONGTHANG_CK += objDathuTN.SoTien;
                             }
-                            else if (objDathuTN.MaTkNo == Globals.TkTienMat)
+                            else if (objDathuTN.MaTkNo == Globals.TkTienMatVND)
                             {
                                 objReport.TH_VND_TM += objDathuTN.SoTien;
                                 objReport.HU_VND_TRONGTHANG_TM += objDathuTN.SoTien;

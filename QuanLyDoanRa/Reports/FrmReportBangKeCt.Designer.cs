@@ -34,11 +34,11 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.btnHuyBo = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.dateTimeInput = new QuanLyDoanRa.Controls.DateTimeInput();
             this.cboLoaiBangKe = new DevExpress.XtraEditors.GridLookUpEdit();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.dateTimeInput = new QuanLyDoanRa.Controls.DateTimeInput();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -102,18 +102,6 @@
             this.panelControl1.Size = new System.Drawing.Size(454, 40);
             this.panelControl1.TabIndex = 3;
             // 
-            // dateTimeInput
-            // 
-            this.dateTimeInput.ChonDkNam = 0;
-            this.dateTimeInput.EndDate = new System.DateTime(((long)(0)));
-            this.dateTimeInput.IsNgay = false;
-            this.dateTimeInput.IsThang = false;
-            this.dateTimeInput.Location = new System.Drawing.Point(12, 12);
-            this.dateTimeInput.Name = "dateTimeInput";
-            this.dateTimeInput.Size = new System.Drawing.Size(430, 25);
-            this.dateTimeInput.StartDate = new System.DateTime(((long)(0)));
-            this.dateTimeInput.TabIndex = 4;
-            // 
             // cboLoaiBangKe
             // 
             this.cboLoaiBangKe.EnterMoveNextControl = true;
@@ -151,6 +139,18 @@
             this.labelControl1.Size = new System.Drawing.Size(67, 13);
             this.labelControl1.TabIndex = 7;
             this.labelControl1.Text = "Loại bảng kê :";
+            // 
+            // dateTimeInput
+            // 
+            this.dateTimeInput.ChonDkNam = 0;
+            this.dateTimeInput.EndDate = new System.DateTime(((long)(0)));
+            this.dateTimeInput.IsNgay = false;
+            this.dateTimeInput.IsThang = false;
+            this.dateTimeInput.Location = new System.Drawing.Point(12, 12);
+            this.dateTimeInput.Name = "dateTimeInput";
+            this.dateTimeInput.Size = new System.Drawing.Size(430, 25);
+            this.dateTimeInput.StartDate = new System.DateTime(((long)(0)));
+            this.dateTimeInput.TabIndex = 4;
             // 
             // FrmReportBangKeCt
             // 

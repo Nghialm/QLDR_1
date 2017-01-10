@@ -45,11 +45,11 @@ namespace QuanLyDoanRa.Reports
             {
                 if (this.Parameters[i].Name == "TKTienMat")
                 {
-                    this.Parameters[i].Value = Vns.QuanLyDoanRa.Globals.TkTienMat;
+                    this.Parameters[i].Value = "111.";// Vns.QuanLyDoanRa.Globals.TkTienMat;
                 }
                 else if (this.Parameters[i].Name == "TKChuyenKhoan")
                 {
-                    this.Parameters[i].Value = Vns.QuanLyDoanRa.Globals.TkTienChuyenKhoan;
+                    this.Parameters[i].Value = "112.";// Vns.QuanLyDoanRa.Globals.TkTienChuyenKhoan;
                 }
             }
 
@@ -70,10 +70,14 @@ namespace QuanLyDoanRa.Reports
                         case 4:
                             giatri_diengiai = "Chi quyết toán";
                             objSoDu.MaTkDoiUng = objSoDu.MaTkCo;
+
+                            objSoDu.MaTkDoiUng = objSoDu.MaTkDoiUng.Substring(0, 4);
                             break;
                         case 5:
                             giatri_diengiai = "Thu hoàn TƯ/QT";
                             objSoDu.MaTkDoiUng = objSoDu.MaTkNo;
+
+                            objSoDu.MaTkDoiUng = objSoDu.MaTkDoiUng.Substring(0, 4);
                             break;
                     }
 

@@ -115,6 +115,7 @@
             this.xrTableCell53 = new DevExpress.XtraReports.UI.XRTableCell();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
+            this.fTongVND = new DevExpress.XtraReports.UI.CalculatedField();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBangKeCt1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable7)).BeginInit();
@@ -184,7 +185,7 @@
             // xrTableCell5
             // 
             this.xrTableCell5.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "BangKeCtGhiSo.TongVND", "{0:#,#}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "BangKeCtGhiSo.fTongVND", "{0:#,#}")});
             this.xrTableCell5.Name = "xrTableCell5";
             this.xrTableCell5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrTableCell5.StylePriority.UsePadding = false;
@@ -392,7 +393,7 @@
             // xrTableCell38
             // 
             this.xrTableCell38.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "BangKeCtGhiSo.TongVND")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "BangKeCtGhiSo.fTongVND")});
             this.xrTableCell38.Name = "xrTableCell38";
             this.xrTableCell38.StylePriority.UseTextAlignment = false;
             xrSummary4.FormatString = "{0:#,#}";
@@ -694,7 +695,7 @@
             // xrTableCell16
             // 
             this.xrTableCell16.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "BangKeCtGhiSo.TongVND")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "BangKeCtGhiSo.fTongVND")});
             this.xrTableCell16.Name = "xrTableCell16";
             xrSummary9.FormatString = "{0:#,#}";
             xrSummary9.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
@@ -882,6 +883,13 @@
             this.xrLine1.Name = "xrLine1";
             this.xrLine1.SizeF = new System.Drawing.SizeF(1114.55F, 2F);
             // 
+            // fTongVND
+            // 
+            this.fTongVND.DataMember = "BangKeCtGhiSo";
+            this.fTongVND.DataSource = this.dsBangKeCt1;
+            this.fTongVND.Expression = "[VNDCk]+[VNDTm]+[TmVND]";
+            this.fTongVND.Name = "fTongVND";
+            // 
             // BangKeQuyetToanDetail
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -893,6 +901,8 @@
             this.GroupHeader2,
             this.ReportFooter,
             this.PageHeader});
+            this.CalculatedFields.AddRange(new DevExpress.XtraReports.UI.CalculatedField[] {
+            this.fTongVND});
             this.DataSource = this.dsBangKeCt1;
             this.Landscape = true;
             this.Margins = new System.Drawing.Printing.Margins(5, 5, 30, 30);
@@ -989,5 +999,6 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell12;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell4;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell14;
+        private DevExpress.XtraReports.UI.CalculatedField fTongVND;
     }
 }
