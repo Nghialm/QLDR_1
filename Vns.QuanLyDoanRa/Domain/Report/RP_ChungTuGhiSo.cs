@@ -270,7 +270,7 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                     _TrichYeu = "Thu chênh lệch Quyết toán/tạm ứng các đoàn ra bằng ngoại tệ (USD) tiền mặt các Ban Đảng Trung ương đi công tác  nước ngoài, " + countDr.ToString() + " đoàn.";
                     if (obj.MaTkNo.StartsWith(Globals.TkTienMatVND) && obj.MaTkCo.StartsWith(Globals.TkTamUng))
                     {
-                        _TM_USD = obj.PsTangUSD;
+                        //_TM_USD = obj.PsTangUSD;
                         _TM_VND += obj.PsTangVND;
                     }
 
@@ -283,7 +283,7 @@ namespace Vns.QuanLyDoanRa.Domain.Report
                     if (obj.MaTkNo.StartsWith(Globals.TkTienChuyenKhoanVND) && obj.MaTkCo.StartsWith(Globals.TkTamUng))
                     {
                         _CK_VND = obj.PsTangVND;
-                        _CK_USD = obj.PsTangUSD;
+                        //_CK_USD = obj.PsTangUSD;
                     }
                     break;
                 case 6:// Rut tien mat

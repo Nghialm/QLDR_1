@@ -28,6 +28,8 @@ namespace Vns.QuanLyDoanRa.Dao
         IList<VnsGiaoDich> GetNhap4FIFO(DateTime TuNgay, DateTime DenNgay, Guid NguonId, String TkNo, String TkCo);
         IList<VnsGiaoDich> GetNhap4FIFO(DateTime TuNgay, DateTime DenNgay, Guid NguonId, String NghiepVu);
         IList<VnsGiaoDich> GetBy(DateTime TuNgay, DateTime DenNgay, Guid NguonId, String NghiepVu);
+        
         IList<VnsGiaoDich> GetTUByDoanRaIdGroupByTyGia(Guid p_DoanRaId);
+        IList<VnsGiaoDich> GetHUKoQTByDoanRaIdGroupByTyGia(Guid p_DoanRaId);
     }
 }

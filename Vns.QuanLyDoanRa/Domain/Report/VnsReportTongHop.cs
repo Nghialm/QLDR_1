@@ -225,7 +225,7 @@ namespace Vns.QuanLyDoanRa.Domain.Report
         {
             get
             {
-                if (ThangDuyetQt < TU_NGAY) return TH_VND_TM;
+                if (ThangDuyetQt < TU_NGAY) return TH_VND_TM + TH_VND_CK;
                 else return 0;
             }
         }
@@ -977,7 +977,7 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             get
             {
                 if (ThangDuyetQt >= _TU_NGAY && ThangDuyetQt <= _DEN_NGAY)
-                    return CN_VND_PhaiTra_TM;
+                    return CN_VND_PhaiTra_TM + CN_VND_PhaiTra_CK;
                 else
                     return 0;
             }

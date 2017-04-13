@@ -95,6 +95,20 @@ namespace Vns.QuanLyDoanRa.Dao.NHibernate
             return q.List<VnsGiaoDich>();
         }
 
+        public IList<VnsGiaoDich> GetHUKoQTByDoanRaIdGroupByTyGia(Guid p_DoanRaId)
+        {
+            string sql = " Select gd.MaTkCo as MaTkCo, Sum(gd.SoTien) as SoTien, Sum(gd.SoTienNt) as SoTienNt, gd.TyGia as TyGia, gd.NgoaiTeId as NgoaiTeId " +
+                         " from VnsChungTu ct inner join ct.LstGiaoDich gd " +
+                         " where gd.DoanRaCoId =: p_DoanRaId and gd.MaTkCo =: p_TkCo " +
+                         " and ct.TrangThai = 0 " +
+                         " Group by gd.NgoaiTeId, gd.TyGia, gd.MaTkCo order by gd.TyGia ASC";
+            IQuery q = NHibernateSession.CreateQuery(sql);
+            q.SetParameter("p_DoanRaId", p_DoanRaId);
+            q.SetParameter("p_TkCo", Globals.TkTamUng);
+            q.SetResultTransformer(Transformers.AliasToBean<VnsGiaoDich>());
+            return q.List<VnsGiaoDich>();
+        }
+
         public IList<VnsGiaoDich> GetNhap4FIFO(DateTime TuNgay, DateTime DenNgay, Guid NguonId, String TkNo, String TkCo)
         {
             ICriteria isearch = NHibernateSession.CreateCriteria<VnsGiaoDich>().CreateAlias("objChungTu", "h");

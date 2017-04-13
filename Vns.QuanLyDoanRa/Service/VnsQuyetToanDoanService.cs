@@ -173,6 +173,27 @@ namespace Vns.QuanLyDoanRa.Service
 
             //Phan bo so tien can quyet toan voi ty qia
             IList<VnsGiaoDich> lstTu = VnsGiaoDichDao.GetTUByDoanRaIdGroupByTyGia(objDoanCongTac.Id);
+            IList<VnsGiaoDich> lstHu = VnsGiaoDichDao.GetHUKoQTByDoanRaIdGroupByTyGia(objDoanCongTac.Id);
+
+            foreach (VnsGiaoDich tmpTU in lstTu)
+            {
+                foreach (VnsGiaoDich tmpHU in lstHu)
+                {
+                    if ((tmpTU.NgoaiTeId == QuanLyDoanRa.Globals.NgoaiTeId) && (tmpHU.NgoaiTeId == QuanLyDoanRa.Globals.NgoaiTeId))
+                    {
+                        if (tmpTU.TyGia == tmpHU.TyGia)
+                        {
+                            tmpTU.SoTienNt -= tmpHU.SoTienNt;
+                            tmpTU.SoTien -= tmpHU.SoTien;
+                        }
+                    }
+                    else if ((tmpTU.NgoaiTeId == QuanLyDoanRa.Globals.NoiTeId) && (tmpHU.NgoaiTeId == QuanLyDoanRa.Globals.NoiTeId))
+                    {
+                        tmpTU.SoTien -= tmpHU.SoTien;
+                    }
+                }
+            }
+
             decimal tu_tm_usd = 0;
             decimal tu_tm_vnd = 0;
             decimal tu_ck_usd = 0;
