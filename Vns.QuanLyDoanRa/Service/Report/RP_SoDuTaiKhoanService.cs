@@ -118,7 +118,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 }
                 else
                 {
-                    obj.DisplayMoTa = obj.NgayCt.ToString("dd/MM");
+                    obj.DisplayMoTa = obj.NgayCt.ToString("dd-MM");
                 }
             }
             VnsLoaiDoanRa objDoanRa = new VnsLoaiDoanRa();

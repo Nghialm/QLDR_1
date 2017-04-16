@@ -67,7 +67,7 @@ namespace QuanLyDoanRa.Reports
                 objBangke.NgayHt = p_TuNgay;
                 objBangke.NgayCt = p_TuNgay;
                 objBangke.DienGiai = String.Format("Quyết toán đoàn đ.c {0} - {1} - đi {2} bằng ngoại tệ TM, CK thanh toán theo TBQT số: {3} -TB/VPTW/nb - ngày {4}",
-                    tmp.TruongDoanFullName, tmp.TenDoanRaVietTat, tmp.NuocCongTac, tmp.SoTbQt, tmp.ThangDuyetQt.ToString("dd/MM/yyyy"));
+                    tmp.TruongDoanFullName, tmp.TenDoanRaVietTat, tmp.NuocCongTac, tmp.SoTbQt, tmp.ThangDuyetQt.ToString("dd-MM-yyyy"));
                 
                 //objBangke.TmUSD = tmp.So_QT_TM_USD - tmp.Chi_QT_TM_USD;
                 //objBangke.TmVND = tmp.So_QT_TM_VND - tmp.Chi_QT_TM_VND;

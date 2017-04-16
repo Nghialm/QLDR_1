@@ -69,7 +69,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
                    objBC03DR.TenGroupThang = "Kỳ này";
                }
 
-               objBC03DR.ThangDuyetDt = objBC03DR.NgayDuyetDt.ToString("MM/yyyy");
+               objBC03DR.ThangDuyetDt = objBC03DR.NgayDuyetDt.ToString("MM-yyyy");
                             
                VnsDoanCongTac objDoanCongTac = VnsDoanCongTacDao.GetByKey("Id",objBC03DR.DoanRaId);
                if (objDoanCongTac != null)
