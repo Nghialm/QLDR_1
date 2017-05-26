@@ -124,7 +124,7 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             _LoaiDoanRaId = obj.LoaiDoanRaId;
             _DoanRaId = obj.DoanRaId;
             _TenLoaiDoanRa = obj.TenLoaiDoanRa;
-            _TenDoanRa = string.Format("{0} - đ/c {1} - đi {2} - QT {3}", obj.TenDoanRa, obj.TruongDoan, obj.NuocCongTac, obj.ThangDuyetQt.ToString("MM-yyyy"));
+            _TenDoanRa = string.Format("{0} - đ/c {1} - đi {2} - QT {3}", obj.TenDoanRa, obj.TruongDoan, obj.NuocCongTac, obj.ThangDuyetQt.ToString("MM/yyyy"));
             _Note = p_Note;
             _GroupByTime = group;
             _STT = 1;
@@ -176,7 +176,7 @@ namespace Vns.QuanLyDoanRa.Domain.Report
             _LoaiDoanRaId = loaidoanra;
             _DoanRaId = doanraid;
             _TenLoaiDoanRa = tenloaidoanra;
-            _TenDoanRa = string.Format("{0} - đ/c {1} - đi {2} -TBQT:{3} - QT {4}", tendoanra, objrp.TruongDoan, nuoccongtac, objrp.SoTbQt, thangduyetqt.ToString("MM-yyyy"));
+            _TenDoanRa = string.Format("{0} - đ/c {1} - đi {2} -TBQT:{3} - QT {4}", tendoanra, objrp.TruongDoan, nuoccongtac, objrp.SoTbQt, thangduyetqt.ToString("MM/yyyy"));
             _Note = p_Note;
             _GroupByTime = group;
             _STT = 1;

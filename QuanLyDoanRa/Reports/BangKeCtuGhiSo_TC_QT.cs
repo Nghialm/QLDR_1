@@ -71,13 +71,13 @@ namespace QuanLyDoanRa.Reports
                             giatri_diengiai = "Chi quyết toán";
                             objSoDu.MaTkDoiUng = objSoDu.MaTkCo;
 
-                            objSoDu.MaTkDoiUng = objSoDu.MaTkDoiUng.Substring(0, 4);
+                            objSoDu.MaTkDoiUng = objSoDu.MaTkDoiUng;//.Substring(0, 4);
                             break;
                         case 5:
                             giatri_diengiai = "Thu hoàn TƯ/QT";
                             objSoDu.MaTkDoiUng = objSoDu.MaTkNo;
 
-                            objSoDu.MaTkDoiUng = objSoDu.MaTkDoiUng.Substring(0, 4);
+                            objSoDu.MaTkDoiUng = objSoDu.MaTkDoiUng;//.Substring(0, 4);
                             break;
                     }
 

@@ -237,7 +237,7 @@
             // xrTableCell1
             // 
             this.xrTableCell1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "NgayCt", "{0:dd-MM}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "NgayCt", "{0:dd/MM}")});
             this.xrTableCell1.Name = "xrTableCell1";
             this.xrTableCell1.Text = "xrTableCell1";
             this.xrTableCell1.Weight = 0.26887270482034809D;

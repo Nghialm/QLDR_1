@@ -179,7 +179,7 @@
             // xrTableCell14
             // 
             this.xrTableCell14.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "BangKeCtGhiSo.NgayCt", "{0:dd-MM-yyyy}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "BangKeCtGhiSo.NgayCt", "{0:dd/MM/yyyy}")});
             this.xrTableCell14.Name = "xrTableCell14";
             this.xrTableCell14.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
             this.xrTableCell14.StylePriority.UsePadding = false;
@@ -199,7 +199,7 @@
             // xrTableCell13
             // 
             this.xrTableCell13.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "DsSoDuTk.NgayCt", "{0:dd-MM-yyyy}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "DsSoDuTk.NgayCt", "{0:dd/MM/yyyy}")});
             this.xrTableCell13.Name = "xrTableCell13";
             this.xrTableCell13.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
             this.xrTableCell13.StylePriority.UsePadding = false;

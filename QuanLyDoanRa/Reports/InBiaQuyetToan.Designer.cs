@@ -132,8 +132,8 @@
             this.xrTableCell9.StylePriority.UseFont = false;
             this.xrTableCell9.StylePriority.UsePadding = false;
             this.xrTableCell9.StylePriority.UseTextAlignment = false;
-            this.xrTableCell9.Text = "         - Căn cứ Quyết định số 189-QĐ/TW, ngày 10-04-2013 của Bộ Chính trị khóa " +
-    "XI về chức năng, nhiệm vụ, tổ chức bộ máy của Văn phòng Trung ương Đảng;";
+            this.xrTableCell9.Text = "         - Căn cứ Quyết định số 189-QĐ/TW, ngày 10/04/2013 của Bộ Chính trị khóa " +
+                "XI về chức năng, nhiệm vụ, tổ chức bộ máy của Văn phòng Trung ương Đảng;";
             this.xrTableCell9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify;
             this.xrTableCell9.Weight = 3D;
             // 
@@ -153,8 +153,8 @@
             this.xrTableCell4.StylePriority.UsePadding = false;
             this.xrTableCell4.StylePriority.UseTextAlignment = false;
             this.xrTableCell4.Text = "         - Căn cứ cơ chế quản lý tài chính đảng quy định tại Thông tư liên tịch s" +
-    "ố 216/2004/TTLT-BTCQTTW-BTC, ngày 29-03-2004 của Ban Tài chính - Quản trị Trung " +
-    "ương và Bộ Tài chính;";
+                "ố 216/2004/TTLT-BTCQTTW-BTC, ngày 29/03/2004 của Ban Tài chính - Quản trị Trung " +
+                "ương và Bộ Tài chính;";
             this.xrTableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify;
             this.xrTableCell4.Weight = 3D;
             // 

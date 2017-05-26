@@ -79,7 +79,7 @@ namespace QuanLyDoanRa.Reports
         {
             if (this.objDoanCongTac != null)
             {
-                General.NgayCanCu = dNgayCanCuHoSo.DateTime.ToString("dd-MM-yyyy");
+                General.NgayCanCu = dNgayCanCuHoSo.DateTime.ToString("dd/MM/yyyy");
                 General.TheoCongVan = mmCanCuCongVan.Text;
                 General.NgayIn = dNgayIn.DateTime;
                 General.SoCanCuHoSo = txtSoCanCuHoSo.Text;

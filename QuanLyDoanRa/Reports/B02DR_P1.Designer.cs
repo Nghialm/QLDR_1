@@ -322,7 +322,7 @@
             this.xrTableCell42.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)
                         | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrTableCell42.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "ThangDuyetDt", "{0:MM-yy}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "ThangDuyetDt", "{0:MM/yy}")});
             this.xrTableCell42.Font = new System.Drawing.Font("Times New Roman", 8.25F);
             this.xrTableCell42.Name = "xrTableCell42";
             this.xrTableCell42.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -1061,7 +1061,7 @@
             this.xrTableCell19.Name = "xrTableCell19";
             this.xrTableCell19.StylePriority.UseBorders = false;
             this.xrTableCell19.StylePriority.UseFont = false;
-            this.xrTableCell19.Text = "TG";
+            this.xrTableCell19.Text = "USD";
             this.xrTableCell19.Weight = 0.3119172785368538D;
             // 
             // xrTableCell20
@@ -1071,7 +1071,7 @@
             this.xrTableCell20.Name = "xrTableCell20";
             this.xrTableCell20.StylePriority.UseBorders = false;
             this.xrTableCell20.StylePriority.UseFont = false;
-            this.xrTableCell20.Text = "QĐ VNĐ";
+            this.xrTableCell20.Text = "TG";
             this.xrTableCell20.Weight = 0.26393001556596862D;
             // 
             // xrTableCell21

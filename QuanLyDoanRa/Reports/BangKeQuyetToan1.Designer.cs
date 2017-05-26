@@ -188,7 +188,7 @@
             // xrTableCell14
             // 
             this.xrTableCell14.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "BangKeCtGhiSo.NgayCt", "dd-MM-yyyy{0}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "BangKeCtGhiSo.NgayCt", "dd/MM/yyyy{0}")});
             this.xrTableCell14.Name = "xrTableCell14";
             this.xrTableCell14.Text = "xrTableCell14";
             this.xrTableCell14.Weight = 0.20776059857028306D;
@@ -204,7 +204,7 @@
             // xrTableCell13
             // 
             this.xrTableCell13.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "DsSoDuTk.NgayCt", "dd-MM-yyyy{0}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "DsSoDuTk.NgayCt", "dd/MM/yyyy{0}")});
             this.xrTableCell13.Name = "xrTableCell13";
             this.xrTableCell13.Text = "xrTableCell13";
             this.xrTableCell13.Weight = 0.21104070814034431D;

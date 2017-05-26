@@ -1000,7 +1000,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 //Dong 5 thu hoan tam ung (= thu hoan trong thang + thu hoan tam ung chua qt trong thang
                 obj04D5.TienMatVND_QD += obj.HU_TRONGTHANG_TM_VND + obj.TH_CHUA_QT_TM_VND; //obj.TH_TM_VND;
                 obj04D5.TienMatUSD += obj.HU_TRONGTHANG_TM_USD + obj.TH_CHUA_QT_TM_USD; //obj.TH_TM_USD;
-                obj04D5.ChuyenKhoanVND += obj.HU_TRONGTHANG_CK_VND + obj.TH_CHUA_QT_CK_VND;  //obj.TH_TONG_CK_VND_USD;
+                obj04D5.ChuyenKhoanVND += obj.HU_TONG_TRONGTHANG_CK_VND_USD + obj.TH_CHUA_QT_CK_VND;//obj.HU_TRONGTHANG_CK_VND + obj.TH_CHUA_QT_CK_VND;  //obj.TH_TONG_CK_VND_USD;
                 obj04D5.TienMatVND += obj.HU_VND_TRONGTHANG_TM + obj.TH_VND_CHUA_QT_TM; //obj.TH_VND_TM; 
 
                 //Dong 6 : Phai thu trong ky
@@ -1182,7 +1182,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 //Dong 5 thu hoan tam ung (= thu hoan trong thang + thu hoan tam ung chua qt trong thang
                 obj04D5.TienMatVND_QD += obj.HU_TRONGTHANG_TM_VND + obj.TH_CHUA_QT_TM_VND;  //obj.TH_TM_VND;
                 obj04D5.TienMatUSD += obj.HU_TRONGTHANG_TM_USD + obj.TH_CHUA_QT_TM_USD;  //obj.TH_TM_USD;
-                obj04D5.ChuyenKhoanVND += obj.HU_TRONGTHANG_CK_VND + obj.TH_CHUA_QT_CK_VND;  //obj.TH_TONG_CK_VND_USD;
+                obj04D5.ChuyenKhoanVND += obj.HU_TONG_TRONGTHANG_CK_VND_USD + obj.TH_CHUA_QT_CK_VND;//obj.HU_TRONGTHANG_CK_VND + obj.TH_CHUA_QT_CK_VND;  //obj.TH_TONG_CK_VND_USD;
                 obj04D5.TienMatVND += obj.HU_VND_TRONGTHANG_TM + obj.TH_VND_CHUA_QT_TM;  //obj.TH_VND_TM;
 
                 //Dong 6 : Phai thu trong ky
@@ -1366,7 +1366,7 @@ namespace Vns.QuanLyDoanRa.Service.Report
                 //Dong 5 thu hoan tam ung (= thu hoan trong thang + thu hoan tam ung chua qt trong thang
                 obj04D5.TienMatVND_QD += obj.HU_TRONGTHANG_TM_VND + obj.TH_CHUA_QT_TM_VND; //obj.TH_TM_VND;
                 obj04D5.TienMatUSD += obj.HU_TRONGTHANG_TM_USD + obj.TH_CHUA_QT_TM_USD; //obj.TH_TM_USD;
-                obj04D5.ChuyenKhoanVND += obj.HU_TRONGTHANG_CK_VND + obj.TH_CHUA_QT_CK_VND; //obj.TH_TONG_CK_VND_USD;
+                obj04D5.ChuyenKhoanVND += obj.HU_TONG_TRONGTHANG_CK_VND_USD + obj.TH_CHUA_QT_CK_VND;//obj.HU_TRONGTHANG_CK_VND + obj.TH_CHUA_QT_CK_VND;  //obj.TH_TONG_CK_VND_USD;
                 obj04D5.TienMatVND += obj.HU_VND_TRONGTHANG_TM + obj.TH_VND_CHUA_QT_TM; //obj.TH_VND_TM;
 
                 //obj04D5.TienMatVND_QD += obj.HU_TRONGTHANG_TM_VND + obj.TH_CHUA_QT_TM_VND;

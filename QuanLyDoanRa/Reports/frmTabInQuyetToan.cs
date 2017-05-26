@@ -196,7 +196,7 @@ namespace QuanLyDoanRa.Reports
                     CanCuHoSo += " ngày " + General.NgayCanCu + " do " + m_objDoanRa.Ten + " lập,";
                     TenDoanRa = m_objDoanRa.Ten;
                     TruongDoan = "Trưởng đoàn : Đồng chí " + m_objDoanRa.TruongDoan;
-                    TuNgayDenNgay = ", đi từ ngày " + m_objDoanRa.NgayDi.ToString("dd-MM-yyyy") + " đến ngày " + m_objDoanRa.NgayVe.ToString("dd-MM-yyyy");
+                    TuNgayDenNgay = ", đi từ ngày " + m_objDoanRa.NgayDi.ToString("dd/MM/yyyy") + " đến ngày " + m_objDoanRa.NgayVe.ToString("dd/MM/yyyy");
 
                     IList<VnsLichCongTac> lstLCT = this.VnsLichCongTacService.GetByDoanCongTac(m_objDoanRa.Id);
                     int songuoiA = 0;
@@ -497,7 +497,7 @@ namespace QuanLyDoanRa.Reports
             CanCuHoSo += " ngày " + General.NgayCanCu + " do " + objDoanRa.Ten + " lập,";
             TenDoanRa = "Đoàn đại biểu : " + objDoanRa.Ten;
             TruongDoan = "Trưởng đoàn : Đồng chí " + objDoanRa.TruongDoan;
-            TuNgayDenNgay = ", đi từ ngày " + objDoanRa.NgayDi.ToString("dd-MM-yyyy") + " đến ngày " + objDoanRa.NgayVe.ToString("dd-MM-yyyy");
+            TuNgayDenNgay = ", đi từ ngày " + objDoanRa.NgayDi.ToString("dd/MM/yyyy") + " đến ngày " + objDoanRa.NgayVe.ToString("dd/MM/yyyy");
             SoThongBao += "-TB/VPTW/nb";
             IList<VnsLichCongTac> lstLCT = this.VnsLichCongTacService.GetByDoanCongTac(objDoanRa.Id);
             int songuoiA = 0;

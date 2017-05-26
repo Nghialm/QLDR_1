@@ -88,7 +88,7 @@ namespace QuanLyDoanRa.Reports
             CanCuHoSo += " ngày "+General.NgayCanCu + " do " + objDoanRa.Ten + " lập,";
             TenDoanRa = "Đoàn đại biểu : " + objDoanRa.Ten;
             TruongDoan = "Trưởng đoàn : Đồng chí " + objDoanRa.TruongDoan;
-            TuNgayDenNgay = ", đi từ ngày " + objDoanRa.NgayDi.ToString("dd-MM-yyyy") + " đến ngày " + objDoanRa.NgayVe.ToString("dd-MM-yyyy");
+            TuNgayDenNgay = ", đi từ ngày " + objDoanRa.NgayDi.ToString("dd/MM/yyyy") + " đến ngày " + objDoanRa.NgayVe.ToString("dd/MM/yyyy");
             SoThongBao += "-TB/VPTW/nb";
             IList<VnsLichCongTac> lstLCT = this.VnsLichCongTacService.GetByDoanCongTac(objDoanRa.IdBanDau);
             int songuoiA = 0;
