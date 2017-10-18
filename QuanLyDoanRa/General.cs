@@ -169,7 +169,7 @@ namespace QuanLyDoanRa
             }
             else
             {
-                InUyNhiemChiVnd PrintUyNhiemVnd = new InUyNhiemChiVnd(objChungTu, objKhachHang, lstGiaoDich, SoTienVnd, objChungTu.NgayCt);
+                InUyNhiemChiVnd_V2 PrintUyNhiemVnd = new InUyNhiemChiVnd_V2(objChungTu, objKhachHang, lstGiaoDich, SoTienVnd, objChungTu.NgayCt);
                 PrintUyNhiemVnd.ShowPreviewDialog();
             }
         }
