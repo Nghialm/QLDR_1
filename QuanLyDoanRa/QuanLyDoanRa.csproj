@@ -506,6 +506,12 @@
     <Compile Include="Reports\B02DR_P4.Designer.cs">
       <DependentUpon>B02DR_P4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\InUyNhiemChiVnd_V3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\InUyNhiemChiVnd_V3.Designer.cs">
+      <DependentUpon>InUyNhiemChiVnd_V3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\InUyNhiemChiVnd_V2.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -994,6 +1000,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\B02DR_P4.resx">
       <DependentUpon>B02DR_P4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\InUyNhiemChiVnd_V3.resx">
+      <DependentUpon>InUyNhiemChiVnd_V3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\InUyNhiemChiVnd_V2.resx">
       <DependentUpon>InUyNhiemChiVnd_V2.cs</DependentUpon>
