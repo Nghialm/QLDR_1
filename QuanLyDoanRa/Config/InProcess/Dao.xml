@@ -33,7 +33,8 @@
   <!--<db:provider id="targetDbProvider" provider="SqlServer-2.0" connectionString="Data Source=demo.wru.edu.vn;Database=Ketoan;Trusted_Connection=False;uid=vinastar;pwd=saodatviet;"/>-->
   <!-- Local-->
   <!--<db:provider id="targetDbProvider" provider="SqlServer-2.0" connectionString="Data Source=demo.wru.edu.vn\SQLSERVER2005;Database=ketoan;Trusted_Connection=False;uid=ketoan;pwd=ketoan123;"/>-->
-  <db:provider id="targetDbProvider" provider="SqlServer-2.0" connectionString="Data Source=.\sqlexpress;Database=QuanLyDoanRa;Trusted_Connection=False;uid=sa;pwd=123456;"/>
+  <db:provider id="targetDbProvider" provider="SqlServer-2.0" connectionString="Data Source=.\sqlexpress;Database=QLDR;Trusted_Connection=False;uid=sa;pwd=123456;"/>
+  <!--<db:provider id="targetDbProvider" provider="SqlServer-2.0" connectionString="Data Source=103.237.147.35;Database=QLDR;Trusted_Connection=False;uid=qldr;pwd=Aa123456;"/>-->
   <!--<db:provider id="targetDbProvider" provider="SqlServer-2.0" connectionString="Data Source=ADSRV\sqlexpress;Database=Ketoan;Trusted_Connection=False;uid=sa;pwd=cybersky@123456;"/>-->
 
   <!-- NHibernate Configuration -->

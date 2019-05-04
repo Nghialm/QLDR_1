@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Vns.QuanLyDoanRa.Domain" assembly="Vns.QuanLyDoanRa.Domain">
+	<class name="Vns.QuanLyDoanRa.Domain.VnsBangKe, Vns.QuanLyDoanRa.Domain" table="VnsBangKe" lazy="true">
+		<id name="Id" column="BangKeId">
+			<generator class="guid" />
+		</id>
+		<property name="HinhThucThanhToan" column="HinhThucThanhToan" />
+		<property name="NgayLap" column="NgayLap" />
+		<property name="LoaiBangKeId" column="LoaiBangKeId" />
+		<property name="MaLoaiBangKe" column="MaLoaiBangKe" />
+		<property name="NoiDung" column="NoiDung" />
+		<property name="NguoiLapPhieu" column="NguoiLapPhieu" />
+		<property name="DiaChi" column="DiaChi" />
+		<property name="TrangThai" column="TrangThai" />
+		<property name="SoBangKe" column="SoBangKe" />
+		<property name="NhomCt" column="NhomCt" />
+	</class>
+</hibernate-mapping>

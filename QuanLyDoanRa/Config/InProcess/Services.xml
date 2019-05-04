@@ -161,4 +161,15 @@
     <property name="VnsLoaiDoanRaDao" ref="VnsLoaiDoanRaDao"/>
     <property name ="RP_SoDuTaiKhoanDao" ref ="RP_SoDuTaiKhoanDao"/>
   </object>
+
+  <!--Them giai doan 2-->
+  <object id="VnsBangKeService" type="Vns.QuanLyDoanRa.Service.VnsBangKeService, Vns.QuanLyDoanRa">
+    <property name="VnsBangKeDao" ref="VnsBangKeDao"/>
+  </object>
+
+  <object id="VnsBangKeChiTietService" type="Vns.QuanLyDoanRa.Service.VnsBangKeChiTietService, Vns.QuanLyDoanRa">
+    <property name="VnsBangKeChiTietDao" ref="VnsBangKeChiTietDao"/>
+  </object>
+  
+  <!--Them giai doan 2-->
 </objects>

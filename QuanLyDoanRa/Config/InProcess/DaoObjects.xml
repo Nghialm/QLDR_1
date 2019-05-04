@@ -147,5 +147,18 @@
     <property name="HibernateTemplate" ref="HibernateTemplate"/>
   </object>
   <!--End ASP Membership-->
-  
+
+  <!--Them giai doan 2-->
+  <object id="VnsBangKeDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.VnsBangKeDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+
+  <object id="VnsBangKeChiTietDao" type="Vns.QuanLyDoanRa.Dao.NHibernate.VnsBangKeChiTietDao, Vns.QuanLyDoanRa">
+    <property name="SessionFactory" ref="NHibernateSessionFactory"/>
+    <property name="HibernateTemplate" ref="HibernateTemplate"/>
+  </object>
+
+  <!--Them giai doan 2-->
+
 </objects>

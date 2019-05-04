@@ -218,7 +218,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dao\Interface\IVnsBangKeChiTietDao.cs" />
+    <Compile Include="Dao\Interface\IVnsBangKeDao.cs" />
     <Compile Include="Dao\Interface\IVnsNgoaiTeDao.cs" />
+    <Compile Include="Dao\VnsBangKeChiTietDao.cs" />
+    <Compile Include="Dao\VnsBangKeDao.cs" />
     <Compile Include="Dao\VnsNgoaiTeDao.cs" />
     <Compile Include="Dao\VnsSoDuCuoiKyDao.cs" />
     <Compile Include="Dao\Interface\IVnsSoDuCuoiKyDao.cs" />
@@ -277,6 +281,10 @@
     <Compile Include="Domain\Report\RP_BangKeCtGhiSo.cs" />
     <Compile Include="Domain\Report\RP_Doan_CongNo.cs" />
     <Compile Include="Domain\Report\VnsReport.cs" />
+    <Compile Include="Domain\VnsBangKe.cs" />
+    <Compile Include="Domain\VnsBangKe.generated.cs" />
+    <Compile Include="Domain\VnsBangKeChiTiet.cs" />
+    <Compile Include="Domain\VnsBangKeChiTiet.generated.cs" />
     <Compile Include="Domain\VnsNgoaiTe.cs" />
     <Compile Include="Domain\VnsNgoaiTe.generated.cs" />
     <Compile Include="Domain\VnsSoDuCuoiKy.cs" />
@@ -333,10 +341,14 @@
     <Compile Include="Domain\VnsThanhVien.generated.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\Interface\IVnsBangKeChiTietService.cs" />
+    <Compile Include="Service\Interface\IVnsBangKeService.cs" />
     <Compile Include="Service\Interface\IVnsNgoaiTeService.cs" />
     <Compile Include="Service\Interface\Report\IReportService.cs" />
     <Compile Include="Service\Report\ReportService.cs" />
     <Compile Include="Service\Report\ReportService.Dung.cs" />
+    <Compile Include="Service\VnsBangKeChiTietService.cs" />
+    <Compile Include="Service\VnsBangKeService.cs" />
     <Compile Include="Service\VnsNgoaiTeService.cs" />
     <Compile Include="Service\VnsSoDuCuoiKyService.cs" />
     <Compile Include="Service\Interface\IVnsSoDuCuoiKyService.cs" />
@@ -466,6 +478,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\VnsBangKe.hbm.xml" />
+    <EmbeddedResource Include="Resource\VnsBangKeChiTiet.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
